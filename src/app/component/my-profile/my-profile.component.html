@@ -1,0 +1,21 @@
+<h1>Mi perfil</h1>
+<form [formGroup]="formProfile" (ngSubmit)="saveDrum()" class="base-form">
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Correo electrónico</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Teléfono</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <h2>Dirección</h2>
+  <p>Condominio el Alerce #443, departamento 21. <a href="#">Cambiar</a></p>
+  <div class="text-end">
+    <button type="button" mat-button>Cancelar</button>
+    <button type="submit" mat-raised-button class="m-1" color="primary">Actualizar</button>
+  </div>
+</form>

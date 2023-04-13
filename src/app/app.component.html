@@ -1,0 +1,35 @@
+<div class="container-fluid shadow p-3 bg-body-tertiary">
+  <header class="d-flex flex-wrap justify-content-center py-3">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4">Pureza del Sur</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item" *ngIf="profile.type === 'client'">
+        <a [routerLink]="['cliente/hacer-pedido']" mat-button>Hacer pedidos</a>
+      </li>
+      <li class="nav-item" *ngIf="profile.type === 'client'">
+        <a [routerLink]="['cliente/mis-pedidos']" mat-button aria-current="page">Mis pedidos</a>
+      </li>
+      <li class="nav-item" *ngIf="profile.type === 'client'">
+        <a [routerLink]="['administrador/bidones']" mat-button aria-current="page">Habilitar bidones</a>
+      </li>
+      <li class="nav-item" *ngIf="profile.type === 'client'">
+        <a [routerLink]="['administrador/lugares']" mat-button aria-current="page">Lugares</a>
+      </li>
+      <li class="nav-item" *ngIf="profile.type === 'client'">
+        <a [routerLink]="['administrador/clientes']" mat-button aria-current="page">Clientes</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['mi-perfil']" mat-button aria-current="page">Mi Perfil</a>
+      </li>
+    </ul>
+  </header>
+</div>
+<div class="container" style="padding-top: 20px;">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>

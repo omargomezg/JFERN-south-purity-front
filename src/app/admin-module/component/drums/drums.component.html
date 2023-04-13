@@ -1,0 +1,22 @@
+<h1>Registro de Bidones</h1>
+<form [formGroup]="formDrum" (ngSubmit)="saveDrum()" class="base-form">
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Dirección</mat-label>
+    <mat-select>
+      <mat-option value="one">First option</mat-option>
+      <mat-option value="two">Second option</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Número de bidón</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Clave del candado</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <div class="text-end">
+    <button type="button" mat-button>Cancelar</button>
+    <button type="submit" mat-raised-button class="m-1" color="primary">Guardar</button>
+  </div>
+</form>
