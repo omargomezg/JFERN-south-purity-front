@@ -2,14 +2,20 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './component/login/login.component';
 import {MyProfileComponent} from "./component/my-profile/my-profile.component";
+import {AuthGuard} from "./core/auth.guard";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'mi-perfil', component: MyProfileComponent},
-  {path: 'cliente', loadChildren: () => import('./client-module/client-module.module').then(m => m.ClientModuleModule)},
+  {path: 'mi-perfil', component: MyProfileComponent, canActivate: [AuthGuard]},
+  {
+    path: 'cliente',
+    loadChildren: () => import('./client-module/client-module.module').then(m => m.ClientModuleModule),
+    canActivate: [AuthGuard]
+  },
   {
     path: 'administrador',
-    loadChildren: () => import('./admin-module/admin-module.module').then(m => m.AdminModuleModule)
+    loadChildren: () => import('./admin-module/admin-module.module').then(m => m.AdminModuleModule),
+    canActivate: [AuthGuard]
   }
 ];
 

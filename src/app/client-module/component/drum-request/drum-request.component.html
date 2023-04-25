@@ -3,8 +3,7 @@
   <mat-form-field appearance="fill" class="base-full-width">
     <mat-label>Dirección</mat-label>
     <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
+      <mat-option *ngFor="let place of places" [value]="place.address">{{place.address}}</mat-option>
     </mat-select>
   </mat-form-field>
   <mat-form-field appearance="fill" class="base-full-width">
