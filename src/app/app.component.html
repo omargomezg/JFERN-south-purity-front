@@ -14,13 +14,13 @@
       <li class="nav-item" *ngIf="profile.type === 'client'">
         <a [routerLink]="['cliente/mis-pedidos']" mat-button aria-current="page">Mis pedidos</a>
       </li>
-      <li class="nav-item" *ngIf="profile.type === 'clients'">
+      <li class="nav-item" *ngIf="profile.type === 'client'">
         <a [routerLink]="['administrador/bidones']" mat-button aria-current="page">Habilitar bidones</a>
       </li>
-      <li class="nav-item" *ngIf="profile.type === 'clients'">
+      <li class="nav-item" *ngIf="profile.type === 'client'">
         <a [routerLink]="['administrador/lugares']" mat-button aria-current="page">Lugares</a>
       </li>
-      <li class="nav-item" *ngIf="profile.type === 'clients'">
+      <li class="nav-item" *ngIf="profile.type === 'client'">
         <a [routerLink]="['administrador/clientes']" mat-button aria-current="page">Clientes</a>
       </li>
       <li class="nav-item">

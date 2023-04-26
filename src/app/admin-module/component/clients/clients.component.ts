@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {PeriodicElement} from "../../../client-module/component/my-requests/my-requests.component";
 interface client {
   identification: string;
   name: string;

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {CommonService} from "../../../admin-module/service/common.service";
+import {PlaceInterface} from "../../service/interface/place.interface";
+import {CommonClientService} from "../../service/common-client.service";
 
 @Component({
   selector: 'app-drum-request',
@@ -8,9 +9,10 @@ import {CommonService} from "../../../admin-module/service/common.service";
 })
 export class DrumRequestComponent implements OnInit {
   formRequest: any;
-  places: any;
+  places: PlaceInterface[];
 
-  constructor(private commonService: CommonService) {
+  constructor(private commonService: CommonClientService) {
+    this.places = []
   }
 
   sendRequest(): void {
@@ -22,7 +24,7 @@ export class DrumRequestComponent implements OnInit {
   }
 
   loadPlaces(): void {
-    this.commonService.getPlace().subscribe(places => this.places = places);
+    this.commonService.getPlaces().subscribe(places => this.places = places);
   }
 
 }

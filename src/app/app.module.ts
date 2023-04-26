@@ -10,14 +10,17 @@ import { FooterComponent } from './core/component/footer/footer.component';
 import { MyProfileComponent } from './component/my-profile/my-profile.component';
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import { HomeComponent } from './component/home/home.component';
+import {TokenInterceptorService} from "./core/interceptor/token-interceptor.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     FooterComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,13 @@ import {HttpClientModule} from "@angular/common/http";
     MatInputModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

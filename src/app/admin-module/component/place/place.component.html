@@ -1,4 +1,9 @@
 <h1>Lugares</h1>
+<div class="row mb-2">
+  <div class="col text-end">
+    <button mat-stroked-button (click)="addPlace()">Agregar</button>
+  </div>
+</div>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mb-3">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Nombre</th>

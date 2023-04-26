@@ -8,7 +8,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
-import { MyRequestsComponent } from './component/my-requests/my-requests.component';
+import { MyOrdersComponent } from './component/my-orders/my-orders.component';
 import {MatTableModule} from "@angular/material/table";
 
 
@@ -16,7 +16,7 @@ import {MatTableModule} from "@angular/material/table";
   declarations: [
     ClientModuleComponent,
     DrumRequestComponent,
-    MyRequestsComponent
+    MyOrdersComponent
   ],
   imports: [
     CommonModule,

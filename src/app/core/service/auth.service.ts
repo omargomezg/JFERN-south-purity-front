@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
+import {Router, Routes} from "@angular/router";
 
 interface AuthorizationModel {
   token: string;
@@ -12,7 +13,8 @@ interface AuthorizationModel {
 })
 export class AuthService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient,
+              private router: Router) { }
 
   authorization(email: string | undefined | null, password: string | undefined | null): Observable<AuthorizationModel> {
     return this.httpClient.post<AuthorizationModel>(`${environment.apiUrl}/auth/token`, {email, password});
@@ -21,5 +23,12 @@ export class AuthService {
   isLogged(): boolean {
     return !!localStorage.getItem('token');
   }
+
+  logout(): void {
+    localStorage.clear();
+    this.router.navigate(['/'])
+  }
+
+
 
 }

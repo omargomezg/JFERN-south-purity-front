@@ -7,11 +7,12 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ClientsComponent } from './component/clients/clients.component';
 import { DrumsComponent } from './component/drums/drums.component';
 import { PlaceComponent } from './component/place/place.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
+import { FormPlaceComponent } from './component/form-place/form-place.component';
 
 
 @NgModule({
@@ -20,16 +21,18 @@ import {MatTableModule} from "@angular/material/table";
     DashboardComponent,
     ClientsComponent,
     DrumsComponent,
-    PlaceComponent
+    PlaceComponent,
+    FormPlaceComponent
   ],
-  imports: [
-    CommonModule,
-    AdminModuleRoutingModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatTableModule
-  ]
+    imports: [
+        CommonModule,
+        AdminModuleRoutingModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatTableModule,
+        FormsModule
+    ]
 })
 export class AdminModuleModule { }
