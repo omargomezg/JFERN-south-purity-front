@@ -7,13 +7,17 @@ import {PlaceInterface} from "./interface/place.interface";
 @Injectable({
   providedIn: 'root'
 })
-export class CommonService {
+export class CommonAdminService {
 
   constructor(private httpClient: HttpClient) { }
 
 
   getPlaces(): Observable<PlaceInterface[]> {
     return this.httpClient.get<PlaceInterface[]>(`${environment.apiUrl}/administrator/place`);
+  }
+
+  postPlace(place: PlaceInterface): Observable<PlaceInterface> {
+    return this.httpClient.post<PlaceInterface>(`${environment.apiUrl}/administrator/place`, place);
   }
 
 }

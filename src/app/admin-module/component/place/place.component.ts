@@ -1,21 +1,8 @@
 import {Component} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {FormPlaceComponent} from "../form-place/form-place.component";
-import {CommonService} from "../../service/common.service";
+import {CommonAdminService} from "../../service/common-admin.service";
 import {PlaceInterface} from "../../service/interface/place.interface";
-
-export interface PeriodicElement {
-  address: string;
-
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {address: 'Condominio Las Luces #443',},
-  {address: 'Condominio Las Luces #443',},
-  {address: 'Altamar Norte #34',},
-  {address: 'Las Cruces',},
-  {address: 'Santa Filomena de Nos, Camino a la Ruta',},
-];
 
 @Component({
   selector: 'app-place',
@@ -27,17 +14,25 @@ export class PlaceComponent {
   // @ts-ignore
   dataSource: PlaceInterface[];
 
-  constructor(private dialog: MatDialog, private commonService: CommonService) {
+  constructor(private dialog: MatDialog, private commonAdminService: CommonAdminService) {
     this.loadPlaces();
   }
 
   loadPlaces(): void {
-    this.commonService.getPlaces().subscribe(places => this.dataSource = places);
+    this.commonAdminService.getPlaces().subscribe(places => this.dataSource = places);
   }
 
-  addPlace() {
+  add() {
+    this.openModal(null);
+  }
+
+  edit(place: PlaceInterface): void {
+    this.openModal(place);
+  }
+
+  openModal(place: PlaceInterface | null): void {
     const dialogRef = this.dialog.open(FormPlaceComponent, {
-      data: null,
+      data: place,
     });
 
     dialogRef.afterClosed().subscribe(result => {

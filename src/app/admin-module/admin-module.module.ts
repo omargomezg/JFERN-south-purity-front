@@ -1,18 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { AdminModuleRoutingModule } from './admin-module-routing.module';
-import { AdminModuleComponent } from './admin-module.component';
-import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { ClientsComponent } from './component/clients/clients.component';
-import { DrumsComponent } from './component/drums/drums.component';
-import { PlaceComponent } from './component/place/place.component';
+import {AdminModuleRoutingModule} from './admin-module-routing.module';
+import {AdminModuleComponent} from './admin-module.component';
+import {DashboardComponent} from './component/dashboard/dashboard.component';
+import {ClientsComponent} from './component/clients/clients.component';
+import {DrumsComponent} from './component/drums/drums.component';
+import {PlaceComponent} from './component/place/place.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
-import { FormPlaceComponent } from './component/form-place/form-place.component';
+import {FormPlaceComponent} from './component/form-place/form-place.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -24,15 +25,17 @@ import { FormPlaceComponent } from './component/form-place/form-place.component'
     PlaceComponent,
     FormPlaceComponent
   ],
-    imports: [
-        CommonModule,
-        AdminModuleRoutingModule,
-        ReactiveFormsModule,
-        MatInputModule,
-        MatSelectModule,
-        MatButtonModule,
-        MatTableModule,
-        FormsModule
-    ]
+  imports: [
+    CommonModule,
+    AdminModuleRoutingModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatTableModule,
+    MatDialogModule,
+    FormsModule
+  ]
 })
-export class AdminModuleModule { }
+export class AdminModuleModule {
+}
