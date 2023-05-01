@@ -9,10 +9,11 @@ import {MatButtonModule} from "@angular/material/button";
 import { FooterComponent } from './core/component/footer/footer.component';
 import { MyProfileComponent } from './component/my-profile/my-profile.component';
 import {MatInputModule} from "@angular/material/input";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './component/home/home.component';
 import {TokenInterceptorService} from "./core/interceptor/token-interceptor.service";
+import { RegisterComponent } from './component/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,17 +21,19 @@ import {TokenInterceptorService} from "./core/interceptor/token-interceptor.serv
     LoginComponent,
     FooterComponent,
     MyProfileComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

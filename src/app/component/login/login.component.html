@@ -1,4 +1,4 @@
-<main class="form-signin">
+<main class="form-signin mb-4">
   <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
     <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Pureza del Sur</h1>
@@ -16,10 +16,10 @@
 
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> Recuérdame
+        <input type="checkbox" value="remember-me" formControlName="rememberMe"> Recuérdame
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" [disabled]="!loginForm.valid" type="submit">Iniciar sesión</button>
-    <p class="mt-5 mb-3 text-muted">© Designed by Gómez Pinot</p>
+    <a [routerLink]="['/registrate']" mat-button>Registrate</a>
   </form>
 </main>
