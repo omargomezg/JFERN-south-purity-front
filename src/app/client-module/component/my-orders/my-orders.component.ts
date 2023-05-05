@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CommonClientService} from "../../service/common-client.service";
-import {MyOrderInterface} from "../../service/interface/my-order.interface";
+import {MyOrderInterface} from "../../service/model/my-order.interface";
 
 @Component({
   selector: 'app-my-requests',

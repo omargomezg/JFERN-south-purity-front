@@ -8,25 +8,12 @@
     </a>
 
     <ul class="nav nav-pills">
-      <li class="nav-item" *ngIf="profile.type === 'client'">
-        <a [routerLink]="['cliente/hacer-pedido']" mat-button>Hacer pedidos</a>
-      </li>
-      <li class="nav-item" *ngIf="profile.type === 'client'">
-        <a [routerLink]="['cliente/mis-pedidos']" mat-button aria-current="page">Mis pedidos</a>
-      </li>
-      <li class="nav-item" *ngIf="profile.type === 'client'">
-        <a [routerLink]="['administrador/bidones']" mat-button aria-current="page">Habilitar bidones</a>
-      </li>
-      <li class="nav-item" *ngIf="profile.type === 'client'">
-        <a [routerLink]="['administrador/lugares']" mat-button aria-current="page">Lugares</a>
-      </li>
-      <li class="nav-item" *ngIf="profile.type === 'client'">
-        <a [routerLink]="['administrador/clientes']" mat-button aria-current="page">Clientes</a>
-      </li>
-      <li class="nav-item">
-        <a [routerLink]="['mi-perfil']" mat-button aria-current="page">Mi Perfil</a>
-      </li>
-      <li class="nav-item">
+      <ng-container *ngIf="authService.isLogged()">
+        <li class="nav-item" *ngFor="let menu of filterByRole(menus)">
+          <a [routerLink]="[menu.link]" mat-button>{{menu.name}}</a>
+        </li>
+      </ng-container>
+      <li class="nav-item" *ngIf="authService.isLogged()">
         <button (click)="logout()" mat-button aria-current="page">Cerrar sesión</button>
       </li>
     </ul>

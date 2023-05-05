@@ -7,6 +7,13 @@ import {RegisterModel} from "../model";
 
 interface AuthorizationModel {
   token: string;
+  profile: ProfileModel
+}
+
+interface ProfileModel {
+  rut: string;
+  fullName: string;
+  role: string;
 }
 
 @Injectable({
@@ -22,12 +29,18 @@ export class AuthService {
     return this.httpClient.post<AuthorizationModel>(`${environment.apiUrl}/auth/token`, {email, password});
   }
 
+  getProfile(): ProfileModel | null {
+    let profile = localStorage.getItem('profile');
+    return profile ? JSON.parse(profile) as ProfileModel : null;
+  }
+
   isLogged(): boolean {
     return !!localStorage.getItem('token');
   }
 
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('profile');
     this.router.navigate(['/login'])
   }
 

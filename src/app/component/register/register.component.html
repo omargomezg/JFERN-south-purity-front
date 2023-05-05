@@ -22,7 +22,6 @@
     <input matInput type="password" formControlName="confirmPassword" >
     <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('email')">Ingrese un correo valido</mat-error>
   </mat-form-field>
-  {{registerForm. | json}}
   <div class="text-end">
     <a [routerLink]="['login']" mat-button>Volver</a>
     <button mat-raised-button [disabled]="!registerForm.valid" color="primary" type="submit">Guardar</button>

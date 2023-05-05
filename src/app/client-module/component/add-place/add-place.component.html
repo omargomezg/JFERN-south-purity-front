@@ -1,0 +1,27 @@
+<form (ngSubmit)="save()" [formGroup]="myPlaceForm" novalidate>
+  <h1 mat-dialog-title>Un paso mas, necesitamos conocer de donde eres.</h1>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Ciudad</mat-label>
+      <mat-select formControlName="country" (selectionChange)="loadPlacesByCountry($event)">
+        <mat-option [value]="country" *ngFor="let country of countries">{{country}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Dirección</mat-label>
+      <mat-select formControlName="id" id="id">
+        <mat-option *ngFor="let place of loadedPlaces" [value]="place.id">{{place.address}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Número o Departamento</mat-label>
+      <input matInput formControlName="address" id="address">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <div class="text-end">
+      <button mat-button [mat-dialog-close]>Cerrar</button>
+      <button mat-raised-button [disabled]="!myPlaceForm.valid" type="submit">Guardar</button>
+    </div>
+  </div>
+</form>

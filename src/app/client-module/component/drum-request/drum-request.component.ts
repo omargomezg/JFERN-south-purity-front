@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {PlaceInterface} from "../../service/interface/place.interface";
+import {PlaceInterface} from "../../service/model/place.interface";
 import {CommonClientService} from "../../service/common-client.service";
+import {AuthService} from "../../../core/service/auth.service";
+import {MatDialog} from "@angular/material/dialog";
+import {AddPlaceComponent} from "../add-place/add-place.component";
 
 @Component({
   selector: 'app-drum-request',
@@ -11,7 +14,7 @@ export class DrumRequestComponent implements OnInit {
   formRequest: any;
   places: PlaceInterface[];
 
-  constructor(private commonService: CommonClientService) {
+  constructor(private commonService: CommonClientService, private matDialog: MatDialog) {
     this.places = []
   }
 
@@ -24,7 +27,17 @@ export class DrumRequestComponent implements OnInit {
   }
 
   loadPlaces(): void {
-    this.commonService.getPlaces().subscribe(places => this.places = places);
+    this.commonService.getMyPlaces().subscribe(places => {
+      if (places.length > 0) {
+        this.places = places
+      } else {
+        const dialogRef = this.matDialog.open(AddPlaceComponent);
+
+        dialogRef.afterClosed().subscribe(result => {
+            this.loadPlaces();
+        });
+      }
+    });
   }
 
 }

@@ -10,22 +10,26 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
 import { MyOrdersComponent } from './component/my-orders/my-orders.component';
 import {MatTableModule} from "@angular/material/table";
+import { AddPlaceComponent } from './component/add-place/add-place.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
   declarations: [
     ClientModuleComponent,
     DrumRequestComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    AddPlaceComponent
   ],
-  imports: [
-    CommonModule,
-    ClientModuleRoutingModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatTableModule
-  ]
+    imports: [
+        CommonModule,
+        ClientModuleRoutingModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatTableModule,
+        MatDialogModule
+    ]
 })
 export class ClientModuleModule { }

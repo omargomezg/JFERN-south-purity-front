@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from "./core/service/auth.service";
+import {menu} from "./core/constant/menu";
 
 @Component({
   selector: 'app-root',
@@ -8,14 +9,19 @@ import {AuthService} from "./core/service/auth.service";
 })
 export class AppComponent {
   title = 'south-purity-front';
+  menus = menu;
   profile = {
-    type: 'client'
+    type: this.authService.getProfile()?.role
   }
 
-  constructor(private authService: AuthService) {
+  constructor(public authService: AuthService) {
   }
 
   logout(): void {
     this.authService.logout();
+  }
+
+  filterByRole(menus: any[]): any {
+    return menus.filter(menu => menu.role.indexOf(this.authService.getProfile()?.role) !== -1);
   }
 }

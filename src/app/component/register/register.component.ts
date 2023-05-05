@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {RegisterModel} from "../../core/model";
 import {AuthService} from "../../core/service/auth.service";
+import {ToastrService} from "ngx-toastr";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -20,7 +22,8 @@ export class RegisterComponent {
       validators: this.password.bind(this)
     });
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService,
+              private toastr: ToastrService, private router: Router) {
   }
 
   password(formGroup: FormGroup) {
@@ -32,7 +35,8 @@ export class RegisterComponent {
   submit(): void {
     let register = this.registerForm.value as RegisterModel;
     this.authService.register(register).subscribe(() => {
-
+      this.toastr.success('Genial, ya tienes tu cuenta.');
+      this.router.navigate(['/']);
     })
   }
 

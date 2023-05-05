@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
       this.setRememberMe(login);
     }
     this.authService.authorization(login.email, login.password).subscribe(tokenResult => {
+      localStorage.setItem('profile', JSON.stringify(tokenResult.profile));
       localStorage.setItem('token', tokenResult.token);
       this.router.navigate(['/home']);
     });
