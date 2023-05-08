@@ -48,5 +48,13 @@ export class AuthService {
     return this.httpClient.post<any>(`${environment.apiUrl}/register`, register);
   }
 
+  getMyProfile(): Observable<any>{
+    return this.httpClient.get<any>(`${environment.apiUrl}/profile`);
+  }
+
+  updateProfile(profile: any): Observable<any> {
+    return this.httpClient.put<any>(`${environment.apiUrl}/profile`, profile);
+  }
+
 
 }

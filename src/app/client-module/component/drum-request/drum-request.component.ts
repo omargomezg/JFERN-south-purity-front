@@ -4,6 +4,7 @@ import {CommonClientService} from "../../service/common-client.service";
 import {AuthService} from "../../../core/service/auth.service";
 import {MatDialog} from "@angular/material/dialog";
 import {AddPlaceComponent} from "../add-place/add-place.component";
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-drum-request',
@@ -11,10 +12,14 @@ import {AddPlaceComponent} from "../add-place/add-place.component";
   styleUrls: ['./drum-request.component.css']
 })
 export class DrumRequestComponent implements OnInit {
-  formRequest: any;
+  formRequest = this.formBuilder.group({
+    address: ['', Validators.required],
+    quantity: ['', Validators.required]
+  });
   places: PlaceInterface[];
 
-  constructor(private commonService: CommonClientService, private matDialog: MatDialog) {
+  constructor(private commonService: CommonClientService, private matDialog: MatDialog,
+              private formBuilder: FormBuilder) {
     this.places = []
   }
 
@@ -29,7 +34,8 @@ export class DrumRequestComponent implements OnInit {
   loadPlaces(): void {
     this.commonService.getMyPlaces().subscribe(places => {
       if (places.length > 0) {
-        this.places = places
+        this.places = places;
+        this.formRequest.controls['address'].setValue(places[0].address);
       } else {
         const dialogRef = this.matDialog.open(AddPlaceComponent);
 
