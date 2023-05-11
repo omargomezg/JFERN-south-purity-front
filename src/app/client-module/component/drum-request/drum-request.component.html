@@ -1,18 +1,34 @@
 <h1>Hacer pedido</h1>
-<form [formGroup]="formRequest" (ngSubmit)="sendRequest()" class="base-form">
-  <mat-form-field appearance="fill" class="base-full-width">
-    <mat-label>Dirección</mat-label>
-    <mat-select formControlName="address">
-      <mat-option *ngFor="let place of places" [value]="place.address">{{place.address}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field appearance="fill" class="base-full-width">
-    <mat-label>Cantidad</mat-label>
-    <input matInput type="number" formControlName="quantity">
-  </mat-form-field>
-  <div class="text-end">
-    <button type="button" mat-button>Cancelar</button>
-    <button type="submit" [disabled]="!formRequest.valid" mat-raised-button class="m-1" color="primary">Siguiente
-    </button>
+<div class="row">
+  <div class="col">
+    <form [formGroup]="formRequest" novalidate (ngSubmit)="sendRequest()" class="base-form">
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>Dirección</mat-label>
+        <mat-select formControlName="address" (selectionChange)="selectedPlace($event)">
+          <mat-option *ngFor="let place of places" [value]="place.id">{{place.fullAddress}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>Cantidad</mat-label>
+        <input matInput type="number" (change)="setTotal()" formControlName="quantity">
+        <mat-hint>Máximo {{max}} bidones.</mat-hint>
+      </mat-form-field>
+      <div class="text-end">
+        <button type="button" mat-button>Cancelar</button>
+        <button type="submit" [disabled]="!formRequest.valid" mat-raised-button class="m-1" color="primary">Siguiente
+        </button>
+      </div>
+    </form>
   </div>
-</form>
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <h4>Unidad: $ {{price | number}}</h4>
+        <h3>Total: $ {{total | number}}</h3>
+      </div>
+      <div class="col">
+        <img src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
+             class="img-fluid"></div>
+    </div>
+  </div>
+</div>

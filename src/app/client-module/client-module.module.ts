@@ -12,6 +12,7 @@ import { MyOrdersComponent } from './component/my-orders/my-orders.component';
 import {MatTableModule} from "@angular/material/table";
 import { AddPlaceComponent } from './component/add-place/add-place.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {MatDialogModule} from "@angular/material/dialog";
         MatSelectModule,
         MatButtonModule,
         MatTableModule,
-        MatDialogModule
+        MatDialogModule,
+        MatCheckboxModule
     ]
 })
 export class ClientModuleModule { }

@@ -28,4 +28,12 @@ export class CommonClientService {
     return this.httpClient.get<MyOrderInterface[]>(`${environment.apiUrl}/customer/order`);
   }
 
+  getWaterDrumsAvailable(place: string): Observable<number> {
+    return this.httpClient.get<number>(`${environment.apiUrl}/customer/water-drums/${place}/available`)
+  }
+
+  getPrice(): Observable<number>{
+    return this.httpClient.get<number>(`${environment.apiUrl}/customer/water-drums/price`);
+  }
+
 }

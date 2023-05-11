@@ -3,5 +3,6 @@ export interface UserInterface {
   role: string;
   rut: string;
   email: string;
+  status: string;
   fullName: string;
 }

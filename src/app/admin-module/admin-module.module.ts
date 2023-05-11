@@ -14,6 +14,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
 import {FormPlaceComponent} from './component/form-place/form-place.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { ConfigurationComponent } from './component/configuration/configuration.component';
+import { ClientFormComponent } from './component/client-form/client-form.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     ClientsComponent,
     DrumsComponent,
     PlaceComponent,
-    FormPlaceComponent
+    FormPlaceComponent,
+    ConfigurationComponent,
+    ClientFormComponent
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>{{data ? data.address : 'Crear'}}</h1>
-<form [formGroup]="placeForm" (ngSubmit)="save()" class="base-form">
+<form [formGroup]="placeForm" novalidate (ngSubmit)="save()" class="base-form">
   <div mat-dialog-content>
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Ciudad</mat-label>

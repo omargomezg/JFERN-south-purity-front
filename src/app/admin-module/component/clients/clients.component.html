@@ -19,7 +19,7 @@
   <ng-container matColumnDef="options">
     <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
     <td mat-cell *matCellDef="let element">
-      <a>Editar</a>
+      <a [routerLink]="['/administrador/cliente', element.id]">Editar</a>
     </td>
   </ng-container>
 

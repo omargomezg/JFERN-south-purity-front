@@ -5,7 +5,6 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {MatSelectChange} from "@angular/material/select";
 import {ToastrService} from "ngx-toastr";
 import {MatDialogRef} from "@angular/material/dialog";
-import {AddPlaceRequestModel} from "../../service/model/add-place-request.model";
 
 @Component({
   selector: 'app-add-place', templateUrl: './add-place.component.html', styleUrls: ['./add-place.component.css']
@@ -18,7 +17,8 @@ export class AddPlaceComponent implements OnInit {
   myPlaceForm = this.formBuilder.group({
     country: ['', Validators.required],
     id: ['', Validators.required],
-    address: ['', Validators.required]
+    address: ['', Validators.required],
+    isPrincipal: [true, Validators.required]
   })
 
   constructor(private commonClientService: CommonClientService, private formBuilder: FormBuilder,
@@ -28,8 +28,8 @@ export class AddPlaceComponent implements OnInit {
   }
 
   save(): void {
-    let {id, address} = this.myPlaceForm.value;
-    this.commonClientService.addPlace({idPlace: id,address: address}).subscribe(() => {
+    let {id, address, isPrincipal} = this.myPlaceForm.value;
+    this.commonClientService.addPlace({idPlace: id, address: address, isPrincipal: isPrincipal}).subscribe(() => {
       this.toastr.success('Bien! ya has registrado una dirección de entrega.');
       this.matDialogRef.close(true);
     });

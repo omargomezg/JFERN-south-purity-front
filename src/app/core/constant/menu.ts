@@ -28,5 +28,10 @@ export const menu = [
     "name": "Mi Perfil",
     "link": "mi-perfil",
     "role": ["ADMINISTRATOR", "CUSTOMER", "STOCKER"]
+  },
+  {
+    "name": "Configuraciones",
+    "link": "administrador/configuracion",
+    "role": ["ADMINISTRATOR"]
   }
 ]

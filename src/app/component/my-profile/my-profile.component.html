@@ -1,5 +1,5 @@
 <h1>Mi perfil</h1>
-<form [formGroup]="formProfile" (ngSubmit)="submit()" class="base-form">
+<form [formGroup]="formProfile" novalidate (ngSubmit)="submit()" class="base-form">
   <mat-form-field appearance="fill" class="base-full-width">
     <mat-label>Rut</mat-label>
     <input matInput formControlName="rut" readonly>
@@ -16,11 +16,14 @@
     <mat-label>Teléfono</mat-label>
     <input matInput formControlName="telephone">
   </mat-form-field>
-  <h2>Dirección</h2>
-  <p>{{address}} <a href="#">Cambiar</a></p>
+  <ng-container *ngIf="profile.role === 'CUSTOMER'">
+    <h2>Dirección</h2>
+    <p>{{address}} <a href="#">Cambiar</a></p>
+  </ng-container>
   <div class="text-end">
     <button type="button" mat-button>Cancelar</button>
     <button type="submit" mat-raised-button class="m-1" color="primary"
-            [disabled]="!formProfile.valid">Actualizar</button>
+            [disabled]="!formProfile.valid">Actualizar
+    </button>
   </div>
 </form>
