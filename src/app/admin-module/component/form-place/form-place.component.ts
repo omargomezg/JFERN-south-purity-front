@@ -26,6 +26,7 @@ export class FormPlaceComponent {
 
   loadData(): void {
     this.placeForm.controls['id'].setValue(this.data.id);
+    this.placeForm.controls['country'].setValue(this.data.country);
     this.placeForm.controls['address'].setValue(this.data.address);
   }
 

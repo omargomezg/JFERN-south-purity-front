@@ -16,6 +16,11 @@ import {FormPlaceComponent} from './component/form-place/form-place.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { ConfigurationComponent } from './component/configuration/configuration.component';
 import { ClientFormComponent } from './component/client-form/client-form.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import { UsersComponent } from './component/users/users.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import { DrumsAvailableComponent } from './component/drums-available/drums-available.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -27,7 +32,9 @@ import { ClientFormComponent } from './component/client-form/client-form.compone
     PlaceComponent,
     FormPlaceComponent,
     ConfigurationComponent,
-    ClientFormComponent
+    ClientFormComponent,
+    UsersComponent,
+    DrumsAvailableComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +45,10 @@ import { ClientFormComponent } from './component/client-form/client-form.compone
     MatButtonModule,
     MatTableModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule,
+    MatPaginatorModule,
+    MatCardModule
   ]
 })
 export class AdminModuleModule {

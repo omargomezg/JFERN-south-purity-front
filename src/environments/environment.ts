@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'http://localhost:8080/api'
+  apiUrl: 'http://qweqwewqeq.us-east-2.elasticbeanstalk.com/api'
 };

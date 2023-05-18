@@ -16,6 +16,7 @@ export class DrumsComponent {
     lockNumber:  [0, Validators.required],
     padlockKey: [0, Validators.required],
   });
+  reloadListOfDrums: boolean = false;
   places: PlaceInterface[] = [];
 
   constructor(private commonAdminService: CommonAdminService, private formBuilder: FormBuilder,
@@ -39,6 +40,7 @@ export class DrumsComponent {
       /*this.formDrum.controls['padlockKey'].markAsPristine();
       this.formDrum.controls['padlockKey'].markAsUntouched();
       this.formDrum.controls['padlockKey'].updateValueAndValidity();*/
+      this.reloadListOfDrums = !this.reloadListOfDrums;
     })
   }
 }
