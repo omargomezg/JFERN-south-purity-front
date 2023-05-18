@@ -20,6 +20,11 @@ export const menu = [
     "role": ["ADMINISTRATOR"]
   },
   {
+    "name": "Usuarios",
+    "link": "administrador/usuarios",
+    "role": ["ADMINISTRATOR"]
+  },
+  {
     "name": "Clientes",
     "link": "administrador/clientes",
     "role": ["ADMINISTRATOR"]
