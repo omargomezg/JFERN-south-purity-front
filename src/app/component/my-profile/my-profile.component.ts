@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {AuthService} from "../../core/service/auth.service";
 import {ToastrService} from "ngx-toastr";
+import {MatDialog} from "@angular/material/dialog";
+import {ResetPwdModalComponent} from "../reset-pwd-modal/reset-pwd-modal.component";
 
 @Component({
   selector: 'app-my-profile',
@@ -19,7 +21,7 @@ export class MyProfileComponent implements OnInit {
   address: string = '';
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService,
-              private toastr: ToastrService) {
+              private toastr: ToastrService, private matDialog: MatDialog) {
   }
 
   submit(): void {
@@ -37,5 +39,12 @@ export class MyProfileComponent implements OnInit {
       this.address = profile.address;
       this.profile = profile;
     })
+  }
+
+  showModalPwd(): void {
+    const dialogRef = this.matDialog.open(ResetPwdModalComponent, {data: {id: this.profile.id}, disableClose: true});
+
+    dialogRef.afterClosed().subscribe(() => {
+    });
   }
 }

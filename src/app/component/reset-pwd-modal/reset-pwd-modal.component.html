@@ -1,0 +1,22 @@
+<form [formGroup]="formPwd" novalidate (ngSubmit)="submit()" class="base-form">
+  <h1 mat-dialog-title>Cambia tu contraseña.</h1>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" formControlName="password">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Repetir contraseña</mat-label>
+      <input matInput type="password" formControlName="confirmPassword">
+      <mat-error *ngIf="formPwd.hasError('matching')">
+      Password must match.
+    </mat-error>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <div class="text-end">
+      <button [mat-dialog-close]="" mat-button>Cancelar</button>
+      <button mat-raised-button [disabled]="!formPwd.valid" color="primary" type="submit">Guardar</button>
+    </div>
+  </div>
+</form>

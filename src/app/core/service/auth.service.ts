@@ -56,5 +56,9 @@ export class AuthService {
     return this.httpClient.put<any>(`${environment.apiUrl}/profile`, profile);
   }
 
+  updatePassword(profile: any): Observable<any> {
+    return this.httpClient.put<any>(`${environment.apiUrl}/user/${profile.id}/password`, profile);
+  }
+
 
 }
