@@ -16,6 +16,8 @@ import {TokenInterceptorService} from "./core/interceptor/token-interceptor.serv
 import {RegisterComponent} from './component/register/register.component';
 import {ToastrModule} from "ngx-toastr";
 import {MatCardModule} from "@angular/material/card";
+import { ResetPwdModalComponent } from './component/reset-pwd-modal/reset-pwd-modal.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -24,20 +26,22 @@ import {MatCardModule} from "@angular/material/card";
     FooterComponent,
     MyProfileComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ResetPwdModalComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
-    ToastrModule.forRoot(),
-    MatCardModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        ToastrModule.forRoot(),
+        MatCardModule,
+        MatDialogModule
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
