@@ -5,7 +5,7 @@ import {environment} from "../../../environments/environment";
 import {PlaceInterface} from "./interface/place.interface";
 import {UserInterface} from "./interface/user.interface";
 import {ConfigurationInterface} from "./interface/configuration.interface";
-import {OrderInterface} from "./interface/order.interface";
+import {ProductInterface} from "./interface/product.interface";
 import {PageInterface} from "./interface/page.interface";
 import {PaginationModel} from "./interface/pagination.model";
 
@@ -34,14 +34,14 @@ export class CommonAdminService {
     return this.httpClient.put<ConfigurationInterface>(`${environment.apiUrl}/administrator/configuration`, configuration);
   }
 
-  getOrders(placeId: string): Observable<PageInterface<OrderInterface>> {
+  getOrders(placeId: string): Observable<PageInterface<ProductInterface>> {
     let queryParams = new HttpParams();
     queryParams = queryParams.append("place", placeId);
-    return this.httpClient.get<PageInterface<OrderInterface>>(`${environment.apiUrl}/order`, {params: queryParams});
+    return this.httpClient.get<PageInterface<ProductInterface>>(`${environment.apiUrl}/order`, {params: queryParams});
   }
 
-  postOrder(order: OrderInterface): Observable<any> {
-    return this.httpClient.post(`${environment.apiUrl}/administrator/order`, order);
+  postProduct(order: ProductInterface): Observable<any> {
+    return this.httpClient.post(`${environment.apiUrl}/administrator/product`, order);
   }
 
   getUserById(id: string) {

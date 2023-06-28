@@ -5,6 +5,9 @@ import {MyProfileComponent} from "./component/my-profile/my-profile.component";
 import {AuthGuard} from "./core/auth.guard";
 import {HomeComponent} from "./component/home/home.component";
 import {RegisterComponent} from "./component/register/register.component";
+import {
+  BuildPaymentResultComponent
+} from "./client-module/component/build-payment-result/build-payment-result.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},

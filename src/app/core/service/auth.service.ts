@@ -11,6 +11,7 @@ interface AuthorizationModel {
 }
 
 interface ProfileModel {
+  id: string;
   rut: string;
   fullName: string;
   role: string;

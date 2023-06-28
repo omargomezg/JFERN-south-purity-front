@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {CommonAdminService} from "../../service/common-admin.service";
 import {PlaceInterface} from "../../service/interface/place.interface";
 import {FormBuilder, Validators} from "@angular/forms";
-import {OrderInterface} from "../../service/interface/order.interface";
+import {ProductInterface} from "../../service/interface/product.interface";
 import {ToastrService} from "ngx-toastr";
 
 @Component({
@@ -29,8 +29,8 @@ export class DrumsComponent {
   }
 
   saveDrum(): void {
-    let order = this.formDrum.value as OrderInterface;
-    this.commonAdminService.postOrder(order).subscribe(result =>{
+    let order = this.formDrum.value as ProductInterface;
+    this.commonAdminService.postProduct(order).subscribe(result =>{
       this.toastr.success('Bidon registrado :)');
       this.formDrum.controls['lockNumber'].setValue(0);
       /*this.formDrum.controls['lockNumber'].markAsPristine();

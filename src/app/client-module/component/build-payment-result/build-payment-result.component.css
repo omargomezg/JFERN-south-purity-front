@@ -1,0 +1,12 @@
+.text-center > .title {
+  font-size: xx-large;
+}
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.icon-display {
+  font-size: 80px;
+  height: 80px;
+  width: 80px;
+}

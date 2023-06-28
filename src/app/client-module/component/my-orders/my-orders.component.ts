@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CommonClientService} from "../../service/common-client.service";
-import {MyOrderInterface} from "../../service/model/my-order.interface";
+import {MyOrderInterface} from "../../service/model";
+import {AuthService} from "../../../core/service/auth.service";
 
 @Component({
   selector: 'app-my-requests',
@@ -11,13 +12,15 @@ export class MyOrdersComponent {
   displayedColumns: string[] = ['correlative'];
   dataSource: MyOrderInterface[];
 
-  constructor(private commonClientService: CommonClientService) {
+  constructor(private commonClientService: CommonClientService,
+              private authService: AuthService) {
     this.dataSource = [];
     this.loadMyOrders();
   }
 
   loadMyOrders(): void {
-    this.commonClientService.getOrders().subscribe(orders => this.dataSource = orders);
+    let id = this.authService.getProfile()?.id as string;
+    this.commonClientService.getOrders(id).subscribe(orders => this.dataSource = orders);
   }
 
 }

@@ -1,34 +1,78 @@
-<h1>Hacer pedido</h1>
+<h1>Hacer pedido online</h1>
+<div style="display: flex; align-items: center;">
+  <mat-icon style="margin-left: 1rem;">my_location</mat-icon>
+  <div>{{places[0].fullAddress}} <a *ngIf="places.length > 1" href>cambiar</a></div>
+</div>
+<br>
+<p class="text-danger">Puedes comprar hasta {{config.available}} bidones.</p>
+<br>
+<br>
 <div class="row">
-  <div class="col">
-    <form [formGroup]="formRequest" novalidate (ngSubmit)="sendRequest()" class="base-form">
-      <mat-form-field appearance="fill" class="base-full-width">
-        <mat-label>Dirección</mat-label>
-        <mat-select formControlName="address" (selectionChange)="selectedPlace($event)">
-          <mat-option *ngFor="let place of places" [value]="place.id">{{place.fullAddress}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="base-full-width">
-        <mat-label>Cantidad</mat-label>
-        <input matInput type="number" (change)="setTotal()" formControlName="quantity">
-        <mat-hint>Máximo {{max}} bidones.</mat-hint>
-      </mat-form-field>
-      <div class="text-end">
-        <button type="button" mat-button>Cancelar</button>
-        <button type="submit" [disabled]="!formRequest.valid" mat-raised-button class="m-1" color="primary">Siguiente
-        </button>
-      </div>
-    </form>
-  </div>
-  <div class="col">
+  <div class="col-sm-7">
     <div class="row">
       <div class="col">
-        <h4>Unidad: $ {{price | number}}</h4>
-        <h3>Total: $ {{total | number}}</h3>
+        <mat-card>
+          <mat-card-header class="text-center">
+            Recarga
+          </mat-card-header>
+          <img mat-card-image
+               (click)="addToCart(products.WATER_DRUM, 'Recarga', config.price)"
+               class="img-fluid btn btn-link"
+               src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
+               alt="Agregar recarga">
+          <mat-card-content>
+            <p class="text-dark text-center">$ {{config.price | number}}</p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-button color="accent">Agregar</button>
+          </mat-card-actions>
+        </mat-card>
       </div>
       <div class="col">
-        <img src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
-             class="img-fluid"></div>
+        <mat-card>
+          <mat-card-header class="text-center">Recarga + Bidón
+          </mat-card-header>
+          <img mat-card-image
+               (click)="addToCart(products.WATER_DRUM_WITH_BOTTLE, 'Recarga + Bidón', config.priceWithDrum)"
+               class="img-fluid btn btn-link"
+               src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
+               alt="Agregar Recarga + Bidón">
+          <mat-card-content>
+            <p class="text-dark text-center">$ {{config.priceWithDrum | number}}</p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-button color="accent">Agregar</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-5">
+    <p class="fw-bold">Resumen de tu compra</p>
+    <table title="Resumen de tu compra" class="table table-responsive table-bordered">
+      <thead>
+      <tr>
+        <th id="quantity">Cant.</th>
+        <th id="description">Descripción</th>
+        <th id="subtotal">Subtotal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of cart">
+        <td>{{item.quantity}}</td>
+        <td>{{item.description}}</td>
+        <td class="text-end">$ {{item.subtotal | number}}</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr class="sutotal-footer">
+        <th id="subtotal-description" colspan="2" class="text-end">Subtotal (IVA incl.)</th>
+        <th id="amount-to-pay" class="text-end">$ {{getSubtotal() | number}}</th>
+      </tr>
+      </tfoot>
+    </table>
+    <div class="text-end">
+      <button mat-stroked-button type="button" color="primary" (click)="sendRequest()">Realizar pago</button>
     </div>
   </div>
 </div>
