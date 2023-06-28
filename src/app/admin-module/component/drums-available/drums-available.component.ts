@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {UserInterface} from "../../service/interface/user.interface";
 import {CommonAdminService} from "../../service/common-admin.service";
-import {OrderInterface} from "../../service/interface/order.interface";
+import {ProductInterface} from "../../service/interface/product.interface";
 
 @Component({
   selector: 'app-drums-available',
@@ -13,7 +13,7 @@ export class DrumsAvailableComponent implements OnChanges{
   @Input() placeId: string | undefined | null;
   @Input() reload: string = '';
   displayedColumns: string[] = ['id', 'number'];
-  dataSource: OrderInterface[];
+  dataSource: ProductInterface[];
 
   constructor(private commonAdminService: CommonAdminService) {
     this.dataSource =[];
