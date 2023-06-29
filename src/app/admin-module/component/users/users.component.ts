@@ -3,7 +3,7 @@ import {UserInterface} from "../../service/interface/user.interface";
 import {CommonAdminService} from "../../service/common-admin.service";
 import {RoleEnum} from "../../../core/constant/role.enum";
 import {PageEvent} from "@angular/material/paginator";
-import {PaginationModel} from "../../service/interface/pagination.model";
+import {PaginationModel} from "../../../core/model/pagination.model";
 
 @Component({
   selector: 'app-users',
@@ -27,8 +27,8 @@ export class UsersComponent implements OnInit {
 
   handlePageEvent(e: PageEvent) {
     console.log(e);
-    this.pagination.page = e.pageIndex;
-    this.pagination.size = e.pageSize;
+    this.pagination.pageIndex = e.pageIndex;
+    this.pagination.pageSize = e.pageSize;
     /*this.pageEvent = e;
     this.length = e.length;
     this.pageSize = e.pageSize;

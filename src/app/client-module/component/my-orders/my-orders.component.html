@@ -1,18 +1,37 @@
 <h1>Mis pedidos</h1>
-<div class="text-center mt-4">
+<div class="text-center mt-4" *ngIf="dataSource.length === 0">
   <p class="text-primary">No encontramos nada!</p>
 </div>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource.length > 0">
+<p>Acá te presentamos el historia de tus compras.</p>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" *ngIf="dataSource.length > 0">
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Position Column -->
-  <ng-container matColumnDef="correlative">
-    <th mat-header-cell *matHeaderCellDef> No.</th>
-    <td mat-cell *matCellDef="let element"> {{element.correlative}} </td>
-  </ng-container>
+    <!-- Position Column -->
+    <ng-container matColumnDef="orderNumber">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element"> {{element.serial}} </td>
+    </ng-container>
+    <ng-container matColumnDef="createdAt">
+      <th mat-header-cell *matHeaderCellDef>Fecha</th>
+      <td mat-cell *matCellDef="let element"> {{element.createdDate | date:'short'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Estado</th>
+      <td mat-cell *matCellDef="let element"> {{ element.status}} </td>
+    </ng-container>
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef>Total</th>
+      <td mat-cell *matCellDef="let element"> {{ element.total | number}} </td>
+    </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator #paginator (page)="handlePageEvent($event)"
+                 [length]="pagination.length"
+                 [pageSize]="pagination.pageSize" [pageSizeOptions]="pagination.pageSizeOptions">
+  </mat-paginator>
+</div>

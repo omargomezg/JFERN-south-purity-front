@@ -7,7 +7,7 @@ import {UserInterface} from "./interface/user.interface";
 import {ConfigurationInterface} from "./interface/configuration.interface";
 import {ProductInterface} from "./interface/product.interface";
 import {PageInterface} from "./interface/page.interface";
-import {PaginationModel} from "./interface/pagination.model";
+import {PaginationModel} from "../../core/model/pagination.model";
 
 @Injectable({
   providedIn: 'root'
@@ -58,12 +58,16 @@ export class CommonAdminService {
 
   getUsers(role: string | undefined, pagination: PaginationModel): Observable<PageInterface<UserInterface>> {
     let queryParams = new HttpParams();
-    queryParams = queryParams.append("page", pagination.page);
-    queryParams = queryParams.append("size", pagination.size);
+    queryParams = queryParams.append("page", pagination.pageIndex);
+    queryParams = queryParams.append("size", pagination.pageSize);
     if (role) {
       queryParams = queryParams.append("role", role);
     }
     return this.httpClient.get<PageInterface<UserInterface>>(`${environment.apiUrl}/user`, {params: queryParams});
+  }
+
+  getnetProcessPending(): Observable<void> {
+    return this.httpClient.patch<void>(`${environment.apiUrl}/payment`, null);
   }
 
 }

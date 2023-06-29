@@ -17,6 +17,8 @@ import { BuildPaymentResultComponent } from './component/build-payment-result/bu
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { GetnetButtonComponent } from './component/getnet-button/getnet-button.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -25,21 +27,23 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     DrumRequestComponent,
     MyOrdersComponent,
     AddPlaceComponent,
-    BuildPaymentResultComponent
+    BuildPaymentResultComponent,
+    GetnetButtonComponent
   ],
-    imports: [
-        CommonModule,
-        ClientModuleRoutingModule,
-        ReactiveFormsModule,
-        MatInputModule,
-        MatSelectModule,
-        MatButtonModule,
-        MatTableModule,
-        MatDialogModule,
-        MatCheckboxModule,
-        MatIconModule,
-        MatCardModule,
-        MatProgressSpinnerModule
-    ]
+  imports: [
+    CommonModule,
+    ClientModuleRoutingModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatTableModule,
+    MatDialogModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule
+  ]
 })
 export class ClientModuleModule { }

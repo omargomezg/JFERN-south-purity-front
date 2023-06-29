@@ -2,6 +2,9 @@ import {Component} from '@angular/core';
 import {CommonClientService} from "../../service/common-client.service";
 import {MyOrderInterface} from "../../service/model";
 import {AuthService} from "../../../core/service/auth.service";
+import {SaleOrderInterface} from "../../../core/model";
+import {PageEvent} from "@angular/material/paginator";
+import {PaginationModel} from "../../../core/model";
 
 @Component({
   selector: 'app-my-requests',
@@ -9,8 +12,9 @@ import {AuthService} from "../../../core/service/auth.service";
   styleUrls: ['./my-orders.component.css']
 })
 export class MyOrdersComponent {
-  displayedColumns: string[] = ['correlative'];
-  dataSource: MyOrderInterface[];
+  displayedColumns: string[] = ['orderNumber', 'createdAt', 'status', 'total'];
+  dataSource: SaleOrderInterface[];
+  pagination: PaginationModel = new PaginationModel()
 
   constructor(private commonClientService: CommonClientService,
               private authService: AuthService) {
@@ -20,7 +24,16 @@ export class MyOrdersComponent {
 
   loadMyOrders(): void {
     let id = this.authService.getProfile()?.id as string;
-    this.commonClientService.getOrders(id).subscribe(orders => this.dataSource = orders);
+    this.commonClientService.getSaleOrder(id, this.pagination).subscribe(orders => {
+      this.dataSource = orders.content
+      this.pagination.length = orders.totalElements;
+    });
   }
 
+  handlePageEvent(pageEvent: PageEvent): void {
+    this.pagination.length = pageEvent.length;
+    this.pagination.pageSize = pageEvent.pageSize;
+    this.pagination.pageIndex = pageEvent.pageIndex;
+    this.loadMyOrders();
+  }
 }
