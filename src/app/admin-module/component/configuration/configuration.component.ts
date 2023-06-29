@@ -35,4 +35,8 @@ export class ConfigurationComponent implements OnInit {
       this.toastr.success('Configuración actualizada');
     });
   }
+
+  callTask(): void {
+    this.commonService.getnetProcessPending().subscribe(() => this.toastr.success('Se ha iniciado el proceso de sincronización'));
+  }
 }
