@@ -66,4 +66,8 @@ export class CommonAdminService {
     return this.httpClient.get<PageInterface<UserInterface>>(`${environment.apiUrl}/user`, {params: queryParams});
   }
 
+  getnetProcessPending(): Observable<void> {
+    return this.httpClient.patch<void>(`${environment.apiUrl}/payment`, null);
+  }
+
 }
