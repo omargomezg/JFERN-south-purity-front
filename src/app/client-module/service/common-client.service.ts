@@ -4,6 +4,7 @@ import {catchError, Observable, of, tap} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {PlaceInterface} from "./model/place.interface";
 import {CartInterface, DrumRequestModel, MyOrderInterface, PaymentResponseModel} from "./model";
+import {PaginationModel} from "../../core/model";
 
 @Injectable({
   providedIn: 'root'
@@ -48,6 +49,14 @@ export class CommonClientService {
 
   getPrice(): Observable<number> {
     return this.httpClient.get<number>(`${environment.apiUrl}/customer/water-drums/price`);
+  }
+
+  getSaleOrder(user: string, pagination: PaginationModel): Observable<any> {
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("userId", user);
+    queryParams = queryParams.append("page", pagination.pageIndex);
+    queryParams = queryParams.append("size", pagination.pageSize);
+    return this.httpClient.get(`${environment.apiUrl}/sale-order`, {params: queryParams});
   }
 
 }

@@ -71,8 +71,14 @@
       </tr>
       </tfoot>
     </table>
-    <div class="text-end">
-      <button mat-stroked-button type="button" color="primary" (click)="sendRequest()">Realizar pago</button>
+    <div class="row justify-content-end">
+      <div class="col-sm-8">
+        <span class="fw-bold">Método de pago</span>
+        <app-getnet-button></app-getnet-button>
+        <div class="text-end">
+          <button mat-raised-button [disabled]="cart.length === 0" type="button" color="primary" (click)="sendRequest()">Realizar pago</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
