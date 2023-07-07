@@ -16,8 +16,11 @@ import {TokenInterceptorService} from "./core/interceptor/token-interceptor.serv
 import {RegisterComponent} from './component/register/register.component';
 import {ToastrModule} from "ngx-toastr";
 import {MatCardModule} from "@angular/material/card";
-import { ResetPwdModalComponent } from './component/reset-pwd-modal/reset-pwd-modal.component';
+import {ResetPwdModalComponent} from './component/reset-pwd-modal/reset-pwd-modal.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {LoadingBarModule} from "@ngx-loading-bar/core";
+import {LoadingBarHttpClientModule} from "@ngx-loading-bar/http-client";
+import { DropDownPlacesComponent } from './component/drop-down-places/drop-down-places.component';
 
 @NgModule({
   declarations: [
@@ -27,27 +30,32 @@ import {MatDialogModule} from "@angular/material/dialog";
     MyProfileComponent,
     HomeComponent,
     RegisterComponent,
-    ResetPwdModalComponent
+    ResetPwdModalComponent,
+    DropDownPlacesComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        FormsModule,
-        ToastrModule.forRoot(),
-        MatCardModule,
-        MatDialogModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    FormsModule,
+    MatDialogModule,
+    LoadingBarHttpClientModule,
+    ToastrModule.forRoot()
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
       multi: true
     }
+  ],
+  exports: [
+    DropDownPlacesComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -2,12 +2,12 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
-import {PlaceInterface} from "./interface/place.interface";
+import {PlaceInterface} from "../../core/model/place.interface";
 import {UserInterface} from "./interface/user.interface";
 import {ConfigurationInterface} from "./interface/configuration.interface";
 import {ProductInterface} from "./interface/product.interface";
 import {PageInterface} from "./interface/page.interface";
-import {PaginationModel} from "../../core/model/pagination.model";
+import {PaginationModel} from "../../core/model";
 
 @Injectable({
   providedIn: 'root'

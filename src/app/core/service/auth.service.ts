@@ -42,7 +42,7 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('profile');
-    this.router.navigate(['/login'])
+    this.router.navigate(['/home'])
   }
 
   register(register: RegisterModel): Observable<any> {

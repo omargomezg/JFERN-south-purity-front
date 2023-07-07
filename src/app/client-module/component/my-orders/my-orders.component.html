@@ -3,11 +3,8 @@
   <p class="text-primary">No encontramos nada!</p>
 </div>
 <p>Acá te presentamos el historia de tus compras.</p>
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" *ngIf="dataSource.length > 0">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+<div class="mat-elevation-z8" *ngIf="dataSource.length > 0">
+  <table mat-table [dataSource]="dataSource">
 
     <!-- Position Column -->
     <ng-container matColumnDef="orderNumber">

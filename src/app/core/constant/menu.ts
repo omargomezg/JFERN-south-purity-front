@@ -1,7 +1,7 @@
 export const menu = [
   {
     "name": "Hacer pedido",
-    "link": "cliente/hacer-pedido",
+    "link": "hacer-pedido",
     "role": ["CUSTOMER"]
   },
   {

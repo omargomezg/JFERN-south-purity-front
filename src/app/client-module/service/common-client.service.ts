@@ -44,7 +44,7 @@ export class CommonClientService {
   }
 
   getWaterDrumsAvailable(place: string): Observable<DrumRequestModel> {
-    return this.httpClient.get<DrumRequestModel>(`${environment.apiUrl}/customer/water-drums/${place}/available`)
+    return this.httpClient.get<DrumRequestModel>(`${environment.apiUrl}/public/water-drums/${place}/available`)
   }
 
   getPrice(): Observable<number> {

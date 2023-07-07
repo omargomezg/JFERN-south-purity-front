@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {FormPlaceComponent} from "../form-place/form-place.component";
 import {CommonAdminService} from "../../service/common-admin.service";
-import {PlaceInterface} from "../../service/interface/place.interface";
+import {PlaceInterface} from "../../../core/model/place.interface";
 
 @Component({
   selector: 'app-place',

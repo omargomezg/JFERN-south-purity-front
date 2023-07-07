@@ -1,19 +1,23 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './component/login/login.component';
 import {MyProfileComponent} from "./component/my-profile/my-profile.component";
 import {AuthGuard} from "./core/auth.guard";
 import {HomeComponent} from "./component/home/home.component";
 import {RegisterComponent} from "./component/register/register.component";
-import {
-  BuildPaymentResultComponent
-} from "./client-module/component/build-payment-result/build-payment-result.component";
+import {DrumRequestComponent} from './component/drum-request/drum-request.component';
+
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled'
+}
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'registrate', component: RegisterComponent},
-  {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+  {path: 'hacer-pedido', component: DrumRequestComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'mi-perfil', component: MyProfileComponent, canActivate: [AuthGuard]},
   {
     path: 'cliente',
@@ -28,7 +32,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
