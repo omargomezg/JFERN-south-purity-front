@@ -1,0 +1,98 @@
+<div class="container-fluid">
+  <h1>Hacer pedido online</h1>
+  <div>
+    <div class="row">
+      <div class="col-sm-4">
+        <app-drop-down-places (place)="selectedPlace($event)"></app-drop-down-places>
+      </div>
+    </div>
+    <br>
+    <ng-container *ngIf="!loading.waterDrums && config.available === 0 && authService.isLogged()">
+      <p class="text-danger">No tenemos bidones disponibles en tu dirección.</p>
+    </ng-container>
+    <ng-container>
+      <p class="text-danger" *ngIf="config.available > 0">Puedes comprar hasta {{config.available}} bidones.</p>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col">
+              <mat-card>
+                <mat-card-header class="text-center">
+                  Recarga
+                </mat-card-header>
+                <img mat-card-image
+                     (click)="addToCart(products.WATER_DRUM, 'Recarga', config.price)"
+                     class="img-fluid btn btn-link"
+                     src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
+                     alt="Agregar recarga">
+                <mat-card-content>
+                  <p class="text-dark text-center">$ {{config.price | number}}</p>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                  <button mat-button color="accent">Agregar</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col">
+              <mat-card>
+                <mat-card-header class="text-center">Recarga + Bidón
+                </mat-card-header>
+                <img mat-card-image
+                     (click)="addToCart(products.WATER_DRUM_WITH_BOTTLE, 'Recarga + Bidón', config.priceWithDrum)"
+                     class="img-fluid btn btn-link"
+                     src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
+                     alt="Agregar Recarga + Bidón">
+                <mat-card-content>
+                  <p class="text-dark text-center">$ {{config.priceWithDrum | number}}</p>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                  <button mat-button color="accent">Agregar</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <p class="fw-bold">Resumen de tu compra</p>
+          <table title="Resumen de tu compra" class="table table-responsive table-bordered">
+            <thead>
+            <tr>
+              <th id="quantity">Cant.</th>
+              <th id="description">Descripción</th>
+              <th id="subtotal">Subtotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of cart">
+              <td>{{item.quantity}}</td>
+              <td>{{item.description}}</td>
+              <td class="text-end">$ {{item.subtotal | number}}</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr class="sutotal-footer">
+              <th id="subtotal-description" colspan="2" class="text-end">Subtotal (IVA incl.)</th>
+              <th id="amount-to-pay" class="text-end">$ {{getSubtotal() | number}}</th>
+            </tr>
+            </tfoot>
+          </table>
+          <div class="row justify-content-end">
+            <div class="col-sm-8">
+              <span class="fw-bold">Método de pago</span>
+              <app-getnet-button></app-getnet-button>
+              <div class="text-end">
+                <button mat-raised-button color="accent" (click)="showLogin()" *ngIf="!authService.isLogged()">Inicia sesion para hacer tu pedido</button>
+                <button mat-raised-button *ngIf="authService.isLogged()" [disabled]="cart.length === 0" type="button" color="primary"
+                        (click)="sendRequest()">Realizar pago
+                </button>
+                <p class="text-reset fst-italic" *ngIf="!authService.isLogged()">Una vez que inicies sesión validaremos el stock disponible enb tu residencia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

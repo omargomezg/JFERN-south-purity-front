@@ -1,0 +1,7 @@
+<div class="mb-3">
+  <label for="selectPlaces" class="form-label">Selecciona uno de nuestros puntos de venta</label>
+  <select id="selectPlaces" class="form-select" [(ngModel)]="selectPlace" (change)="emmitPlace()"
+          aria-label="select places">
+    <option *ngFor="let place of places" [value]="place.id">{{place.address}}</option>
+  </select>
+</div>
