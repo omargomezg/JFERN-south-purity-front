@@ -1,22 +1,23 @@
-<div class="container-fluid">
+<div class="clearfix"></div>
+<div class="container-fluid bg-body">
   <div class="row">
-    <div class="col-sm-2">
+    <div [ngClass]="{'col-sm-2': isLogged, 'd-none': !isLogged}">
       <app-vertical-menu></app-vertical-menu>
     </div>
-    <div class="col-sm-10">
+    <div [ngClass]="{'col-sm-10': isLogged}">
       <h1>Hacer pedido online</h1>
       <div>
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-5">
             <app-drop-down-places (place)="selectedPlace($event)"></app-drop-down-places>
           </div>
         </div>
         <hr/>
-        <ng-container *ngIf="!loading.waterDrums && config.available === 0 && authService.isLogged()">
+        <ng-container *ngIf="!loading.waterDrums && config.available === 0 && isLogged">
           <p class="text-danger">No tenemos bidones disponibles en tu dirección.</p>
         </ng-container>
         <ng-container>
-          <p class="text-danger" *ngIf="config.available > 0">Puedes comprar hasta {{config.available}} bidones.</p>
+          <p class="text-danger" *ngIf="config.available > 0 && isLogged">Puedes comprar hasta {{config.available}} bidones.</p>
           <br>
           <br>
           <div class="row">

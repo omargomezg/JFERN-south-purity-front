@@ -23,6 +23,7 @@ export class DrumRequestComponent implements OnInit {
   loading = {
     waterDrums: true
   }
+  isLogged: boolean;
   products = ProductEnum;
   cart: CartInterface[] = [];
 
@@ -31,6 +32,7 @@ export class DrumRequestComponent implements OnInit {
               public authService: AuthService,
               private router: Router,
               private matDialog: MatDialog) {
+    this.isLogged = this.authService.isLogged();
     this.places = []
   }
 
