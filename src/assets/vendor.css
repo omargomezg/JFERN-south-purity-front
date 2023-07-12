@@ -22525,12 +22525,12 @@ body.page-scrolled .header-fixed {
 }
 
 .hero-background, .hero-background-overlay, .hero-foreground {
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 10
+  z-index: 10;
 }
 
 .hero-foreground {
