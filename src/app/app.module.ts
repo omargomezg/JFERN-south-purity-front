@@ -36,6 +36,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {UsersComponent} from './component/users/users.component';
 import {FormPlaceComponent} from './component/form-place/form-place.component';
 import {ConfigurationComponent} from './component/configuration/configuration.component';
+import {DrumsAvailableComponent} from './component/drums-available/drums-available.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {ConfigurationComponent} from './component/configuration/configuration.co
     ResetPwdModalComponent,
     MyOrdersComponent,
     DrumRequestComponent,
+    DrumsAvailableComponent,
     ClientsComponent,
     ClientFormComponent,
     UsersComponent,

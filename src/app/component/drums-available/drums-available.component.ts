@@ -1,5 +1,4 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {UserInterface} from "../../core/model/user.interface";
 import {CommonAdminService} from "../../core/service/common-admin.service";
 import {ProductInterface} from "../../core/model/product.interface";
 

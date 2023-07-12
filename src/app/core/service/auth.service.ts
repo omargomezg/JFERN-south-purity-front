@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {Router} from "@angular/router";
 import {RegisterModel} from "../model";
@@ -21,9 +21,12 @@ interface ProfileModel {
   providedIn: 'root'
 })
 export class AuthService {
+  private statusSession = new BehaviorSubject<boolean>(false);
+  public statusSession$ = this.statusSession.asObservable();
 
   constructor(private httpClient: HttpClient,
               private router: Router) {
+    this.isLogged();
   }
 
   authorization(email: string | undefined | null, password: string | undefined | null): Observable<AuthorizationModel> {
@@ -36,12 +39,14 @@ export class AuthService {
   }
 
   isLogged(): boolean {
+    this.statusSession.next(!!localStorage.getItem('token'));
     return !!localStorage.getItem('token');
   }
 
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('profile');
+    this.statusSession.next(false);
     this.router.navigate(['/home'])
   }
 

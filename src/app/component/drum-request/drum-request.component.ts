@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {CommonClientService} from "../../client-module/service/common-client.service";
 import {MatDialog} from "@angular/material/dialog";
 import {AddPlaceComponent} from "../../client-module/component/add-place/add-place.component";
@@ -17,13 +17,14 @@ export enum ProductEnum {
   templateUrl: './drum-request.component.html',
   styleUrls: ['./drum-request.component.css']
 })
-export class DrumRequestComponent implements OnInit {
+export class DrumRequestComponent implements OnInit, OnChanges {
   config = new DrumRequestModel();
   places: PlaceInterface[];
   loading = {
     waterDrums: true
   }
   isLogged: boolean;
+  hasBottle: boolean = false;
   products = ProductEnum;
   cart: CartInterface[] = [];
 
@@ -123,5 +124,9 @@ export class DrumRequestComponent implements OnInit {
 
   delete(index: number): void {
     this.cart.splice(index, 1);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.hasBottle = !this.loading.waterDrums && this.config.available === 0 && this.authService.isLogged();
   }
 }

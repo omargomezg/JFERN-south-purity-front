@@ -101,7 +101,8 @@
                     <button mat-raised-button color="accent" (click)="showLogin()" *ngIf="!authService.isLogged()">
                       Inicia sesion para hacer tu pedido
                     </button>
-                    <button mat-raised-button *ngIf="authService.isLogged()" [disabled]="cart.length === 0"
+                    <button mat-raised-button *ngIf="authService.isLogged()"
+                            [disabled]="cart.length === 0 && !hasBottle"
                             type="button" color="primary"
                             (click)="sendRequest()">Realizar pago
                     </button>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AuthService} from '../../core/service/auth.service';
 import {Router} from '@angular/router';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent {
   clientName?: string;
+  subscription?: Subscription;
   isAuthenticated?: boolean;
 
   constructor(private router: Router, public authService: AuthService) {
@@ -16,10 +18,13 @@ export class HeaderComponent {
   }
 
   checkSession(): void {
-    this.isAuthenticated = this.authService.isLogged()
-    if (this.isAuthenticated) {
-      this.clientName = this.authService.getProfile()?.fullName as string;
-    }
+    let profile = this.authService.getProfile();
+    this.subscription = this.authService.statusSession$
+      .subscribe((status: boolean) => this.isAuthenticated = status);
+  }
+
+  getName(): string {
+    return this.authService.getProfile()?.fullName as string;
   }
 
   action(): void {
