@@ -1,5 +1,4 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {PlaceService} from '../../core/service/place.service';
 import {PlaceInterface} from '../../core/model';
 import {PublicService} from '../../core/service/public.service';
 
@@ -8,7 +7,7 @@ import {PublicService} from '../../core/service/public.service';
   templateUrl: './drop-down-places.component.html',
   styleUrls: ['./drop-down-places.component.css']
 })
-export class DropDownPlacesComponent implements OnInit{
+export class DropDownPlacesComponent implements OnInit {
   @Output() place = new EventEmitter<string>;
 
   places: PlaceInterface[] = [];

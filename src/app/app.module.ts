@@ -18,9 +18,24 @@ import {ToastrModule} from "ngx-toastr";
 import {MatCardModule} from "@angular/material/card";
 import {ResetPwdModalComponent} from './component/reset-pwd-modal/reset-pwd-modal.component';
 import {MatDialogModule} from "@angular/material/dialog";
-import {LoadingBarModule} from "@ngx-loading-bar/core";
 import {LoadingBarHttpClientModule} from "@ngx-loading-bar/http-client";
-import { DropDownPlacesComponent } from './component/drop-down-places/drop-down-places.component';
+import {ContactComponent} from './component/contact/contact.component';
+import {MyOrdersComponent} from './component/my-orders/my-orders.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+import {DrumRequestComponent} from './component/drum-request/drum-request.component';
+import {GetnetButtonComponent} from './component/getnet-button/getnet-button.component';
+import {DropDownPlacesComponent} from './component/drop-down-places/drop-down-places.component';
+import {VerticalMenuComponent} from './component/vertical-menu/vertical-menu.component';
+import {HeaderComponent} from './component/header/header.component';
+import {DashboardComponent} from './component/dashboard/dashboard.component';
+import {PlaceComponent} from './component/place/place.component';
+import {ClientsComponent} from './component/clients/clients.component';
+import {ClientFormComponent} from './component/client-form/client-form.component';
+import {MatSelectModule} from '@angular/material/select';
+import {UsersComponent} from './component/users/users.component';
+import {FormPlaceComponent} from './component/form-place/form-place.component';
+import {ConfigurationComponent} from './component/configuration/configuration.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +46,20 @@ import { DropDownPlacesComponent } from './component/drop-down-places/drop-down-
     HomeComponent,
     RegisterComponent,
     ResetPwdModalComponent,
-    DropDownPlacesComponent
+    MyOrdersComponent,
+    DrumRequestComponent,
+    ClientsComponent,
+    ClientFormComponent,
+    UsersComponent,
+    ConfigurationComponent,
+    GetnetButtonComponent,
+    DropDownPlacesComponent,
+    ContactComponent,
+    VerticalMenuComponent,
+    HeaderComponent,
+    FormPlaceComponent,
+    PlaceComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +73,10 @@ import { DropDownPlacesComponent } from './component/drop-down-places/drop-down-
     FormsModule,
     MatDialogModule,
     LoadingBarHttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatPaginatorModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     {
@@ -55,7 +86,7 @@ import { DropDownPlacesComponent } from './component/drop-down-places/drop-down-
     }
   ],
   exports: [
-    DropDownPlacesComponent
+    VerticalMenuComponent
   ],
   bootstrap: [AppComponent]
 })

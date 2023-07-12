@@ -118,4 +118,8 @@ export class DrumRequestComponent implements OnInit {
   showLogin(): void {
     this.router.navigateByUrl('/login');
   }
+
+  delete(index: number): void {
+    this.cart.splice(index, 1);
+  }
 }

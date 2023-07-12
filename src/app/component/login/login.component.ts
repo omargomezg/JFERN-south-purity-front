@@ -39,8 +39,21 @@ export class LoginComponent implements OnInit {
     this.authService.authorization(login.email, login.password).subscribe(tokenResult => {
       localStorage.setItem('profile', JSON.stringify(tokenResult.profile));
       localStorage.setItem('token', tokenResult.token);
-      this.router.navigate(['/home']);
+      this.redirectToProfileHome(tokenResult.profile.role);
     });
+  }
+
+  redirectToProfileHome(role: string): void {
+    if (role === 'ADMINISTRATOR') {
+      this.router.navigate(['/dashboard']);
+    } else if (role === 'CUSTOMER') {
+      let cart = sessionStorage.getItem('cart');
+      if (cart != null) {
+        this.router.navigate(['/hacer-pedido']);
+      } else {
+        this.router.navigate(['/mis-pedidos']);
+      }
+    }
   }
 
   setRememberMe(login: LoginModel): void {

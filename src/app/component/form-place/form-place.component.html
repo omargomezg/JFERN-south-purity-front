@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>{{data ? data.address : 'Crear'}}</h1>
+<form [formGroup]="placeForm" novalidate (ngSubmit)="save()" class="base-form">
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Ciudad</mat-label>
+      <input matInput formControlName="country" cdkFocusInitial>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Dirección</mat-label>
+      <input matInput formControlName="address">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Alerta de stock</mat-label>
+      <input type="number" matInput formControlName="availableStock">
+      <mat-hint>Inidica el stock mínimo a tener en el punto de venta</mat-hint>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <div class="text-end">
+      <button mat-button [mat-dialog-close]="data">Cerrar</button>
+      <button mat-raised-button [disabled]="!placeForm.valid" type="submit">Guardar</button>
+    </div>
+  </div>
+</form>
