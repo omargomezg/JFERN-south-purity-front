@@ -3,6 +3,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {FormPlaceComponent} from "../form-place/form-place.component";
 import {CommonAdminService} from "../../core/service/common-admin.service";
 import {PlaceInterface} from "../../core/model";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-place',
@@ -11,10 +12,10 @@ import {PlaceInterface} from "../../core/model";
 })
 export class PlaceComponent {
   displayedColumns: string[] = ['city', 'name', 'options'];
-  // @ts-ignore
-  dataSource: PlaceInterface[];
+  dataSource: PlaceInterface[] = [];
 
-  constructor(private dialog: MatDialog, private commonAdminService: CommonAdminService) {
+  constructor(private dialog: MatDialog, private commonAdminService: CommonAdminService,
+              private router: Router) {
     this.loadPlaces();
   }
 
@@ -38,5 +39,9 @@ export class PlaceComponent {
     dialogRef.afterClosed().subscribe(result => {
       this.loadPlaces();
     });
+  }
+
+  addBottles(): void {
+    this.router.navigateByUrl('/agregar-bidones');
   }
 }

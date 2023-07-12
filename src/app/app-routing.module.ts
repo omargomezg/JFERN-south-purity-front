@@ -12,6 +12,10 @@ import {PlaceComponent} from './component/place/place.component';
 import {ClientsComponent} from './component/clients/clients.component';
 import {UsersComponent} from './component/users/users.component';
 import {ConfigurationComponent} from './component/configuration/configuration.component';
+import {DrumsComponent} from './component/drums/drums.component';
+import {
+  BuildPaymentResultComponent
+} from './client-module/component/build-payment-result/build-payment-result.component';
 
 const routerOptions: ExtraOptions = {
   useHash: false,
@@ -26,11 +30,13 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'home', component: HomeComponent},
   {path: 'puntos-de-venta', component: PlaceComponent},
+  {path: 'agregar-bidones', component: DrumsComponent, canActivate: [AuthGuard]},
   {path: 'clientes', component: ClientsComponent, canActivate: [AuthGuard]},
   {path: 'usuarios', component: UsersComponent, canActivate: [AuthGuard]},
   {path: 'configuracion', component: ConfigurationComponent, canActivate: [AuthGuard]},
   {path: 'mis-datos', component: MyProfileComponent, canActivate: [AuthGuard]},
   {path: 'mis-pedidos', component: MyOrdersComponent, canActivate: [AuthGuard]},
+  {path: 'payment-result/:reference', component: BuildPaymentResultComponent, canActivate: [AuthGuard]},
 
   {
     path: 'cliente',

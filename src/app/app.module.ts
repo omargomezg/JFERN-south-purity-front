@@ -37,6 +37,7 @@ import {UsersComponent} from './component/users/users.component';
 import {FormPlaceComponent} from './component/form-place/form-place.component';
 import {ConfigurationComponent} from './component/configuration/configuration.component';
 import {DrumsAvailableComponent} from './component/drums-available/drums-available.component';
+import {DrumsComponent} from './component/drums/drums.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import {DrumsAvailableComponent} from './component/drums-available/drums-availab
     MyOrdersComponent,
     DrumRequestComponent,
     DrumsAvailableComponent,
+    DrumsComponent,
     ClientsComponent,
     ClientFormComponent,
     UsersComponent,

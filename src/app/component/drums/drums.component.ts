@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CommonAdminService} from "../../core/service/common-admin.service";
-import {PlaceInterface} from "../../core/model/place.interface";
+import {PlaceInterface} from "../../core/model";
 import {FormBuilder, Validators} from "@angular/forms";
 import {ProductInterface} from "../../core/model/product.interface";
 import {ToastrService} from "ngx-toastr";
