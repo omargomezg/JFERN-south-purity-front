@@ -24,7 +24,7 @@ export class DrumRequestComponent implements OnInit {
     waterDrums: true
   }
   isLogged: boolean;
-  hasBottle: boolean = false;
+  selectedPlace?: string;
   products = ProductEnum;
   cart: CartInterface[] = [];
 
@@ -38,7 +38,7 @@ export class DrumRequestComponent implements OnInit {
   }
 
   sendRequest(): void {
-    this.commonService.createSaleOrder(this.places[0].id, this.cart as []).subscribe(response => {
+    this.commonService.createSaleOrder(this.selectedPlace as string, this.cart as []).subscribe(response => {
       sessionStorage.removeItem('cart');
       window.open(response.url, "_self");
     });
@@ -49,7 +49,7 @@ export class DrumRequestComponent implements OnInit {
     if(sessionStorage.getItem('cart') != null) {
       this.cart = cart ? JSON.parse(cart) : [];
     }
-    this.loadPlaces();
+    //this.loadPlaces();
   }
 
   loadWaterDrumsAvailable(place: string): void {
@@ -75,7 +75,8 @@ export class DrumRequestComponent implements OnInit {
     });
   }
 
-  selectedPlace($event: string) {
+  setPlace($event: string) {
+    this.selectedPlace = $event;
     this.loadWaterDrumsAvailable($event);
   }
 
