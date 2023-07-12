@@ -7,6 +7,12 @@
     </div>
     <p>Un momento... estamos validando tu pago.</p>
   </ng-container>
+  <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'REJECTED'">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display" fontIcon="error"></mat-icon>
+    <p>Tu pago online fue rechazado</p>
+    <a [routerLink]="['/home']" mat-stroked-button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back"></mat-icon>Home</a>
+  </ng-container>
   <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'APPROVED'">
     <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display" fontIcon="done"></mat-icon>
     <div class="clearfix"></div>

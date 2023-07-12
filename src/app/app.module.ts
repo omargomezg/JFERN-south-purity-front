@@ -38,6 +38,8 @@ import {FormPlaceComponent} from './component/form-place/form-place.component';
 import {ConfigurationComponent} from './component/configuration/configuration.component';
 import {DrumsAvailableComponent} from './component/drums-available/drums-available.component';
 import {DrumsComponent} from './component/drums/drums.component';
+import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import {DrumsComponent} from './component/drums/drums.component';
     FooterComponent,
     MyProfileComponent,
     HomeComponent,
+    BuildPaymentResultComponent,
     RegisterComponent,
     ResetPwdModalComponent,
     MyOrdersComponent,
@@ -80,7 +83,8 @@ import {DrumsComponent} from './component/drums/drums.component';
     ToastrModule.forRoot(),
     MatPaginatorModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule
   ],
   providers: [
     {

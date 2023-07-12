@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {CommonClientService} from "../../service/common-client.service";
-import {PaymentResponseModel} from "../../service/model";
+import {CommonClientService} from "../../client-module/service/common-client.service";
+import {PaymentResponseModel} from "../../client-module/service/model";
 
 @Component({
   selector: 'app-build-payment-result',

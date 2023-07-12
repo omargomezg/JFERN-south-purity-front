@@ -15,7 +15,7 @@ import {ConfigurationComponent} from './component/configuration/configuration.co
 import {DrumsComponent} from './component/drums/drums.component';
 import {
   BuildPaymentResultComponent
-} from './client-module/component/build-payment-result/build-payment-result.component';
+} from './component/build-payment-result/build-payment-result.component';
 
 const routerOptions: ExtraOptions = {
   useHash: false,
