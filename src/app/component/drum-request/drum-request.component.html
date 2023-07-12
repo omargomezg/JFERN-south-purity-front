@@ -36,7 +36,10 @@
                       <p class="text-dark text-center">$ {{config.price | number}}</p>
                     </mat-card-content>
                     <mat-card-actions align="end">
-                      <button mat-button color="accent">Agregar</button>
+                      <button mat-button
+                              (click)="addToCart(products.WATER_DRUM, 'Recarga', config.price)"
+                              color="accent">Agregar
+                      </button>
                     </mat-card-actions>
                   </mat-card>
                 </div>
@@ -53,7 +56,11 @@
                       <p class="text-dark text-center">$ {{config.priceWithDrum | number}}</p>
                     </mat-card-content>
                     <mat-card-actions align="end">
-                      <button mat-button color="accent">Agregar</button>
+                      <button mat-button
+                              (click)="addToCart(products.WATER_DRUM_WITH_BOTTLE, 'Recarga + Bidón', config.priceWithDrum)"
+                              color="accent">
+                        Agregar
+                      </button>
                     </mat-card-actions>
                   </mat-card>
                 </div>
