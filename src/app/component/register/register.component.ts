@@ -15,6 +15,9 @@ export class RegisterComponent {
       rut: [''],
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      city: ['', Validators.required],
+      address: ['', Validators.required],
+      telephone: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(30)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(30)]]
     },
@@ -34,9 +37,15 @@ export class RegisterComponent {
 
   submit(): void {
     let register = this.registerForm.value as RegisterModel;
+    register.role = 'CUSTOMER';
     this.authService.register(register).subscribe(() => {
       this.toastr.success('Genial, ya tienes tu cuenta.');
-      this.router.navigate(['/']);
+      let cart = localStorage.getItem('cart');
+      if(cart != null) {
+        this.router.navigate(['/hacer-pedido']);
+      } else {
+        this.router.navigate(['/mis-pedidos']);
+      }
     })
   }
 

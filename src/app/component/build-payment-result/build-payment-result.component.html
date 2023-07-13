@@ -1,0 +1,33 @@
+<div class="text-center">
+  <ng-container *ngIf="gettingPaymentStatus">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <p>Un momento... estamos validando tu pago.</p>
+  </ng-container>
+  <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'REJECTED'">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display" fontIcon="error"></mat-icon>
+    <p>Tu pago online fue rechazado</p>
+    <a [routerLink]="['/home']" mat-stroked-button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back"></mat-icon>Home</a>
+  </ng-container>
+  <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'APPROVED'">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display" fontIcon="done"></mat-icon>
+    <div class="clearfix"></div>
+    <h3 class="display-3 title">Su compra ha sido exitosa!</h3>
+    <p>Tu pago online fue exitoso</p>
+    <p>Ya puedes hacer el retiro de tus bidones:</p>
+    <ul>
+      <li *ngFor="let product of paymentResponse.products">Bidón Nº {{product.key}} - clave {{product.value}}</li>
+    </ul>
+  </ng-container>
+  <ng-container  *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'NOT_EXISTS'">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display" fontIcon="error"></mat-icon>
+    <p>No hemos encontrado información relacionada al pago.</p>
+    <a [routerLink]="['/home']" mat-stroked-button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back"></mat-icon>Home</a>
+  </ng-container>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <app-vertical-menu source="configurations"></app-vertical-menu>
+    </div>
+    <div class="col-sm-10 border-start">
+      <h1>Configuraciones</h1>
+      <form (ngSubmit)="submit()" [formGroup]="configurationForm" novalidate class="base-form">
+        <mat-form-field appearance="fill" class="base-full-width">
+          <mat-label>Valor de la recarga</mat-label>
+          <input type="number" matInput formControlName="price">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="base-full-width">
+          <mat-label>Valor del bidón + recarga</mat-label>
+          <input type="number" matInput formControlName="priceWithDrum">
+        </mat-form-field>
+        <div class="text-end">
+          <button type="button" mat-button>Cancelar</button>
+          <button type="submit" mat-raised-button class="m-1" [disabled]="!configurationForm.valid" color="primary">
+            Guardar
+          </button>
+        </div>
+      </form>
+      <h2>GetNet</h2>
+      <p>Si existen operaciones pendientes, puedes hacer una actualización de aquellas pendientes</p>
+      <button type="button" mat-raised-button (click)="callTask()">Procesar operaciones pendientes</button>
+    </div>
+  </div>
+</div>
