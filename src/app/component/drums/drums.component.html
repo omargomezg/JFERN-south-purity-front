@@ -3,8 +3,13 @@
     <app-vertical-menu source="places"></app-vertical-menu>
   </div>
   <div class="col-sm-10 border-start">
-    <h1>Puntos de venta > Registro de Bidones</h1>
-    <div class="row">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/puntos-de-venta']">Puntos de venta</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Registro de Bidones</li>
+      </ol>
+    </nav>
+    <div class="row mt-6">
       <div class="col-sm-8">
         <form [formGroup]="formDrum" novalidate (ngSubmit)="saveDrum()" class="base-form">
           <mat-form-field appearance="fill" class="base-full-width">

@@ -16,7 +16,7 @@
         </button>
       </div>
       <div class="row align-items-center mt-14 mt-md-23 mt-lg-25">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4" *ngIf="false">
           <div class="card border-0 bg-transparent mb-10 mb-md-0">
             <div class="card-body p-0 text-center">
               <div class="card-icon text-white mb-6"><i class="material-icons">location_on</i></div>
@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4" *ngIf="false">
           <div class="card border-0 bg-transparent">
             <div class="card-body p-0 text-center">
               <div class="card-icon text-white mb-6"><i class="material-icons">verified_user</i></div>
@@ -168,7 +168,7 @@
         <small *ngIf="false"
                class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
           What we do the best</small>
-        <h1>Quienes somos</h1>
+        <h1>Quiénes somos</h1>
       </div>
       <!--<div class="d-none d-md-block">
         <div class="btn-group">
@@ -183,8 +183,9 @@
     </div>
     <div class="clearfix"></div>
     <div>
-      <p>Hola, somos pureza del sur, un nuevo concepto en la venta de agua purificada para tu hogar, nuestro revolucionario método, te permitirá tener agua purificada en botellones de 20 litros las 24 horas del día y los 365 días del año, y a solo un paso de tu departamento, o de tu casa.</p>
-      <p>Es importante que sepas que nuestro método de venta está pensado para edificios y condominios.</p>
+      <p class="text-center">Hola, somos pureza del sur, un nuevo concepto en la venta de agua purificada para tu hogar, nuestro revolucionario método, te permitirá tener agua purificada en botellones de 20 litros las 24 horas del día y los 365 días del año, y a solo un paso de tu departamento, o de tu casa.</p>
+      <p class="text-center">Es importante que sepas que nuestro método de venta está pensado para edificios y condominios.</p>
+      <p class="text-info text-center">Si vives en uno de ellos y no tienen nuestros productos no dudes en contactarnos.</p>
     </div>
     <div class="shuffle-grid shuffle-grid-gap-14 shuffle-grid-cols-1 shuffle-grid-cols-lg-2 mt-14 shuffle d-none"
          id="services-grid"
@@ -294,7 +295,7 @@
     </div>
   </div>
 </section>
-<section class="section" id="advantages">
+<section class="section" id="ventajas">
   <div class="section-content text-center container"><small
     class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
     &nbsp;
@@ -303,7 +304,7 @@
   </div>
   <div class="sds-block mt-14 mt-xl-20">
     <div class="sds-block-background sds-block-background-right"
-         style="background-image: url('https://plus.unsplash.com/premium_photo-1680790392369-ba9ae9d348db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFydHklMjBkcmlua3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80')">
+         style="background-image: url('https://imgs.elpais.com.uy/dims4/default/58b1735/2147483647/strip/true/crop/1920x1320+0+26/resize/2880x1980!/quality/90/?url=https%3A%2F%2Fel-pais-uruguay-production-web.s3.amazonaws.com%2Fbrightspot%2Fuploads%2F2021%2F11%2F03%2F61829c01894d1.jpeg')">
     </div>
     <div class="sds-block-foreground sds-block-foreground-left text-center text-xl-left">
       <ul class="list-unstyled mb-12">
@@ -590,7 +591,7 @@
     </div>
   </div>
 </section>
-<section id="contacts">
+<section id="contacto">
   <app-contact></app-contact>
   <div class="container py-19 py-lg-20 d-none">
     <div class="row vertical-divider-light">

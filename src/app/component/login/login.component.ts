@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     password: ['', Validators.required],
     rememberMe: false
   });
+  failedLogin = false;
 
   constructor(private authService: AuthService, private router: Router,
               private formBuilder: FormBuilder) {
@@ -40,6 +41,8 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('profile', JSON.stringify(tokenResult.profile));
       localStorage.setItem('token', tokenResult.token);
       this.redirectToProfileHome(tokenResult.profile.role);
+    }, error => {
+      this.failedLogin = true;
     });
   }
 

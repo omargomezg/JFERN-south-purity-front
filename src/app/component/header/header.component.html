@@ -57,7 +57,8 @@
         <nav class="navbar navbar-expand-lg navbar-light w-100" id="header-navbar">
           <a class="navbar-brand"
              [routerLink]="['/home']">
-            <img src="/assets/full_logo.svg" width="200">
+            <img alt="Pureza del Sur" src="/assets/full_logo.svg" height="90" width="190" class=""
+                 style="overflow: hidden">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse"
                   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -72,16 +73,20 @@
                    (click)="action()">{{isAuthenticated ? 'Hola ' + getName() : 'Iniciar sesión'}}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" data-toggle="smooth-scroll"
+                <a class="nav-link text-uppercase"
+                   [ngClass]="isMenuActive('como-comprar') ? 'active' : ''"
+                   data-toggle="smooth-scroll"
                    href="home/#como-comprar">Como comprar?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase active" data-toggle="smooth-scroll"
+                <a class="nav-link text-uppercase" [ngClass]="isMenuActive('quienes-somos') ? 'active' : ''" data-toggle="smooth-scroll"
                    href="home/#quienes-somos">Quiénes somos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" data-toggle="smooth-scroll"
-                   href="home/#advantages">Ventajas</a>
+                <a class="nav-link text-uppercase"
+                   [ngClass]="isMenuActive('ventajas') ? 'active' : ''"
+                   data-toggle="smooth-scroll"
+                   href="home/#ventajas">Ventajas</a>
               </li>
               <li class="nav-item d-none">
                 <a class="nav-link text-uppercase" data-toggle="smooth-scroll"
@@ -93,8 +98,10 @@
                    href="https://demo.htmlhunters.com/profi/contractor.html#testimonials">Testimonials</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" data-toggle="smooth-scroll"
-                   href="home/#contacts">Contacto</a>
+                <a class="nav-link text-uppercase"
+                   [ngClass]="isMenuActive('contacto') ? 'active' : ''"
+                   data-toggle="smooth-scroll"
+                   href="home/#contacto">Contacto</a>
               </li>
             </ul>
           </div>

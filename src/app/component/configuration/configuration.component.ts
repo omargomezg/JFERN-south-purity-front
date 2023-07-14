@@ -13,7 +13,8 @@ export class ConfigurationComponent implements OnInit {
   configuration = {} as ConfigurationInterface;
   configurationForm = this.formBuilder.group({
     price: [0, [Validators.required]],
-    priceWithDrum: [0, [Validators.required]]
+    priceWithDrum: [0, [Validators.required]],
+    returnUrl: ['http://localhost:4200', [Validators.required]],
   });
 
   constructor(private formBuilder: FormBuilder, private commonService: CommonAdminService,

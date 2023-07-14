@@ -16,6 +16,7 @@ import {DrumsComponent} from './component/drums/drums.component';
 import {
   BuildPaymentResultComponent
 } from './component/build-payment-result/build-payment-result.component';
+import {ClientFormComponent} from './component/client-form/client-form.component';
 
 const routerOptions: ExtraOptions = {
   useHash: false,
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'puntos-de-venta', component: PlaceComponent},
   {path: 'agregar-bidones', component: DrumsComponent, canActivate: [AuthGuard]},
   {path: 'clientes', component: ClientsComponent, canActivate: [AuthGuard]},
+  {path: 'crear-cliente', component: ClientFormComponent, canActivate: [AuthGuard]},
   {path: 'usuarios', component: UsersComponent, canActivate: [AuthGuard]},
   {path: 'configuracion', component: ConfigurationComponent, canActivate: [AuthGuard]},
   {path: 'mis-datos', component: MyProfileComponent, canActivate: [AuthGuard]},
