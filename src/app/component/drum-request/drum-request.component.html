@@ -1,5 +1,5 @@
 <div class="clearfix"></div>
-<div class="container-fluid bg-body">
+<div class="container-lg bg-body">
   <div class="row">
     <div [ngClass]="{'col-sm-2': isLogged, 'd-none': !isLogged}">
       <app-vertical-menu></app-vertical-menu>
@@ -7,20 +7,18 @@
     <div [ngClass]="{'col-sm-10': isLogged}">
       <h1>Hacer pedido online</h1>
       <div>
-        <div class="row">
+        <div class="row border-bottom">
           <div class="col-sm-5">
             <app-drop-down-places (place)="setPlace($event)"></app-drop-down-places>
           </div>
         </div>
-        <hr/>
         <ng-container *ngIf="!loading.waterDrums && config.available === 0 && isLogged">
           <p class="text-danger">No tenemos bidones disponibles en tu dirección.</p>
         </ng-container>
         <ng-container>
           <p class="text-danger" *ngIf="config.available > 0 && isLogged">Puedes comprar hasta {{config.available}} bidones.</p>
-          <br>
-          <br>
-          <div class="row">
+          <p class="text-info mb-10">*<strong>Recuerda!</strong> Una vez solicitado el pago tienes <b>15 minutos</b> para completar la transacción. Despues se liberarán los productos.</p>
+          <div class="row" [ngClass]="{'opacity-50': selectedPlace === ''}">
             <div class="col-sm-7">
               <div class="row">
                 <div class="col">
@@ -78,7 +76,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let item of cart; let i = index ">
+                <tr *ngFor="let item of cart.items; let i = index ">
                   <td>{{item.quantity}}</td>
                   <td>{{item.description}}</td>
                   <td class="text-end">$ {{item.subtotal | number}}<br>
@@ -102,7 +100,7 @@
                       Inicia sesión para hacer tu pedido
                     </button>
                     <button mat-raised-button *ngIf="authService.isLogged()"
-                            [disabled]="cart.length === 0 || cart.length > this.config.available"
+                            [disabled]="cart.items.length === 0 || cart.items.length > this.config.available"
                             type="button" color="primary"
                             (click)="sendRequest()">Realizar pago
                     </button>
@@ -113,7 +111,6 @@
               </div>
             </div>
           </div>
-          <p>*Una vez solicitado el pago tienes 15 minutos para completar la transacción. Despues se liberarán los productos.</p>
         </ng-container>
       </div>
     </div>

@@ -3,7 +3,7 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 import {catchError, Observable, of, tap} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {PlaceInterface} from "./model/place.interface";
-import {CartInterface, DrumRequestModel, MyOrderInterface, PaymentResponseModel} from "./model";
+import {CartModel, DrumRequestModel, MyOrderInterface, PaymentResponseModel} from "./model";
 import {PaginationModel} from "../../core/model";
 
 @Injectable({
@@ -21,9 +21,9 @@ export class CommonClientService {
     return this.httpClient.post(`${environment.apiUrl}/customer/place`, place);
   }
 
-  createSaleOrder(address: string, cart: CartInterface[]): Observable<PaymentResponseModel> {
+  createSaleOrder(cart: CartModel): Observable<PaymentResponseModel> {
     let queryParams = new HttpParams();
-    queryParams = queryParams.append("address", address);
+    queryParams = queryParams.append("address", cart.place);
     return this.httpClient.post<PaymentResponseModel>(`${environment.apiUrl}/payment`, cart, {params: queryParams});
   }
 
