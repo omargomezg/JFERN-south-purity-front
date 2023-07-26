@@ -17,6 +17,7 @@ import {
   BuildPaymentResultComponent
 } from './component/build-payment-result/build-payment-result.component';
 import {ClientFormComponent} from './component/client-form/client-form.component';
+import {ResetPwdWithCodeComponent} from "./component/reset-pwd-with-code/reset-pwd-with-code.component";
 
 const routerOptions: ExtraOptions = {
   useHash: false,
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'crear-cliente', component: ClientFormComponent, canActivate: [AuthGuard]},
   {path: 'usuarios', component: UsersComponent, canActivate: [AuthGuard]},
   {path: 'configuracion', component: ConfigurationComponent, canActivate: [AuthGuard]},
+  {path: 'reset-password/:email', component: ResetPwdWithCodeComponent},
   {path: 'mis-datos', component: MyProfileComponent, canActivate: [AuthGuard]},
   {path: 'mis-pedidos', component: MyOrdersComponent, canActivate: [AuthGuard]},
   {path: 'payment-result/:reference', component: BuildPaymentResultComponent, canActivate: [AuthGuard]},

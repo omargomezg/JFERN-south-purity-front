@@ -4,6 +4,7 @@ import {BehaviorSubject, Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {Router} from "@angular/router";
 import {RegisterModel} from "../model";
+import {UserInterface} from "../model/user.interface";
 
 interface AuthorizationModel {
   token: string;
@@ -60,6 +61,14 @@ export class AuthService {
 
   updateProfile(profile: any): Observable<any> {
     return this.httpClient.put<any>(`${environment.apiUrl}/profile`, profile);
+  }
+
+  restoreAccount(user: UserInterface): Observable<UserInterface>{
+    return this.httpClient.post<UserInterface>(`${environment.apiUrl}/auth/restore`, user);
+  }
+
+  restoreAccountWithCode(user: UserInterface): Observable<UserInterface>{
+    return this.httpClient.post<UserInterface>(`${environment.apiUrl}/auth/restore/${user.passwordReset.code}`, user);
   }
 
   updatePassword(profile: any): Observable<any> {

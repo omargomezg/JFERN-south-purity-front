@@ -22,7 +22,8 @@
       </div>
       <p class="text-danger" *ngIf="failedLogin">Correo o contraseña incorrecta</p>
       <button class="w-100 btn btn-lg btn-primary" [disabled]="!loginForm.valid" type="submit">Iniciar sesión</button>
-      <a [routerLink]="['/registrate']" mat-button>Registrate</a>
+      <a [routerLink]="['/registrate']" mat-button>Registrate</a> |
+      <button (click)="restorePassword()" type="button" mat-button>Recuperar contraseña</button>
     </form>
   </div>
 </div>
