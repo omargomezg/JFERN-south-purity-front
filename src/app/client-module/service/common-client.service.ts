@@ -24,7 +24,7 @@ export class CommonClientService {
   createSaleOrder(cart: CartModel): Observable<PaymentResponseModel> {
     let queryParams = new HttpParams();
     queryParams = queryParams.append("address", cart.place);
-    return this.httpClient.post<PaymentResponseModel>(`${environment.apiUrl}/payment`, cart, {params: queryParams});
+    return this.httpClient.post<PaymentResponseModel>(`${environment.apiUrl}/payment`, cart.items, {params: queryParams});
   }
 
   getStatusSaleOrder(orderId: string): Observable<PaymentResponseModel> {

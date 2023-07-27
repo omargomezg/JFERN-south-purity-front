@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {FormBuilder, Validators} from "@angular/forms";
 import {matchValidator} from "../../core/match-validator";
 import {ToastrService} from "ngx-toastr";
@@ -30,7 +30,8 @@ export class ResetPwdWithCodeComponent implements OnInit {
   });
 
   constructor(private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder,
-              private toastr: ToastrService, private authService: AuthService) {
+              private toastr: ToastrService, private authService: AuthService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -50,7 +51,14 @@ export class ResetPwdWithCodeComponent implements OnInit {
       }
     };
     this.authService.restoreAccountWithCode(user as UserInterface).subscribe(result =>{
-      console.log(result);
+      this.toastr.success('Su contraseña ha sido actualizada.')
+      this.router.navigateByUrl('/login');
+    }, error =>{
+      this.toastr.info('Oops, el código podría haber ha expirado!');
     });
+  }
+
+  cancel() {
+    this.router.navigateByUrl('/login');
   }
 }
