@@ -19,7 +19,14 @@ export class DropDownPlacesComponent implements OnInit {
   ngOnInit(): void {
     this.publicService.getPlaces().subscribe(places => {
       this.places = places
-      this.places.push({id: '', country: '', address: 'Seleccione un punto de venta', availableStock: 0, padlocks: 0});
+      this.places.push({
+        id: '',
+        country: '',
+        address: 'Seleccione un punto de venta',
+        availableStock: 0,
+        padlocks: 0,
+        status: 'ENABLED'
+      });
       this.selectPlace = '';
       this.place.emit(this.selectPlace);
     });

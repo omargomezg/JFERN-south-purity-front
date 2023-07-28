@@ -6,7 +6,7 @@ export class PaginationModel {
 
   constructor() {
     this.pageIndex = 0;
-    this.pageSize = 25;
+    this.pageSize = 10;
     this.length = 10;
     this.pageSizeOptions = [10, 25, 50, 100];
   }

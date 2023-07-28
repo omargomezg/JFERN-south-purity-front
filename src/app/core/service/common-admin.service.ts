@@ -33,8 +33,10 @@ export class CommonAdminService {
     return this.httpClient.put<ConfigurationInterface>(`${environment.apiUrl}/administrator/configuration`, configuration);
   }
 
-  getOrders(placeId: string): Observable<PageInterface<ProductInterface>> {
+  getOrders(placeId: string, pagination: PaginationModel): Observable<PageInterface<ProductInterface>> {
     let queryParams = new HttpParams();
+    queryParams = queryParams.append("page", pagination.pageIndex);
+    queryParams = queryParams.append("size", pagination.pageSize);
     queryParams = queryParams.append("place", placeId);
     return this.httpClient.get<PageInterface<ProductInterface>>(`${environment.apiUrl}/order`, {params: queryParams});
   }

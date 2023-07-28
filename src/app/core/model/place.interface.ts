@@ -4,4 +4,5 @@ export interface PlaceInterface {
   address: string;
   availableStock: number;
   padlocks: number;
+  status: string;
 }
