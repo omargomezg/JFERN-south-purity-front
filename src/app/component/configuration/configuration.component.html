@@ -20,10 +20,16 @@
             Guardar
           </button>
         </div>
-      </form>
       <h2>GetNet</h2>
-      <p>Si existen operaciones pendientes, puedes hacer una actualización de aquellas pendientes</p>
+      <p>Si existen operaciones pendientes, puedes hacer una actualización contra los servicios de getnet</p>
       <button type="button" mat-raised-button (click)="callTask()">Procesar operaciones pendientes</button>
+
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>Url de respuesta</mat-label>
+        <input type="text" matInput formControlName="returnUrl">
+        <mat-hint>Esta es la dirección url donde el cliente verá el resultado de la operación de pago a través de Getnet.</mat-hint>
+      </mat-form-field>
+      </form>
     </div>
   </div>
 </div>

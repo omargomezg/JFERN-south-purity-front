@@ -33,3 +33,18 @@
 h1 {
   line-height: 50px;
 }
+
+/*link with white color and circle blur shadow for white background*/
+.bg-special {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.2s;
+  margin: 20px;
+}
+

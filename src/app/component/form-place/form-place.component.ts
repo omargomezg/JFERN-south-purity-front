@@ -15,7 +15,8 @@ export class FormPlaceComponent {
     id: [''],
     address: ['', Validators.required],
     availableStock: [0, [Validators.required, Validators.min(0)]],
-    country: ['', Validators.required]
+    country: ['', Validators.required],
+    status: true
   })
 
   constructor(private formBuilder: FormBuilder,
@@ -30,10 +31,22 @@ export class FormPlaceComponent {
     this.placeForm.controls['country'].setValue(this.data.country);
     this.placeForm.controls['availableStock'].setValue(this.data.availableStock);
     this.placeForm.controls['address'].setValue(this.data.address);
+    this.placeForm.controls['status'].setValue(this.data.status === 'ENABLED');
+  }
+
+  getData(): PlaceInterface {
+    return {
+      id: this.placeForm.controls['id'].value as string,
+      country: this.placeForm.controls['country'].value as string,
+      availableStock: this.placeForm.controls['availableStock'].value as number,
+      address: this.placeForm.controls['address'].value as string,
+      padlocks: 0,
+      status: this.placeForm.controls['status'].value ? 'ENABLED' : 'DISABLED'
+    };
   }
 
   save() {
-    this.commonService.postPlace(this.placeForm.value as PlaceInterface).subscribe(() => {
+    this.commonService.postPlace(this.getData()).subscribe(() => {
       this.dialogRef.close();
     });
   }

@@ -9,7 +9,7 @@
        aria-controls="v-pills-home"
        aria-selected="true">Mis pedidos</a>
     <a class="nav-link"
-       *ngIf="role === 'CUSTOMER'"
+         *ngIf="role === 'CUSTOMER' || role === 'ADMINISTRATOR' || role === 'STOCKER'"
        [routerLink]="['/mis-datos']"
        [ngClass]="source === 'my-data' ? 'active' : ''"
        data-toggle="pill" role="tab"

@@ -40,6 +40,9 @@ import {DrumsAvailableComponent} from './component/drums-available/drums-availab
 import {DrumsComponent} from './component/drums/drums.component';
 import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
 import {MatIconModule} from '@angular/material/icon';
+import {RestorePasswordComponent} from './component/restore-password/restore-password.component';
+import {ResetPwdWithCodeComponent} from './component/reset-pwd-with-code/reset-pwd-with-code.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -66,7 +69,9 @@ import {MatIconModule} from '@angular/material/icon';
     HeaderComponent,
     FormPlaceComponent,
     PlaceComponent,
-    DashboardComponent
+    DashboardComponent,
+    RestorePasswordComponent,
+    ResetPwdWithCodeComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +89,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatPaginatorModule,
     MatTableModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    MatSlideToggleModule
   ],
   providers: [
     {

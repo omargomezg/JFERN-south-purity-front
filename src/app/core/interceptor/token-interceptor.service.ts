@@ -22,7 +22,7 @@ export class TokenInterceptorService implements HttpInterceptor{
     // @ts-ignore
     return next.handle(req).pipe(
       catchError((err) => {
-        if (err.status === 401) {
+        if (err.status === 401 && !err.url.includes('/auth/token')) {
           this.authService.logout();
         }
         const error = err.error.message || err.statusText;

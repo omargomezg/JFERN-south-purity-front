@@ -23,8 +23,8 @@ export class BuildPaymentResultComponent implements OnInit {
         this.commonService.getStatusSaleOrder(params['reference']).subscribe(data => {
             this.paymentResponse = data;
             this.gettingPaymentStatus = false;
-        }
-    );
+          }
+        );
     });
   }
 

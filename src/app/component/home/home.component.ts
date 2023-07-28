@@ -13,10 +13,6 @@ export class HomeComponent {
   constructor(private router: Router) {
   }
 
-  addToCart(WATER_DRUM: any, recarga: string, price: any) {
-
-  }
-
   buy() {
     this.router.navigateByUrl('hacer-pedido');
   }

@@ -1,6 +1,14 @@
+html body {
+  height: 100%;
+}
+.form-parent {
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
 .form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+  display: table-cell;
+  vertical-align: middle;
 }

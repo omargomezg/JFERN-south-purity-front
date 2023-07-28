@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AuthService} from '../../core/service/auth.service';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,8 @@ export class HeaderComponent {
   subscription?: Subscription;
   isAuthenticated?: boolean;
 
-  constructor(private router: Router, public authService: AuthService) {
+  constructor(private router: Router, public authService: AuthService,
+              private location: Location) {
     this.checkSession();
   }
 
@@ -37,5 +39,9 @@ export class HeaderComponent {
     } else if (role == 'ADMINISTRATOR') {
       this.router.navigate(['/dashboard']);
     }
+  }
+
+  isMenuActive(anchor: string) {
+    return this.location.path(true).includes(anchor);
   }
 }
