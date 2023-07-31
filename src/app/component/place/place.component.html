@@ -29,7 +29,7 @@
           <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
           <td mat-cell *matCellDef="let element">
             <button mat-button (click)="edit(element)">Editar</button>
-            <button mat-button (click)="addBottles()">Agregar bidones</button>
+            <button mat-button (click)="addBottles(element.id)">Agregar bidones</button>
           </td>
         </ng-container>
 

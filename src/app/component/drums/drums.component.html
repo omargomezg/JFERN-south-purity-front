@@ -10,7 +10,7 @@
       </ol>
     </nav>
     <div class="row mt-6">
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <form [formGroup]="formDrum" novalidate (ngSubmit)="saveDrum()" class="base-form">
           <mat-form-field appearance="fill" class="base-full-width">
             <mat-label>Dirección</mat-label>
@@ -29,13 +29,13 @@
                    (focus)="formDrum.controls['padlockKey'].setValue(null)">
           </mat-form-field>
           <div class="text-end">
-            <button type="button" mat-button>Cancelar</button>
+            <button type="button" mat-button (click)="cancel()">Cancelar</button>
             <button type="submit" mat-raised-button [disabled]="!formDrum.valid" class="m-1" color="primary">Guardar
             </button>
           </div>
         </form>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <mat-card>
           <mat-card-content>
             <app-drums-available [placeId]="formDrum.controls['place'].value"

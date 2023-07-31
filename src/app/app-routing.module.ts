@@ -13,9 +13,7 @@ import {ClientsComponent} from './component/clients/clients.component';
 import {UsersComponent} from './component/users/users.component';
 import {ConfigurationComponent} from './component/configuration/configuration.component';
 import {DrumsComponent} from './component/drums/drums.component';
-import {
-  BuildPaymentResultComponent
-} from './component/build-payment-result/build-payment-result.component';
+import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
 import {ClientFormComponent} from './component/client-form/client-form.component';
 import {ResetPwdWithCodeComponent} from "./component/reset-pwd-with-code/reset-pwd-with-code.component";
 
@@ -32,9 +30,9 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'home', component: HomeComponent},
   {path: 'puntos-de-venta', component: PlaceComponent},
-  {path: 'agregar-bidones', component: DrumsComponent, canActivate: [AuthGuard]},
+  {path: 'agregar-bidones/:placeId', component: DrumsComponent, canActivate: [AuthGuard]},
   {path: 'clientes', component: ClientsComponent, canActivate: [AuthGuard]},
-  {path: 'crear-cliente', component: ClientFormComponent, canActivate: [AuthGuard]},
+  {path: 'agregar-usuario', component: ClientFormComponent, canActivate: [AuthGuard]},
   {path: 'usuarios', component: UsersComponent, canActivate: [AuthGuard]},
   {path: 'configuracion', component: ConfigurationComponent, canActivate: [AuthGuard]},
   {path: 'reset-password/:email', component: ResetPwdWithCodeComponent},

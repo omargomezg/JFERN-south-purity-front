@@ -13,7 +13,7 @@ export class DrumsAvailableComponent implements OnChanges {
 
   @Input() placeId: string | undefined | null;
   @Input() reload: string = '';
-  displayedColumns: string[] = ['id', 'number', 'key'];
+  displayedColumns: string[] = ['id', 'number', 'key', 'createdDate'];
   selectedPlaceId: string | undefined | null;
   dataSource: ProductInterface[];
   totalElements: number = 0

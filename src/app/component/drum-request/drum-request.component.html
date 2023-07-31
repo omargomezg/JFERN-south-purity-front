@@ -8,7 +8,7 @@
       <h1>Hacer pedido online</h1>
       <div>
         <div class="row border-bottom">
-          <div class="col-sm-5">
+          <div class="col-sm-6">
             <app-drop-down-places (place)="setPlace($event)"></app-drop-down-places>
           </div>
         </div>
@@ -16,8 +16,10 @@
           <p class="text-danger">No tenemos bidones disponibles en tu dirección.</p>
         </ng-container>
         <ng-container>
-          <p class="text-danger" *ngIf="config.available > 0 && isLogged">Puedes comprar hasta {{config.available}} bidones.</p>
-          <p class="text-info mb-10">*<strong>Recuerda!</strong> Una vez solicitado el pago tienes <b>15 minutos</b> para completar la transacción. Despues se liberarán los productos.</p>
+          <p class="text-danger" *ngIf="config.available > 0 && isLogged">Puedes comprar hasta {{config.available}}
+            bidones.</p>
+          <p class="text-info mb-10">*<strong>Recuerda!</strong> Una vez solicitado el pago tienes <b>15 minutos</b>
+            para completar la transacción. Despues se liberarán los productos.</p>
           <div class="row" [ngClass]="{'opacity-50': selectedPlace === ''}">
             <div class="col-sm-7">
               <div class="row">

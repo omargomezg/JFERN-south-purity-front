@@ -46,8 +46,8 @@ export class DrumRequestComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let cart =sessionStorage.getItem('cart');
-    if(sessionStorage.getItem('cart') != null) {
+    let cart = sessionStorage.getItem('cart');
+    if (sessionStorage.getItem('cart') != null) {
       console.log(cart);
       // @ts-ignore
       this.cart = JSON.parse(cart);
@@ -57,11 +57,13 @@ export class DrumRequestComponent implements OnInit {
   }
 
   loadWaterDrumsAvailable(place: string): void {
-    this.loading.waterDrums = true;
-    this.commonService.getWaterDrumsAvailable(place).subscribe(config => {
-      this.config = config;
-      this.loading.waterDrums = false;
-    });
+    if (place) {
+      this.loading.waterDrums = true;
+      this.commonService.getWaterDrumsAvailable(place).subscribe(config => {
+        this.config = config;
+        this.loading.waterDrums = false;
+      });
+    }
   }
 
   loadPlaces(): void {

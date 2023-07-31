@@ -41,7 +41,7 @@ export class PlaceComponent {
     });
   }
 
-  addBottles(): void {
-    this.router.navigateByUrl('/agregar-bidones');
+  addBottles(placeId: string): void {
+    this.router.navigateByUrl('/agregar-bidones/' + placeId);
   }
 }
