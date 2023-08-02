@@ -10,6 +10,7 @@
         <div class="row border-bottom">
           <div class="col-sm-6">
             <app-drop-down-places (place)="setPlace($event)"></app-drop-down-places>
+            <a (click)="loadPlaces()" href>Establecer como principal</a>
           </div>
         </div>
         <ng-container *ngIf="!loading.waterDrums && config.available === 0 && isLogged">
@@ -68,8 +69,8 @@
               </div>
             </div>
             <div class="col-sm-5">
-              <p class="fw-bold">Resumen de tu compra</p>
               <table title="Resumen de tu compra" class="table table-responsive table-bordered">
+                <caption>Resumen de tu compra</caption>
                 <thead>
                 <tr>
                   <th id="quantity">Cant.</th>
