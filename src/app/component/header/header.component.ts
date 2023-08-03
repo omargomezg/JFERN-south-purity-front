@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from '../../core/service/auth.service';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {Location} from '@angular/common';
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,7 @@ export class HeaderComponent {
   clientName?: string;
   subscription?: Subscription;
   isAuthenticated?: boolean;
+  home = environment.home;
 
   constructor(private router: Router, public authService: AuthService,
               private location: Location) {
