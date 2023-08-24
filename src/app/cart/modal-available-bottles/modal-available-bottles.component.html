@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Bidones disponibles en {{cart.place.address}}</h1>
+<div mat-dialog-content>
+  <p>Puedes agregar hasta {{maxBottles}} bidones.</p>
+  <div class="mb-3">
+    <select class="form-select" [(ngModel)]="selectBottle">
+      <option selected value="">Selecciona un bidón</option>
+      <option *ngFor="let bottle of bottles" [value]="bottle.id">Nº {{bottle.lockNumber}} | Key {{bottle.padlockKey}}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <button class="btn btn-sm btn-secondary" (click)="addBottle()" [disabled]="maxBottles <= selectedBottles.length">
+      Agregar
+    </button>
+  </div>
+
+  <mat-list>
+    <ng-container *ngFor="let bottle of selectedBottles; let i = index ">
+      <mat-list-item>
+        {{bottle.lockNumber}} | {{bottle.padlockKey}}
+      </mat-list-item>
+      <mat-divider *ngIf="i + 1 != bottles?.length"></mat-divider>
+    </ng-container>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="cart">Cancelar</button>
+  <button mat-button color="primary" (click)="accept()">Aceptar</button>
+</div>

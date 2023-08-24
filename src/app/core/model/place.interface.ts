@@ -1,8 +1,8 @@
-export interface PlaceInterface {
-  id: string;
-  country: string;
-  address: string;
-  availableStock: number;
-  padlocks: number;
-  status: string;
+export class PlaceInterface {
+  id: string = '';
+  country: string = '';
+  address: string = '';
+  availableStock: number = 0;
+  padlocks: number = 0;
+  status: string = '';
 }

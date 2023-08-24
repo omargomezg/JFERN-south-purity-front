@@ -50,10 +50,10 @@ export class ResetPwdWithCodeComponent implements OnInit {
         code: this.formPwdReset.controls['code'].value as string
       }
     };
-    this.authService.restoreAccountWithCode(user as UserInterface).subscribe(result =>{
+    this.authService.restoreAccountWithCode(user as UserInterface).subscribe(result => {
       this.toastr.success('Su contraseña ha sido actualizada.')
       this.router.navigateByUrl('/login');
-    }, error =>{
+    }, error => {
       this.toastr.info('Oops, el código podría haber ha expirado!');
     });
   }

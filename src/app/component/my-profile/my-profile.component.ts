@@ -17,7 +17,7 @@ export class MyProfileComponent implements OnInit {
     email: ['', Validators.required],
     telephone: ['']
   });
-  profile: any;
+  profile = this.authService.getProfile();
   address: string = '';
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService,
@@ -25,8 +25,6 @@ export class MyProfileComponent implements OnInit {
   }
 
   submit(): void {
-    this.profile.fullName = this.formProfile.controls['fullName'].value;
-    this.profile.telephone = this.formProfile.controls['telephone'].value;
     this.authService.updateProfile(this.profile).subscribe(() => this.toastr.success('Perfil actualizado'))
   }
 
@@ -42,7 +40,7 @@ export class MyProfileComponent implements OnInit {
   }
 
   showModalPwd(): void {
-    const dialogRef = this.matDialog.open(ResetPwdModalComponent, {data: {id: this.profile.id}, disableClose: true});
+    const dialogRef = this.matDialog.open(ResetPwdModalComponent, {data: {id: this.profile?.id}, disableClose: true});
 
     dialogRef.afterClosed().subscribe(() => {
     });

@@ -5,7 +5,6 @@ import {MyProfileComponent} from "./component/my-profile/my-profile.component";
 import {AuthGuard} from "./core/auth.guard";
 import {HomeComponent} from "./component/home/home.component";
 import {RegisterComponent} from "./component/register/register.component";
-import {DrumRequestComponent} from './component/drum-request/drum-request.component';
 import {MyOrdersComponent} from './component/my-orders/my-orders.component';
 import {DashboardComponent} from './component/dashboard/dashboard.component';
 import {PlaceComponent} from './component/place/place.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'registrate', component: RegisterComponent},
-  {path: 'hacer-pedido', component: DrumRequestComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'home', component: HomeComponent},
   {path: 'puntos-de-venta', component: PlaceComponent},
@@ -39,7 +37,10 @@ const routes: Routes = [
   {path: 'mis-datos', component: MyProfileComponent, canActivate: [AuthGuard]},
   {path: 'mis-pedidos', component: MyOrdersComponent, canActivate: [AuthGuard]},
   {path: 'payment-result/:reference', component: BuildPaymentResultComponent, canActivate: [AuthGuard]},
-
+  {
+    path: 'hacer-pedido',
+    loadChildren: () => import('./cart/cart.module').then(m => m.CartModule)
+  },
   {
     path: 'cliente',
     loadChildren: () => import('./client-module/client-module.module').then(m => m.ClientModuleModule),

@@ -10,7 +10,6 @@ export interface UserInterface {
   passwordReset: PasswordReset;
 }
 
-
 interface PasswordReset {
   code: string;
 }

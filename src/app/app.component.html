@@ -1,26 +1,5 @@
-<div class="container-fluid shadow p-3 bg-body-tertiary">
-  <header class="d-flex flex-wrap justify-content-center py-3" *ngIf="false">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="#bootstrap"></use>
-      </svg>
-      <span class="fs-4">Home</span>
-    </a>
-
-    <ul class="nav nav-pills">
-      <ng-container *ngIf="authService.isLogged()">
-        <li class="nav-item" *ngFor="let menu of filterByRole(menus)">
-          <a [routerLink]="[menu.link]" mat-button>{{menu.name}}</a>
-        </li>
-      </ng-container>
-      <li class="nav-item" *ngIf="authService.isLogged()">
-        <button (click)="logout()" mat-button aria-current="page">Cerrar sesión</button>
-      </li>
-    </ul>
-  </header>
-</div>
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <ngx-loading-bar height="3px" diameter="18px"></ngx-loading-bar>
+<app-header></app-header>
+<router-outlet></router-outlet>
+<ngx-loading-bar height="3px" diameter="18px"></ngx-loading-bar>
 
 <app-footer></app-footer>

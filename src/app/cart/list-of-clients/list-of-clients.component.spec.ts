@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DrumRequestComponent } from './drum-request.component';
+import { ListOfClientsComponent } from './list-of-clients.component';
 
-describe('DrumRequestComponent', () => {
-  let component: DrumRequestComponent;
-  let fixture: ComponentFixture<DrumRequestComponent>;
+describe('ListOfClientsComponent', () => {
+  let component: ListOfClientsComponent;
+  let fixture: ComponentFixture<ListOfClientsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DrumRequestComponent ]
+      declarations: [ ListOfClientsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DrumRequestComponent);
+    fixture = TestBed.createComponent(ListOfClientsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

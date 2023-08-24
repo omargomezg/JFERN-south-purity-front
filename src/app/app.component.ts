@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {AuthService} from "./core/service/auth.service";
-import {menu} from "./core/constant/menu";
+import {MENU} from "./core/constant/MENU";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import {menu} from "./core/constant/menu";
 })
 export class AppComponent {
   title = 'south-purity-front';
-  menus = menu;
+  menus = MENU;
   profile = {
     type: this.authService.getProfile()?.role
   }

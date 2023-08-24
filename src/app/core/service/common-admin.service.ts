@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
-import {PaginationModel, PlaceInterface} from "../model";
+import {PaginationModel, PlaceInterface, UserFilterModel} from "../model";
 import {UserInterface} from "../model/user.interface";
 import {ConfigurationInterface} from "../model/configuration.interface";
 import {ProductInterface} from "../model/product.interface";
@@ -26,18 +26,21 @@ export class CommonAdminService {
   }
 
   getConfiguration(): Observable<ConfigurationInterface> {
-    return this.httpClient.get<ConfigurationInterface>(`${environment.apiUrl}/administrator/configuration`);
+    return this.httpClient.get<ConfigurationInterface>(`${environment.apiUrl}/configuration`);
   }
 
   putConfiguration(configuration: ConfigurationInterface): Observable<ConfigurationInterface> {
-    return this.httpClient.put<ConfigurationInterface>(`${environment.apiUrl}/administrator/configuration`, configuration);
+    return this.httpClient.put<ConfigurationInterface>(`${environment.apiUrl}/configuration`, configuration);
   }
 
-  getOrders(placeId: string, pagination: PaginationModel): Observable<PageInterface<ProductInterface>> {
+  getOrders(placeId: string, status: string, pagination: PaginationModel): Observable<PageInterface<ProductInterface>> {
     let queryParams = new HttpParams();
     queryParams = queryParams.append("page", pagination.pageIndex);
     queryParams = queryParams.append("size", pagination.pageSize);
-    queryParams = queryParams.append("place", placeId);
+    queryParams = queryParams.append("placeId", placeId);
+    if (status !== '') {
+      queryParams = queryParams.append("status", status);
+    }
     return this.httpClient.get<PageInterface<ProductInterface>>(`${environment.apiUrl}/order`, {params: queryParams});
   }
 
@@ -57,13 +60,11 @@ export class CommonAdminService {
     return this.httpClient.post<any>(`${environment.apiUrl}/user`, user);
   }
 
-  getUsers(role: string | undefined, pagination: PaginationModel): Observable<PageInterface<UserInterface>> {
-    let queryParams = new HttpParams();
+  getUsers(filter: UserFilterModel, pagination: PaginationModel): Observable<PageInterface<UserInterface>> {
+    // @ts-ignore
+    let queryParams = new HttpParams({fromObject: filter});
     queryParams = queryParams.append("page", pagination.pageIndex);
     queryParams = queryParams.append("size", pagination.pageSize);
-    if (role) {
-      queryParams = queryParams.append("role", role);
-    }
     return this.httpClient.get<PageInterface<UserInterface>>(`${environment.apiUrl}/user`, {params: queryParams});
   }
 

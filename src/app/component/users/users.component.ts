@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UserInterface} from "../../core/model/user.interface";
 import {CommonAdminService} from "../../core/service/common-admin.service";
 import {PageEvent} from "@angular/material/paginator";
-import {PaginationModel} from "../../core/model";
+import {PaginationModel, UserFilterModel} from "../../core/model";
 
 @Component({
   selector: 'app-users',
@@ -28,15 +28,13 @@ export class UsersComponent implements OnInit {
     console.log(e);
     this.pagination.pageIndex = e.pageIndex;
     this.pagination.pageSize = e.pageSize;
-    /*this.pageEvent = e;
-    this.length = e.length;
-    this.pageSize = e.pageSize;
-    this.pageIndex = e.pageIndex;*/
     this.loadUsers();
   }
 
   loadUsers(): void {
-    this.commonAdminService.getUsers(undefined, this.pagination).subscribe(customers => {
+    let filter = new UserFilterModel();
+    filter.role = '';
+    this.commonAdminService.getUsers(filter, this.pagination).subscribe(customers => {
       this.totalElements = customers.totalElements;
       this.dataSource = customers.content;
     });

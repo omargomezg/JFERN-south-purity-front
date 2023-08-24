@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {PlaceInterface} from "../../service/model/place.interface";
 import {CommonClientService} from "../../service/common-client.service";
 import {FormBuilder, Validators} from "@angular/forms";
 import {MatSelectChange} from "@angular/material/select";
 import {ToastrService} from "ngx-toastr";
 import {MatDialogRef} from "@angular/material/dialog";
+import {PlaceInterface} from "../../../core/model";
 
 @Component({
   selector: 'app-add-place', templateUrl: './add-place.component.html', styleUrls: ['./add-place.component.css']

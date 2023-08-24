@@ -1,0 +1,122 @@
+<div class="container">
+  <router-outlet></router-outlet>
+  <h1>Pedido online</h1>
+  <div>
+    <app-drop-down-places (onPlaceSelected)="selectedPlace($event)" [place]="cart.place"></app-drop-down-places>
+    <app-list-of-clients
+      [place]="cart.place"
+      (clientId)="setClient($event)"
+      *ngIf="cart.paymentType === PAYMENT_TYPE.CASH && profile?.role === 'ADMINISTRATOR'"></app-list-of-clients>
+    <ng-container>
+      <div class="row p-4" [ngClass]="{'opacity-50': cart.place.id === ''}">
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col">
+              <mat-card>
+                <mat-card-header class="text-center">
+                  Recarga
+                </mat-card-header>
+                <img mat-card-image
+                     (click)="addToCart(products.WATER_DRUM, 'Recarga', config.price)"
+                     class="img-fluid btn btn-link"
+                     src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
+                     alt="Agregar recarga">
+                <mat-card-content>
+                  <p class="text-dark text-center">$ {{config.price | number}}</p>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                  <button mat-button
+                          (click)="addToCart(products.WATER_DRUM, 'Recarga', config.price)"
+                          color="accent">Agregar
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col">
+              <mat-card>
+                <mat-card-header class="text-center">Recarga + Bidón
+                </mat-card-header>
+                <img mat-card-image
+                     (click)="addToCart(products.WATER_DRUM_WITH_BOTTLE, 'Recarga + Bidón', config.priceWithDrum)"
+                     class="img-fluid btn btn-link"
+                     src="https://www.plasticos-chile.cl/wp-content/uploads/2019/04/Bid%C3%B3n-Policarbonato-20-Litros-1.jpg"
+                     alt="Agregar Recarga + Bidón">
+                <mat-card-content>
+                  <p class="text-dark text-center">$ {{config.priceWithDrum | number}}</p>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                  <button mat-button
+                          (click)="addToCart(products.WATER_DRUM_WITH_BOTTLE, 'Recarga + Bidón', config.priceWithDrum)"
+                          color="accent">
+                    Agregar
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <p class="text-black" [hidden]="">Bidones disponibles:
+            <ng-container *ngIf="isLogged">
+              {{config.available}} unidades.
+              <button (click)="showAvailableBottles()" color="accent"
+                      *ngIf="config.available > 0 && profile?.role === 'ADMINISTRATOR' && cart.paymentType ===
+                      PAYMENT_TYPE.CASH"
+                      mat-button>Especificar unidades a entregar
+              </button>
+            </ng-container>
+            <ng-container *ngIf="!isLogged">
+              <span class="text-indigo">debes <a [routerLink]="['/login']">iniciar sesión.</a></span>
+            </ng-container>
+          </p>
+          <table title="Resumen de tu compra" class="table table-responsive table-bordered">
+            <caption>Resumen de tu compra</caption>
+            <thead>
+            <tr>
+              <th id="quantity">Cant.</th>
+              <th id="description">Descripción</th>
+              <th id="subtotal">Subtotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of cart.items; let i = index ">
+              <td>{{item.quantity}}</td>
+              <td>{{item.description}}</td>
+              <td class="text-end">$ {{item.subtotal | number}}<br>
+                <button mat-button (click)="delete(i, item.quantity)">Eliminar</button>
+              </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr class="subtotal-footer">
+              <th id="subtotal-description" colspan="2" class="text-end">Subtotal (IVA incl.)</th>
+              <th id="amount-to-pay" class="text-end">$ {{getSubtotal() | number}}</th>
+            </tr>
+            </tfoot>
+          </table>
+          <div class="row justify-content-end">
+            <div class="col-sm-8">
+              <span class="fw-bold">Método de pago</span>
+              <app-getnet-button (paymentType)="cart.paymentType = $event"></app-getnet-button>
+              <div class="text-end">
+                <button mat-raised-button color="accent" (click)="showLogin()" *ngIf="!authService.isLogged()">
+                  Inicia sesión para hacer tu pedido
+                </button>
+                <button mat-raised-button *ngIf="authService.isLogged()"
+                        [disabled]="cart.items.length === 0 || cart.items.length > this.config.available"
+                        (click)="pay()"
+                        type="button" color="primary">Realizar pago
+                </button>
+                <p class="text-reset fst-italic" *ngIf="!authService.isLogged()">Una vez que inicies sesión
+                  validaremos el stock disponible en tu residencia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<code>
+  {{cart | json}}
+</code>

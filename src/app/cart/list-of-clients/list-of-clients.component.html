@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-sm-2">
+    <label for="clientList" class="form-label">Cliente</label>
+  </div>
+  <div class="col-auto">
+    <select id="clientList" class="form-select" (change)="onClientChange($event)"
+            aria-label="select places">
+      <option *ngFor="let client of clients" [value]="client.id">{{client.fullName}}</option>
+    </select>
+  </div>
+</div>

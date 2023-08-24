@@ -23,10 +23,6 @@ import {ContactComponent} from './component/contact/contact.component';
 import {MyOrdersComponent} from './component/my-orders/my-orders.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
-import {DrumRequestComponent} from './component/drum-request/drum-request.component';
-import {GetnetButtonComponent} from './component/getnet-button/getnet-button.component';
-import {DropDownPlacesComponent} from './component/drop-down-places/drop-down-places.component';
-import {VerticalMenuComponent} from './component/vertical-menu/vertical-menu.component';
 import {HeaderComponent} from './component/header/header.component';
 import {DashboardComponent} from './component/dashboard/dashboard.component';
 import {PlaceComponent} from './component/place/place.component';
@@ -43,6 +39,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {RestorePasswordComponent} from './component/restore-password/restore-password.component';
 import {ResetPwdWithCodeComponent} from './component/reset-pwd-with-code/reset-pwd-with-code.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -55,17 +52,13 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     RegisterComponent,
     ResetPwdModalComponent,
     MyOrdersComponent,
-    DrumRequestComponent,
     DrumsAvailableComponent,
     DrumsComponent,
     ClientsComponent,
     ClientFormComponent,
     UsersComponent,
     ConfigurationComponent,
-    GetnetButtonComponent,
-    DropDownPlacesComponent,
     ContactComponent,
-    VerticalMenuComponent,
     HeaderComponent,
     FormPlaceComponent,
     PlaceComponent,
@@ -90,7 +83,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     MatTableModule,
     MatSelectModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatMenuModule
   ],
   providers: [
     {
@@ -98,9 +92,6 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
       useClass: TokenInterceptorService,
       multi: true
     }
-  ],
-  exports: [
-    VerticalMenuComponent
   ],
   bootstrap: [AppComponent]
 })

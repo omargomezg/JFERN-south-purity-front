@@ -1,5 +1,5 @@
 <div id="page-start-anchor"></div>
-<section class="header header-fixed-xl overflow-hidden">
+<section class="header header-fixed-xl">
   <div class="header-top-line bg-primary">
     <div class="container">
       <div class="row">
@@ -75,7 +75,22 @@
               <li class="nav-item">
                 <a class="nav-link text-uppercase" style="cursor: pointer;" data-toggle="smooth-scroll"
                    [routerLink]=""
+                   *ngIf="!isAuthenticated"
                    (click)="action()">{{isAuthenticated ? 'Hola ' + getName() : 'Iniciar sesión'}}</a>
+              </li>
+              <li class="nav-item dropdown" *ngIf="isAuthenticated">
+                <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                  Hola {{getName()}}
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item" *ngFor="let menu of filterByRole(menus)">
+                    <a [routerLink]="[menu.link]" class="dropdown-item">{{menu.name}}</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-item" href (click)="logout()">Cerrar sesión</a>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-uppercase"
@@ -116,4 +131,3 @@
     </div>
   </div>
 </section>
-<div class="header-spacing-helper clearfix" style="height: 95px;"></div>
