@@ -1,6 +1,7 @@
 export interface ProductInterface {
-  place: string;
-  lockNumber: number;
-  padlockKey: number;
+    id: string;
+    place: string;
+    lockNumber: number;
+    padlockKey: number;
 
 }

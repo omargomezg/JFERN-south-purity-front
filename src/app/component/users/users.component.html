@@ -1,49 +1,49 @@
-<div class="container-fluid">
-  <h1>Usuarios</h1>
+<div class="container">
+    <h1>Usuarios</h1>
 
-  <div class="row mb-2">
-    <div class="col text-end">
-      <a [routerLink]="['/agregar-usuario']" mat-stroked-button>Agregar</a>
+    <div class="row mb-2">
+        <div class="col text-end">
+            <a [routerLink]="['/agregar-usuario']" mat-stroked-button>Agregar</a>
+        </div>
     </div>
-  </div>
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
 
-      <ng-container matColumnDef="identification">
-        <th mat-header-cell *matHeaderCellDef>Identificación</th>
-        <td mat-cell *matCellDef="let element"> {{element.rut}} </td>
-      </ng-container>
+            <ng-container matColumnDef="identification">
+                <th mat-header-cell *matHeaderCellDef>Identificación</th>
+                <td mat-cell *matCellDef="let element"> {{element.rut}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Nombre</th>
-        <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
-      </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Nombre</th>
+                <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="role">
-        <th mat-header-cell *matHeaderCellDef>Rol</th>
-        <td mat-cell *matCellDef="let element"> {{element.role}} </td>
-      </ng-container>
+            <ng-container matColumnDef="role">
+                <th mat-header-cell *matHeaderCellDef>Rol</th>
+                <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="status">
-        <th mat-header-cell *matHeaderCellDef>Estado</th>
-        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
-      </ng-container>
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef>Estado</th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="options">
-        <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
-        <td mat-cell *matCellDef="let element">
-          <a [routerLink]="['/administrador/cliente', element.id]">Editar</a>
-        </td>
-      </ng-container>
+            <ng-container matColumnDef="options">
+                <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
+                <td mat-cell *matCellDef="let element">
+                    <a [routerLink]="['/administrador/cliente', element.id]">Editar</a>
+                </td>
+            </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-    <mat-paginator [length]="totalElements"
-                   (page)="handlePageEvent($event)"
-                   [pageSize]="pagination.pageSize"
-                   [pageSizeOptions]="[5, 10, 25, 100]"
-                   aria-label="Select page">
-    </mat-paginator>
-  </div>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [length]="totalElements"
+                       (page)="handlePageEvent($event)"
+                       [pageSize]="pagination.pageSize"
+                       [pageSizeOptions]="[5, 10, 25, 100]"
+                       aria-label="Select page">
+        </mat-paginator>
+    </div>
 </div>

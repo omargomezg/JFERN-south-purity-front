@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {CommonAdminService} from "../../core/service/common-admin.service";
 import {PaginationModel, PlaceInterface, UserFilterModel} from "../../core/model";
+import {UserInterface} from "../../core/model/user.interface";
 
 @Component({
   selector: 'app-list-of-clients',
@@ -10,7 +11,8 @@ import {PaginationModel, PlaceInterface, UserFilterModel} from "../../core/model
 export class ListOfClientsComponent implements OnChanges {
   @Input() place: PlaceInterface | undefined;
   @Output() clientId = new EventEmitter<string>();
-  clients: any[] = [];
+  clients: UserInterface[] = [];
+  selectedClient: string | undefined;
   pagination = new PaginationModel();
 
   constructor(private commonAdminService: CommonAdminService) {
@@ -22,19 +24,13 @@ export class ListOfClientsComponent implements OnChanges {
       let filter = new UserFilterModel();
       filter.placeId = this.place.id;
       this.commonAdminService.getUsers(filter, this.pagination).subscribe(response => {
-        this.addDefaultValue(response.totalElements);
-        response.content.forEach(client => this.clients.push(client));
+        this.clients = response.content;
       });
     }
   }
 
-  addDefaultValue(size: number): void {
-    if (size > 0) {
-      this.clients.push({id: '', fullName: 'Seleccione un cliente'});
-    }
-  }
-
-  onClientChange($event: any) {
-    this.clientId.emit($event.target.value);
+  onClientChange(): void {
+    console.log(this.selectedClient);
+    this.clientId.emit(this.selectedClient);
   }
 }

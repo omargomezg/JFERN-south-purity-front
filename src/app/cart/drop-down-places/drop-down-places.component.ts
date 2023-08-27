@@ -23,6 +23,7 @@ export class DropDownPlacesComponent implements OnInit {
   constructor(private publicService: PublicService, private authService: AuthService,
               private formBuilder: FormBuilder) {
     this.formPlace = this.buildForm();
+    this.loadPlaces();
   }
 
   ngOnInit(): void {
@@ -30,6 +31,9 @@ export class DropDownPlacesComponent implements OnInit {
       this.formPlace.get('place')?.setValue(this.place.id);
     }
     this.formPlace.get('place')?.setValue(this.place.id);
+  }
+
+  loadPlaces(): void {
     this.publicService.getPlaces().subscribe(list => {
       this.places = list;
       this.setValueChanges();

@@ -1,34 +1,34 @@
 import {Injectable} from '@angular/core';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
-import {AuthService} from "../service/auth.service";
+import {AuthService} from "../service";
 import {catchError, Observable, throwError} from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class TokenInterceptorService implements HttpInterceptor {
 
-  constructor(private authService: AuthService) {
-  }
-
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const token = localStorage.getItem('token');
-    if (token) {
-      req = req.clone({
-        setHeaders: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+    constructor(private authService: AuthService) {
     }
-    // @ts-ignore
-    return next.handle(req).pipe(
-      catchError((err) => {
-        if (err.status === 401 && !err.url.includes('/auth/token')) {
-          this.authService.logout(true);
+
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        const token = localStorage.getItem('token');
+        if (token) {
+            req = req.clone({
+                setHeaders: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
         }
-        const error = err.error.message || err.statusText;
-        return throwError(error);
-      })
-    );
-  }
+        // @ts-ignore
+        return next.handle(req).pipe(
+            catchError((err) => {
+                if (err.status === 401 && !err.url.includes('/auth/token')) {
+                    this.authService.logout(true);
+                }
+                const error = err.error.message || err.statusText;
+                return throwError(error);
+            })
+        );
+    }
 }

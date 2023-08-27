@@ -5,39 +5,38 @@ import {PageEvent} from "@angular/material/paginator";
 import {PaginationModel, UserFilterModel} from "../../core/model";
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+    selector: 'app-users',
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
 
-  displayedColumns: string[] = ['identification', 'name', 'role', 'status', 'options'];
-  dataSource: UserInterface[];
-  pagination: PaginationModel = new PaginationModel();
-  totalElements: number = 0
+    displayedColumns: string[] = ['identification', 'name', 'role', 'status', 'options'];
+    dataSource: UserInterface[];
+    pagination: PaginationModel = new PaginationModel();
+    totalElements: number = 0
 
-  constructor(private commonAdminService: CommonAdminService,) {
-    this.dataSource = [];
-  }
+    constructor(private commonAdminService: CommonAdminService,) {
+        this.dataSource = [];
+    }
 
-  ngOnInit(): void {
-    this.loadUsers();
-  }
+    ngOnInit(): void {
+        this.loadUsers();
+    }
 
-  handlePageEvent(e: PageEvent) {
-    console.log(e);
-    this.pagination.pageIndex = e.pageIndex;
-    this.pagination.pageSize = e.pageSize;
-    this.loadUsers();
-  }
+    handlePageEvent(e: PageEvent) {
+        this.pagination.pageIndex = e.pageIndex;
+        this.pagination.pageSize = e.pageSize;
+        this.loadUsers();
+    }
 
-  loadUsers(): void {
-    let filter = new UserFilterModel();
-    filter.role = '';
-    this.commonAdminService.getUsers(filter, this.pagination).subscribe(customers => {
-      this.totalElements = customers.totalElements;
-      this.dataSource = customers.content;
-    });
-  }
+    loadUsers(): void {
+        let filter = new UserFilterModel();
+        filter.role = 'ADMINISTRATOR,CUSTOMER';
+        this.commonAdminService.getUsers(filter, this.pagination).subscribe(customers => {
+            this.totalElements = customers.totalElements;
+            this.dataSource = customers.content;
+        });
+    }
 
 }
