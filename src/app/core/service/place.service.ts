@@ -14,4 +14,8 @@ export class PlaceService {
   get(): Observable<PlaceInterface[]> {
     return this.httpClient.get<PlaceInterface[]>(`${environment.apiUrl}/place`);
   }
+
+  put(place: PlaceInterface): Observable<PlaceInterface[]> {
+    return this.httpClient.put<PlaceInterface[]>(`${environment.apiUrl}/place`, place);
+  }
 }

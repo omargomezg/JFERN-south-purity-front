@@ -7,6 +7,11 @@ export const PRODUCT_STATUS = {
   AVAILABLE: 'AVAILABLE',
 }
 
+export enum PlaceStatusEnum {
+  ENABLED = 'ENABLED',
+  DISABLED = 'DISABLED',
+}
+
 export enum TYPE_OF_BOTTLES {
   'WATER_DRUM', 'WATER_DRUM_WITH_BOTTLE'
 }
