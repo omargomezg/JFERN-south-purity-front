@@ -1,11 +1,10 @@
 import {Component} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {FormPlaceComponent} from "../form-place/form-place.component";
-import {CommonAdminService} from "../../core/service/common-admin.service";
+import {CommonAdminService, PlaceService} from "../../core/service";
 import {PlaceInterface} from "../../core/model";
 import {Router} from '@angular/router';
 import {MatSlideToggleChange} from "@angular/material/slide-toggle";
-import {PlaceService} from "../../core/service";
 import {PlaceStatusEnum} from "../../core/constant/app.constants";
 import {ToastrService} from "ngx-toastr";
 
@@ -42,7 +41,7 @@ export class PlaceComponent {
       data: place,
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(() => {
       this.loadPlaces();
     });
   }

@@ -116,11 +116,11 @@ export class CartComponent {
       const payDialog = this.matDialog.open(ModalTimeToPayComponent, {
         data: this.cart
       });
-      payDialog.afterClosed().subscribe(result => {
+      payDialog.afterClosed().subscribe(() => {
 
       });
     } else {
-      this.commonService.createSaleOrder(this.cart).subscribe(response => {
+      this.commonService.createSaleOrder(this.cart).subscribe(() => {
         this.clearForm();
         this.toastr.success('Venta al Contado realizada con éxito', 'Venta al Contado');
       });
