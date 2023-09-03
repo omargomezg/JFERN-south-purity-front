@@ -10,7 +10,6 @@ import {DashboardComponent} from './component/dashboard/dashboard.component';
 import {PlaceComponent} from './component/place/place.component';
 import {ClientsComponent} from './component/clients/clients.component';
 import {UsersComponent} from './component/users/users.component';
-import {ConfigurationComponent} from './component/configuration/configuration.component';
 import {DrumsComponent} from './component/drums/drums.component';
 import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
 import {ClientFormComponent} from './component/client-form/client-form.component';
@@ -32,7 +31,7 @@ const routes: Routes = [
   {path: 'clientes', component: ClientsComponent, canActivate: [AuthGuard]},
   {path: 'agregar-usuario', component: ClientFormComponent, canActivate: [AuthGuard]},
   {path: 'usuarios', component: UsersComponent, canActivate: [AuthGuard]},
-  {path: 'configuracion', component: ConfigurationComponent, canActivate: [AuthGuard]},
+  {path: 'usuario/:id', component: ClientFormComponent, canActivate: [AuthGuard]},
   {path: 'reset-password/:email', component: ResetPwdWithCodeComponent},
   {path: 'mis-datos', component: MyProfileComponent, canActivate: [AuthGuard]},
   {path: 'mis-pedidos', component: MyOrdersComponent, canActivate: [AuthGuard]},
@@ -44,6 +43,11 @@ const routes: Routes = [
   {
     path: 'cliente',
     loadChildren: () => import('./client-module/client-module.module').then(m => m.ClientModuleModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'back-office',
+    loadChildren: () => import('./administrator/administrator.module').then(m => m.AdministratorModule),
     canActivate: [AuthGuard]
   }
 ];

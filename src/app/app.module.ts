@@ -31,7 +31,6 @@ import {ClientFormComponent} from './component/client-form/client-form.component
 import {MatSelectModule} from '@angular/material/select';
 import {UsersComponent} from './component/users/users.component';
 import {FormPlaceComponent} from './component/form-place/form-place.component';
-import {ConfigurationComponent} from './component/configuration/configuration.component';
 import {DrumsAvailableComponent} from './component/drums-available/drums-available.component';
 import {DrumsComponent} from './component/drums/drums.component';
 import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
@@ -40,6 +39,7 @@ import {RestorePasswordComponent} from './component/restore-password/restore-pas
 import {ResetPwdWithCodeComponent} from './component/reset-pwd-with-code/reset-pwd-with-code.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatMenuModule} from "@angular/material/menu";
+import {UserFormComponent} from './component/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -57,14 +57,14 @@ import {MatMenuModule} from "@angular/material/menu";
     ClientsComponent,
     ClientFormComponent,
     UsersComponent,
-    ConfigurationComponent,
     ContactComponent,
     HeaderComponent,
     FormPlaceComponent,
     PlaceComponent,
     DashboardComponent,
     RestorePasswordComponent,
-    ResetPwdWithCodeComponent
+    ResetPwdWithCodeComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@ export const MENU = [
   },
   {
     "name": "Configuraciones",
-    "link": "configuracion",
+    "link": "back-office",
     "role": ["ADMINISTRATOR"]
   },
   {
