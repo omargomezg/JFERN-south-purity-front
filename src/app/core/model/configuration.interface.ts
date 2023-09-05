@@ -15,5 +15,8 @@ export interface ConfigurationInterface {
   price: number;
   priceWithDrum: number;
   timeToPay: number;
+  returnUrl: string;
+  updatedDate: Date;
+  createdDate: Date;
   smtp: SmtpInterface;
 }

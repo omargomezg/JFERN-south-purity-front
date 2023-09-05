@@ -19,7 +19,7 @@ export class BuildPaymentResultComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      if (params['reference'])
+      if (params['refserence'])
         this.commonService.getStatusSaleOrder(params['reference']).subscribe(data => {
             this.paymentResponse = data;
             this.gettingPaymentStatus = false;

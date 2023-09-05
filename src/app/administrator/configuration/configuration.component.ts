@@ -29,6 +29,7 @@ export class ConfigurationComponent implements OnInit {
       this.configurationForm.controls['price'].setValue(configuration.price);
       this.configurationForm.controls['priceWithDrum'].setValue(configuration.priceWithDrum);
       this.configurationForm.controls['timeToPay'].setValue(this.toMinutes(configuration.timeToPay));
+      this.configurationForm.controls['returnUrl'].setValue(configuration.returnUrl);
       if (configuration.smtp) {
         this.emailAddress = configuration.smtp.username;
         this.configurationForm.controls['smtp'].setValue({
