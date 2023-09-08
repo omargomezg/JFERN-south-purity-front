@@ -6,6 +6,8 @@ export interface UserInterface {
   telephone: string;
   rut: string;
   email: string;
+  city: string;
+  address: string;
   status: string;
   fullName: string;
   password: string

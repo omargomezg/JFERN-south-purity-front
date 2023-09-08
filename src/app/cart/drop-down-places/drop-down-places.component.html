@@ -11,9 +11,6 @@
           <option *ngFor="let item of places" [value]="item.id">{{item.address}}</option>
         </select>
       </div>
-      <div class="col-auto" *ngIf="formPlace.valid && isLogged && profile?.role == 'CUSTOMER'">
-        <button class="btn btn-secondary" (click)="setPrincipal()">Recordar selección</button>
-      </div>
     </div>
   </form>
 </div>

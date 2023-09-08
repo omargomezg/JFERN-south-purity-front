@@ -30,7 +30,7 @@
 
       <ng-container matColumnDef="place">
         <th mat-header-cell *matHeaderCellDef>Punto de venta</th>
-        <td mat-cell *matCellDef="let element"> {{element.fullAddress}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.place ? element.place.address : ''}} </td>
       </ng-container>
 
       <ng-container matColumnDef="options">

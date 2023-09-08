@@ -16,6 +16,10 @@ export class UserService {
     return this.httpClient.get<UserInterface>(`${environment.apiUrl}/user/${clientId}`);
   }
 
+  update(user: UserInterface): Observable<UserInterface> {
+    return this.httpClient.put<UserInterface>(`${environment.apiUrl}/user/${user.id}`, user);
+  }
+
   updatePlace(clientId: string, placeId: string): Observable<UserInterface> {
     return this.httpClient.put<UserInterface>(`${environment.apiUrl}/user/${clientId}/place/${placeId}`, {});
   }

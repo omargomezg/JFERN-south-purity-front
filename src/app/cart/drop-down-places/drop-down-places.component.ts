@@ -17,27 +17,25 @@ export class DropDownPlacesComponent implements OnInit {
 
   formPlace: FormGroup;
   places: PlaceInterface[] = [];
-  isLogged: boolean = this.authService.isLogged();
   profile = this.authService.getProfile();
 
   constructor(private publicService: PublicService, private authService: AuthService,
               private userService: UserService,
               private formBuilder: FormBuilder) {
     this.formPlace = this.buildForm();
-    this.loadPlaces();
   }
 
   ngOnInit(): void {
-    if (this.place.id) {
-      this.formPlace.get('place')?.setValue(this.place.id);
-    }
-    this.formPlace.get('place')?.setValue(this.place.id);
+    this.loadPlaces();
   }
 
   loadPlaces(): void {
     this.publicService.getPlaces().subscribe(list => {
       this.places = list;
       this.setValueChanges();
+      if (this.place.id) {
+        this.formPlace.get('place')?.setValue(this.place.id);
+      }
     });
   }
 
@@ -45,10 +43,6 @@ export class DropDownPlacesComponent implements OnInit {
     return this.formBuilder.group({
       place: ['', [Validators.required]]
     });
-  }
-
-  setPrincipal() {
-
   }
 
   private setValueChanges(): void {
