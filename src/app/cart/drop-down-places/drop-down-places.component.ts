@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PlaceInterface} from '../../core/model';
-import {AuthService, PublicService} from '../../core/service';
+import {AuthService, PublicService, UserService} from '../../core/service';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
@@ -21,6 +21,7 @@ export class DropDownPlacesComponent implements OnInit {
   profile = this.authService.getProfile();
 
   constructor(private publicService: PublicService, private authService: AuthService,
+              private userService: UserService,
               private formBuilder: FormBuilder) {
     this.formPlace = this.buildForm();
     this.loadPlaces();
@@ -52,7 +53,16 @@ export class DropDownPlacesComponent implements OnInit {
 
   private setValueChanges(): void {
     this.formPlace.valueChanges.subscribe((form) => {
-      this.onPlaceSelected.emit(this.getPlace(form.place));
+      const place: PlaceInterface = this.getPlace(form.place);
+      this.updateClientPlace(place);
+      this.onPlaceSelected.emit(place);
+    });
+  }
+
+  private updateClientPlace(place: PlaceInterface): void {
+    if (!this.authService.isLogged()) return;
+    if (this.authService.getProfile()?.role !== 'CUSTOMER') return;
+    this.userService.updatePlace(this.profile?.id as string, place.id).subscribe(() => {
     });
   }
 
