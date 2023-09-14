@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {config, Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {PageInterface, PaginationModel, PlaceInterface, ProductInterface, UserFilterModel} from "../model";
 import {UserInterface} from "../model/user.interface";
@@ -28,6 +28,8 @@ export class CommonAdminService {
     }
 
     putConfiguration(configuration: ConfigurationInterface): Observable<ConfigurationInterface> {
+      let {timeToPay} = configuration;
+      configuration.timeToPay = timeToPay * 60000;
         return this.httpClient.put<ConfigurationInterface>(`${environment.apiUrl}/configuration`, configuration);
     }
 

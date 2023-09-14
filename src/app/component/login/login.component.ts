@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
         this.authService.authorization(login.email, login.password).subscribe(tokenResult => {
             localStorage.setItem('profile', JSON.stringify(tokenResult.profile));
             localStorage.setItem('token', tokenResult.token);
+            this.authService.isLogged();
             this.redirectToProfileHome(tokenResult.profile.role);
         }, error => {
             this.failedLogin = true;

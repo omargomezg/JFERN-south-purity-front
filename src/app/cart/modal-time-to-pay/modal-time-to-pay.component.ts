@@ -17,8 +17,10 @@ export class ModalTimeToPayComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.commonService.findConfiguration().subscribe(response => {
-      this.timeToPay = Math.floor((response.timeToPay / 1000 / 60) % 60);
+    this.commonService.findConfiguration().subscribe(configuration => {
+      let {timeToPay} = configuration;
+      this.timeToPay = Math.floor((timeToPay / 1000 / 60) % 60);
+      console.log(this.timeToPay)
     });
   }
 

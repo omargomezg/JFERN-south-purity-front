@@ -70,16 +70,9 @@ export class ConfigurationComponent implements OnInit {
   }
 
   submit(): void {
-    this.configuration.price = this.configurationForm.controls['price'].value as number;
-    this.configuration.priceWithDrum = this.configurationForm.controls['priceWithDrum'].value as number;
-    this.configuration.timeToPay = this.toMilliseconds(this.configurationForm.controls['timeToPay'].value as number);
     this.commonService.putConfiguration(this.configurationForm.value as ConfigurationInterface).subscribe(result => {
       this.toastr.success('Configuración actualizada');
     });
-  }
-
-  toMilliseconds(minutes: number): number {
-    return minutes * 60000;
   }
 
   toMinutes(milliseconds: number): number {

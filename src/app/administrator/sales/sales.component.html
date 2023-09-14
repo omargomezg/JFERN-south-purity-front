@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Ventas realizadas</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($ventas as $venta) { ?>
+        <tr>
+          <td><?php echo $venta->fecha; ?></td>
+          <td><?php echo $venta->cliente; ?></td>
+          <td><?php echo $venta->producto; ?></td>
+          <td><?php echo $venta->cantidad; ?></td>
+          <td><?php echo $venta->precio; ?></td>
+          <td><?php echo $venta->total; ?></td>
+        </tr>
+      <?php } ?>
+    </tbody>
+</div>

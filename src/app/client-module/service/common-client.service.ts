@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {CartModel, DrumRequestModel, MyOrderInterface, PaymentResponseModel} from "./model";
 import {PageInterface, PaginationModel, PlaceInterface, SaleOrderInterface} from "../../core/model";
+import {ConfigurationInterface} from "../../core/model/configuration.interface";
 
 @Injectable({
     providedIn: 'root'
@@ -12,8 +13,8 @@ export class CommonClientService {
     constructor(private httpClient: HttpClient) {
     }
 
-    findConfiguration(): Observable<any> {
-        return this.httpClient.get(`${environment.apiUrl}/configuration`);
+    findConfiguration(): Observable<ConfigurationInterface> {
+        return this.httpClient.get<ConfigurationInterface>(`${environment.apiUrl}/configuration`);
     }
 
     getPlaces(): Observable<PlaceInterface[]> {
