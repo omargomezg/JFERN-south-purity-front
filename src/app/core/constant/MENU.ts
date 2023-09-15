@@ -25,6 +25,11 @@ export const MENU = [
     "role": ["ADMINISTRATOR"]
   },
   {
+    "name": "Ventas",
+    "link": "back-office/ventas",
+    "role": ["ADMINISTRATOR"]
+  },
+  {
     "name": "Puntos de venta",
     "link": "puntos-de-venta",
     "role": ["ADMINISTRATOR"]

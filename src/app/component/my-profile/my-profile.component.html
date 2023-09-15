@@ -4,10 +4,10 @@
     <div class="col-sm-8" *ngIf="!loading">
       {{user.role}}
       <ng-template [ngIf]="user.role === 'ADMINISTRATOR'" [ngIfElse]="customerContainer">
-        <app-my-admin-profile [user]="user"></app-my-admin-profile>
+        <!--<app-my-admin-profile [user]="user"></app-my-admin-profile>-->
       </ng-template>
       <ng-template #customerContainer>
-        <app-my-customer-profile [user]="user"></app-my-customer-profile>
+        <!--<app-my-customer-profile [user]="user"></app-my-customer-profile>-->
       </ng-template>
     </div>
     <div class="col-sm-4">

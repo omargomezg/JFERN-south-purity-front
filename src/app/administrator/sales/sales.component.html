@@ -1,26 +1,38 @@
 <div class="container">
-  <h1>Ventas realizadas</h1>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Cliente</th>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Precio</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($ventas as $venta) { ?>
-        <tr>
-          <td><?php echo $venta->fecha; ?></td>
-          <td><?php echo $venta->cliente; ?></td>
-          <td><?php echo $venta->producto; ?></td>
-          <td><?php echo $venta->cantidad; ?></td>
-          <td><?php echo $venta->precio; ?></td>
-          <td><?php echo $venta->total; ?></td>
-        </tr>
-      <?php } ?>
-    </tbody>
+  <h1>Ventas</h1>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="sales">
+      <caption></caption>
+      <ng-container matColumnDef="createdDate">
+        <th mat-header-cell *matHeaderCellDef> Fecha</th>
+        <td mat-cell *matCellDef="let sale"> {{sale.createdDate | date:'short'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Fecha</th>
+        <td mat-cell *matCellDef="let sale"> {{sale.status}} </td>
+      </ng-container>
+      <ng-container matColumnDef="client">
+        <th mat-header-cell *matHeaderCellDef> Cliente</th>
+        <td mat-cell *matCellDef="let sale"> {{sale.client.fullName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> Detalle</th>
+        <td mat-cell *matCellDef="let sale">
+          {{sale.total | number:'1.0-0'}}
+      </ng-container>
+      <ng-container matColumnDef="payment">
+        <th mat-header-cell *matHeaderCellDef> Transacción</th>
+        <td mat-cell *matCellDef="let sale">
+          <code>{{sale.paymentDetail | json}} </code></td>
+      </ng-container>
+      <ng-container matColumnDef="options">
+        <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
+        <td mat-cell *matCellDef="let element">
+
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
 </div>

@@ -7,7 +7,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatCheckboxModule} from "@angular/material/checkbox";
-import { SalesComponent } from './sales/sales.component';
+import {SalesComponent} from './sales/sales.component';
+import {MatTableModule} from "@angular/material/table";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SalesComponent } from './sales/sales.component';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule
   ]
 })
 export class AdministratorModule {
