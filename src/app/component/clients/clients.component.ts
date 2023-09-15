@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {CommonAdminService} from "../../core/service/common-admin.service";
-import {RoleEnum} from "../../core/constant/role.enum";
+import {CommonAdminService} from "../../core/service";
 import {UserInterface} from "../../core/model/user.interface";
-import {PaginationModel} from "../../core/model/pagination.model";
+import {PaginationModel, UserFilterModel} from "../../core/model";
 import {PageEvent} from "@angular/material/paginator";
 
 @Component({
@@ -31,7 +30,7 @@ export class ClientsComponent implements OnInit {
   }
 
   loadUsers(): void {
-    this.commonAdminService.getUsers(RoleEnum.CUSTOMER, this.pagination).subscribe(customers => {
+    this.commonAdminService.getUsers(new UserFilterModel(), this.pagination).subscribe(customers => {
       this.totalElements = customers.totalElements;
       this.dataSource = customers.content;
     });

@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
-import {AuthService} from '../../core/service/auth.service';
+import {Component} from '@angular/core';
+import {AuthService} from '../../core/service';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {Location} from '@angular/common';
+import {environment} from "../../../environments/environment";
+import {MENU} from "../../core/constant/MENU";
 
 @Component({
   selector: 'app-header',
@@ -13,6 +15,8 @@ export class HeaderComponent {
   clientName?: string;
   subscription?: Subscription;
   isAuthenticated?: boolean;
+  home = environment.home;
+  menus = MENU;
 
   constructor(private router: Router, public authService: AuthService,
               private location: Location) {
@@ -20,7 +24,6 @@ export class HeaderComponent {
   }
 
   checkSession(): void {
-    let profile = this.authService.getProfile();
     this.subscription = this.authService.statusSession$
       .subscribe((status: boolean) => this.isAuthenticated = status);
   }
@@ -43,5 +46,15 @@ export class HeaderComponent {
 
   isMenuActive(anchor: string) {
     return this.location.path(true).includes(anchor);
+  }
+
+  protected readonly menu = MENU;
+
+  filterByRole(menus: any[]): any {
+    return menus.filter(menu => menu.role.indexOf(this.authService.getProfile()?.role) !== -1);
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

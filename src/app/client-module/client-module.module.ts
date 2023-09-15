@@ -15,7 +15,6 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import {AppModule} from '../app.module';
 
 @NgModule({
   declarations: [
@@ -35,8 +34,7 @@ import {AppModule} from '../app.module';
     MatIconModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatPaginatorModule,
-    AppModule
+    MatPaginatorModule
   ]
 })
 export class ClientModuleModule {

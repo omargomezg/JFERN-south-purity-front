@@ -1,0 +1,16 @@
+<div class="mb-3">
+  <form [formGroup]="formPlace">
+    <div class="row align-items-center">
+      <div class="col-sm-2">
+        <label for="selectPlaces" class="form-label">Puntos de venta</label>
+      </div>
+      <div class="col-auto">
+        <select id="selectPlaces" class="form-select" formControlName="place"
+                aria-label="select places">
+          <option value="">Seleccione una opción</option>
+          <option *ngFor="let item of places" [value]="item.id">{{item.address}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>

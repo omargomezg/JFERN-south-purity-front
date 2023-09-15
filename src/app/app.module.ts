@@ -23,10 +23,6 @@ import {ContactComponent} from './component/contact/contact.component';
 import {MyOrdersComponent} from './component/my-orders/my-orders.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
-import {DrumRequestComponent} from './component/drum-request/drum-request.component';
-import {GetnetButtonComponent} from './component/getnet-button/getnet-button.component';
-import {DropDownPlacesComponent} from './component/drop-down-places/drop-down-places.component';
-import {VerticalMenuComponent} from './component/vertical-menu/vertical-menu.component';
 import {HeaderComponent} from './component/header/header.component';
 import {DashboardComponent} from './component/dashboard/dashboard.component';
 import {PlaceComponent} from './component/place/place.component';
@@ -35,7 +31,6 @@ import {ClientFormComponent} from './component/client-form/client-form.component
 import {MatSelectModule} from '@angular/material/select';
 import {UsersComponent} from './component/users/users.component';
 import {FormPlaceComponent} from './component/form-place/form-place.component';
-import {ConfigurationComponent} from './component/configuration/configuration.component';
 import {DrumsAvailableComponent} from './component/drums-available/drums-available.component';
 import {DrumsComponent} from './component/drums/drums.component';
 import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
@@ -43,6 +38,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {RestorePasswordComponent} from './component/restore-password/restore-password.component';
 import {ResetPwdWithCodeComponent} from './component/reset-pwd-with-code/reset-pwd-with-code.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatMenuModule} from "@angular/material/menu";
+import {UserFormComponent} from './component/user-form/user-form.component';
+
+/*import { MyCustomerProfileComponent } from './component/my-customer-profile/my-customer-profile.component';
+import { MyAdminProfileComponent } from './component/my-admin-profile/my-admin-profile.component';*/
 
 @NgModule({
   declarations: [
@@ -55,23 +55,21 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     RegisterComponent,
     ResetPwdModalComponent,
     MyOrdersComponent,
-    DrumRequestComponent,
     DrumsAvailableComponent,
     DrumsComponent,
     ClientsComponent,
     ClientFormComponent,
     UsersComponent,
-    ConfigurationComponent,
-    GetnetButtonComponent,
-    DropDownPlacesComponent,
     ContactComponent,
-    VerticalMenuComponent,
     HeaderComponent,
     FormPlaceComponent,
     PlaceComponent,
     DashboardComponent,
     RestorePasswordComponent,
-    ResetPwdWithCodeComponent
+    ResetPwdWithCodeComponent,
+    UserFormComponent,
+    /*MyCustomerProfileComponent,
+    MyAdminProfileComponent*/
   ],
   imports: [
     BrowserModule,
@@ -90,7 +88,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     MatTableModule,
     MatSelectModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatMenuModule
   ],
   providers: [
     {
@@ -98,9 +97,6 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
       useClass: TokenInterceptorService,
       multi: true
     }
-  ],
-  exports: [
-    VerticalMenuComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {CommonAdminService} from "../../core/service/common-admin.service";
+import {CommonAdminService} from "../../core/service";
 import {FormBuilder, Validators} from "@angular/forms";
 import {UserInterface} from "../../core/model/user.interface";
 import {ToastrService} from "ngx-toastr";
@@ -79,7 +79,7 @@ export class ClientFormComponent implements OnInit {
 
   showMessageAndRedirect(message: string): void {
     this.toastr.success(message);
-    this.router.navigate(['/administrador/usuarios'])
+    this.router.navigate(['/usuarios'], {relativeTo: this.activatedRoute})
   }
 
   randomPassword(): void {

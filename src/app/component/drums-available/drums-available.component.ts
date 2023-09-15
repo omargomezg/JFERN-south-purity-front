@@ -1,33 +1,58 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {CommonAdminService} from "../../core/service/common-admin.service";
-import {ProductInterface} from "../../core/model/product.interface";
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {CommonAdminService, ProductService} from "../../core/service";
+import {PaginationModel, ProductInterface} from "../../core/model";
 import {PageEvent} from "@angular/material/paginator";
-import {PaginationModel} from "../../core/model";
+import {STATUS_BOTTLES} from "../../core/constant/app.constants";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-drums-available',
   templateUrl: './drums-available.component.html',
   styleUrls: ['./drums-available.component.css']
 })
-export class DrumsAvailableComponent implements OnChanges {
+export class DrumsAvailableComponent implements OnInit, OnChanges {
 
   @Input() placeId: string | undefined | null;
   @Input() reload: string = '';
-  displayedColumns: string[] = ['id', 'number', 'key'];
+  displayedColumns: string[] = ['id', 'number', 'key', 'createdDate', 'status', 'options'];
   selectedPlaceId: string | undefined | null;
   dataSource: ProductInterface[];
   totalElements: number = 0
   pagination: PaginationModel = new PaginationModel();
+  statuses = STATUS_BOTTLES;
+  selectedStatus: string = STATUS_BOTTLES[0].code;
+  public filterForm: FormGroup;
 
-  constructor(private commonAdminService: CommonAdminService) {
+  constructor(private commonAdminService: CommonAdminService,
+              private productService: ProductService,
+              private formBuilder: FormBuilder) {
     this.dataSource = [];
+    this.filterForm = this.buildForm();
+  }
+
+  ngOnInit(): void {
+    this.setValueChanges();
   }
 
   getOrders(): void {
-    this.commonAdminService.getOrders(this.selectedPlaceId as string, this.pagination).subscribe(orders => {
+    this.commonAdminService.getOrders(this.selectedPlaceId as string, this.selectedStatus, this.pagination).subscribe(orders => {
       this.totalElements = orders.totalElements;
       this.dataSource = orders.content;
     })
+  }
+
+  buildForm(): FormGroup {
+    return this.formBuilder.group({
+      status: ['']
+    });
+  }
+
+  setValueChanges(): void {
+    this.filterForm.valueChanges.subscribe((form) => {
+      this.selectedStatus = form.status;
+      this.pagination.pageIndex = 0;
+      this.getOrders();
+    });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -43,4 +68,19 @@ export class DrumsAvailableComponent implements OnChanges {
     this.getOrders();
   }
 
+  trackByStatusCode(index: number, status: any): string {
+    return status.code;
+  }
+
+  unTake(product: ProductInterface) {
+
+  }
+
+  delete(product: ProductInterface) {
+    if (confirm('Are you sure to delete this product?') == true) {
+      this.productService.delete(product.id).subscribe(() => {
+        this.getOrders();
+      });
+    }
+  }
 }

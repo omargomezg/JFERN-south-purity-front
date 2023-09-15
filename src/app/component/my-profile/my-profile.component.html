@@ -1,45 +1,17 @@
-<div class="container-fluid">
+<div class="container">
+  <h1>Mis datos</h1>
   <div class="row">
-    <div class="col-sm-2">
-      <app-vertical-menu source="my-data"></app-vertical-menu>
+    <div class="col-sm-8" *ngIf="!loading">
+      {{user.role}}
+      <ng-template [ngIf]="user.role === 'ADMINISTRATOR'" [ngIfElse]="customerContainer">
+        <!--<app-my-admin-profile [user]="user"></app-my-admin-profile>-->
+      </ng-template>
+      <ng-template #customerContainer>
+        <!--<app-my-customer-profile [user]="user"></app-my-customer-profile>-->
+      </ng-template>
     </div>
-    <div class="col-sm-10">
-      <h1>Mis datos</h1>
-      <div class="row">
-        <div class="col-sm-8">
-          <form [formGroup]="formProfile" novalidate (ngSubmit)="submit()" class="base-form">
-            <mat-form-field appearance="fill" class="base-full-width">
-              <mat-label>Rut</mat-label>
-              <input matInput formControlName="rut" readonly>
-            </mat-form-field>
-            <mat-form-field appearance="fill" class="base-full-width">
-              <mat-label>Nombre</mat-label>
-              <input matInput formControlName="fullName">
-            </mat-form-field>
-            <mat-form-field appearance="fill" class="base-full-width">
-              <mat-label>Correo electrónico</mat-label>
-              <input matInput formControlName="email" readonly>
-            </mat-form-field>
-            <mat-form-field appearance="fill" class="base-full-width">
-              <mat-label>Teléfono</mat-label>
-              <input matInput formControlName="telephone">
-            </mat-form-field>
-            <ng-container *ngIf="profile.role === 'CUSTOMER'">
-              <h2>Dirección</h2>
-              <p>{{address}} <a href="#">Cambiar</a></p>
-            </ng-container>
-            <div class="text-end">
-              <button type="button" mat-button>Cancelar</button>
-              <button type="submit" mat-raised-button class="m-1" color="primary"
-                      [disabled]="!formProfile.valid">Actualizar
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="col-sm-4">
-          <button type="button" mat-raised-button (click)="showModalPwd()">Cambia tu contraseña</button>
-        </div>
-      </div>
+    <div class="col-sm-4">
+      <button type="button" mat-raised-button (click)="showModalPwd()">Cambia tu contraseña</button>
     </div>
   </div>
 </div>

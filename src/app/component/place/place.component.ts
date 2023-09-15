@@ -1,9 +1,12 @@
 import {Component} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {FormPlaceComponent} from "../form-place/form-place.component";
-import {CommonAdminService} from "../../core/service/common-admin.service";
+import {CommonAdminService, PlaceService} from "../../core/service";
 import {PlaceInterface} from "../../core/model";
 import {Router} from '@angular/router';
+import {MatSlideToggleChange} from "@angular/material/slide-toggle";
+import {PlaceStatusEnum} from "../../core/constant/app.constants";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-place',
@@ -11,11 +14,13 @@ import {Router} from '@angular/router';
   styleUrls: ['./place.component.css']
 })
 export class PlaceComponent {
-  displayedColumns: string[] = ['city', 'name', 'options'];
+  displayedColumns: string[] = ['city', 'name', 'status', 'options'];
   dataSource: PlaceInterface[] = [];
 
   constructor(private dialog: MatDialog, private commonAdminService: CommonAdminService,
-              private router: Router) {
+              private router: Router,
+              private placeService: PlaceService,
+              private toastr: ToastrService) {
     this.loadPlaces();
   }
 
@@ -36,12 +41,18 @@ export class PlaceComponent {
       data: place,
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(() => {
       this.loadPlaces();
     });
   }
 
-  addBottles(): void {
-    this.router.navigateByUrl('/agregar-bidones');
+  addBottles(placeId: string): void {
+    this.router.navigateByUrl('/agregar-bidones/' + placeId);
+  }
+
+  onSlideStatus($event: MatSlideToggleChange, place: PlaceInterface) {
+    place.status = $event.checked ? PlaceStatusEnum.ENABLED : PlaceStatusEnum.DISABLED;
+    const message = "Punto de venta ha sido " + (place.status === PlaceStatusEnum.ENABLED ? 'habilitado' : 'deshabilitado');
+    this.placeService.put(place).subscribe(() => this.toastr.success(message));
   }
 }

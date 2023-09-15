@@ -1,0 +1,83 @@
+<div class="container">
+  <h1>Configuraciones</h1>
+  <div class="row">
+    <div class="col-sm-8">
+      <form (ngSubmit)="submit()" [formGroup]="configurationForm" novalidate class="base-form">
+        <mat-form-field appearance="fill" class="base-full-width">
+          <mat-label>Valor de la recarga</mat-label>
+          <input type="number" matInput formControlName="price">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="base-full-width">
+          <mat-label>Valor del bidón + recarga</mat-label>
+          <input type="number" matInput formControlName="priceWithDrum">
+        </mat-form-field>
+        <h2>GetNet</h2>
+        <p>Si existen operaciones pendientes, puedes hacer una actualización contra los servicios de getnet</p>
+        <mat-form-field appearance="fill" class="base-full-width">
+          <mat-label>Url de respuesta</mat-label>
+          <input type="text" matInput formControlName="returnUrl">
+          <mat-hint>Esta es la dirección url donde el cliente verá el resultado de la operación de pago a través de
+            Getnet.
+          </mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="base-full-width">
+          <mat-label>Minutos antes de expirar el pago</mat-label>
+          <input type="number" matInput formControlName="timeToPay">
+        </mat-form-field>
+        <div formGroupName="smtp">
+          <h2>Configurar SMPT</h2>
+          <p>Permite el envío de correos electrónicos</p>
+          <mat-form-field appearance="fill" class="base-full-width">
+            <mat-label>Host</mat-label>
+            <input type="text" matInput formControlName="host">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="base-full-width">
+            <mat-label>Puerto</mat-label>
+            <input type="number" matInput formControlName="port">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="base-full-width">
+            <mat-label>Usuario</mat-label>
+            <input type="text" matInput formControlName="username">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="base-full-width">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput formControlName="password">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="base-full-width">
+            <mat-label>Protocolo</mat-label>
+            <input type="text" matInput formControlName="protocol">
+          </mat-form-field>
+          <mat-checkbox formControlName="auth">Auth</mat-checkbox>
+          <mat-checkbox formControlName="starttlsEnable">Enable</mat-checkbox>
+          <mat-checkbox formControlName="starttlsRequired">Required</mat-checkbox>
+        </div>
+        <div class="text-end">
+          <br>
+          <button type="button" mat-button>Cancelar</button>
+          <button type="submit" mat-raised-button class="m-1" [disabled]="!configurationForm.valid" color="primary">
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <h1>Opciones</h1>
+      <div class="row">
+        <div class="col">
+          <button type="button" mat-raised-button (click)="callTask()">Procesar operaciones pendientes</button>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill" class="base-full-width">
+            <mat-label class="form-label">Correo para prueba</mat-label>
+            <input type="email" matInput [(ngModel)]="emailAddress" placeholder="Enviar correo de prueba">
+          </mat-form-field>
+          <button type="button" mat-flat-button color="primary" (click)="sendEmail()">Enviar correo de prueba
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

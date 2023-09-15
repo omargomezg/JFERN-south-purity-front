@@ -1,0 +1,32 @@
+<form [formGroup]="formProfile" novalidate (ngSubmit)="submit()" class="base-form">
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Rut</mat-label>
+    <input matInput formControlName="rut" readonly>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="fullName">
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Correo electrónico</mat-label>
+    <input matInput formControlName="email" readonly>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="base-full-width">
+    <mat-label>Teléfono</mat-label>
+    <input matInput formControlName="telephone">
+  </mat-form-field>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Ciudad</mat-label>
+      <input matInput formControlName="city">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="base-full-width">
+      <mat-label>Direccion</mat-label>
+      <input matInput formControlName="address">
+    </mat-form-field>
+  <div class="text-end">
+    <button type="button" mat-button>Cancelar</button>
+    <button type="submit" mat-raised-button class="m-1" color="primary"
+            [disabled]="!formProfile.valid">Actualizar
+    </button>
+  </div>
+</form>

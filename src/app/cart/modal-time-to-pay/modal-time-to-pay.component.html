@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Debes tener en cuenta!</h1>
+<div mat-dialog-content>
+  <p>Una vez solicitado el pago tienes {{timeToPay}} minutos para completar la transacción. Después se liberarán
+    los productos.</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-button color="primary" (click)="sendRequest()" cdkFocusInitial>Realizar pedido</button>
+</div>

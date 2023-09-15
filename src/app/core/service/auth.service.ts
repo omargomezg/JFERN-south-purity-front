@@ -44,18 +44,22 @@ export class AuthService {
     return !!localStorage.getItem('token');
   }
 
-  logout(): void {
+  logout(goToLogin: boolean = false): void {
     localStorage.removeItem('token');
     localStorage.removeItem('profile');
     this.statusSession.next(false);
-    this.router.navigate(['/home'])
+    if (goToLogin) {
+      this.router.navigate(['/login']);
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
 
   register(register: RegisterModel): Observable<any> {
     return this.httpClient.post<any>(`${environment.apiUrl}/register`, register);
   }
 
-  getMyProfile(): Observable<any>{
+  getMyProfile(): Observable<any> {
     return this.httpClient.get<any>(`${environment.apiUrl}/profile`);
   }
 
@@ -63,11 +67,11 @@ export class AuthService {
     return this.httpClient.put<any>(`${environment.apiUrl}/profile`, profile);
   }
 
-  restoreAccount(user: UserInterface): Observable<UserInterface>{
+  restoreAccount(user: UserInterface): Observable<UserInterface> {
     return this.httpClient.post<UserInterface>(`${environment.apiUrl}/auth/restore`, user);
   }
 
-  restoreAccountWithCode(user: UserInterface): Observable<UserInterface>{
+  restoreAccountWithCode(user: UserInterface): Observable<UserInterface> {
     return this.httpClient.post<UserInterface>(`${environment.apiUrl}/auth/restore/${user.passwordReset.code}`, user);
   }
 
