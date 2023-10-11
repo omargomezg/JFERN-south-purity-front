@@ -40,6 +40,8 @@ import {ResetPwdWithCodeComponent} from './component/reset-pwd-with-code/reset-p
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatMenuModule} from "@angular/material/menu";
 import {UserFormComponent} from './component/user-form/user-form.component';
+import {MyCustomerProfileComponent} from "./component/my-customer-profile/my-customer-profile.component";
+import {MyAdminProfileComponent} from "./component/my-admin-profile/my-admin-profile.component";
 
 /*import { MyCustomerProfileComponent } from './component/my-customer-profile/my-customer-profile.component';
 import { MyAdminProfileComponent } from './component/my-admin-profile/my-admin-profile.component';*/
@@ -68,8 +70,8 @@ import { MyAdminProfileComponent } from './component/my-admin-profile/my-admin-p
     RestorePasswordComponent,
     ResetPwdWithCodeComponent,
     UserFormComponent,
-    /*MyCustomerProfileComponent,
-    MyAdminProfileComponent*/
+    MyCustomerProfileComponent,
+    MyAdminProfileComponent
   ],
   imports: [
     BrowserModule,

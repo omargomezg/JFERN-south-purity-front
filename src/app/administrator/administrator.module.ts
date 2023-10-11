@@ -9,6 +9,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {SalesComponent} from './sales/sales.component';
 import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -16,17 +17,18 @@ import {MatTableModule} from "@angular/material/table";
     ConfigurationComponent,
     SalesComponent
   ],
-  imports: [
-    CommonModule,
-    AdministratorRoutingModule,
-    FormsModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatCheckboxModule,
-    MatTableModule
-  ]
+    imports: [
+        CommonModule,
+        AdministratorRoutingModule,
+        FormsModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatCheckboxModule,
+        MatTableModule,
+        MatPaginatorModule
+    ]
 })
 export class AdministratorModule {
 }
