@@ -43,7 +43,6 @@ export class DrumsComponent implements OnInit {
             this.formDrum.controls['padlockKey'].setValue('');
             this.reloadListOfDrums = !this.reloadListOfDrums;
         }, error => {
-            console.log(error);
             this.toastr.error(error);
         })
     }

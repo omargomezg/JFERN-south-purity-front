@@ -41,64 +41,64 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatMenuModule} from "@angular/material/menu";
 import {UserFormComponent} from './component/user-form/user-form.component';
 
-/*import { MyCustomerProfileComponent } from './component/my-customer-profile/my-customer-profile.component';
-import { MyAdminProfileComponent } from './component/my-admin-profile/my-admin-profile.component';*/
+import {MyCustomerProfileComponent} from './component/my-customer-profile/my-customer-profile.component';
+import {MyAdminProfileComponent} from './component/my-admin-profile/my-admin-profile.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    FooterComponent,
-    MyProfileComponent,
-    HomeComponent,
-    BuildPaymentResultComponent,
-    RegisterComponent,
-    ResetPwdModalComponent,
-    MyOrdersComponent,
-    DrumsAvailableComponent,
-    DrumsComponent,
-    ClientsComponent,
-    ClientFormComponent,
-    UsersComponent,
-    ContactComponent,
-    HeaderComponent,
-    FormPlaceComponent,
-    PlaceComponent,
-    DashboardComponent,
-    RestorePasswordComponent,
-    ResetPwdWithCodeComponent,
-    UserFormComponent,
-    /*MyCustomerProfileComponent,
-    MyAdminProfileComponent*/
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    FormsModule,
-    MatDialogModule,
-    LoadingBarHttpClientModule,
-    ToastrModule.forRoot(),
-    MatPaginatorModule,
-    MatTableModule,
-    MatSelectModule,
-    MatIconModule,
-    MatSlideToggleModule,
-    MatMenuModule
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorService,
-      multi: true
-    }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        FooterComponent,
+        MyProfileComponent,
+        HomeComponent,
+        BuildPaymentResultComponent,
+        RegisterComponent,
+        ResetPwdModalComponent,
+        MyOrdersComponent,
+        DrumsAvailableComponent,
+        DrumsComponent,
+        ClientsComponent,
+        ClientFormComponent,
+        UsersComponent,
+        ContactComponent,
+        HeaderComponent,
+        FormPlaceComponent,
+        PlaceComponent,
+        DashboardComponent,
+        RestorePasswordComponent,
+        ResetPwdWithCodeComponent,
+        UserFormComponent,
+        MyCustomerProfileComponent,
+        MyAdminProfileComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        FormsModule,
+        MatDialogModule,
+        LoadingBarHttpClientModule,
+        ToastrModule.forRoot(),
+        MatPaginatorModule,
+        MatTableModule,
+        MatSelectModule,
+        MatIconModule,
+        MatSlideToggleModule,
+        MatMenuModule
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptorService,
+            multi: true
+        }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
