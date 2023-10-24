@@ -43,7 +43,7 @@ import {UserFormComponent} from './component/user-form/user-form.component';
 
 import {MyCustomerProfileComponent} from './component/my-customer-profile/my-customer-profile.component';
 import {MyAdminProfileComponent} from './component/my-admin-profile/my-admin-profile.component';
-import {GtagModule} from "angular-gtag";
+import {NgxGa4Module} from '@kattoshi/ngx-ga4';
 
 @NgModule({
     declarations: [
@@ -91,7 +91,7 @@ import {GtagModule} from "angular-gtag";
         MatIconModule,
         MatSlideToggleModule,
         MatMenuModule,
-        GtagModule.forRoot({trackingId: 'G-FVKGFK1ZQD', trackPageviews: true})
+        NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'})
     ],
     providers: [
         {
