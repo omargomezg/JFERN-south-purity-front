@@ -43,6 +43,7 @@ import {UserFormComponent} from './component/user-form/user-form.component';
 
 import {MyCustomerProfileComponent} from './component/my-customer-profile/my-customer-profile.component';
 import {MyAdminProfileComponent} from './component/my-admin-profile/my-admin-profile.component';
+import {GtagModule} from "angular-gtag";
 
 @NgModule({
     declarations: [
@@ -89,7 +90,8 @@ import {MyAdminProfileComponent} from './component/my-admin-profile/my-admin-pro
         MatSelectModule,
         MatIconModule,
         MatSlideToggleModule,
-        MatMenuModule
+        MatMenuModule,
+        GtagModule.forRoot({trackingId: 'G-FVKGFK1ZQD', trackPageviews: true})
     ],
     providers: [
         {

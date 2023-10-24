@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {AuthService} from "./core/service";
 import {MENU} from "./core/constant/MENU";
+import {Gtag} from "angular-gtag";
 
 @Component({
     selector: 'app-root',
@@ -14,7 +15,8 @@ export class AppComponent {
         type: this.authService.getProfile()?.role
     }
 
-    constructor(public authService: AuthService) {
+    constructor(public authService: AuthService, gtag: Gtag) {
+        gtag.pageview({page_title: 'Home', page_path: '/'});
     }
 
     logout(): void {
