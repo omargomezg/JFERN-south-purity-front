@@ -9,6 +9,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {SalesComponent} from './sales/sales.component';
 import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {MatTableModule} from "@angular/material/table";
     MatInputModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class AdministratorModule {
