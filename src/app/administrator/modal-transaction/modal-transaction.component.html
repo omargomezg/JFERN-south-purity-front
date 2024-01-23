@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Detalle de la transacción</h1>
+<div mat-dialog-content>
+  <dl>
+    <dt>Request ID</dt>
+    <dd>{{transaction.requestId}}</dd>
+    <dt>Status</dt>
+    <dd>{{transaction.status}}</dd>
+    <dt>Message</dt>
+    <dd>{{transaction.message}}</dd>
+  </dl>
+  <div class="row">
+    <div class="col"></div>
+  </div>
+  <div class="text-end">
+  <span class="text-info small">{{transaction.date | date:'short'}}
+  </span>
+    <mat-icon (click)="reload()" class="reload-display">refresh</mat-icon>
+  </div>
+</div>
