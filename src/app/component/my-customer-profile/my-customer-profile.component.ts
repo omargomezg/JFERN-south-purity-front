@@ -7,7 +7,7 @@ import {UserService} from "../../core/service";
 @Component({
   selector: 'app-my-customer-profile',
   templateUrl: './my-customer-profile.component.html',
-  styleUrls: ['./my-customer-profile.component.css']
+  styleUrls: ['./my-customer-profile.component.scss']
 })
 export class MyCustomerProfileComponent implements OnChanges {
   @Input() user: UserInterface = {} as UserInterface;

@@ -24,13 +24,11 @@
           "@angular/material/prebuilt-themes/indigo-pink.css",
           "src/styles.css",
           "node_modules/bootstrap/dist/css/bootstrap.css",
-          "node_modules/ngx-toastr/toastr.css",
-          "src/assets/vendor.css"
+          "node_modules/ngx-toastr/toastr.css"
         ],
         "scripts": [
           "node_modules/jquery/dist/jquery.min.js",
           "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
-          "src/assets/vendor.js",
           "src/assets/app.js"
         ]
       },

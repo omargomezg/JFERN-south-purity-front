@@ -7,7 +7,7 @@ import {MatDialogRef} from "@angular/material/dialog";
 import {PlaceInterface} from "../../../core/model";
 
 @Component({
-  selector: 'app-add-place', templateUrl: './add-place.component.html', styleUrls: ['./add-place.component.css']
+  selector: 'app-add-place', templateUrl: './add-place.component.html', styleUrls: ['./add-place.component.scss']
 })
 export class AddPlaceComponent implements OnInit {
 

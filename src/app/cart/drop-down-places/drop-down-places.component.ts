@@ -6,7 +6,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 @Component({
   selector: 'app-drop-down-places',
   templateUrl: './drop-down-places.component.html',
-  styleUrls: ['./drop-down-places.component.css']
+  styleUrls: ['./drop-down-places.component.scss']
 })
 export class DropDownPlacesComponent implements OnInit {
   @Output()

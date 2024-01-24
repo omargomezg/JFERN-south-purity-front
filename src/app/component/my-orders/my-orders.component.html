@@ -1,46 +1,47 @@
 <div class="container">
-    <h1>Mis pedidos</h1>
+  <div class="border mt-4 p-4">
+    <app-paragraph-h1 text="Mis pedidos"></app-paragraph-h1>
     <div class="text-center mt-4" *ngIf="dataSource.length === 0">
-        <p class="text-primary">No encontramos nada!</p>
+      <p class="text-primary">No encontramos nada!</p>
     </div>
     <p>Acá te presentamos el historia de tus compras.</p>
 
     <div class="mat-elevation-z8" *ngIf="dataSource.length > 0">
-        <table class="table table-striped">
-            <caption>Detalle de mis pedidos</caption>
-            <thead>
-            <tr>
-                <th>No.</th>
-                <th>Fecha</th>
-                <th>Detalle</th>
-                <th>Códigos</th>
-                <th>Estado</th>
-                <th>Total</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let order of dataSource">
-                <td>{{order.serial}}</td>
-                <td>{{order.createdDate | date:'short'}}</td>
-                <td>
-                    <ng-container *ngFor="let item of order.items">
-                        <div>{{item.quantity}} {{item.name}}</div>
-                    </ng-container>
-                </td>
-                <td>
-                    <ng-container *ngFor="let key of order.keys">
-                        <div>No. {{key.key}} - Clave: {{key.value}}</div>
-                    </ng-container>
-                </td>
-                <td>{{order.status}}</td>
-                <td class="text-end">{{order.total | number}}</td>
-            </tr>
-            </tbody>
-        </table>
-        <mat-paginator #paginator (page)="handlePageEvent($event)"
-                       [length]="pagination.length"
-                       [pageSize]="pagination.pageSize" [pageSizeOptions]="pagination.pageSizeOptions">
-        </mat-paginator>
+      <table class="table table-striped">
+        <caption>Detalle de mis pedidos</caption>
+        <thead>
+        <tr>
+          <th>No.</th>
+          <th>Fecha</th>
+          <th>Detalle</th>
+          <th>Códigos</th>
+          <th>Estado</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let order of dataSource">
+          <td>{{order.serial}}</td>
+          <td>{{order.createdDate | date:'short'}}</td>
+          <td>
+            <ng-container *ngFor="let item of order.items">
+              <div>{{item.quantity}} {{item.name}}</div>
+            </ng-container>
+          </td>
+          <td>
+            <ng-container *ngFor="let key of order.keys">
+              <div>No. {{key.key}} - Clave: {{key.value}}</div>
+            </ng-container>
+          </td>
+          <td>{{order.status}}</td>
+          <td class="text-end">{{order.total | number}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <mat-paginator #paginator (page)="handlePageEvent($event)"
+                     [length]="pagination.length"
+                     [pageSize]="pagination.pageSize" [pageSizeOptions]="pagination.pageSizeOptions">
+      </mat-paginator>
     </div>
-    <br>
+  </div>
 </div>

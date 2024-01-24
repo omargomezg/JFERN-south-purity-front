@@ -7,7 +7,7 @@ import {CommonAdminService} from "../../core/service/common-admin.service";
 @Component({
   selector: 'app-form-place',
   templateUrl: './form-place.component.html',
-  styleUrls: ['./form-place.component.css']
+  styleUrls: ['./form-place.component.scss']
 })
 export class FormPlaceComponent {
 

@@ -7,7 +7,7 @@ import {PageEvent} from "@angular/material/paginator";
 @Component({
     selector: 'app-my-requests',
     templateUrl: './my-orders.component.html',
-    styleUrls: ['./my-orders.component.css']
+    styleUrls: ['./my-orders.component.scss']
 })
 export class MyOrdersComponent {
     dataSource: SaleOrderInterface[];

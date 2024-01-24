@@ -11,7 +11,7 @@ import {ModalTransactionComponent} from "../modal-transaction/modal-transaction.
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
-  styleUrls: ['./sales.component.css']
+  styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent {
   sales: SaleOrderInterface[] = [];

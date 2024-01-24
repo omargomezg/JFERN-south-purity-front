@@ -930,3 +930,227 @@ To fix this, set a unique name for each project in a project.json inside the pro
     at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
     at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
 [NX Daemon Server] - 2024-01-23T01:04:37.184Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T12:39:02.736Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T12:39:02.738Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T12:39:02.740Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:02.740Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T12:39:02.741Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:02.742Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T12:39:02.743Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T12:39:02.743Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:02.743Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:02.765Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:218:15[90m)[39m
+    at [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:188:23
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async createProjectConfigurations [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/retrieve-workspace-files.js:89:62[90m)[39m
+    at async processFilesAndCreateAndSerializeProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:140:28[90m)[39m
+    at async getCachedSerializedProjectGraphPromise [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:43:16[90m)[39m
+    at async handleRequestProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/handle-request-project-graph.js:12:24[90m)[39m
+    at async handleResult [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:110:16[90m)[39m
+    at async handleMessage [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:81:9[90m)[39m
+    at async [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T12:39:02.766Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T12:39:50.025Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T12:39:50.027Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T12:39:50.029Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:50.030Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T12:39:50.030Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:50.031Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T12:39:50.032Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T12:39:50.032Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:50.032Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:50.058Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:218:15[90m)[39m
+    at [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:188:23
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async createProjectConfigurations [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/retrieve-workspace-files.js:89:62[90m)[39m
+    at async processFilesAndCreateAndSerializeProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:140:28[90m)[39m
+    at async getCachedSerializedProjectGraphPromise [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:43:16[90m)[39m
+    at async handleRequestProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/handle-request-project-graph.js:12:24[90m)[39m
+    at async handleResult [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:110:16[90m)[39m
+    at async handleMessage [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:81:9[90m)[39m
+    at async [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T12:39:50.059Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:50:17.862Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:50:17.864Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:50:17.867Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:50:17.869Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:50:17.870Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:50:17.871Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:50:17.872Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:50:17.873Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:50:17.873Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:50:17.943Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:50:17.944Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:51:03.912Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:51:03.914Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:51:03.917Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:03.918Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:51:03.919Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:03.920Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:51:03.921Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:51:03.921Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:03.921Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:03.941Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:51:03.942Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:51:25.586Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:51:25.592Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:51:25.597Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:25.597Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:51:25.598Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:25.619Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:51:25.620Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:52:59.330Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:52:59.332Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:52:59.336Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:52:59.337Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:52:59.337Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:52:59.338Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:52:59.339Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:52:59.339Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:52:59.339Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:52:59.365Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:52:59.366Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-24T15:27:09.719Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-24T15:27:09.728Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-24T15:27:09.729Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-24T15:27:09.731Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-24T15:27:09.764Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-24T15:27:09.767Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-24T15:27:09.768Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-24T15:27:09.768Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-24T15:27:09.769Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-24T15:27:09.913Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:218:15[90m)[39m
+    at [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:188:23
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async createProjectConfigurations [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/retrieve-workspace-files.js:89:62[90m)[39m
+    at async processFilesAndCreateAndSerializeProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:140:28[90m)[39m
+    at async getCachedSerializedProjectGraphPromise [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:43:16[90m)[39m
+    at async handleRequestProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/handle-request-project-graph.js:12:24[90m)[39m
+    at async handleResult [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:110:16[90m)[39m
+    at async handleMessage [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:81:9[90m)[39m
+    at async [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-24T15:27:09.917Z - Done responding to the client null

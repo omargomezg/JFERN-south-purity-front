@@ -5,7 +5,7 @@ import {PaymentDetailInterface} from "../../core/model/sale-order/payment-detail
 @Component({
   selector: 'app-modal-transaction',
   templateUrl: './modal-transaction.component.html',
-  styleUrls: ['./modal-transaction.component.css']
+  styleUrls: ['./modal-transaction.component.scss']
 })
 export class ModalTransactionComponent {
 

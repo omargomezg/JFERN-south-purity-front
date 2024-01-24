@@ -6,7 +6,7 @@ import {UserInterface} from "../../core/model/user.interface";
 @Component({
   selector: 'app-list-of-clients',
   templateUrl: './list-of-clients.component.html',
-  styleUrls: ['./list-of-clients.component.css']
+  styleUrls: ['./list-of-clients.component.scss']
 })
 export class ListOfClientsComponent implements OnChanges {
   @Input() place: PlaceInterface | undefined;

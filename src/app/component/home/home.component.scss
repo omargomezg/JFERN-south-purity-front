@@ -30,10 +30,6 @@
   transform: translate3d(0px, 14px, 0px);
 }
 
-h1 {
-  line-height: 50px;
-}
-
 /*link with white color and circle blur shadow for white background*/
 .bg-special {
   color: #fff;
@@ -48,3 +44,40 @@ h1 {
   margin: 20px;
 }
 
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0
+}
+
+.text-steps {
+  font-size: 1rem;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-icon > span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.list-unstyled > li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  list-style: none
+}
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}

@@ -7,7 +7,7 @@ import {PageEvent} from "@angular/material/paginator";
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css']
+  styleUrls: ['./clients.component.scss']
 })
 export class ClientsComponent implements OnInit {
   displayedColumns: string[] = ['identification', 'name', 'email', 'place', 'options'];

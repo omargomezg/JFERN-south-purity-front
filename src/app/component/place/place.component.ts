@@ -11,7 +11,7 @@ import {ToastrService} from "ngx-toastr";
 @Component({
   selector: 'app-place',
   templateUrl: './place.component.html',
-  styleUrls: ['./place.component.css']
+  styleUrls: ['./place.component.scss']
 })
 export class PlaceComponent {
   displayedColumns: string[] = ['city', 'name', 'status', 'options'];
