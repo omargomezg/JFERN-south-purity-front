@@ -1,4 +1,5 @@
-<section class="hero hero-fullscreen jarallax hero-bg-ready" data-speed="0.2" style="min-height: 640px;"
+<div class="container-fluid">
+<section class="hero vh-100 hero-fullscreen jarallax hero-bg-ready" data-speed="0.2"
          data-jarallax-original-styles="min-height: calc(100vh - 140px)">
   <div class="hero-background">
     <div class="hero-background-overlay" style="background-color: rgba(0,0,0,.5)"></div>
@@ -6,14 +7,12 @@
   <div class="hero-foreground container d-flex flex-column justify-content-center">
     <div class="py-14 py-md-23 py-lg-25">
       <div class="d-flex flex-column justify-content-center align-items-center text-center">
-        <h1 class="fs-10 fs-lg-11 mb-3 font-weight-bold text-white">Agua Purificada Premium</h1>
+        <h1 class="fs-10 fs-lg-11 mb-0 font-weight-bold text-white">Agua Purificada Premium</h1>
         <p class="mt-7 mb-10 text-white fs-5" style="max-width: 530px">
           Agua purificada de la mejor calidad, con un proceso de purificación de 7 etapas, para que
           disfrutes de un agua pura y cristalina.
         </p>
-        <button (click)="buy()"
-                gtagEvent trackOn="click" action="make_order"
-                class="btn btn-lg btn-primary">
+          <button (click)="buy()" gtagEvent trackOn="click" action="make_order" class="btn btn-lg btn-primary">
           Solicita tu recarga
         </button>
       </div>
@@ -37,48 +36,36 @@
                 <i class="material-icons">phone</i>
               </div>
               <div
-                class="fs-1 lh-1 my-2 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
+                class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
                 Whatsapp Valdivia
               </div>
               <p class="mb-0 text-white">+56 9 8442 8760</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card border-0 bg-transparent mb-10 mb-md-0">
-            <div class="card-body p-0 text-center">
-              <div class="card-icon text-white mb-6">
-                <i class="material-icons">phone</i>
+          <div class="col-12 col-md-4">
+              <div class="card border-0 bg-transparent mb-10 mb-md-0">
+                  <div class="card-body p-0 text-center">
+                      <div class="card-icon text-white mb-6">
+                          <i class="material-icons">phone</i>
+                      </div>
+                      <div class="fs-1 lh-1 my-2 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
+                          Whatsapp Santiago
+                      </div>
+                      <p class="mb-0 text-white">+56 9 3929 6686</p>
+                  </div>
               </div>
-              <div
-                class="fs-1 lh-1 my-2 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
-                Whatsapp Santiago
-              </div>
-              <p class="mb-0 text-white">+56 9 3929 6686</p>
-            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-4" *ngIf="false">
-          <div class="card border-0 bg-transparent">
-            <div class="card-body p-0 text-center">
-              <div class="card-icon text-white mb-6"><i class="material-icons">verified_user</i></div>
-              <div
-                class="fs-1 lh-1 my-5 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-white-75">
-                Resolución Sanitaria
-              </div>
-              <p class="mb-0 text-white"># 706109</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
   <div id="jarallax-container-0">
-    <img class="jarallax-img w-100" style="opacity: 0.9"
-         src="https://www.epa.gov/system/files/styles/gallery_medium/private/images/2022-10/Picture5.jpg?h=8366ed85&itok=NmR9BvEx"
+    <img class="jarallax-img vw-100" style="opacity: 0.9"
+         src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0f5mvf8.jpg"
          alt="hero background">
   </div>
 </section>
+</div>
 <section class="section" id="como-comprar">
   <div class="section-content container text-center">
     <small

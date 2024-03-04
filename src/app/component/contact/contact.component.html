@@ -1,69 +1,69 @@
 <div class="section bg-secondary">
-  <div class="section-content container">
-    <div class="text-center">
-      <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
-        Nos pondremos en contacto con usted
-      </small>
-      <h1>Contáctenos</h1>
+    <div class="section-content container">
+        <div class="text-center">
+            <small class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">
+                Nos pondremos en contacto con usted
+            </small>
+            <h1>Contáctenos</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <form [formGroup]="formContact" class="row mt-17">
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="first_name" class="form-label">Nombres</label>
+                            <input type="text" formControlName="names" name="names" class="form-control"
+                                   id="first_name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="last_name" class="form-label">Apellidos</label>
+                            <input type="text" formControlName="lastName" name="lastName" class="form-control"
+                                   id="last_name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="text" formControlName="telephone" name="telephone" class="form-control"
+                                   id="phone"></div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="text" formControlName="email" name="email" class="form-control" id="email">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" formControlName="message" name="message" class="form-control"
+                                      rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div
+                            class="col-12 d-flex justify-content-between align-items-center flex-column flex-md-row">
+                        <div *ngIf="false" class="form-group form-check mb-9 mb-md-0">
+                            <div class="custom-checkbox-wrap checked">
+                                <input type="checkbox" class="custom-checkbox" id="exampleCheck2"
+                                       checked="checked">
+                                <div class="custom-checkbox-presenter"></div>
+                            </div>
+                            <label class="form-check-label" for="exampleCheck2">I've read and agree with the <a
+                                    href="https://demo.htmlhunters.com/profi/contractor.html#">Terms &amp;
+                                Policy</a></label>
+                        </div>
+                        <div class="form-group mb-0">
+                            <button class="btn btn-primary btn-lg"
+                                    gtagEvent trackOn="click" action="send_contact_form" [disabled]="!formContact.valid"
+                                    (click)="send()">Enviar
+                                mensaje
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <form [formGroup]="formContact" class="row mt-17">
-          <div class="col-12 col-sm-6">
-            <div class="form-group">
-              <label for="first_name" class="form-label">Nombres</label>
-              <input type="text" formControlName="names" name="names" class="form-control"
-                     id="first_name">
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="form-group">
-              <label for="last_name" class="form-label">Apellidos</label>
-              <input type="text" formControlName="lastName" name="lastName" class="form-control"
-                     id="last_name">
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="form-group">
-              <label for="phone" class="form-label">Teléfono</label>
-              <input type="text" formControlName="telephone" name="telephone" class="form-control"
-                     id="phone"></div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="form-group">
-              <label for="email" class="form-label">Correo electrónico</label>
-              <input type="text" formControlName="email" name="email" class="form-control" id="email">
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="form-group">
-              <label for="message" class="form-label">Mensaje</label>
-              <textarea id="message" formControlName="message" name="message" class="form-control"
-                        rows="3"></textarea>
-            </div>
-          </div>
-          <div
-            class="col-12 d-flex justify-content-between align-items-center flex-column flex-md-row">
-            <div *ngIf="false" class="form-group form-check mb-9 mb-md-0">
-              <div class="custom-checkbox-wrap checked">
-                <input type="checkbox" class="custom-checkbox" id="exampleCheck2"
-                       checked="checked">
-                <div class="custom-checkbox-presenter"></div>
-              </div>
-              <label class="form-check-label" for="exampleCheck2">I've read and agree with the <a
-                href="https://demo.htmlhunters.com/profi/contractor.html#">Terms &amp;
-                Policy</a></label>
-            </div>
-            <div class="form-group mb-0">
-              <button class="btn btn-primary btn-lg"
-                      gtagEvent trackOn="click" action="send_contact_form" [disabled]="!formContact.valid"
-                      (click)="send()">Enviar
-                mensaje
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 </div>
