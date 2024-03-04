@@ -3,6 +3,11 @@
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="sales">
       <caption></caption>
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell align-content-center" [attr.colspan]="sales.length">
+          <p class="text-info">No hay datos que que visualizar</p>
+        </td>
+      </tr>
       <ng-container matColumnDef="createdDate">
         <th mat-header-cell *matHeaderCellDef> Fecha</th>
         <td mat-cell *matCellDef="let sale"> {{sale.createdDate | date:'short'}} </td>
