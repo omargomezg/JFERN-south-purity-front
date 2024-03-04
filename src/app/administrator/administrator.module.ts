@@ -17,18 +17,18 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     ConfigurationComponent,
     SalesComponent
   ],
-    imports: [
-        CommonModule,
-        AdministratorRoutingModule,
-        FormsModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatCheckboxModule,
-        MatTableModule,
-        MatPaginatorModule
-    ]
+  imports: [
+    CommonModule,
+    AdministratorRoutingModule,
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatTableModule,
+      MatPaginatorModule
+  ]
 })
 export class AdministratorModule {
 }

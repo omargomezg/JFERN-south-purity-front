@@ -55,8 +55,10 @@
                                 Policy</a></label>
                         </div>
                         <div class="form-group mb-0">
-                            <button class="btn btn-primary btn-lg" [disabled]="!formContact.valid"
-                                    (click)="send()">Enviar mensaje
+                            <button class="btn btn-primary btn-lg"
+                                    gtagEvent trackOn="click" action="send_contact_form" [disabled]="!formContact.valid"
+                                    (click)="send()">Enviar
+                                mensaje
                             </button>
                         </div>
                     </div>
