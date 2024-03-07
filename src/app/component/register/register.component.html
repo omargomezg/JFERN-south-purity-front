@@ -1,43 +1,44 @@
-<div class="container">
-  <h1>Regístrate</h1>
-  <form [formGroup]="registerForm" novalidate (ngSubmit)="submit()" class="base-form">
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Rut</mat-label>
-      <input type="text" matInput formControlName="rut" cdkFocusInitial>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Nombre completo</mat-label>
-      <input matInput formControlName="fullName">
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="email">
-      <mat-error *ngIf="registerForm.controls['email'].hasError('email')">Ingrese un correo valido</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Ciudad</mat-label>
-      <input matInput formControlName="city">
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Dirección</mat-label>
-      <input matInput formControlName="address">
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Teléfono</mat-label>
-      <input matInput formControlName="telephone">
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Contraseña</mat-label>
-      <input matInput type="password" formControlName="password">
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="base-full-width">
-      <mat-label>Repetir contraseña</mat-label>
-      <input matInput type="password" formControlName="confirmPassword">
-      <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('email')">Ingrese un correo valido</mat-error>
-    </mat-form-field>
-    <div class="text-end">
-      <a [routerLink]="['login']" mat-button>Volver</a>
-      <button mat-raised-button [disabled]="!registerForm.valid" color="primary" type="submit">Guardar</button>
-    </div>
-  </form>
+<div class="container mb-4">
+    <h1>Regístrate</h1>
+    <form [formGroup]="registerForm" novalidate (ngSubmit)="submit()" class="base-form">
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Rut</mat-label>
+            <input type="text" matInput formControlName="rut" cdkFocusInitial>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Nombre completo</mat-label>
+            <input matInput formControlName="fullName">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+            <mat-error *ngIf="registerForm.controls['email'].hasError('email')">Ingrese un correo valido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Ciudad</mat-label>
+            <input matInput formControlName="city">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Dirección</mat-label>
+            <input matInput formControlName="address">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Teléfono</mat-label>
+            <input matInput formControlName="telephone">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="base-full-width">
+            <mat-label>Repetir contraseña</mat-label>
+            <input matInput type="password" formControlName="confirmPassword">
+            <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('email')">Ingrese un correo valido
+            </mat-error>
+        </mat-form-field>
+        <div class="text-end">
+            <a [routerLink]="['login']" mat-button>Volver</a>
+            <button mat-raised-button [disabled]="!registerForm.valid" color="primary" type="submit">Guardar</button>
+        </div>
+    </form>
 </div>

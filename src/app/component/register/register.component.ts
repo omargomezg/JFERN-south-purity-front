@@ -46,6 +46,9 @@ export class RegisterComponent {
             } else {
                 this.router.navigate(['/mis-pedidos']);
             }
+        }, error => {
+            console.log(error);
+            this.toastr.error('Ocurrió un error al registrarte, intenta nuevamente.', error);
         })
     }
 
