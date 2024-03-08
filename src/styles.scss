@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+/* principal palette => https://coolors.co/palette/2f6690-3a7ca5-d9dcd6-16425b-81c3d7 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@100&display=swap');
+
+$primary: #3a7ca5;
+$secondary: #f9f9f9;
+$success: #28a745;
+$info: #4184f3;
+$warning: #fdb813;
+$danger: #dc3545;
+$light: #efefef;
+$muted: #81c3d7;
+$dark: #dc3545;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import "assets/vendor";
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.base-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.base-full-width {
+  width: 100%;
+}
+
+code {
+  display: block;
+  white-space: pre-wrap
+}

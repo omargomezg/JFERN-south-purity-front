@@ -44,63 +44,68 @@ import {MyCustomerProfileComponent} from "./component/my-customer-profile/my-cus
 import {MyAdminProfileComponent} from "./component/my-admin-profile/my-admin-profile.component";
 
 import {NgxGa4Module} from '@kattoshi/ngx-ga4';
+import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        LoginComponent,
-        FooterComponent,
-        MyProfileComponent,
-        HomeComponent,
-        BuildPaymentResultComponent,
-        RegisterComponent,
-        ResetPwdModalComponent,
-        MyOrdersComponent,
-        DrumsAvailableComponent,
-        DrumsComponent,
-        ClientsComponent,
-        ClientFormComponent,
-        UsersComponent,
-        ContactComponent,
-        HeaderComponent,
-        FormPlaceComponent,
-        PlaceComponent,
-        DashboardComponent,
-        RestorePasswordComponent,
-        ResetPwdWithCodeComponent,
-        UserFormComponent,
-        MyCustomerProfileComponent,
-        MyAdminProfileComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatCardModule,
-        FormsModule,
-        MatDialogModule,
-        LoadingBarHttpClientModule,
-        ToastrModule.forRoot(),
-        MatPaginatorModule,
-        MatTableModule,
-        MatSelectModule,
-        MatIconModule,
-        MatSlideToggleModule,
-        MatMenuModule,
-        NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'})
-    ],
-    providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: TokenInterceptorService,
-            multi: true
-        }
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    FooterComponent,
+    MyProfileComponent,
+    HomeComponent,
+    BuildPaymentResultComponent,
+    RegisterComponent,
+    ResetPwdModalComponent,
+    MyOrdersComponent,
+    DrumsAvailableComponent,
+    DrumsComponent,
+    ClientsComponent,
+    ClientFormComponent,
+    UsersComponent,
+    ContactComponent,
+    HeaderComponent,
+    FormPlaceComponent,
+    PlaceComponent,
+    DashboardComponent,
+    RestorePasswordComponent,
+    ResetPwdWithCodeComponent,
+    UserFormComponent,
+    MyCustomerProfileComponent,
+    MyAdminProfileComponent,
+    ParagraphH1Component
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    FormsModule,
+    MatDialogModule,
+    LoadingBarHttpClientModule,
+    ToastrModule.forRoot(),
+    MatPaginatorModule,
+    MatTableModule,
+    MatSelectModule,
+    MatIconModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'})
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
+  exports: [
+    ParagraphH1Component
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

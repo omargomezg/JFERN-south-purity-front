@@ -1,17 +1,19 @@
 <div class="container">
-    <h1>Mis datos</h1>
+  <div class="border mt-4 p-4">
+    <app-paragraph-h1 text="Mis datos"></app-paragraph-h1>
     <div class="row">
-        <div class="col-sm-8" *ngIf="!loading">
-            {{user.role}}
-            <ng-template [ngIf]="user.role === 'ADMINISTRATOR'" [ngIfElse]="customerContainer">
-                <app-my-admin-profile [user]="user"></app-my-admin-profile>
-            </ng-template>
-            <ng-template #customerContainer>
-                <app-my-customer-profile [user]="user"></app-my-customer-profile>
-            </ng-template>
-        </div>
-        <div class="col-sm-4">
-            <button type="button" mat-raised-button (click)="showModalPwd()">Cambia tu contraseña</button>
-        </div>
+      <div class="col-sm-8" *ngIf="!loading">
+        {{user.role}}
+        <ng-template [ngIf]="user.role === 'ADMINISTRATOR'" [ngIfElse]="customerContainer">
+          <app-my-admin-profile [user]="user"></app-my-admin-profile>
+        </ng-template>
+        <ng-template #customerContainer>
+          <app-my-customer-profile [user]="user"></app-my-customer-profile>
+        </ng-template>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" mat-raised-button (click)="showModalPwd()">Cambia tu contraseña</button>
+      </div>
     </div>
+  </div>
 </div>

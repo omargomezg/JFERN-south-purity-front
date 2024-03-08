@@ -1,0 +1,47 @@
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0
+}
+
+.text-steps {
+  font-size: 1rem;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-icon > span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.list-unstyled > li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  list-style: none
+}
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.parallax {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://ichef.bbci.co.uk/images/ic/1920x1080/p0f5mvf8.jpg");
+  height: 83vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -8,7 +8,7 @@ import {UserInterface} from "../../core/model/user.interface";
 @Component({
     selector: 'app-restore-password',
     templateUrl: './restore-password.component.html',
-    styleUrls: ['./restore-password.component.css']
+    styleUrls: ['./restore-password.component.scss']
 })
 export class RestorePasswordComponent {
     formRestorePwd = this.formBuilder.group({

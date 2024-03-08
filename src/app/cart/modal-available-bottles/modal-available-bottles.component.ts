@@ -8,7 +8,7 @@ import {CartModel} from "../../client-module/service/model";
 @Component({
     selector: 'app-modal-available-bottles',
     templateUrl: './modal-available-bottles.component.html',
-    styleUrls: ['./modal-available-bottles.component.css']
+    styleUrls: ['./modal-available-bottles.component.scss']
 })
 export class ModalAvailableBottlesComponent implements OnInit {
     bottles: ProductModel[] = [];

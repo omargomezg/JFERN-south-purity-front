@@ -10,12 +10,20 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {SalesComponent} from './sales/sales.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {ModalHistoryComponent} from './modal-history/modal-history.component';
+import {MatListModule} from "@angular/material/list";
+import {ModalTransactionComponent} from './modal-transaction/modal-transaction.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatIconModule} from "@angular/material/icon";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
   declarations: [
     ConfigurationComponent,
-    SalesComponent
+    SalesComponent,
+    ModalHistoryComponent,
+    ModalTransactionComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +35,11 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     ReactiveFormsModule,
     MatCheckboxModule,
     MatTableModule,
-      MatPaginatorModule
+    MatPaginatorModule,
+    MatListModule,
+    MatDialogModule,
+    MatIconModule,
+    MatTooltipModule
   ]
 })
 export class AdministratorModule {

@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
     selector: 'app-drums',
     templateUrl: './drums.component.html',
-    styleUrls: ['./drums.component.css']
+    styleUrls: ['./drums.component.scss']
 })
 export class DrumsComponent implements OnInit {
     formDrum = this.formBuilder.group({

@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 @Component({
   selector: 'app-drums-available',
   templateUrl: './drums-available.component.html',
-  styleUrls: ['./drums-available.component.css']
+  styleUrls: ['./drums-available.component.scss']
 })
 export class DrumsAvailableComponent implements OnInit, OnChanges {
 

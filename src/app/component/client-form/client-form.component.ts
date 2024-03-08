@@ -18,7 +18,7 @@ interface Role {
 @Component({
   selector: 'app-client-form',
   templateUrl: './client-form.component.html',
-  styleUrls: ['./client-form.component.css']
+  styleUrls: ['./client-form.component.scss']
 })
 export class ClientFormComponent implements OnInit {
 

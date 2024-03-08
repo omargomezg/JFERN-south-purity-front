@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx serve",
+    "startTime": "2024-01-21T00:05:07.153Z",
+    "endTime": "2024-01-21T20:01:50.107Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "south-purity-front:serve:development",
+      "target": "serve",
+      "projectName": "south-purity-front",
+      "hash": "999582860077713668",
+      "startTime": "2024-01-21T00:05:07.156Z",
+      "endTime": "2024-01-21T20:01:50.106Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

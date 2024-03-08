@@ -6,7 +6,7 @@ import {PaymentResponseModel} from "../../client-module/service/model";
 @Component({
   selector: 'app-build-payment-result',
   templateUrl: './build-payment-result.component.html',
-  styleUrls: ['./build-payment-result.component.css']
+  styleUrls: ['./build-payment-result.component.scss']
 })
 export class BuildPaymentResultComponent implements OnInit {
 

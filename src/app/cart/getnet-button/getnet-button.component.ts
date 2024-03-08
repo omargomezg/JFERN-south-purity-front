@@ -5,7 +5,7 @@ import {PAYMENT_TYPE} from "../../core/constant/app.constants";
 @Component({
     selector: 'app-getnet-button',
     templateUrl: './getnet-button.component.html',
-    styleUrls: ['./getnet-button.component.css']
+    styleUrls: ['./getnet-button.component.scss']
 })
 export class GetnetButtonComponent {
 

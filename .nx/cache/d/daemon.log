@@ -1,0 +1,1156 @@
+[NX Daemon Server] - 2024-01-20T23:57:57.719Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-20T23:57:57.720Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-20T23:57:57.729Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-20T23:57:57.730Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-20T23:57:57.730Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-20T23:57:57.731Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-20T23:57:57.731Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-20T23:57:57.731Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-20T23:57:57.731Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-20T23:57:57.876Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-20T23:57:57.877Z - Time taken for 'total for creating and serializing project graph' 145.1319580078125ms
+[NX Daemon Server] - 2024-01-20T23:57:57.878Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-20T23:57:57.878Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 145. Response time: 2.
+[NX Daemon Server] - 2024-01-20T23:57:57.881Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-01-20T23:57:57.881Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-20T23:57:57.881Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-01-20T23:57:57.882Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-20T23:57:57.882Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-01-20T23:57:57.882Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-01-20T23:57:57.882Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-01-21T00:05:06.522Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-21T00:05:06.524Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-21T00:05:06.530Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-21T00:05:06.531Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-21T00:05:06.531Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-21T00:05:06.532Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-21T00:05:06.533Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-21T00:05:06.533Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-21T00:05:06.533Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-21T00:05:06.572Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-21T00:05:06.573Z - Time taken for 'total for creating and serializing project graph' 40.32820796966553ms
+[NX Daemon Server] - 2024-01-21T00:05:06.577Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-21T00:05:06.577Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 40. Response time: 5.
+[NX Daemon Server] - 2024-01-21T00:05:06.612Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-01-21T00:05:06.612Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-01-21T00:05:06.612Z - Handled HASH_TASKS. Handling time: 9. Response time: 0.
+[NX Daemon Server] - 2024-01-21T00:05:07.463Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-21T00:05:07.464Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-21T00:05:07.464Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-21T00:05:07.465Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-21T00:05:07.465Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-21T00:05:07.465Z - Time taken for 'total for creating and serializing project graph' 0.06933295726776123ms
+[NX Daemon Server] - 2024-01-21T00:05:07.466Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-21T00:05:07.467Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-01-21T00:05:12.048Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:12.166Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:12.221Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:12.282Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:12.341Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:12.917Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:12.976Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.166Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.229Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.281Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.338Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.440Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.541Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.602Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.682Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.769Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.827Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:13.904Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:14.013Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:14.113Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:14.550Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:14.610Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:14.685Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:14.765Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:14.869Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.024Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.159Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.237Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.290Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.383Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.469Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.521Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.578Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.636Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.689Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.784Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.891Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:15.942Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.000Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.057Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.109Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.169Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.221Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.278Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.336Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:16.395Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:19.183Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T00:05:19.281Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T20:01:50.089Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-21T20:01:50.098Z - There are 1 open connections. Reset inactivity timer.
+[NX Daemon Server] - 2024-01-21T20:01:50.105Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-01-21T20:01:50.105Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-01-21T20:01:50.105Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-01-21T20:01:50.165Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-01-21T20:20:19.947Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-21T20:20:19.950Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-21T20:20:19.951Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-21T20:20:19.954Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-21T20:20:19.955Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-21T20:20:19.956Z - Time taken for 'total for creating and serializing project graph' 0.49733400344848633ms
+[NX Daemon Server] - 2024-01-21T20:20:19.958Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-21T20:20:19.958Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX Daemon Server] - 2024-01-21T20:20:20.014Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-01-21T20:20:20.014Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-01-21T20:20:20.014Z - Handled HASH_TASKS. Handling time: 21. Response time: 1.
+[NX Daemon Server] - 2024-01-21T20:20:21.564Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-21T20:20:21.565Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-01-21T20:20:21.566Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-21T20:20:21.570Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-21T20:20:21.570Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-21T20:20:21.573Z - Time taken for 'total for creating and serializing project graph' 0.5797080993652344ms
+[NX Daemon Server] - 2024-01-21T20:20:21.575Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-21T20:20:21.575Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 5.
+[NX Daemon Server] - 2024-01-21T20:20:26.794Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-21T20:20:26.927Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:20.849Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:20.850Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:20.954Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:41:20.954Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:41:20.954Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:41:21.005Z - Time taken for 'hash changed files from watcher' 2.4287079572677612ms
+[NX Daemon Server] - 2024-01-22T01:41:21.828Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:22.009Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:22.010Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:22.213Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:41:22.213Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:41:22.213Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:41:22.240Z - Time taken for 'hash changed files from watcher' 2.444499969482422ms
+[NX Daemon Server] - 2024-01-22T01:41:23.337Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:23.502Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:23.503Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:23.717Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:23.909Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:41:23.909Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:41:23.909Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:41:23.931Z - Time taken for 'hash changed files from watcher' 4.692624926567078ms
+[NX Daemon Server] - 2024-01-22T01:41:23.961Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:32.536Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:32.537Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:33.339Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:41:33.339Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:41:33.339Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:41:33.370Z - Time taken for 'hash changed files from watcher' 0.8595000505447388ms
+[NX Daemon Server] - 2024-01-22T01:41:33.909Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:33.910Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:35.511Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:41:35.511Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:41:35.511Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:41:35.530Z - Time taken for 'hash changed files from watcher' 0.2882500886917114ms
+[NX Daemon Server] - 2024-01-22T01:41:37.874Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:37.874Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:38.908Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:38.908Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:39.118Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:41.080Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:41:41.081Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:41:41.081Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:41:41.125Z - Time taken for 'hash changed files from watcher' 2.109125018119812ms
+[NX Daemon Server] - 2024-01-22T01:41:50.515Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:50.518Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:50.747Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:52.025Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:52.122Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:52.552Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:52.552Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:52.742Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:56.919Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:41:56.920Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:41:56.920Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:41:56.949Z - Time taken for 'hash changed files from watcher' 0.3269169330596924ms
+[NX Daemon Server] - 2024-01-22T01:41:57.668Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:41:57.668Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:41:57.862Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:04.071Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:42:04.073Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:42:04.073Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:42:04.122Z - Time taken for 'hash changed files from watcher' 1.5254579782485962ms
+[NX Daemon Server] - 2024-01-22T01:42:25.643Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:42:25.644Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:25.860Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:32.046Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:42:32.047Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:42:32.047Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:42:32.089Z - Time taken for 'hash changed files from watcher' 1.0997920036315918ms
+[NX Daemon Server] - 2024-01-22T01:42:33.842Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:42:33.842Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:34.020Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:40.243Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:42:40.243Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:42:40.243Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:42:40.262Z - Time taken for 'hash changed files from watcher' 0.30787503719329834ms
+[NX Daemon Server] - 2024-01-22T01:42:46.437Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:42:46.437Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:46.654Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:47.653Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:42:47.653Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:47.858Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:48.989Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:42:48.989Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:49.047Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:49.148Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:49.207Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:51.985Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:42:51.985Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:52.163Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:42:52.838Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:42:52.839Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:42:52.839Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:42:52.871Z - Time taken for 'hash changed files from watcher' 0.8096660375595093ms
+[NX Daemon Server] - 2024-01-22T01:43:06.432Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:06.439Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:06.682Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:08.757Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:08.757Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:08.965Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:10.990Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:10.991Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:11.172Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:12.332Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:12.841Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:43:12.841Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:43:12.841Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:43:12.860Z - Time taken for 'hash changed files from watcher' 0.3595830202102661ms
+[NX Daemon Server] - 2024-01-22T01:43:20.654Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:20.654Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:20.817Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:23.919Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:23.919Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:24.103Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:27.055Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:43:27.056Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:43:27.056Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:43:27.095Z - Time taken for 'hash changed files from watcher' 1.1299159526824951ms
+[NX Daemon Server] - 2024-01-22T01:43:27.188Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:27.189Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:27.410Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:33.590Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:43:33.590Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:43:33.590Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:43:33.622Z - Time taken for 'hash changed files from watcher' 0.5049160718917847ms
+[NX Daemon Server] - 2024-01-22T01:43:38.120Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:38.120Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:38.274Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:44.521Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:43:44.522Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:43:44.522Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:43:44.547Z - Time taken for 'hash changed files from watcher' 0.5513339042663574ms
+[NX Daemon Server] - 2024-01-22T01:43:47.154Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:47.154Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:47.329Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:53.557Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:43:53.558Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:43:53.558Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:43:53.594Z - Time taken for 'hash changed files from watcher' 0.8634589910507202ms
+[NX Daemon Server] - 2024-01-22T01:43:58.670Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:43:58.671Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:58.825Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:43:59.987Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:44:02.493Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:44:02.494Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:44:02.671Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:44:05.072Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:44:05.072Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:44:05.072Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:44:05.104Z - Time taken for 'hash changed files from watcher' 0.6412919759750366ms
+[NX Daemon Server] - 2024-01-22T01:44:06.491Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T01:44:06.491Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:44:06.678Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:44:12.894Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T01:44:12.894Z - [REQUEST]: src/app/administrator/sales/sales.component.html
+[NX Daemon Server] - 2024-01-22T01:44:12.894Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T01:44:12.933Z - Time taken for 'hash changed files from watcher' 1.3756669759750366ms
+[NX Daemon Server] - 2024-01-22T01:45:06.887Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:48:10.287Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:48:10.485Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:48:10.559Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:48:10.631Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:48:30.120Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:48:40.677Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:54:54.195Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T01:58:13.407Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:00:33.963Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:00:58.432Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-01-22T02:00:58.438Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-22T02:00:58.439Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-01-22T02:00:58.441Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-22T02:00:58.442Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-22T02:00:58.443Z - Time taken for 'total for creating and serializing project graph' 0.5899579524993896ms
+[NX Daemon Server] - 2024-01-22T02:00:58.448Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-22T02:00:58.448Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 6.
+[NX Daemon Server] - 2024-01-22T02:00:58.452Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-22T02:00:58.453Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-01-22T02:00:58.457Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-22T02:00:58.457Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-01-22T02:00:58.459Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-01-22T02:00:58.473Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-01-22T02:00:58.473Z - Handled REQUEST_FILE_DATA. Handling time: 1. Response time: 14.
+[NX Daemon Server] - 2024-01-22T02:04:27.095Z - [WATCHER]: angular.json was created or restored
+[NX Daemon Server] - 2024-01-22T02:04:27.095Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:04:27.197Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:04:27.197Z - [REQUEST]: angular.json
+[NX Daemon Server] - 2024-01-22T02:04:27.197Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:04:27.222Z - Time taken for 'hash changed files from watcher' 0.6697919368743896ms
+[NX Daemon Server] - 2024-01-22T02:04:32.720Z - [WATCHER]: 4 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:04:32.720Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:04:32.822Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:04:32.822Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts
+[NX Daemon Server] - 2024-01-22T02:04:32.822Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:04:32.839Z - Time taken for 'hash changed files from watcher' 1.1456669569015503ms
+[NX Daemon Server] - 2024-01-22T02:04:33.499Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:05:09.425Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:05:09.426Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:05:09.635Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:05:09.635Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts
+[NX Daemon Server] - 2024-01-22T02:05:09.635Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:05:09.666Z - Time taken for 'hash changed files from watcher' 7.418208003044128ms
+[NX Daemon Server] - 2024-01-22T02:05:11.736Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:05:11.848Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:06:20.034Z - [WATCHER]: src/app/core/model/sale-order/history.interface.ts was created or restored
+[NX Daemon Server] - 2024-01-22T02:06:20.035Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:06:20.137Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:06:20.137Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts
+[NX Daemon Server] - 2024-01-22T02:06:20.137Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:06:20.164Z - Time taken for 'hash changed files from watcher' 1.5314580202102661ms
+[NX Daemon Server] - 2024-01-22T02:06:21.711Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:06:21.711Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:06:21.913Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:06:21.913Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts
+[NX Daemon Server] - 2024-01-22T02:06:21.913Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:06:21.926Z - Time taken for 'hash changed files from watcher' 0.5895000696182251ms
+[NX Daemon Server] - 2024-01-22T02:06:22.014Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:07:22.478Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:09:35.455Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:09:35.457Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:09:35.860Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:09:35.860Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts
+[NX Daemon Server] - 2024-01-22T02:09:35.860Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:09:35.881Z - Time taken for 'hash changed files from watcher' 1.313541054725647ms
+[NX Daemon Server] - 2024-01-22T02:09:36.116Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:09:36.337Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:09:37.635Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:09:37.753Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:11:24.326Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:11:24.328Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:11:24.533Z - [WATCHER]: src/app/administrator/administrator.module.ts was modified
+[NX Daemon Server] - 2024-01-22T02:11:24.533Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:11:24.699Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:11:25.107Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:11:25.130Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:11:25.131Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts
+[NX Daemon Server] - 2024-01-22T02:11:25.131Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:11:25.153Z - Time taken for 'hash changed files from watcher' 1.7414590120315552ms
+[NX Daemon Server] - 2024-01-22T02:12:25.398Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:12:25.456Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:12:25.881Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:12:25.971Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:13:32.004Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:13:32.012Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:13:32.187Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:13:32.188Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:13:32.431Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:13:33.183Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:13:33.616Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:13:33.616Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:13:33.616Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:13:33.641Z - Time taken for 'hash changed files from watcher' 1.8497090339660645ms
+[NX Daemon Server] - 2024-01-22T02:14:09.473Z - [WATCHER]: src/app/administrator/sales/sales.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:14:09.474Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:14:09.919Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:14:11.170Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:14:11.303Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:14:12.678Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:14:12.679Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:14:12.679Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:14:12.705Z - Time taken for 'hash changed files from watcher' 3.7660419940948486ms
+[NX Daemon Server] - 2024-01-22T02:14:35.260Z - [WATCHER]: src/app/administrator/sales/sales.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:14:35.261Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:14:35.601Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:14:41.666Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:14:41.667Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:14:41.667Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:14:41.691Z - Time taken for 'hash changed files from watcher' 3.301792025566101ms
+[NX Daemon Server] - 2024-01-22T02:14:58.617Z - [WATCHER]: src/app/administrator/sales/sales.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:14:58.618Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:14:58.880Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:15:05.023Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:15:05.023Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:15:05.023Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:15:05.047Z - Time taken for 'hash changed files from watcher' 2.9537079334259033ms
+[NX Daemon Server] - 2024-01-22T02:15:15.595Z - [WATCHER]: src/app/administrator/sales/sales.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:15:15.600Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:15:15.931Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:15:22.003Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:15:22.003Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:15:22.003Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:15:22.026Z - Time taken for 'hash changed files from watcher' 2.6495829820632935ms
+[NX Daemon Server] - 2024-01-22T02:16:01.319Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:16:01.323Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:16:01.719Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:16:02.987Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:16:07.727Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:16:07.727Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:16:07.727Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:16:07.752Z - Time taken for 'hash changed files from watcher' 2.6714580059051514ms
+[NX Daemon Server] - 2024-01-22T02:16:35.759Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:16:35.760Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:16:36.083Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:16:42.165Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:16:42.166Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:16:42.166Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:16:42.191Z - Time taken for 'hash changed files from watcher' 3.871583938598633ms
+[NX Daemon Server] - 2024-01-22T02:17:07.682Z - [WATCHER]: src/app/administrator/sales/sales.component.ts was modified
+[NX Daemon Server] - 2024-01-22T02:17:07.685Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:17:08.038Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:17:14.089Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:17:14.090Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:17:14.090Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:17:14.120Z - Time taken for 'hash changed files from watcher' 3.5587079524993896ms
+[NX Daemon Server] - 2024-01-22T02:18:08.283Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:19:20.095Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:19:20.097Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:19:20.448Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:19:20.899Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:19:26.499Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:19:26.499Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:19:26.499Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:19:26.523Z - Time taken for 'hash changed files from watcher' 1.1654160022735596ms
+[NX Daemon Server] - 2024-01-22T02:20:21.136Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:20:54.600Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:20:54.601Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:20:54.877Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:21:01.006Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:21:01.006Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:21:01.006Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:21:01.036Z - Time taken for 'hash changed files from watcher' 2.5217500925064087ms
+[NX Daemon Server] - 2024-01-22T02:21:31.147Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:21:31.149Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:21:31.279Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:21:31.279Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:21:31.538Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:21:33.356Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:21:37.555Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:21:37.557Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:21:37.557Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:21:37.580Z - Time taken for 'hash changed files from watcher' 4.726500034332275ms
+[NX Daemon Server] - 2024-01-22T02:22:13.176Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:22:13.179Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:22:13.500Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:22:19.584Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:22:19.584Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts
+[NX Daemon Server] - 2024-01-22T02:22:19.585Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:22:19.613Z - Time taken for 'hash changed files from watcher' 3.4924169778823853ms
+[NX Daemon Server] - 2024-01-22T02:23:13.760Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:24:20.164Z - [WATCHER]: src/app/core/model/sale-order/payment-detail.interface.ts was modified
+[NX Daemon Server] - 2024-01-22T02:24:20.166Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:24:26.570Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:24:26.570Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts
+[NX Daemon Server] - 2024-01-22T02:24:26.570Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:24:26.598Z - Time taken for 'hash changed files from watcher' 2.418916940689087ms
+[NX Daemon Server] - 2024-01-22T02:25:20.872Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:25:20.936Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:25:21.032Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:25:21.324Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:25:21.433Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:25:37.898Z - [WATCHER]: src/app/core/model/sale-order/payment-detail.interface.ts was modified
+[NX Daemon Server] - 2024-01-22T02:25:37.899Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:25:44.303Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:25:44.303Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts
+[NX Daemon Server] - 2024-01-22T02:25:44.303Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:25:44.327Z - Time taken for 'hash changed files from watcher' 3.2272080183029175ms
+[NX Daemon Server] - 2024-01-22T02:26:38.402Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:27:00.895Z - [WATCHER]: src/app/core/model/sale-order/payment-detail.interface.ts was modified
+[NX Daemon Server] - 2024-01-22T02:27:00.895Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:27:07.300Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:27:07.301Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts
+[NX Daemon Server] - 2024-01-22T02:27:07.301Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:27:07.322Z - Time taken for 'hash changed files from watcher' 3.2576661109924316ms
+[NX Daemon Server] - 2024-01-22T02:28:01.493Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:32:25.081Z - [WATCHER]: 4 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:32:25.082Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:32:25.186Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:32:25.186Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:32:25.186Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:32:25.210Z - Time taken for 'hash changed files from watcher' 2.1180830001831055ms
+[NX Daemon Server] - 2024-01-22T02:32:25.492Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:33:25.740Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:36:14.656Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:36:14.660Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:36:14.862Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:36:14.862Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:36:14.862Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:36:14.879Z - Time taken for 'hash changed files from watcher' 1.433791995048523ms
+[NX Daemon Server] - 2024-01-22T02:36:15.017Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:36:15.416Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:37:15.624Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:37:25.197Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:37:25.198Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:37:25.480Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:37:25.602Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:37:25.603Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:37:25.603Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:37:25.632Z - Time taken for 'hash changed files from watcher' 2.113874912261963ms
+[NX Daemon Server] - 2024-01-22T02:37:35.816Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:37:35.817Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:37:36.084Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:37:36.619Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:37:36.620Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:37:36.620Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:37:36.640Z - Time taken for 'hash changed files from watcher' 1.6408330202102661ms
+[NX Daemon Server] - 2024-01-22T02:38:26.292Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:38:26.300Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:38:26.653Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:38:27.846Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:38:27.910Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:38:27.910Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:38:27.910Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:38:27.928Z - Time taken for 'hash changed files from watcher' 2.7604169845581055ms
+[NX Daemon Server] - 2024-01-22T02:38:47.449Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:38:47.451Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:38:47.823Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:38:50.658Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:38:50.659Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:38:50.659Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:38:50.684Z - Time taken for 'hash changed files from watcher' 4.369541049003601ms
+[NX Daemon Server] - 2024-01-22T02:39:48.104Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:40:10.914Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:40:10.917Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:40:11.182Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:40:11.182Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:40:11.357Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:40:13.259Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:40:17.323Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:40:17.323Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:40:17.323Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:40:17.352Z - Time taken for 'hash changed files from watcher' 3.5113749504089355ms
+[NX Daemon Server] - 2024-01-22T02:43:15.511Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:43:15.512Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:43:15.777Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:43:21.917Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:43:21.918Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:43:21.918Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:43:21.942Z - Time taken for 'hash changed files from watcher' 3.637125015258789ms
+[NX Daemon Server] - 2024-01-22T02:44:15.979Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:44:40.224Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:44:40.224Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:44:40.447Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:44:46.634Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:44:46.634Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:44:46.635Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:44:46.670Z - Time taken for 'hash changed files from watcher' 7.855542063713074ms
+[NX Daemon Server] - 2024-01-22T02:44:53.162Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:44:53.163Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:44:53.200Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:44:53.203Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:44:54.936Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:44:59.568Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:44:59.568Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:44:59.568Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:44:59.594Z - Time taken for 'hash changed files from watcher' 3.724666953086853ms
+[NX Daemon Server] - 2024-01-22T02:45:25.185Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:45:25.226Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:45:25.493Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:45:31.591Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:45:31.591Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:45:31.591Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:45:31.613Z - Time taken for 'hash changed files from watcher' 2.9301669597625732ms
+[NX Daemon Server] - 2024-01-22T02:46:10.395Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:46:10.399Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:10.716Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:11.923Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:16.806Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:46:16.807Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:46:16.807Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:46:16.828Z - Time taken for 'hash changed files from watcher' 4.9469170570373535ms
+[NX Daemon Server] - 2024-01-22T02:46:48.249Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T02:46:48.250Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:48.341Z - [WATCHER]: src/app/administrator/administrator.module.ts was modified
+[NX Daemon Server] - 2024-01-22T02:46:48.341Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:48.612Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:49.025Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:50.181Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:46:54.655Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:46:54.656Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:46:54.656Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:46:54.687Z - Time taken for 'hash changed files from watcher' 3.6391249895095825ms
+[NX Daemon Server] - 2024-01-22T02:49:12.397Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:49:12.399Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:49:12.771Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:49:18.801Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:49:18.801Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:49:18.801Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:49:18.818Z - Time taken for 'hash changed files from watcher' 1.4317079782485962ms
+[NX Daemon Server] - 2024-01-22T02:49:41.413Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:49:41.419Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:49:41.690Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:49:42.890Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:49:47.823Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:49:47.824Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:49:47.824Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:49:47.848Z - Time taken for 'hash changed files from watcher' 2.730916976928711ms
+[NX Daemon Server] - 2024-01-22T02:50:36.670Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:50:36.677Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:50:37.012Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:50:40.263Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:50:40.263Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:50:40.455Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:50:41.628Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:50:43.081Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:50:43.081Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:50:43.081Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:50:43.102Z - Time taken for 'hash changed files from watcher' 1.8743749856948853ms
+[NX Daemon Server] - 2024-01-22T02:52:08.484Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:52:08.485Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:52:08.798Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:52:14.890Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:52:14.891Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:52:14.891Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:52:14.914Z - Time taken for 'hash changed files from watcher' 3.6551250219345093ms
+[NX Daemon Server] - 2024-01-22T02:53:09.008Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:53:53.338Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:53:53.339Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:53:53.621Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:53:54.909Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:53:59.746Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:53:59.746Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:53:59.746Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:53:59.777Z - Time taken for 'hash changed files from watcher' 2.558791995048523ms
+[NX Daemon Server] - 2024-01-22T02:57:59.361Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:57:59.368Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:57:59.690Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:05.774Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:58:05.774Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:58:05.775Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:58:05.796Z - Time taken for 'hash changed files from watcher' 3.567209005355835ms
+[NX Daemon Server] - 2024-01-22T02:58:08.718Z - [WATCHER]: src/app/administrator/administrator.module.ts was modified
+[NX Daemon Server] - 2024-01-22T02:58:08.719Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:09.125Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:09.181Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:10.388Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:15.127Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:58:15.128Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:58:15.128Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:58:15.145Z - Time taken for 'hash changed files from watcher' 6.530416965484619ms
+[NX Daemon Server] - 2024-01-22T02:58:31.848Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T02:58:31.849Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:32.123Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:33.315Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T02:58:38.253Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T02:58:38.254Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T02:58:38.254Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T02:58:38.275Z - Time taken for 'hash changed files from watcher' 2.4667919874191284ms
+[NX Daemon Server] - 2024-01-22T12:21:14.396Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:21:14.398Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:21:14.678Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:21:15.903Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:21:20.803Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:21:20.803Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:21:20.803Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:21:20.841Z - Time taken for 'hash changed files from watcher' 3.3795000314712524ms
+[NX Daemon Server] - 2024-01-22T12:21:52.346Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:21:52.347Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:21:52.578Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:21:53.815Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:21:58.753Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:21:58.754Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:21:58.754Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:21:58.779Z - Time taken for 'hash changed files from watcher' 4.22770893573761ms
+[NX Daemon Server] - 2024-01-22T12:22:39.108Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:22:39.109Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:22:39.345Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:22:40.542Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:22:45.513Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:22:45.513Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:22:45.513Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:22:45.532Z - Time taken for 'hash changed files from watcher' 3.910083055496216ms
+[NX Daemon Server] - 2024-01-22T12:22:52.191Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:22:52.208Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:22:52.568Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:22:53.759Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:22:58.613Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:22:58.614Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:22:58.614Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:22:58.646Z - Time taken for 'hash changed files from watcher' 3.4787089824676514ms
+[NX Daemon Server] - 2024-01-22T12:24:01.053Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T12:24:01.054Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:01.397Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:02.590Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:07.459Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:24:07.459Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:24:07.459Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:24:07.481Z - Time taken for 'hash changed files from watcher' 3.250124931335449ms
+[NX Daemon Server] - 2024-01-22T12:24:10.937Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:10.939Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.css was modified
+[NX Daemon Server] - 2024-01-22T12:24:11.127Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:12.337Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:17.343Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:24:17.343Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:24:17.344Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:24:17.365Z - Time taken for 'hash changed files from watcher' 2.3112919330596924ms
+[NX Daemon Server] - 2024-01-22T12:24:24.792Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:24.794Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:24:25.089Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:26.302Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:24:31.198Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:24:31.199Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:24:31.199Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:24:31.223Z - Time taken for 'hash changed files from watcher' 2.4170418977737427ms
+[NX Daemon Server] - 2024-01-22T12:25:02.199Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:25:02.203Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T12:25:02.559Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:25:03.158Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:25:04.298Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:25:08.606Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:25:08.606Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:25:08.606Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:25:08.623Z - Time taken for 'hash changed files from watcher' 2.1906250715255737ms
+[NX Daemon Server] - 2024-01-22T12:25:18.515Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:25:18.528Z - [WATCHER]: src/app/administrator/modal-transaction/modal-transaction.component.css was modified
+[NX Daemon Server] - 2024-01-22T12:25:18.895Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:25:20.069Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:25:24.932Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:25:24.932Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:25:24.932Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:25:24.953Z - Time taken for 'hash changed files from watcher' 1.61033296585083ms
+[NX Daemon Server] - 2024-01-22T12:26:05.140Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T12:26:05.142Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:26:05.552Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:26:07.079Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:26:11.546Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:26:11.547Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:26:11.547Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:26:11.572Z - Time taken for 'hash changed files from watcher' 3.381124973297119ms
+[NX Daemon Server] - 2024-01-22T12:26:34.511Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:26:34.512Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:26:34.862Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:26:36.099Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:26:40.916Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:26:40.916Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:26:40.916Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:26:40.941Z - Time taken for 'hash changed files from watcher' 2.9157079458236694ms
+[NX Daemon Server] - 2024-01-22T12:42:21.985Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:42:21.987Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:42:22.078Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:42:22.078Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:42:22.512Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:42:24.095Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:42:28.394Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:42:28.395Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:42:28.395Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:42:28.432Z - Time taken for 'hash changed files from watcher' 6.189792037010193ms
+[NX Daemon Server] - 2024-01-22T12:43:23.047Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:43:23.053Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:43:23.324Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:43:24.541Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:43:29.456Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:43:29.457Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:43:29.458Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:43:29.478Z - Time taken for 'hash changed files from watcher' 3.075832962989807ms
+[NX Daemon Server] - 2024-01-22T12:43:34.420Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T12:43:34.421Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:43:34.765Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:43:35.989Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T12:43:40.826Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T12:43:40.827Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T12:43:40.827Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T12:43:40.850Z - Time taken for 'hash changed files from watcher' 3.7400829792022705ms
+[NX Daemon Server] - 2024-01-22T13:05:41.206Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:05:41.208Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:05:41.716Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:05:43.048Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:05:47.612Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:05:47.613Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:05:47.613Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:05:47.638Z - Time taken for 'hash changed files from watcher' 3.3993330001831055ms
+[NX Daemon Server] - 2024-01-22T13:05:52.803Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:05:52.807Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:05:53.141Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:05:54.357Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:05:59.211Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:05:59.211Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:05:59.211Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:05:59.236Z - Time taken for 'hash changed files from watcher' 2.2118330001831055ms
+[NX Daemon Server] - 2024-01-22T13:06:18.436Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:06:18.442Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:06:18.717Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:06:19.932Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:06:24.848Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:06:24.849Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:06:24.849Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:06:24.876Z - Time taken for 'hash changed files from watcher' 3.6550830602645874ms
+[NX Daemon Server] - 2024-01-22T13:06:31.240Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:06:31.241Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:06:31.549Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:06:32.750Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:06:37.645Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:06:37.645Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:06:37.645Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:06:37.670Z - Time taken for 'hash changed files from watcher' 3.367416024208069ms
+[NX Daemon Server] - 2024-01-22T13:17:55.236Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:17:55.237Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:17:55.641Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:17:56.847Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:18:01.641Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:18:01.642Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:18:01.642Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:18:01.664Z - Time taken for 'hash changed files from watcher' 2.988582968711853ms
+[NX Daemon Server] - 2024-01-22T13:19:20.177Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:19:20.178Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:19:20.479Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:19:21.665Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:19:26.581Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:19:26.581Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:19:26.581Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:19:26.635Z - Time taken for 'hash changed files from watcher' 1.6561250686645508ms
+[NX Daemon Server] - 2024-01-22T13:19:47.748Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:19:47.749Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:19:47.983Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:19:49.171Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:19:54.151Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:19:54.152Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:19:54.152Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:19:54.173Z - Time taken for 'hash changed files from watcher' 2.487333059310913ms
+[NX Daemon Server] - 2024-01-22T13:20:09.547Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:20:09.548Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:09.729Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:20:09.729Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:09.904Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:11.534Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:15.951Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:20:15.951Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:20:15.951Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:20:15.973Z - Time taken for 'hash changed files from watcher' 1.7755420207977295ms
+[NX Daemon Server] - 2024-01-22T13:20:42.892Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:20:42.893Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:43.103Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:20:43.104Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:43.266Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:43.707Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:44.878Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:49.296Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:20:49.296Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:20:49.296Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:20:49.317Z - Time taken for 'hash changed files from watcher' 1.6978750228881836ms
+[NX Daemon Server] - 2024-01-22T13:20:59.088Z - [WATCHER]: src/app/administrator/administrator.module.ts was modified
+[NX Daemon Server] - 2024-01-22T13:20:59.094Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:59.177Z - [WATCHER]: src/app/administrator/administrator.module.ts was modified
+[NX Daemon Server] - 2024-01-22T13:20:59.178Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:20:59.617Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:21:01.201Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:21:05.498Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:21:05.498Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts
+[NX Daemon Server] - 2024-01-22T13:21:05.498Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:21:05.518Z - Time taken for 'hash changed files from watcher' 2.5294580459594727ms
+[NX Daemon Server] - 2024-01-22T13:24:41.883Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-22T13:24:41.884Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:24:43.056Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:24:44.748Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:24:44.886Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:24:48.288Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:24:48.288Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts,src/app/administrator/sales/sales.component.css
+[NX Daemon Server] - 2024-01-22T13:24:48.288Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:24:48.308Z - Time taken for 'hash changed files from watcher' 2.3673750162124634ms
+[NX Daemon Server] - 2024-01-22T13:25:56.145Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:25:56.191Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:25:56.540Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:26:02.598Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:26:02.598Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts,src/app/administrator/sales/sales.component.css
+[NX Daemon Server] - 2024-01-22T13:26:02.599Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:26:02.618Z - Time taken for 'hash changed files from watcher' 3.332458019256592ms
+[NX Daemon Server] - 2024-01-22T13:26:28.188Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:26:28.189Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:26:28.398Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:26:34.594Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:26:34.594Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts,src/app/administrator/sales/sales.component.css
+[NX Daemon Server] - 2024-01-22T13:26:34.594Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:26:34.611Z - Time taken for 'hash changed files from watcher' 1.735582947731018ms
+[NX Daemon Server] - 2024-01-22T13:27:28.597Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:29:21.520Z - [WATCHER]: src/app/administrator/sales/sales.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:29:21.521Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:29:21.815Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:29:27.925Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:29:27.926Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts,src/app/administrator/sales/sales.component.css
+[NX Daemon Server] - 2024-01-22T13:29:27.926Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:29:27.950Z - Time taken for 'hash changed files from watcher' 3.494125008583069ms
+[NX Daemon Server] - 2024-01-22T13:30:22.039Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:49:32.760Z - [WATCHER]: src/app/administrator/modal-history/modal-history.component.html was modified
+[NX Daemon Server] - 2024-01-22T13:49:32.761Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:49:33.150Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T13:49:39.166Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-22T13:49:39.166Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts,src/app/administrator/sales/sales.component.css
+[NX Daemon Server] - 2024-01-22T13:49:39.166Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-22T13:49:39.190Z - Time taken for 'hash changed files from watcher' 3.9980000257492065ms
+[NX Daemon Server] - 2024-01-22T13:50:33.370Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T14:27:13.986Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-22T14:27:15.733Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-22T17:15:39.011Z - There are 2 open connections. Reset inactivity timer.
+[NX Daemon Server] - 2024-01-22T20:15:50.032Z - There are 2 open connections. Reset inactivity timer.
+[NX Daemon Server] - 2024-01-22T23:19:54.000Z - There are 2 open connections. Reset inactivity timer.
+[NX Daemon Server] - 2024-01-23T01:04:37.117Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-01-23T01:04:37.124Z - Established a connection. Number of open connections: 4
+[NX Daemon Server] - 2024-01-23T01:04:37.126Z - Closed a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-01-23T01:04:37.138Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T01:04:37.149Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T01:04:37.150Z - [REQUEST]: angular.json,src/app/administrator/modal-history/modal-history.component.css,src/app/administrator/modal-history/modal-history.component.ts,src/app/administrator/modal-history/modal-history.component.html,src/app/administrator/modal-history/modal-history.component.spec.ts,src/app/administrator/administrator.module.ts,src/app/core/model/sale-order/history.interface.ts,src/app/core/model/sale-order/sale-order.interface.ts,src/app/administrator/sales/sales.component.html,src/app/administrator/sales/sales.component.ts,src/app/core/model/sale-order/payment-detail.interface.ts,src/app/administrator/modal-transaction/modal-transaction.component.ts,src/app/administrator/modal-transaction/modal-transaction.component.css,src/app/administrator/modal-transaction/modal-transaction.component.html,src/app/administrator/modal-transaction/modal-transaction.component.spec.ts,src/app/administrator/sales/sales.component.css
+[NX Daemon Server] - 2024-01-23T01:04:37.150Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T01:04:37.182Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T01:04:37.184Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T12:39:02.736Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T12:39:02.738Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T12:39:02.740Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:02.740Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T12:39:02.741Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:02.742Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T12:39:02.743Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T12:39:02.743Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:02.743Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:02.765Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:218:15[90m)[39m
+    at [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:188:23
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async createProjectConfigurations [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/retrieve-workspace-files.js:89:62[90m)[39m
+    at async processFilesAndCreateAndSerializeProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:140:28[90m)[39m
+    at async getCachedSerializedProjectGraphPromise [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:43:16[90m)[39m
+    at async handleRequestProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/handle-request-project-graph.js:12:24[90m)[39m
+    at async handleResult [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:110:16[90m)[39m
+    at async handleMessage [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:81:9[90m)[39m
+    at async [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T12:39:02.766Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T12:39:50.025Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T12:39:50.027Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T12:39:50.029Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:50.030Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T12:39:50.030Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T12:39:50.031Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T12:39:50.032Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T12:39:50.032Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:50.032Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T12:39:50.058Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:218:15[90m)[39m
+    at [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:188:23
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async createProjectConfigurations [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/retrieve-workspace-files.js:89:62[90m)[39m
+    at async processFilesAndCreateAndSerializeProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:140:28[90m)[39m
+    at async getCachedSerializedProjectGraphPromise [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:43:16[90m)[39m
+    at async handleRequestProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/handle-request-project-graph.js:12:24[90m)[39m
+    at async handleResult [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:110:16[90m)[39m
+    at async handleMessage [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:81:9[90m)[39m
+    at async [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T12:39:50.059Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:50:17.862Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:50:17.864Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:50:17.867Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:50:17.869Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:50:17.870Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:50:17.871Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:50:17.872Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:50:17.873Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:50:17.873Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:50:17.943Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:50:17.944Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:51:03.912Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:51:03.914Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:51:03.917Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:03.918Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:51:03.919Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:03.920Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:51:03.921Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:51:03.921Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:03.921Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:03.941Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:51:03.942Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:51:25.586Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:51:25.592Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:51:25.597Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:25.597Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:51:25.598Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:25.599Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:51:25.619Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:51:25.620Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-23T13:52:59.330Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-23T13:52:59.332Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-23T13:52:59.336Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:52:59.337Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-23T13:52:59.337Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-23T13:52:59.338Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-23T13:52:59.339Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-23T13:52:59.339Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:52:59.339Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-23T13:52:59.365Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:218:15)
+    at /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:188:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createProjectConfigurations (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:89:62)
+    at async processFilesAndCreateAndSerializeProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:140:28)
+    at async getCachedSerializedProjectGraphPromise (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:43:16)
+    at async handleRequestProjectGraph (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:110:16)
+    at async handleMessage (/Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:81:9)
+    at async /Users/ogomez/Projects/juan/JFERN-south-purity-front/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-23T13:52:59.366Z - Done responding to the client null
+[NX Daemon Server] - 2024-01-24T15:27:09.719Z - Started listening on: /var/folders/lw/0dp3l8_s58j2wmtgrlrbbmqm0000gn/T/d897d2ec575cbb67afdc/d.sock
+[NX Daemon Server] - 2024-01-24T15:27:09.728Z - [WATCHER]: Subscribed to changes within: /Users/ogomez/Projects/juan/JFERN-south-purity-front (native)
+[NX Daemon Server] - 2024-01-24T15:27:09.729Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-24T15:27:09.731Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-24T15:27:09.764Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-24T15:27:09.767Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-24T15:27:09.768Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-24T15:27:09.768Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-24T15:27:09.769Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-24T15:27:09.913Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+Error: The following projects are defined in multiple locations:
+- south-purity-front: 
+  - .
+  - 
+
+To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+    at readProjectConfigurationsFromRootMap [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:218:15[90m)[39m
+    at [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/project-configuration-utils.js:188:23
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async createProjectConfigurations [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/project-graph/utils/retrieve-workspace-files.js:89:62[90m)[39m
+    at async processFilesAndCreateAndSerializeProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:140:28[90m)[39m
+    at async getCachedSerializedProjectGraphPromise [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/project-graph-incremental-recomputation.js:43:16[90m)[39m
+    at async handleRequestProjectGraph [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/handle-request-project-graph.js:12:24[90m)[39m
+    at async handleResult [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:110:16[90m)[39m
+    at async handleMessage [90m(/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:81:9[90m)[39m
+    at async [90m/Users/ogomez/Projects/juan/JFERN-south-purity-front/[39mnode_modules/[4mnx[24m/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-01-24T15:27:09.917Z - Done responding to the client null

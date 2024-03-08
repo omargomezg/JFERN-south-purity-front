@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
-    styleUrls: ['./register.component.css']
+    styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
     registerForm = this.formBuilder.group({
@@ -46,6 +46,9 @@ export class RegisterComponent {
             } else {
                 this.router.navigate(['/mis-pedidos']);
             }
+        }, error => {
+            console.log(error);
+            this.toastr.error('Ocurrió un error al registrarte, intenta nuevamente.', error);
         })
     }
 
