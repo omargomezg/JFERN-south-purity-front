@@ -14,7 +14,7 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
 
   @Input() placeId: string | undefined | null;
   @Input() reload: string = '';
-  displayedColumns: string[] = ['id', 'number', 'key', 'createdDate', 'status', 'options'];
+  displayedColumns: string[] = ['id', 'description', 'createdDate', 'status', 'options'];
   selectedPlaceId: string | undefined | null;
   dataSource: ProductInterface[];
   totalElements: number = 0
