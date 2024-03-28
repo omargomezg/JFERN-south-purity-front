@@ -72,4 +72,12 @@ export class CommonAdminService {
         return this.httpClient.patch<void>(`${environment.apiUrl}/payment`, null);
     }
 
+    getTypeOfProducts(): Observable<any> {
+        return this.httpClient.get<any>(`${environment.apiUrl}/product/type`);
+    }
+
+    createProductType(productType: any): Observable<any> {
+        return this.httpClient.post<any>(`${environment.apiUrl}/product/type`, productType);
+    }
+
 }

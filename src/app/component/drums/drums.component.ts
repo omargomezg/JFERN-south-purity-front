@@ -4,6 +4,8 @@ import {PlaceInterface, ProductInterface} from "../../core/model";
 import {FormBuilder, Validators} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
 import {ActivatedRoute, Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
+import {ProductTypeComponent} from "../product-type/product-type.component";
 
 @Component({
     selector: 'app-drums',
@@ -15,20 +17,31 @@ export class DrumsComponent implements OnInit {
         place: ['', Validators.required],
         lockNumber: [0, Validators.required],
         padlockKey: ['', Validators.required],
+        productType: ['', Validators.required],
     });
     reloadListOfDrums: boolean = false;
     places: PlaceInterface[] = [];
+    productTypes: any = [];
 
-    constructor(private commonAdminService: CommonAdminService, private formBuilder: FormBuilder,
-                private toastr: ToastrService, private activatedRoute: ActivatedRoute, private router: Router) {
+    constructor(private commonAdminService: CommonAdminService,
+                private formBuilder: FormBuilder,
+                private toastr: ToastrService,
+                private matDialog: MatDialog,
+                private activatedRoute: ActivatedRoute, private router: Router) {
         this.loadPlaces();
+
     }
 
     ngOnInit(): void {
+        this.loadProductTypes();
         this.activatedRoute.params.subscribe(params => {
             if (params['placeId'])
                 this.formDrum.controls['place'].setValue(params['placeId'] as string);
         });
+    }
+
+    loadProductTypes(): void {
+        this.commonAdminService.getTypeOfProducts().subscribe(productTypes => this.productTypes = productTypes);
     }
 
     loadPlaces(): void {
@@ -49,5 +62,12 @@ export class DrumsComponent implements OnInit {
 
     cancel() {
         this.router.navigateByUrl('/puntos-de-venta');
+    }
+
+    openModalProductType() {
+        const dialogReference = this.matDialog.open(ProductTypeComponent, {width: '400px', disableClose: true});
+        dialogReference.afterClosed().subscribe(() => {
+            this.loadProductTypes();
+        });
     }
 }

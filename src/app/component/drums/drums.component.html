@@ -1,45 +1,58 @@
 <div class="container">
-  <app-paragraph-h1 text="Registro de bidones"></app-paragraph-h1>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a [routerLink]="['/puntos-de-venta']">Puntos de venta</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Registro de Bidones</li>
-    </ol>
-  </nav>
-  <div class="row mt-6">
-    <div class="col-auto">
-      <form [formGroup]="formDrum" novalidate (ngSubmit)="saveDrum()" class="base-form">
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Dirección</mat-label>
-          <mat-select formControlName="place">
-            <mat-option *ngFor="let place of places" [value]="place.id">{{place.address}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Número de candado</mat-label>
-          <input matInput type="number" formControlName="lockNumber" min="1"
-                 (focus)="formDrum.controls['lockNumber'].setValue(null)">
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Clave del candado</mat-label>
-          <input matInput type="text" formControlName="padlockKey"
-                 (focus)="formDrum.controls['padlockKey'].setValue(null)">
-        </mat-form-field>
-        <div class="text-end">
-          <button type="button" mat-button (click)="cancel()">Cancelar</button>
-          <button type="submit" mat-raised-button [disabled]="!formDrum.valid" class="m-1" color="primary">Guardar
-          </button>
+    <app-paragraph-h1 text="Registro de bidones"></app-paragraph-h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/puntos-de-venta']">Puntos de venta</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Registro de Bidones</li>
+        </ol>
+    </nav>
+    <div class="row my-2">
+        <div class="col text-end">
+            <button mat-raised-button color="primary" (click)="openModalProductType()">
+                <mat-icon>add</mat-icon>
+                Tipo de Bidón
+            </button>
         </div>
-      </form>
     </div>
-    <div class="col-auto">
-      <mat-card>
-        <mat-card-content>
-          <app-drums-available [placeId]="formDrum.controls['place'].value"
-                               [reload]="reloadListOfDrums.toString()"></app-drums-available>
-        </mat-card-content>
-      </mat-card>
-      <br>
+    <div class="row my-6">
+        <div class="col-5">
+            <form [formGroup]="formDrum" novalidate (ngSubmit)="saveDrum()" class="base-form">
+                <mat-form-field appearance="fill" class="base-full-width">
+                    <mat-label>Dirección</mat-label>
+                    <mat-select formControlName="place">
+                        <mat-option *ngFor="let place of places" [value]="place.id">{{ place.address }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="base-full-width">
+                    <mat-label>Tipo de bidón</mat-label>
+                    <mat-select formControlName="productType">
+                        <mat-option *ngFor="let type of productTypes" [value]="type.id">
+                            {{ type.shortName }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="base-full-width">
+                    <mat-label>Número de candado</mat-label>
+                    <input matInput type="number" formControlName="lockNumber" min="1"
+                           (focus)="formDrum.controls['lockNumber'].setValue(null)">
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="base-full-width">
+                    <mat-label>Clave del candado</mat-label>
+                    <input matInput type="text" formControlName="padlockKey"
+                           (focus)="formDrum.controls['padlockKey'].setValue(null)">
+                </mat-form-field>
+                <div class="text-end">
+                    <button type="button" mat-button (click)="cancel()">Cancelar</button>
+                    <button type="submit" mat-raised-button [disabled]="!formDrum.valid" class="m-1" color="primary">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-7 border-start">
+            <app-drums-available [placeId]="formDrum.controls['place'].value"
+                                 [reload]="reloadListOfDrums.toString()"></app-drums-available>
+
+        </div>
     </div>
-  </div>
 </div>

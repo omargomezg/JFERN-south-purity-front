@@ -45,6 +45,7 @@ import {MyAdminProfileComponent} from "./component/my-admin-profile/my-admin-pro
 
 import {NgxGa4Module} from '@kattoshi/ngx-ga4';
 import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.component';
+import { ProductTypeComponent } from './component/product-type/product-type.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.compon
     UserFormComponent,
     MyCustomerProfileComponent,
     MyAdminProfileComponent,
-    ParagraphH1Component
+    ParagraphH1Component,
+    ProductTypeComponent
   ],
   imports: [
     BrowserModule,
