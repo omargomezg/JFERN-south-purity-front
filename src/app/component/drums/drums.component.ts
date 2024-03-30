@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonAdminService} from "../../core/service";
-import {PlaceInterface, ProductInterface} from "../../core/model";
+import {PlaceModel, ProductModel} from "../../core/model";
 import {FormBuilder, Validators} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -20,7 +20,7 @@ export class DrumsComponent implements OnInit {
         productType: ['', Validators.required],
     });
     reloadListOfDrums: boolean = false;
-    places: PlaceInterface[] = [];
+    places: PlaceModel[] = [];
     productTypes: any = [];
 
     constructor(private commonAdminService: CommonAdminService,
@@ -49,8 +49,7 @@ export class DrumsComponent implements OnInit {
     }
 
     saveDrum(): void {
-        let order = this.formDrum.value as ProductInterface;
-        this.commonAdminService.postProduct(order).subscribe(() => {
+        this.commonAdminService.postProduct(this.formDrum.value).subscribe(() => {
             this.toastr.success('Bidón registrado :)');
             this.formDrum.controls['lockNumber'].setValue(0);
             this.formDrum.controls['padlockKey'].setValue('');

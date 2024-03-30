@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {CommonAdminService, ProductService} from "../../core/service";
-import {PaginationModel, ProductInterface} from "../../core/model";
+import {PaginationModel, ProductModel} from "../../core/model";
 import {PageEvent} from "@angular/material/paginator";
 import {STATUS_BOTTLES} from "../../core/constant/app.constants";
 import {FormBuilder, FormGroup} from "@angular/forms";
@@ -16,7 +16,7 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
   @Input() reload: string = '';
   displayedColumns: string[] = ['id', 'description', 'createdDate', 'status', 'options'];
   selectedPlaceId: string | undefined | null;
-  dataSource: ProductInterface[];
+  dataSource: ProductModel[];
   totalElements: number = 0
   pagination: PaginationModel = new PaginationModel();
   statuses = STATUS_BOTTLES;
@@ -72,11 +72,11 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
     return status.code;
   }
 
-  unTake(product: ProductInterface) {
+  unTake(product: ProductModel) {
 
   }
 
-  delete(product: ProductInterface) {
+  delete(product: ProductModel) {
     if (confirm('Are you sure to delete this product?') == true) {
       this.productService.delete(product.id).subscribe(() => {
         this.getOrders();

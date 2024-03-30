@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CartModel, DrumRequestModel} from "../../client-module/service/model";
-import {PlaceInterface} from "../../core/model";
+import {PlaceModel} from "../../core/model";
 import {CommonClientService} from "../../client-module/service/common-client.service";
 import {AuthService} from "../../core/service";
 import {Router} from "@angular/router";
@@ -18,7 +18,7 @@ import {ToastrService} from "ngx-toastr";
 })
 export class CartComponent {
   config = new DrumRequestModel();
-  places: PlaceInterface[];
+  places: PlaceModel[];
   loading = {
     waterDrums: true
   }
@@ -68,7 +68,7 @@ export class CartComponent {
     }
   }
 
-  onSelectedPlace(place: PlaceInterface): void {
+  onSelectedPlace(place: PlaceModel): void {
     this.cart.place = place;
     this.loadWaterDrumsAvailable();
   }

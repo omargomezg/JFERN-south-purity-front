@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {CommonAdminService} from "../../core/service/common-admin.service";
-import {PaginationModel, PlaceInterface, UserFilterModel} from "../../core/model";
+import {PaginationModel, PlaceModel, UserFilterModel} from "../../core/model";
 import {UserInterface} from "../../core/model/user.interface";
 
 @Component({
@@ -9,7 +9,7 @@ import {UserInterface} from "../../core/model/user.interface";
   styleUrls: ['./list-of-clients.component.scss']
 })
 export class ListOfClientsComponent implements OnChanges {
-  @Input() place: PlaceInterface | undefined;
+  @Input() place: PlaceModel | undefined;
   @Output() clientId = new EventEmitter<string>();
   clients: UserInterface[] = [];
   selectedClient: string | undefined;

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PlaceInterface} from '../../core/model';
+import {PlaceModel} from '../../core/model';
 import {AuthService, PublicService, UserService} from '../../core/service';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
@@ -10,13 +10,13 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class DropDownPlacesComponent implements OnInit {
   @Output()
-  public onPlaceSelected: EventEmitter<PlaceInterface> = new EventEmitter<PlaceInterface>();
+  public onPlaceSelected: EventEmitter<PlaceModel> = new EventEmitter<PlaceModel>();
 
   @Input()
-  public place: PlaceInterface = {} as PlaceInterface;
+  public place: PlaceModel = {} as PlaceModel;
 
   formPlace: FormGroup;
-  places: PlaceInterface[] = [];
+  places: PlaceModel[] = [];
   profile = this.authService.getProfile();
 
   constructor(private publicService: PublicService, private authService: AuthService,
@@ -47,21 +47,21 @@ export class DropDownPlacesComponent implements OnInit {
 
   private setValueChanges(): void {
     this.formPlace.valueChanges.subscribe((form) => {
-      const place: PlaceInterface = this.getPlace(form.place);
+      const place: PlaceModel = this.getPlace(form.place);
       this.updateClientPlace(place);
       this.onPlaceSelected.emit(place);
     });
   }
 
-  private updateClientPlace(place: PlaceInterface): void {
+  private updateClientPlace(place: PlaceModel): void {
     if (!this.authService.isLogged()) return;
     if (this.authService.getProfile()?.role !== 'CUSTOMER') return;
     this.userService.updatePlace(this.profile?.id as string, place.id).subscribe(() => {
     });
   }
 
-  private getPlace(id: string): PlaceInterface {
-    let place = this.places.find(place => place.id === id) as PlaceInterface;
-    return place === undefined ? {} as PlaceInterface : place;
+  private getPlace(id: string): PlaceModel {
+    let place = this.places.find(place => place.id === id) as PlaceModel;
+    return place === undefined ? {} as PlaceModel : place;
   }
 }

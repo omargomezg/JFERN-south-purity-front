@@ -3,7 +3,7 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {CartModel, DrumRequestModel, MyOrderInterface, PaymentResponseModel} from "./model";
-import {PageInterface, PaginationModel, PlaceInterface, SaleOrderInterface} from "../../core/model";
+import {PageInterface, PaginationModel, PlaceModel, SaleOrderInterface} from "../../core/model";
 import {ConfigurationInterface} from "../../core/model/configuration.interface";
 
 @Injectable({
@@ -17,8 +17,8 @@ export class CommonClientService {
         return this.httpClient.get<ConfigurationInterface>(`${environment.apiUrl}/configuration`);
     }
 
-    getPlaces(): Observable<PlaceInterface[]> {
-        return this.httpClient.get<PlaceInterface[]>(`${environment.apiUrl}/place`);
+    getPlaces(): Observable<PlaceModel[]> {
+        return this.httpClient.get<PlaceModel[]>(`${environment.apiUrl}/place`);
     }
 
     addPlace(place: any): Observable<any> {
@@ -33,8 +33,8 @@ export class CommonClientService {
         return this.httpClient.get<PaymentResponseModel>(`${environment.apiUrl}/payment/status/${orderId}`);
     }
 
-    getMyPlaces(): Observable<PlaceInterface[]> {
-        return this.httpClient.get<PlaceInterface[]>(`${environment.apiUrl}/place/customer`);
+    getMyPlaces(): Observable<PlaceModel[]> {
+        return this.httpClient.get<PlaceModel[]>(`${environment.apiUrl}/place/customer`);
     }
 
     getOrders(id: string): Observable<MyOrderInterface[]> {
@@ -45,7 +45,7 @@ export class CommonClientService {
         return this.httpClient.get<MyOrderInterface[]>(`${environment.apiUrl}/payment/`);
     }
 
-    getWaterDrumsAvailable(place: PlaceInterface): Observable<DrumRequestModel> {
+    getWaterDrumsAvailable(place: PlaceModel): Observable<DrumRequestModel> {
         return this.httpClient.get<DrumRequestModel>(`${environment.apiUrl}/public/water-drums/${place.id}/available`)
     }
 

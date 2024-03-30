@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {config, Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
-import {PageInterface, PaginationModel, PlaceInterface, ProductInterface, UserFilterModel} from "../model";
+import {PageInterface, PaginationModel, PlaceModel, ProductModel, UserFilterModel} from "../model";
 import {UserInterface} from "../model/user.interface";
 import {ConfigurationInterface} from "../model/configuration.interface";
 
@@ -15,12 +15,12 @@ export class CommonAdminService {
     }
 
 
-    getPlaces(): Observable<PlaceInterface[]> {
-        return this.httpClient.get<PlaceInterface[]>(`${environment.apiUrl}/place`);
+    getPlaces(): Observable<PlaceModel[]> {
+        return this.httpClient.get<PlaceModel[]>(`${environment.apiUrl}/place`);
     }
 
-    postPlace(place: PlaceInterface): Observable<PlaceInterface> {
-        return this.httpClient.post<PlaceInterface>(`${environment.apiUrl}/administrator/place`, place);
+    postPlace(place: any): Observable<PlaceModel> {
+        return this.httpClient.post<PlaceModel>(`${environment.apiUrl}/administrator/place`, place);
     }
 
     getConfiguration(): Observable<ConfigurationInterface> {
@@ -33,7 +33,7 @@ export class CommonAdminService {
         return this.httpClient.put<ConfigurationInterface>(`${environment.apiUrl}/configuration`, configuration);
     }
 
-    getOrders(placeId: string, status: string, pagination: PaginationModel): Observable<PageInterface<ProductInterface>> {
+    getOrders(placeId: string, status: string, pagination: PaginationModel): Observable<PageInterface<ProductModel>> {
         let queryParams = new HttpParams();
         queryParams = queryParams.append("page", pagination.pageIndex);
         queryParams = queryParams.append("size", pagination.pageSize);
@@ -41,10 +41,10 @@ export class CommonAdminService {
         if (status !== '') {
             queryParams = queryParams.append("status", status);
         }
-        return this.httpClient.get<PageInterface<ProductInterface>>(`${environment.apiUrl}/order`, {params: queryParams});
+        return this.httpClient.get<PageInterface<ProductModel>>(`${environment.apiUrl}/order`, {params: queryParams});
     }
 
-    postProduct(order: ProductInterface): Observable<any> {
+    postProduct(order: any): Observable<any> {
         return this.httpClient.post(`${environment.apiUrl}/administrator/product`, order);
     }
 

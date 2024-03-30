@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {FormPlaceComponent} from "../form-place/form-place.component";
 import {CommonAdminService, PlaceService} from "../../core/service";
-import {PlaceInterface} from "../../core/model";
+import {PlaceModel} from "../../core/model";
 import {Router} from '@angular/router';
 import {MatSlideToggleChange} from "@angular/material/slide-toggle";
 import {PlaceStatusEnum} from "../../core/constant/app.constants";
@@ -15,7 +15,7 @@ import {ToastrService} from "ngx-toastr";
 })
 export class PlaceComponent {
   displayedColumns: string[] = ['city', 'name', 'status', 'options'];
-  dataSource: PlaceInterface[] = [];
+  dataSource: PlaceModel[] = [];
 
   constructor(private dialog: MatDialog, private commonAdminService: CommonAdminService,
               private router: Router,
@@ -32,11 +32,11 @@ export class PlaceComponent {
     this.openModal(null);
   }
 
-  edit(place: PlaceInterface): void {
+  edit(place: PlaceModel): void {
     this.openModal(place);
   }
 
-  openModal(place: PlaceInterface | null): void {
+  openModal(place: PlaceModel | null): void {
     const dialogRef = this.dialog.open(FormPlaceComponent, {
       data: place,
     });
@@ -50,7 +50,7 @@ export class PlaceComponent {
     this.router.navigateByUrl('/agregar-bidones/' + placeId);
   }
 
-  onSlideStatus($event: MatSlideToggleChange, place: PlaceInterface) {
+  onSlideStatus($event: MatSlideToggleChange, place: PlaceModel) {
     place.status = $event.checked ? PlaceStatusEnum.ENABLED : PlaceStatusEnum.DISABLED;
     const message = "Punto de venta ha sido " + (place.status === PlaceStatusEnum.ENABLED ? 'habilitado' : 'deshabilitado');
     this.placeService.put(place).subscribe(() => this.toastr.success(message));

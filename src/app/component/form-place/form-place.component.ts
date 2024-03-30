@@ -1,8 +1,8 @@
 import {Component, Inject} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {PlaceInterface} from "../../core/model";
-import {CommonAdminService} from "../../core/service/common-admin.service";
+import {PlaceModel} from "../../core/model";
+import {CommonAdminService} from "../../core/service";
 
 @Component({
   selector: 'app-form-place',
@@ -22,7 +22,7 @@ export class FormPlaceComponent {
   constructor(private formBuilder: FormBuilder,
               private commonService: CommonAdminService,
               public dialogRef: MatDialogRef<FormPlaceComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: PlaceInterface) {
+              @Inject(MAT_DIALOG_DATA) public data: PlaceModel) {
     if (data) this.loadData();
   }
 
@@ -34,7 +34,7 @@ export class FormPlaceComponent {
     this.placeForm.controls['status'].setValue(this.data.status === 'ENABLED');
   }
 
-  getData(): PlaceInterface {
+  getData(): any {
     return {
       id: this.placeForm.controls['id'].value as string,
       country: this.placeForm.controls['country'].value as string,

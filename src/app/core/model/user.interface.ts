@@ -1,4 +1,4 @@
-import {PlaceInterface} from "./place.interface";
+import {PlaceModel} from "./place.model";
 
 export interface UserInterface {
   id: string;
@@ -12,7 +12,7 @@ export interface UserInterface {
   fullName: string;
   password: string
   passwordReset: PasswordReset;
-  place: PlaceInterface;
+  place: PlaceModel;
 }
 
 interface PasswordReset {

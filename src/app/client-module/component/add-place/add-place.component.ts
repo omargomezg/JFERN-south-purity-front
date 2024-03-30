@@ -4,7 +4,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {MatSelectChange} from "@angular/material/select";
 import {ToastrService} from "ngx-toastr";
 import {MatDialogRef} from "@angular/material/dialog";
-import {PlaceInterface} from "../../../core/model";
+import {PlaceModel} from "../../../core/model";
 
 @Component({
   selector: 'app-add-place', templateUrl: './add-place.component.html', styleUrls: ['./add-place.component.scss']
@@ -12,8 +12,8 @@ import {PlaceInterface} from "../../../core/model";
 export class AddPlaceComponent implements OnInit {
 
   countries: string[] = [];
-  places: PlaceInterface[] = [];
-  loadedPlaces: PlaceInterface[] = [];
+  places: PlaceModel[] = [];
+  loadedPlaces: PlaceModel[] = [];
   myPlaceForm = this.formBuilder.group({
     country: ['', Validators.required],
     id: ['', Validators.required],
@@ -46,7 +46,7 @@ export class AddPlaceComponent implements OnInit {
     });
   }
 
-  loadCountries(places: PlaceInterface[]): void {
+  loadCountries(places: PlaceModel[]): void {
     places.forEach(place => {
       if (!this.countries.includes(place.country)) {
         this.countries.push(place.country);
