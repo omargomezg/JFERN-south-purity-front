@@ -15,6 +15,12 @@
             <mat-option *ngFor="let place of places" [value]="place.id">{{place.address}}</mat-option>
           </mat-select>
         </mat-form-field>
+          <mat-form-field appearance="fill" class="base-full-width">
+              <mat-label>Tipo de bidón</mat-label>
+              <mat-select formControlName="shortName">
+                  <mat-option *ngFor="let bottle of bottles" [value]="bottle.name">{{bottle.name}}</mat-option>
+              </mat-select>
+          </mat-form-field>
         <mat-form-field appearance="fill" class="base-full-width">
           <mat-label>Número de candado</mat-label>
           <input matInput type="number" formControlName="lockNumber" min="1"

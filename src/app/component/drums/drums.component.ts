@@ -15,9 +15,20 @@ export class DrumsComponent implements OnInit {
         place: ['', Validators.required],
         lockNumber: [0, Validators.required],
         padlockKey: ['', Validators.required],
+        shortName: ['', Validators.required],
     });
     reloadListOfDrums: boolean = false;
     places: PlaceInterface[] = [];
+    bottles = [
+        {
+            id: 1,
+            name: 'Bidón de 20 litros'
+        },
+        {
+            id: 2,
+            name: 'Bidón de 10 litros'
+        }
+    ];
 
     constructor(private commonAdminService: CommonAdminService, private formBuilder: FormBuilder,
                 private toastr: ToastrService, private activatedRoute: ActivatedRoute, private router: Router) {
