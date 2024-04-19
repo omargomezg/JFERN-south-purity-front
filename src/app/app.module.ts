@@ -45,6 +45,7 @@ import {MyAdminProfileComponent} from "./component/my-admin-profile/my-admin-pro
 
 import {NgxGa4Module} from '@kattoshi/ngx-ga4';
 import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.component';
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
@@ -74,27 +75,28 @@ import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.compon
     MyAdminProfileComponent,
     ParagraphH1Component
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    FormsModule,
-    MatDialogModule,
-    LoadingBarHttpClientModule,
-    ToastrModule.forRoot(),
-    MatPaginatorModule,
-    MatTableModule,
-    MatSelectModule,
-    MatIconModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'})
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        FormsModule,
+        MatDialogModule,
+        LoadingBarHttpClientModule,
+        ToastrModule.forRoot(),
+        MatPaginatorModule,
+        MatTableModule,
+        MatSelectModule,
+        MatIconModule,
+        MatSlideToggleModule,
+        MatMenuModule,
+        NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'}),
+        MatRadioModule
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

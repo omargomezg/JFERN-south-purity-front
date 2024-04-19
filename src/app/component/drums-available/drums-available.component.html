@@ -11,15 +11,15 @@
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <caption></caption>
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef>#</th>
-    <td mat-cell *matCellDef="let element; let i = index;"> {{i + 1}}</td>
+    <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef>Número</th>
+        <td mat-cell *matCellDef="let element"> {{element.lockNumber}} </td>
+    </ng-container>
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Bidón</th>
+    <td mat-cell *matCellDef="let element"> {{element.shortName.replace('Bidón de ', '')}}</td>
   </ng-container>
 
-  <ng-container matColumnDef="number">
-    <th mat-header-cell *matHeaderCellDef>Número</th>
-    <td mat-cell *matCellDef="let element"> {{element.lockNumber}} </td>
-  </ng-container>
   <ng-container matColumnDef="key">
     <th mat-header-cell *matHeaderCellDef>Clave</th>
     <td mat-cell *matCellDef="let element"> {{element.padlockKey}} </td>

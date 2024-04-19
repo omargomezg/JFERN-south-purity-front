@@ -15,16 +15,41 @@
             <mat-option *ngFor="let place of places" [value]="place.id">{{place.address}}</mat-option>
           </mat-select>
         </mat-form-field>
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Número de candado</mat-label>
-          <input matInput type="number" formControlName="lockNumber" min="1"
-                 (focus)="formDrum.controls['lockNumber'].setValue(null)">
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Clave del candado</mat-label>
-          <input matInput type="text" formControlName="padlockKey"
-                 (focus)="formDrum.controls['padlockKey'].setValue(null)">
-        </mat-form-field>
+        <mat-radio-group (change)="setDefaultPrice($event)" aria-label="Select an option" formControlName="shortName">
+          <mat-radio-button value="Bidón de 20 Lts.">Bidón de 20 Lts.</mat-radio-button>
+          <mat-radio-button value="Bidón de 10 Lts.">Bidón de 10 Lts.</mat-radio-button>
+        </mat-radio-group>
+        <div class="row">
+          <div class="col">
+            <mat-form-field appearance="fill" floatLabel="always" class="base-full-width">
+              <mat-label>Valor recarga</mat-label>
+              <input matInput type="number" class="text-price" formControlName="priceRefill">
+              <span matTextPrefix>$&nbsp;</span>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill" class="base-full-width">
+              <mat-label>Valor bidón</mat-label>
+              <input matInput type="number" class="text-price" formControlName="priceBottle">
+              <span matTextPrefix>$&nbsp;</span>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field appearance="fill" class="base-full-width">
+              <mat-label>Número de candado</mat-label>
+              <input matInput type="number" class="text-price" formControlName="lockNumber" min="1"
+                (focus)="formDrum.controls['lockNumber'].setValue(null)">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill" class="base-full-width">
+              <mat-label>Clave del candado</mat-label>
+              <input matInput type="text" formControlName="padlockKey" (focus)="formDrum.controls['padlockKey'].setValue(null)">
+            </mat-form-field>
+          </div>
+        </div>
         <div class="text-end">
           <button type="button" mat-button (click)="cancel()">Cancelar</button>
           <button type="submit" mat-raised-button [disabled]="!formDrum.valid" class="m-1" color="primary">Guardar
@@ -36,7 +61,7 @@
       <mat-card>
         <mat-card-content>
           <app-drums-available [placeId]="formDrum.controls['place'].value"
-                               [reload]="reloadListOfDrums.toString()"></app-drums-available>
+            [reload]="reloadListOfDrums.toString()"></app-drums-available>
         </mat-card-content>
       </mat-card>
       <br>
