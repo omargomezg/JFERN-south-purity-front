@@ -43,7 +43,6 @@
       </button>
       <mat-menu #menutb="matMenu">
         <button mat-menu-item (click)="unTake(element)" *ngIf="element.status === 'TAKEN'">Liberar</button>
-        <button mat-menu-item (click)="unTake(element)" *ngIf="element.status === 'TAKEN'">Actualizar</button>
         <button mat-menu-item (click)="delete(element)" *ngIf="element.status === 'AVAILABLE'">Eliminar</button>
       </mat-menu>
     </td>

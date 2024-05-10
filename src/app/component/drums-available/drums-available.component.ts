@@ -4,6 +4,7 @@ import {PaginationModel, ProductInterface} from "../../core/model";
 import {PageEvent} from "@angular/material/paginator";
 import {STATUS_BOTTLES} from "../../core/constant/app.constants";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-drums-available',
@@ -25,7 +26,8 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
 
   constructor(private commonAdminService: CommonAdminService,
               private productService: ProductService,
-              private formBuilder: FormBuilder) {
+    private formBuilder: FormBuilder,
+    private toast: ToastrService) {
     this.dataSource = [];
     this.filterForm = this.buildForm();
   }
@@ -73,7 +75,14 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
   }
 
   unTake(product: ProductInterface) {
-
+    this.commonAdminService.untakenProduct(product.id, this.placeId as string).subscribe((result) => {
+      if (result === true) {
+        this.toast.success('Product liberado');
+        this.getOrders()
+      } else {
+        this.toast.error('No es posible liberar el producto');
+      }
+    })
   }
 
   delete(product: ProductInterface) {
