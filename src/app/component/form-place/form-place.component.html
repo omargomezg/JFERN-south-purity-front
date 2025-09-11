@@ -1,9 +1,18 @@
-<h1 mat-dialog-title>{{data ? data.address : 'Crear'}}</h1>
+<h1 mat-dialog-title>{{data ? data.address : 'Nuevo Punto de Venta'}}</h1>
 <form [formGroup]="placeForm" novalidate (ngSubmit)="save()" class="base-form">
   <div mat-dialog-content>
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Ciudad</mat-label>
-      <input matInput formControlName="country" cdkFocusInitial>
+      <input type="text"
+             placeholder="Seleccione una ciudad"
+             formControlName="country"
+             aria-label="Number"
+             matInput>
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredCommunes | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
     </mat-form-field>
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Dirección</mat-label>
@@ -17,7 +26,6 @@
     <mat-slide-toggle formControlName="status">
       {{ placeForm.controls['status'].value ? 'Deshabilitar punto de venta' : 'Activar punto de venta'}}
     </mat-slide-toggle>
-    {{ placeForm.controls['status'].value }}
   </div>
   <div mat-dialog-actions>
     <div class="text-end">

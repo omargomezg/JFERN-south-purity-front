@@ -46,6 +46,7 @@ import {MyAdminProfileComponent} from "./component/my-admin-profile/my-admin-pro
 import {NgxGa4Module} from '@kattoshi/ngx-ga4';
 import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.component';
 import {MatRadioModule} from "@angular/material/radio";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import {MatRadioModule} from "@angular/material/radio";
         MatSlideToggleModule,
         MatMenuModule,
         NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'}),
-        MatRadioModule
+        MatRadioModule,
+        MatAutocompleteModule
     ],
   providers: [
     {

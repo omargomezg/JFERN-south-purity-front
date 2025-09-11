@@ -1,16 +1,20 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {PlaceInterface} from "../../core/model";
-import {CommonAdminService} from "../../core/service/common-admin.service";
+import {CommuneInterface, PlaceInterface} from "../../core/model";
+import {CommonAdminService} from "../../core/service";
+import {LocationService} from "../../core/service/location.service";
+import {Observable} from "rxjs";
+import {map, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'app-form-place',
   templateUrl: './form-place.component.html',
   styleUrls: ['./form-place.component.scss']
 })
-export class FormPlaceComponent {
-
+export class FormPlaceComponent implements OnInit {
+  communes: CommuneInterface[] = [];
+  filteredCommunes: Observable<string[]> = new Observable<string[]>();
   placeForm = this.formBuilder.group({
     id: [''],
     address: ['', Validators.required],
@@ -21,9 +25,20 @@ export class FormPlaceComponent {
 
   constructor(private formBuilder: FormBuilder,
               private commonService: CommonAdminService,
+              private readonly locationService: LocationService,
               public dialogRef: MatDialogRef<FormPlaceComponent>,
               @Inject(MAT_DIALOG_DATA) public data: PlaceInterface) {
     if (data) this.loadData();
+  }
+
+  ngOnInit(): void {
+    this.locationService.getComunas().subscribe(data => {
+      this.communes = data;
+      this.filteredCommunes = this.placeForm.controls['country'].valueChanges.pipe(
+        startWith(''),
+        map(value => this._filter(value || '')),
+      );
+    });
   }
 
   loadData(): void {
@@ -45,10 +60,17 @@ export class FormPlaceComponent {
     };
   }
 
-  save() {
+  save(): void {
     this.commonService.postPlace(this.getData()).subscribe(() => {
       this.dialogRef.close();
     });
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.communes.filter(option => option.nombre.toLowerCase().includes(filterValue))
+      .map(option => option.nombre);
   }
 
 }
