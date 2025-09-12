@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>{{data ? data.address : 'Nuevo Punto de Venta'}}</h1>
+<h1 mat-dialog-title>{{data ? 'Punto de venta: ' + data.address : 'Nuevo Punto de Venta'}}</h1>
 <form [formGroup]="placeForm" novalidate (ngSubmit)="save()" class="base-form">
   <div mat-dialog-content>
     <mat-form-field appearance="fill" class="base-full-width">
@@ -7,6 +7,7 @@
              placeholder="Seleccione una ciudad"
              formControlName="country"
              aria-label="Number"
+             [matAutocomplete]="auto"
              matInput>
       <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
         <mat-option *ngFor="let option of filteredCommunes | async" [value]="option">

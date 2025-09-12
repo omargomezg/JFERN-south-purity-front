@@ -28,11 +28,11 @@ export class CartComponent {
   cart: CartModel = new CartModel();
   protected readonly PAYMENT_TYPE = PAYMENT_TYPE;
 
-  constructor(private commonService: CommonClientService,
+  constructor(private readonly commonService: CommonClientService,
               public authService: AuthService,
-              private router: Router,
-              private toastr: ToastrService,
-              private matDialog: MatDialog) {
+              private readonly router: Router,
+              private readonly toastr: ToastrService,
+              private readonly matDialog: MatDialog) {
     this.isLogged = this.authService.isLogged();
     this.places = []
   }
@@ -100,14 +100,13 @@ export class CartComponent {
   hasAvailableBottles(description: string, available: number): boolean {
     let bottle = this.config.find(bottle => bottle.description === description)?.available ?? 0;
     let cart = this.cart.items.find(item => item.description === description)?.quantity ?? 0;
-    console.log(description + ' >> ' + (bottle > cart))
     return bottle > cart;
   }
 
   isTrue(value: boolean): boolean {
     if (value === undefined || value === null)
       return true;
-    return value === true;
+    return value;
   }
 
   existsElement(description: string): boolean {
@@ -116,7 +115,6 @@ export class CartComponent {
 
   getSubtotal(): number {
     return this.cart.items.reduce((accumulator, object) => {
-      console.log(object.subtotal)
       return accumulator + object.subtotal;
     }, 0);
   }

@@ -47,6 +47,8 @@ import {NgxGa4Module} from '@kattoshi/ngx-ga4';
 import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.component';
 import {MatRadioModule} from "@angular/material/radio";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { RutValidatorDirective } from './core/directive/rut-validator.directive';
+import { RutFormatPipe } from './core/pipe/rut-format.pipe';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,9 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     UserFormComponent,
     MyCustomerProfileComponent,
     MyAdminProfileComponent,
-    ParagraphH1Component
+    ParagraphH1Component,
+    RutValidatorDirective,
+    RutFormatPipe
   ],
     imports: [
         BrowserModule,

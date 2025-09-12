@@ -68,7 +68,6 @@ export class FormPlaceComponent implements OnInit {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-
     return this.communes.filter(option => option.nombre.toLowerCase().includes(filterValue))
       .map(option => option.nombre);
   }

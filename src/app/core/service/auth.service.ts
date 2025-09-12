@@ -22,11 +22,11 @@ interface ProfileModel {
   providedIn: 'root'
 })
 export class AuthService {
-  private statusSession = new BehaviorSubject<boolean>(false);
+  private readonly statusSession = new BehaviorSubject<boolean>(false);
   public statusSession$ = this.statusSession.asObservable();
 
-  constructor(private httpClient: HttpClient,
-              private router: Router) {
+  constructor(private readonly httpClient: HttpClient,
+              private readonly router: Router) {
     this.isLogged();
   }
 
@@ -56,6 +56,7 @@ export class AuthService {
   }
 
   register(register: RegisterModel): Observable<any> {
+    register.rut = register.rut.replace(/\./g, '');
     return this.httpClient.post<any>(`${environment.apiUrl}/register`, register);
   }
 
