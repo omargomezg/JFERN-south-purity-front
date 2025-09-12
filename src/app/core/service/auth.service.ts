@@ -56,7 +56,14 @@ export class AuthService {
   }
 
   register(register: RegisterModel): Observable<any> {
-    register.rut = register.rut.replace(/\./g, '');
+    let rut = register.rut.replace(/\.|-/g, '');
+    if (rut.length > 1) {
+      rut = rut.slice(0, -1) + '-' + rut.slice(-1);
+    }
+    if (rut.charAt(rut.length - 1).toLowerCase() === 'k') {
+      rut = rut.slice(0, -1) + 'K';
+    }
+    register.rut = rut;
     return this.httpClient.post<any>(`${environment.apiUrl}/register`, register);
   }
 
