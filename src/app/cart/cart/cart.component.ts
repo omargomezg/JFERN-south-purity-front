@@ -17,7 +17,7 @@ import {ToastrService} from "ngx-toastr";
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
-  config : DrumRequestModel[] = [];
+  config: DrumRequestModel[] = [];
   places: PlaceInterface[];
   loading = {
     waterDrums: true
@@ -130,7 +130,7 @@ export class CartComponent {
   }
 
   pay(): void {
-    if (this.cart.paymentType === PAYMENT_TYPE.GETNET) {
+    if (this.cart.paymentType === PAYMENT_TYPE.GETNET || this.cart.paymentType === PAYMENT_TYPE.TRANSBANK) {
       const payDialog = this.matDialog.open(ModalTimeToPayComponent, {
         data: this.cart
       });
