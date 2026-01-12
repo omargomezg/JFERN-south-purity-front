@@ -1,14 +1,116 @@
-html body {
-  height: 100%;
+@import "../../../styles.scss";
+
+.container-fluid {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $secondary 0%, $light 100%);
 }
+
 .form-parent {
-  display: table;
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  margin: auto;
 }
+
 .form-signin {
-  display: table-cell;
-  vertical-align: middle;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    color: $primary;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    display: block !important; /* Overriding visually-hidden for better UX if desired, or keep hidden */
+  }
+
+  /* If we want to keep the h1 visually hidden as per original HTML but maybe show a Logo or Welcome text, 
+     I will respect the HTML's 'visually-hidden' class, but adding a visible header is often better. 
+     For now, I'll assume the user might want to see the title "Pureza del Sur". 
+     I will suggest removing 'visually-hidden' in the HTML step. */
 }
+
+.form-floating {
+  margin-bottom: 1rem;
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid fade-out($primary, 0.8);
+    
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 0.25rem fade-out($primary, 0.75);
+    }
+  }
+
+  label {
+    color: #999;
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+  
+  &:disabled {
+    background-color: lighten($primary, 20%);
+    border-color: lighten($primary, 20%);
+  }
+}
+
+.links-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+
+  a, button.mat-mdc-button {
+    color: $muted;
+    text-decoration: none;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+  
+  .divider {
+    color: #ccc;
+    display: none; /* Hiding the pipe separator relying on flex gap */
+  }
+}
+
+asl-google-signin-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  
+  /* The google button wrapper itself */
+  > div {
+    width: 100% !important;
+    
+    iframe {
+        margin: 0 auto !important;
+    }
+  }
+}
+
