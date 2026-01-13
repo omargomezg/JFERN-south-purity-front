@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../../variables.scss";
 
 .container-fluid {
   min-height: 100vh;
@@ -27,7 +27,8 @@
     color: $primary;
     margin-bottom: 1.5rem;
     font-weight: bold;
-    display: block !important; /* Overriding visually-hidden for better UX if desired, or keep hidden */
+    display: block !important;
+    /* Overriding visually-hidden for better UX if desired, or keep hidden */
   }
 
   /* If we want to keep the h1 visually hidden as per original HTML but maybe show a Logo or Welcome text, 
@@ -38,11 +39,11 @@
 
 .form-floating {
   margin-bottom: 1rem;
-  
+
   .form-control {
     border-radius: 5px;
     border: 1px solid fade-out($primary, 0.8);
-    
+
     &:focus {
       border-color: $primary;
       box-shadow: 0 0 0 0.25rem fade-out($primary, 0.75);
@@ -67,7 +68,7 @@
     background-color: darken($primary, 10%);
     border-color: darken($primary, 10%);
   }
-  
+
   &:disabled {
     background-color: lighten($primary, 20%);
     border-color: lighten($primary, 20%);
@@ -81,20 +82,22 @@
   gap: 0.5rem;
   font-size: 0.9rem;
 
-  a, button.mat-mdc-button {
+  a,
+  button.mat-mdc-button {
     color: $muted;
     text-decoration: none;
     transition: color 0.2s;
-    
+
     &:hover {
       color: $primary;
       text-decoration: underline;
     }
   }
-  
+
   .divider {
     color: #ccc;
-    display: none; /* Hiding the pipe separator relying on flex gap */
+    display: none;
+    /* Hiding the pipe separator relying on flex gap */
   }
 }
 
@@ -103,14 +106,13 @@ asl-google-signin-button {
   justify-content: center;
   margin-top: 1.5rem;
   width: 100%;
-  
+
   /* The google button wrapper itself */
-  > div {
+  >div {
     width: 100% !important;
-    
+
     iframe {
-        margin: 0 auto !important;
+      margin: 0 auto !important;
     }
   }
 }
-
