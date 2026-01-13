@@ -5,6 +5,7 @@ import {environment} from "../../../environments/environment";
 import {Router} from "@angular/router";
 import {RegisterModel} from "../model";
 import {UserInterface} from "../model/user.interface";
+import { SocialUser } from '@abacritt/angularx-social-login';
 
 interface AuthorizationModel {
   token: string;
@@ -37,6 +38,10 @@ export class AuthService {
   getProfile(): ProfileModel | null {
     let profile = localStorage.getItem('profile');
     return profile ? JSON.parse(profile) as ProfileModel : null;
+  } 
+
+  authorizationGoogle(user: SocialUser): Observable<AuthorizationModel> {
+    return this.httpClient.post<AuthorizationModel>(`${environment.apiUrl}/auth/google`, user);
   }
 
   isLogged(): boolean {
