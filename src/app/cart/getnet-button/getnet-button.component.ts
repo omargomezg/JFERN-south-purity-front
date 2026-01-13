@@ -12,6 +12,7 @@ export class GetnetButtonComponent {
     paymentTypes = PAYMENT_TYPE;
 
     @Output() paymentType = new EventEmitter<string>();
+    paymentTypeSelected: string = PAYMENT_TYPE.GETNET;
 
     profile = this.authService.getProfile();
 
@@ -19,6 +20,7 @@ export class GetnetButtonComponent {
     }
 
     setPaymentType(paymentType: string): void {
+        this.paymentTypeSelected = paymentType;
         this.paymentType.emit(paymentType);
     }
 }

@@ -1,9 +1,8 @@
 <div class="payment-content">
   <div class="payment-item">
     <div class="form-check" *ngIf="profile?.role === 'ADMINISTRATOR'">
-      <input class="form-check-input" type="radio"
-             (change)="setPaymentType(paymentTypes.CASH)"
-             name="paymentType" id="radioCash">
+      <input class="form-check-input" type="radio" (change)="setPaymentType(paymentTypes.CASH)" name="paymentType"
+        id="radioCash">
       <label class="form-check-label" for="radioCash">
         Contado
       </label>
@@ -11,27 +10,27 @@
   </div>
   <div class="payment-item">
     <div class="form-check">
-      <input class="form-check-input" type="radio"
-             (change)="setPaymentType(paymentTypes.GETNET)"
-             name="paymentType" id="radioGetNet">
+      <input class="form-check-input" type="radio" (change)="setPaymentType(paymentTypes.GETNET)" name="paymentType"
+        id="radioGetNet">
       <label class="form-check-label" for="radioGetNet">
         Getnet
       </label>
     </div>
   </div>
-  <div class="payment-item">
+  <div class="payment-item" *ngIf="false">
     <div class="form-check">
-      <input class="form-check-input" type="radio"
-             (change)="setPaymentType(paymentTypes.TRANSBANK)"
-             name="paymentType" id="radioTransbank">
+      <input class="form-check-input" type="radio" (change)="setPaymentType(paymentTypes.TRANSBANK)" name="paymentType"
+        id="radioTransbank">
       <label class="form-check-label" for="radioTransbank">
         Webpay Plus
       </label>
     </div>
   </div>
 </div>
-<img
-  src="https://banco.santander.cl/uploads/000/029/870/0620f532-9fc9-4248-b99e-78bae9f13e1d/original/Logo_WebCheckout_Getnet.svg"
-  alt="">
-<p>Paga seguro todo lo que necesitas con Getnet utilizando tus tarjetas de crédito, débito y prepago, de todos los
-  emisores nacionales e internacionales.</p>
+<div *ngIf="paymentTypeSelected === paymentTypes.GETNET">
+  <img
+    src="https://banco.santander.cl/uploads/000/029/870/0620f532-9fc9-4248-b99e-78bae9f13e1d/original/Logo_WebCheckout_Getnet.svg"
+    alt="">
+  <p>Paga seguro todo lo que necesitas con Getnet utilizando tus tarjetas de crédito, débito y prepago, de todos los
+    emisores nacionales e internacionales.</p>
+</div>
