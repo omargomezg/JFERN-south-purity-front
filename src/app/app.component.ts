@@ -36,7 +36,6 @@ export class AppComponent implements OnInit {
     this.ngxGa4Service.config();
     this.socialAuthService.authState.subscribe((user: SocialUser) => {
       if (user) {
-        console.log(user);
         this.authService.authorizationGoogle(user).subscribe(tokenResult => {
           localStorage.setItem('profile', JSON.stringify(tokenResult.profile));
             localStorage.setItem('token', tokenResult.token);

@@ -120,7 +120,9 @@ import { RutFormatPipe } from './core/pipe/rut-format.pipe';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('862673757450-dq2ojmbu0v48mosunvo2cs0citcgir3f.apps.googleusercontent.com')
+            provider: new GoogleLoginProvider('862673757450-dq2ojmbu0v48mosunvo2cs0citcgir3f.apps.googleusercontent.com', {
+              oneTapEnabled: false
+            })
           }
         ],
         onError: (err) => {
