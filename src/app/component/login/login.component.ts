@@ -53,6 +53,8 @@ export class LoginComponent implements OnInit {
     redirectToProfileHome(role: string): void {
         if (role === 'ADMINISTRATOR') {
             this.router.navigate(['/puntos-de-venta']);
+        } else if (role === 'STOCKER') {
+            this.router.navigate(['/puntos-de-venta']);
         } else if (role === 'CUSTOMER') {
             let cart = sessionStorage.getItem('cart');
             if (cart != null) {

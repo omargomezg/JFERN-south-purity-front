@@ -32,6 +32,6 @@ export const MENU = [
     {
         "name": "Puntos de venta",
         "link": "puntos-de-venta",
-        "role": ["ADMINISTRATOR"]
+        "role": ["ADMINISTRATOR", "STOCKER"]
     }
 ]

@@ -1,70 +1,114 @@
-<div class="container">
-  <app-paragraph-h1 text="Registro de bidones"></app-paragraph-h1>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a [routerLink]="['/puntos-de-venta']">Puntos de venta</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Registro de Bidones</li>
-    </ol>
-  </nav>
-  <div class="row mt-6">
-    <div class="col-auto">
-      <form [formGroup]="formDrum" novalidate (ngSubmit)="saveDrum()" class="base-form">
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Dirección</mat-label>
-          <mat-select formControlName="place">
-            <mat-option *ngFor="let place of places" [value]="place.id">{{place.address}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-radio-group (change)="setDefaultPrice($event)" aria-label="Select an option" formControlName="shortName">
-          <mat-radio-button value="Bidón de 20 Lts.">Bidón de 20 Lts.</mat-radio-button>
-          <mat-radio-button value="Bidón de 10 Lts.">Bidón de 10 Lts.</mat-radio-button>
-        </mat-radio-group>
-        <div class="row">
-          <div class="col">
-            <mat-form-field appearance="fill" floatLabel="always" class="base-full-width">
-              <mat-label>Valor recarga</mat-label>
-              <input matInput type="number" class="text-price" formControlName="priceRefill">
-              <span matTextPrefix>$&nbsp;</span>
-            </mat-form-field>
-          </div>
-          <div class="col">
-            <mat-form-field appearance="fill" class="base-full-width">
-              <mat-label>Valor bidón</mat-label>
-              <input matInput type="number" class="text-price" formControlName="priceBottle">
-              <span matTextPrefix>$&nbsp;</span>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <mat-form-field appearance="fill" class="base-full-width">
-              <mat-label>Número de candado</mat-label>
-              <input matInput type="number" class="text-price" formControlName="lockNumber" min="1"
-                (focus)="formDrum.controls['lockNumber'].setValue(null)">
-            </mat-form-field>
-          </div>
-          <div class="col">
-            <mat-form-field appearance="fill" class="base-full-width">
-              <mat-label>Clave del candado</mat-label>
-              <input matInput type="text" formControlName="padlockKey" (focus)="formDrum.controls['padlockKey'].setValue(null)">
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="text-end">
-          <button type="button" mat-button (click)="cancel()">Cancelar</button>
-          <button type="submit" mat-raised-button [disabled]="!formDrum.valid" class="m-1" color="primary">Guardar
-          </button>
-        </div>
-      </form>
+<div class="drums-page-container">
+  <div class="header-section">
+    <app-paragraph-h1 text="Registro de Bidones"></app-paragraph-h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb custom-breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/puntos-de-venta']">
+            <mat-icon>location_on</mat-icon> Puntos de venta</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Registro de Bidones</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <!-- Form Section -->
+    <div class="form-card-wrapper">
+      <mat-card class="modern-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>add_circle</mat-icon> Nuevo Registro
+          </mat-card-title>
+          <mat-card-subtitle>Configure los detalles del bidón y candado</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <form [formGroup]="formDrum" novalidate (ngSubmit)="saveDrum()" class="modern-form">
+
+            <div class="form-section">
+              <h3 class="section-title"><mat-icon>store</mat-icon> Ubicación</h3>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Punto de Venta / Dirección</mat-label>
+                <mat-select formControlName="place">
+                  <mat-option *ngFor="let place of places" [value]="place.id">
+                    {{place.address}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="form-section">
+              <h3 class="section-title"><mat-icon>inventory_2</mat-icon> Tipo de Bidón</h3>
+              <mat-radio-group (change)="setDefaultPrice($event)" formControlName="shortName" class="type-radio-group">
+                <mat-radio-button value="Bidón de 20 Lts." color="primary">
+                  <span class="radio-label">20 Litros</span>
+                </mat-radio-button>
+                <mat-radio-button value="Bidón de 10 Lts." color="primary">
+                  <span class="radio-label">10 Litros</span>
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+            <div class="form-section price-section">
+              <h3 class="section-title"><mat-icon>payments</mat-icon> Precios sugeridos</h3>
+              <div class="grid-row">
+                <mat-form-field appearance="outline">
+                  <mat-label>Valor Recarga</mat-label>
+                  <input matInput type="number" formControlName="priceRefill">
+                  <span matTextPrefix>$&nbsp;</span>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Valor Bidón (Envase)</mat-label>
+                  <input matInput type="number" formControlName="priceBottle">
+                  <span matTextPrefix>$&nbsp;</span>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="form-section security-section">
+              <h3 class="section-title"><mat-icon>lock</mat-icon> Seguridad</h3>
+              <div class="grid-row">
+                <mat-form-field appearance="outline">
+                  <mat-label>Número Candado</mat-label>
+                  <input matInput type="number" formControlName="lockNumber" min="1"
+                    (focus)="formDrum.controls['lockNumber'].setValue(null)">
+                  <mat-icon matSuffix>pin</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Clave Candado</mat-label>
+                  <input matInput type="text" formControlName="padlockKey"
+                    (focus)="formDrum.controls['padlockKey'].setValue(null)">
+                  <mat-icon matSuffix>vpn_key</mat-icon>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" mat-stroked-button (click)="cancel()">
+                <mat-icon>close</mat-icon> Cancelar
+              </button>
+              <button type="submit" mat-raised-button color="primary" [disabled]="!formDrum.valid">
+                <mat-icon>save</mat-icon> Registrar Bidón
+              </button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
     </div>
-    <div class="col-auto">
-      <mat-card>
+
+    <!-- List Section -->
+    <div class="list-card-wrapper">
+      <mat-card class="modern-card list-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>list_alt</mat-icon> Bidones Disponibles
+          </mat-card-title>
+        </mat-card-header>
         <mat-card-content>
           <app-drums-available [placeId]="formDrum.controls['place'].value"
             [reload]="reloadListOfDrums.toString()"></app-drums-available>
         </mat-card-content>
       </mat-card>
-      <br>
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
   <div class="payment-item">
     <div class="form-check" *ngIf="profile?.role === 'ADMINISTRATOR'">
       <input class="form-check-input" type="radio" (change)="setPaymentType(paymentTypes.CASH)" name="paymentType"
-        id="radioCash">
+        id="radioCash" [checked]="paymentTypeSelected === paymentTypes.CASH">
       <label class="form-check-label" for="radioCash">
         Contado
       </label>
@@ -11,16 +11,16 @@
   <div class="payment-item">
     <div class="form-check">
       <input class="form-check-input" type="radio" (change)="setPaymentType(paymentTypes.GETNET)" name="paymentType"
-        id="radioGetNet">
+        id="radioGetNet" [checked]="paymentTypeSelected === paymentTypes.GETNET">
       <label class="form-check-label" for="radioGetNet">
         Getnet
       </label>
     </div>
   </div>
-  <div class="payment-item" *ngIf="false">
+  <div class="payment-item" *ngIf="profile?.role === 'ADMINISTRATOR'">
     <div class="form-check">
       <input class="form-check-input" type="radio" (change)="setPaymentType(paymentTypes.TRANSBANK)" name="paymentType"
-        id="radioTransbank">
+        id="radioTransbank" [checked]="paymentTypeSelected === paymentTypes.TRANSBANK">
       <label class="form-check-label" for="radioTransbank">
         Webpay Plus
       </label>
@@ -31,4 +31,8 @@
   <img src="assets/images/getnet-logo.svg" alt="">
   <p>Paga seguro todo lo que necesitas con Getnet utilizando tus tarjetas de crédito, débito y prepago, de todos los
     emisores nacionales e internacionales.</p>
+</div>
+<div *ngIf="paymentTypeSelected === paymentTypes.TRANSBANK">
+  <!-- <img src="assets/images/webpay-logo.svg" alt=""> -->
+  <p>Paga seguro utilizando Webpay Plus con tus tarjetas de crédito, débito y prepago.</p>
 </div>

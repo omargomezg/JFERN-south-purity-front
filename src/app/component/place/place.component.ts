@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {FormPlaceComponent} from "../form-place/form-place.component";
-import {CommonAdminService, PlaceService} from "../../core/service";
-import {PlaceInterface} from "../../core/model";
-import {Router} from '@angular/router';
-import {MatSlideToggleChange} from "@angular/material/slide-toggle";
-import {PlaceStatusEnum} from "../../core/constant/app.constants";
-import {ToastrService} from "ngx-toastr";
+import { Component } from '@angular/core';
+import { MatDialog } from "@angular/material/dialog";
+import { FormPlaceComponent } from "../form-place/form-place.component";
+import { AuthService, CommonAdminService, PlaceService } from "../../core/service";
+import { PlaceInterface } from "../../core/model";
+import { Router } from '@angular/router';
+import { MatSlideToggleChange } from "@angular/material/slide-toggle";
+import { PlaceStatusEnum } from "../../core/constant/app.constants";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: 'app-place',
@@ -16,11 +16,13 @@ import {ToastrService} from "ngx-toastr";
 export class PlaceComponent {
   displayedColumns: string[] = ['city', 'name', 'status', 'options'];
   dataSource: PlaceInterface[] = [];
+  profile = this.authService.getProfile();
 
   constructor(private dialog: MatDialog, private commonAdminService: CommonAdminService,
-              private router: Router,
-              private placeService: PlaceService,
-              private toastr: ToastrService) {
+    private router: Router,
+    private authService: AuthService,
+    private placeService: PlaceService,
+    private toastr: ToastrService) {
     this.loadPlaces();
   }
 

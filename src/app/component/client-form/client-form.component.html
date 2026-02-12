@@ -16,8 +16,8 @@
         <mat-option *ngFor="let role of roles" [value]="role.value">{{role.label}}</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="fill" class="base-full-width" *ngIf="!user.id">
-      <mat-label>Contraseña</mat-label>
+    <mat-form-field appearance="fill" class="base-full-width" *ngIf="!user.id || profile?.role === 'ADMINISTRATOR'">
+      <mat-label>{{user.id ? 'Nueva Contraseña' : 'Contraseña'}}</mat-label>
       <input type="password" matInput formControlName="password" autocomplete="new-password">
       <button type="button" (click)="randomPassword()" mat-button matSuffix mat-stroked-button>Generar contraseña
       </button>

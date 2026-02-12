@@ -2,7 +2,7 @@
   <app-paragraph-h1 text="Puntos de venta"></app-paragraph-h1>
   <div class="row mb-2">
     <div class="col text-end">
-      <button mat-stroked-button (click)="add()">Agregar</button>
+      <button mat-stroked-button (click)="add()" *ngIf="profile?.role === 'ADMINISTRATOR'">Agregar</button>
     </div>
   </div>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mb-3">
@@ -23,14 +23,14 @@
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef>Estado</th>
       <td mat-cell *matCellDef="let element">
-        <mat-slide-toggle (change)="onSlideStatus($event, element)"
-                          [checked]="element.status === 'ENABLED'"></mat-slide-toggle>
+        <mat-slide-toggle (change)="onSlideStatus($event, element)" [disabled]="profile?.role !== 'ADMINISTRATOR'"
+          [checked]="element.status === 'ENABLED'"></mat-slide-toggle>
       </td>
     </ng-container>
     <ng-container matColumnDef="options">
       <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button (click)="edit(element)">Editar</button>
+        <button mat-button (click)="edit(element)" *ngIf="profile?.role === 'ADMINISTRATOR'">Editar</button>
         <button mat-button (click)="addBottles(element.id)">Bidones</button>
       </td>
     </ng-container>
