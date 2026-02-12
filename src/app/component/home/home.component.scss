@@ -37,10 +37,63 @@ h1 {
 }
 
 .parallax {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/images/water-parallax.jpg");
-  height: 83vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/water-parallax.jpg");
+  height: 85vh;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  animation: heroFadeIn 1.2s ease-out;
+
+  h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+  }
+
+  .hero-text {
+    max-width: 800px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 992px) {
+    height: 70vh;
+    background-attachment: scroll;
+
+    h1 {
+      font-size: 3.5rem !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    height: 60vh;
+
+    h1 {
+      font-size: 2.8rem !important;
+    }
+
+    .hero-text {
+      font-size: 1.1rem !important;
+    }
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
