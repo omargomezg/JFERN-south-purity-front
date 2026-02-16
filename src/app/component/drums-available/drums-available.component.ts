@@ -4,7 +4,7 @@ import {PaginationModel, ProductInterface} from "../../core/model";
 import {PageEvent} from "@angular/material/paginator";
 import {STATUS_BOTTLES} from "../../core/constant/app.constants";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import { ToastrService } from 'ngx-toastr';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-drums-available',
@@ -26,10 +26,11 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
 
   constructor(private commonAdminService: CommonAdminService,
               private productService: ProductService,
-    private formBuilder: FormBuilder,
-    private toast: ToastrService) {
+              private formBuilder: FormBuilder,
+              private toast: ToastrService) {
     this.dataSource = [];
-    this.filterForm = this.buildForm();
+    // Set default selected status to the first entry of STATUS_BOTTLES (code: '') => "Todos"
+    this.filterForm = this.formBuilder.group({status: [STATUS_BOTTLES[0].code]});
   }
 
   ngOnInit(): void {

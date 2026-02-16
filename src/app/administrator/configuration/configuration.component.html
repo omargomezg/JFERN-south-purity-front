@@ -16,6 +16,19 @@
           <mat-label>Minutos antes de expirar el pago</mat-label>
           <input type="number" matInput formControlName="timeToPay">
         </mat-form-field>
+        <div class="row">
+          <div class="col"><mat-form-field appearance="fill" class="base-full-width">
+            <mat-label>$ Recarga</mat-label>
+            <input type="number" matInput formControlName="price">
+          </mat-form-field>
+        </div>
+          <div class="col">
+            R<mat-form-field appearance="fill" class="base-full-width">
+            <mat-label>$ Recarga + Envase</mat-label>
+            <input type="number" matInput formControlName="priceWithDrum">
+          </mat-form-field>
+        </div>
+        </div>
         <div formGroupName="smtp">
           <h2>Configurar SMPT</h2>
           <p>Permite el envío de correos electrónicos</p>

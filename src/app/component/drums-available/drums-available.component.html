@@ -1,17 +1,14 @@
 <div class="available-drums-container">
   <div class="filter-bar">
     <form [formGroup]="filterForm" class="filter-form">
-      <mat-form-field appearance="outline" class="status-filter">
-        <mat-label>Filtrar por Estado</mat-label>
-        <mat-select formControlName="status">
-          <mat-option *ngFor="let status of statuses; trackBy:trackByStatusCode" [value]="status.code">
-            <mat-icon class="status-icon" [class]="status.code.toLowerCase()">
-              {{status.code === 'AVAILABLE' ? 'check_circle' : 'pending'}}
-            </mat-icon>
-            {{status.value}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+      <mat-label>Mostrar</mat-label>
+      <mat-radio-group formControlName="status" class="status-filter">
+        <mat-radio-button
+          *ngFor="let status of statuses; trackBy:trackByStatusCode"
+          [value]="status.code">
+          {{ status.value }}
+        </mat-radio-button>
+      </mat-radio-group>
     </form>
   </div>
 
@@ -20,10 +17,10 @@
 
       <!-- Number Column -->
       <ng-container matColumnDef="number">
-        <th mat-header-cell *matHeaderCellDef># Candado</th>
+        <th mat-header-cell *matHeaderCellDef>Nº Candado</th>
         <td mat-cell *matCellDef="let element">
           <span class="lock-badge">
-            <mat-icon>pin</mat-icon> {{element.lockNumber}}
+            {{ element.lockNumber }}
           </span>
         </td>
       </ng-container>
@@ -33,7 +30,7 @@
         <th mat-header-cell *matHeaderCellDef>Capacidad</th>
         <td mat-cell *matCellDef="let element">
           <span class="capacity-text">
-            {{element.shortName.replace('Bidón de ', '')}}
+            {{ element.shortName.replace('Bidón de ', '') }}
           </span>
         </td>
       </ng-container>
@@ -42,7 +39,7 @@
       <ng-container matColumnDef="key">
         <th mat-header-cell *matHeaderCellDef>Clave</th>
         <td mat-cell *matCellDef="let element">
-          <code>{{element.padlockKey}}</code>
+          <code>{{ element.padlockKey }}</code>
         </td>
       </ng-container>
 
@@ -50,7 +47,7 @@
       <ng-container matColumnDef="createdDate">
         <th mat-header-cell *matHeaderCellDef>Fecha Registro</th>
         <td mat-cell *matCellDef="let element">
-          <span class="date-text">{{element.createdDate | date:'dd/MM/yyyy'}}</span>
+          <span class="date-text">{{ element.createdDate | date:'dd/MM/yyyy' }}</span>
         </td>
       </ng-container>
 
@@ -59,15 +56,15 @@
         <th mat-header-cell *matHeaderCellDef>Estado</th>
         <td mat-cell *matCellDef="let element">
           <span class="status-badge" [class.status-taken]="element.status === 'TAKEN'"
-            [class.status-available]="element.status === 'AVAILABLE'">
-            {{element.status === 'TAKEN' ? 'En pago' : 'Disponible'}}
+                [class.status-available]="element.status === 'AVAILABLE'">
+            {{ element.status === 'TAKEN' ? 'En pago' : 'Disponible' }}
           </span>
         </td>
       </ng-container>
 
       <!-- Options Column -->
       <ng-container matColumnDef="options">
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <th mat-header-cell *matHeaderCellDef> Acciones</th>
         <td mat-cell *matCellDef="let element">
           <button mat-icon-button [matMenuTriggerFor]="menutb" class="action-button">
             <mat-icon>more_horiz</mat-icon>
@@ -95,7 +92,7 @@
     </div>
 
     <mat-paginator [length]="totalElements" (page)="handlePageEvent($event)" [pageSize]="pagination.pageSize"
-      [pageSizeOptions]="[5, 10, 25]" aria-label="Select page" class="modern-paginator">
+                   [pageSizeOptions]="[5, 10, 25]" aria-label="Select page" class="modern-paginator">
     </mat-paginator>
   </div>
 </div>

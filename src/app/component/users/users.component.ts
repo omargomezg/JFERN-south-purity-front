@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { UserInterface } from "../../core/model/user.interface";
-import { CommonAdminService } from "../../core/service";
-import { PageEvent } from "@angular/material/paginator";
-import { PaginationModel, UserFilterModel } from "../../core/model";
+import {Component, OnInit} from '@angular/core';
+import {UserInterface} from "../../core/model/user.interface";
+import {CommonAdminService} from "../../core/service";
+import {PageEvent} from "@angular/material/paginator";
+import {PaginationModel, UserFilterModel} from "../../core/model";
 
 @Component({
   selector: 'app-users',
@@ -11,7 +11,7 @@ import { PaginationModel, UserFilterModel } from "../../core/model";
 })
 export class UsersComponent implements OnInit {
 
-  displayedColumns: string[] = ['identification', 'name', 'role', 'status', 'options'];
+  displayedColumns: string[] = ['identification', 'email', 'name', 'role', 'status', 'options'];
   dataSource: UserInterface[];
   pagination: PaginationModel = new PaginationModel();
   totalElements: number = 0

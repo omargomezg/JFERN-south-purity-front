@@ -27,6 +27,7 @@ export class TokenInterceptorService implements HttpInterceptor {
                     this.authService.logout(true);
                 }
                 const error = err.error.message || err.statusText;
+                console.log("El error: ", err);
                 return throwError(error);
             })
         );
