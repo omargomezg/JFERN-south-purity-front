@@ -7,29 +7,31 @@ WORKDIR /app
 # Copy package.json and package-lock.json to install dependencies
 COPY package.json package-lock.json ./
 
-# Install Angular CLI globally and project dependencies
-RUN npm install -g @angular/cli && npm install --force
+# Install dependencies using legacy-peer-deps to avoid conflicts
+RUN npm install --legacy-peer-deps
 
 # Copy the entire Angular project
 COPY . .
 
-# Build the Angular application for production
-RUN ng build --configuration production
+# Build the Angular application for production (includes SSR and Prerendering)
+RUN npm run build
 
-# Stage 2: Serve the built Angular application with a lightweight Node.js server
+# Stage 2: Serve the built Angular application with Node.js
 FROM node:20-alpine
 
 # Set the working directory for the serving stage
 WORKDIR /usr/src/app
 
-# Copy only the built Angular application from the build stage
-COPY --from=build /app/dist/south-purity-front ./public
+# Copy the built output (both browser and server folders)
+COPY --from=build /app/dist/south-purity-front ./dist/south-purity-front
 
-# Install a lightweight web server (e.g., serve or http-server)
-RUN npm install -g serve
+# The server expects the 'browser' folder to be at dist/south-purity-front/browser relative to process.cwd()
+# We set the environment variable for the port to match the user's previous preference
+ENV PORT=8080
 
 # Expose the port your server will listen on
 EXPOSE 8080
 
-# Command to run the server
-CMD ["serve", "-s", "public", "-l", "8080"]
+# Command to run the Node.js SSR server
+# The server.mjs file is the entry point for the Esbuild-based SSR bundle
+CMD ["node", "dist/south-purity-front/server/server.mjs"]

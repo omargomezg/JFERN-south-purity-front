@@ -1,24 +1,29 @@
-import {Injectable} from '@angular/core';
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
-import {AuthService} from "../service";
-import {catchError, Observable, throwError} from "rxjs";
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+
+import { isPlatformBrowser } from '@angular/common';
+import { AuthService } from "../service";
+import { catchError, Observable, throwError } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
 })
 export class TokenInterceptorService implements HttpInterceptor {
 
-    constructor(private authService: AuthService) {
+    constructor(private authService: AuthService,
+        @Inject(PLATFORM_ID) private platformId: Object) {
     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        const token = localStorage.getItem('token');
-        if (token) {
-            req = req.clone({
-                setHeaders: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
+        if (isPlatformBrowser(this.platformId)) {
+            const token = localStorage.getItem('token');
+            if (token) {
+                req = req.clone({
+                    setHeaders: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+            }
         }
         // @ts-ignore
         return next.handle(req).pipe(

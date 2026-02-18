@@ -13,6 +13,7 @@ yarn-error.log
 
 # IDEs and editors
 .idea/
+*.iml
 .project
 .classpath
 .c9/
@@ -42,4 +43,7 @@ testem.log
 Thumbs.db
 
 /.nx/cache
+
+# Temporary SSR test folder
+/tmp_test_ssr
 

@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {AuthService} from "./core/service";
-import {MENU} from "./core/constant/MENU";
-import {NgxGa4Service} from "@kattoshi/ngx-ga4";
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AuthService } from "./core/service";
+import { MENU } from "./core/constant/MENU";
+import { NgxGa4Service } from "@kattoshi/ngx-ga4";
 import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Router } from '@angular/router';
 
@@ -19,7 +20,8 @@ export class AppComponent implements OnInit {
 
   constructor(public authService: AuthService, private socialAuthService: SocialAuthService,
     private router: Router,
-    private ngxGa4Service: NgxGa4Service) {
+    private ngxGa4Service: NgxGa4Service,
+    @Inject(PLATFORM_ID) private platformId: Object) {
   }
 
   logout(): void {
@@ -31,32 +33,34 @@ export class AppComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    await this.ngxGa4Service.install$('G-FVKGFK1ZQD');
-    this.ngxGa4Service.js();
-    this.ngxGa4Service.config();
-    this.socialAuthService.authState.subscribe((user: SocialUser) => {
-      if (user) {
-        this.authService.authorizationGoogle(user).subscribe(tokenResult => {
-          localStorage.setItem('profile', JSON.stringify(tokenResult.profile));
+    if (isPlatformBrowser(this.platformId)) {
+      await this.ngxGa4Service.install$('G-FVKGFK1ZQD');
+      this.ngxGa4Service.js();
+      this.ngxGa4Service.config();
+      this.socialAuthService.authState.subscribe((user: SocialUser) => {
+        if (user) {
+          this.authService.authorizationGoogle(user).subscribe(tokenResult => {
+            localStorage.setItem('profile', JSON.stringify(tokenResult.profile));
             localStorage.setItem('token', tokenResult.token);
             this.authService.isLogged();
             this.redirectToProfileHome(tokenResult.profile.role);
-        });
-      }
-    });
+          });
+        }
+      });
+    }
   }
 
   redirectToProfileHome(role: string): void {
-        if (role === 'ADMINISTRATOR') {
-            this.router.navigate(['/puntos-de-venta']);
-        } else if (role === 'CUSTOMER') {
-            let cart = sessionStorage.getItem('cart');
-            if (cart != null) {
-                this.router.navigate(['/hacer-pedido']);
-            } else {
-                this.router.navigate(['/mis-pedidos']);
-            }
-        }
+    if (role === 'ADMINISTRATOR') {
+      this.router.navigate(['/puntos-de-venta']);
+    } else if (role === 'CUSTOMER') {
+      let cart = isPlatformBrowser(this.platformId) ? sessionStorage.getItem('cart') : null;
+      if (cart != null) {
+        this.router.navigate(['/hacer-pedido']);
+      } else {
+        this.router.navigate(['/mis-pedidos']);
+      }
     }
+  }
 
 }

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { NgOptimizedImage } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -131,7 +131,8 @@ import { RutFormatPipe } from './core/pipe/rut-format.pipe';
           console.error(err);
         }
       } as SocialAuthServiceConfig
-    }
+    },
+    provideClientHydration()
   ],
   exports: [
     ParagraphH1Component
