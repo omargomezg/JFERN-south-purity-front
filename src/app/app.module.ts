@@ -12,7 +12,6 @@ import { MyProfileComponent } from './component/my-profile/my-profile.component'
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
-import { HomeComponent } from './component/home/home.component';
 import { TokenInterceptorService } from "./core/interceptor/token-interceptor.service";
 import { RegisterComponent } from './component/register/register.component';
 import { ToastrModule } from "ngx-toastr";
@@ -20,7 +19,6 @@ import { MatCardModule } from "@angular/material/card";
 import { ResetPwdModalComponent } from './component/reset-pwd-modal/reset-pwd-modal.component';
 import { MatDialogModule } from "@angular/material/dialog";
 import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
-import { ContactComponent } from './component/contact/contact.component';
 import { MyOrdersComponent } from './component/my-orders/my-orders.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
@@ -59,7 +57,6 @@ import { RutFormatPipe } from './core/pipe/rut-format.pipe';
     LoginComponent,
     FooterComponent,
     MyProfileComponent,
-    HomeComponent,
     BuildPaymentResultComponent,
     RegisterComponent,
     ResetPwdModalComponent,
@@ -69,7 +66,6 @@ import { RutFormatPipe } from './core/pipe/rut-format.pipe';
     ClientsComponent,
     ClientFormComponent,
     UsersComponent,
-    ContactComponent,
     HeaderComponent,
     FormPlaceComponent,
     PlaceComponent,
