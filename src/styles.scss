@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: Roboto, 'sans-serif' !important;
 }
 
 .base-form {
@@ -79,4 +79,16 @@ code {
     font-weight: 450 !important;
   }
 
+}
+
+.text-primary {
+  color: variables.$primary !important;
+}
+
+.bg-primary {
+  background-color: variables.$primary !important;
+}
+
+.bg-secondary {
+  background-color: variables.$secondary !important;
 }
