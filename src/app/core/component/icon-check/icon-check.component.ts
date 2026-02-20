@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-icon-check',
-    imports: [],
+    standalone: true,
     templateUrl: './icon-check.component.html',
     styleUrl: './icon-check.component.scss'
 })

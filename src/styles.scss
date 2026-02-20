@@ -3,10 +3,10 @@
 // Google Fonts are moved to index.html for better performance (FCP)
 
 
-@import "variables";
+@use "variables";
 
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
-@import "assets/vendor";
+@use 'node_modules/bootstrap/scss/bootstrap.scss';
+@use "assets/vendor";
 
 body {
   margin: 0;

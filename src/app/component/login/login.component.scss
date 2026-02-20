@@ -1,10 +1,15 @@
-@import "../../../variables.scss";
+@use "sass:color";
+@use "../../../variables.scss" as variables;
 
 .container-fluid {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, $secondary 0%, $light 100%);
+  background: linear-gradient(
+    135deg,
+    variables.$secondary 0%,
+    variables.$light 100%
+  );
 }
 
 .form-parent {
@@ -23,17 +28,11 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    color: $primary;
+    color: variables.$primary;
     margin-bottom: 1.5rem;
     font-weight: bold;
     display: block !important;
-    /* Overriding visually-hidden for better UX if desired, or keep hidden */
   }
-
-  /* If we want to keep the h1 visually hidden as per original HTML but maybe show a Logo or Welcome text, 
-     I will respect the HTML's 'visually-hidden' class, but adding a visible header is often better. 
-     For now, I'll assume the user might want to see the title "Pureza del Sur". 
-     I will suggest removing 'visually-hidden' in the HTML step. */
 }
 
 .form-floating {
@@ -41,11 +40,11 @@
 
   .form-control {
     border-radius: 5px;
-    border: 1px solid fade-out($primary, 0.8);
+    border: 1px solid color.change(variables.$primary, $alpha: 0.8);
 
     &:focus {
-      border-color: $primary;
-      box-shadow: 0 0 0 0.25rem fade-out($primary, 0.75);
+      border-color: variables.$primary;
+      box-shadow: 0 0 0 0.25rem color.change(variables.$primary, $alpha: 0.25);
     }
   }
 
@@ -55,8 +54,8 @@
 }
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+  background-color: variables.$primary;
+  border-color: variables.$primary;
   padding: 0.8rem;
   font-size: 1.1rem;
   border-radius: 5px;
@@ -64,13 +63,13 @@
   margin-top: 1rem;
 
   &:hover {
-    background-color: darken($primary, 10%);
-    border-color: darken($primary, 10%);
+    background-color: color.adjust(variables.$primary, $lightness: -10%);
+    border-color: color.adjust(variables.$primary, $lightness: -10%);
   }
 
   &:disabled {
-    background-color: lighten($primary, 20%);
-    border-color: lighten($primary, 20%);
+    background-color: color.adjust(variables.$primary, $lightness: 20%);
+    border-color: color.adjust(variables.$primary, $lightness: 20%);
   }
 }
 
@@ -83,12 +82,12 @@
 
   a,
   button.mat-mdc-button {
-    color: $muted;
+    color: variables.$muted;
     text-decoration: none;
     transition: color 0.2s;
 
     &:hover {
-      color: $primary;
+      color: variables.$primary;
       text-decoration: underline;
     }
   }
@@ -96,7 +95,6 @@
   .divider {
     color: #ccc;
     display: none;
-    /* Hiding the pipe separator relying on flex gap */
   }
 }
 
@@ -106,8 +104,7 @@ asl-google-signin-button {
   margin-top: 1.5rem;
   width: 100%;
 
-  /* The google button wrapper itself */
-  >div {
+  > div {
     width: 100% !important;
 
     iframe {

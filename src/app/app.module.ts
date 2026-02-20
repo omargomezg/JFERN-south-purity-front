@@ -11,7 +11,7 @@ import { FooterComponent } from './core/component/footer/footer.component';
 import { MyProfileComponent } from './component/my-profile/my-profile.component';
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi, withFetch } from "@angular/common/http";
 import { TokenInterceptorService } from "./core/interceptor/token-interceptor.service";
 import { RegisterComponent } from './component/register/register.component';
 import { ToastrModule } from "ngx-toastr";
@@ -51,7 +51,8 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { RutValidatorDirective } from './core/directive/rut-validator.directive';
 import { RutFormatPipe } from './core/pipe/rut-format.pipe';
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         LoginComponent,
         FooterComponent,
@@ -81,7 +82,9 @@ import { RutFormatPipe } from './core/pipe/rut-format.pipe';
     exports: [
         ParagraphH1Component
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
         NgOptimizedImage,
         AppRoutingModule,
         BrowserAnimationsModule,
@@ -103,7 +106,9 @@ import { RutFormatPipe } from './core/pipe/rut-format.pipe';
         MatRadioModule,
         MatAutocompleteModule,
         SocialLoginModule,
-        GoogleSigninButtonModule], providers: [
+        GoogleSigninButtonModule
+    ],
+    providers: [
         {
             provide: HTTP_INTERCEPTORS,
             useClass: TokenInterceptorService,
@@ -127,7 +132,8 @@ import { RutFormatPipe } from './core/pipe/rut-format.pipe';
             } as SocialAuthServiceConfig
         },
         provideClientHydration(),
-        provideHttpClient(withInterceptorsFromDi())
-    ] })
+        provideHttpClient(withInterceptorsFromDi(), withFetch())
+    ]
+})
 export class AppModule {
 }
