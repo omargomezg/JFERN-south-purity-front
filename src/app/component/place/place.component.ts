@@ -9,9 +9,10 @@ import { PlaceStatusEnum } from "../../core/constant/app.constants";
 import { ToastrService } from "ngx-toastr";
 
 @Component({
-  selector: 'app-place',
-  templateUrl: './place.component.html',
-  styleUrls: ['./place.component.scss']
+    selector: 'app-place',
+    templateUrl: './place.component.html',
+    styleUrls: ['./place.component.scss'],
+    standalone: false
 })
 export class PlaceComponent {
   displayedColumns: string[] = ['city', 'name', 'status', 'options'];

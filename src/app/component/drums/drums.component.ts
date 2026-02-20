@@ -9,7 +9,8 @@ import { MatRadioChange } from '@angular/material/radio';
 @Component({
     selector: 'app-drums',
     templateUrl: './drums.component.html',
-    styleUrls: ['./drums.component.scss']
+    styleUrls: ['./drums.component.scss'],
+    standalone: false
 })
 export class DrumsComponent implements OnInit {
   bottle20Lts = "Bidón de 20 Lts.";

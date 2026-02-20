@@ -56,7 +56,10 @@ const defaultDialogData = {
 };
 
 // Dummy component used for router testing (e.g. route 'home')
-@Component({selector: 'app-dummy', template: ''})
+@Component({
+    selector: 'app-dummy', template: '',
+    standalone: false
+})
 class DummyComponent {
 }
 

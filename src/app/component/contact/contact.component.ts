@@ -6,7 +6,6 @@ import { ToastrService } from "ngx-toastr";
 
 @Component({
     selector: 'app-contact',
-    standalone: true,
     imports: [CommonModule, ReactiveFormsModule],
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss']

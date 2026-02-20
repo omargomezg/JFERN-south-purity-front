@@ -8,7 +8,8 @@ import {AuthService} from "../../core/service";
 @Component({
     selector: 'app-reset-pwd-modal',
     templateUrl: './reset-pwd-modal.component.html',
-    styleUrls: ['./reset-pwd-modal.component.scss']
+    styleUrls: ['./reset-pwd-modal.component.scss'],
+    standalone: false
 })
 export class ResetPwdModalComponent {
 

@@ -10,6 +10,7 @@ import {RestorePasswordComponent} from '../restore-password/restore-password.com
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
+    standalone: false
 })
 export class LoginComponent implements OnInit {
 

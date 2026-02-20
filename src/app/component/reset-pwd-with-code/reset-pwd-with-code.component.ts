@@ -9,7 +9,8 @@ import {AuthService} from "../../core/service";
 @Component({
     selector: 'app-reset-pwd-with-code',
     templateUrl: './reset-pwd-with-code.component.html',
-    styleUrls: ['./reset-pwd-with-code.component.scss']
+    styleUrls: ['./reset-pwd-with-code.component.scss'],
+    standalone: false
 })
 export class ResetPwdWithCodeComponent implements OnInit {
 

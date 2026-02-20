@@ -4,9 +4,10 @@ import {PaginationModel, PlaceInterface, UserFilterModel} from "../../core/model
 import {UserInterface} from "../../core/model/user.interface";
 
 @Component({
-  selector: 'app-list-of-clients',
-  templateUrl: './list-of-clients.component.html',
-  styleUrls: ['./list-of-clients.component.scss']
+    selector: 'app-list-of-clients',
+    templateUrl: './list-of-clients.component.html',
+    styleUrls: ['./list-of-clients.component.scss'],
+    standalone: false
 })
 export class ListOfClientsComponent implements OnChanges {
   @Input() place: PlaceInterface | undefined;

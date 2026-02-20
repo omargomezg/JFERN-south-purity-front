@@ -2,11 +2,10 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-button-buy',
-  standalone: true,
-  imports: [],
-  templateUrl: './button-buy.component.html',
-  styleUrl: './button-buy.component.scss'
+    selector: 'app-button-buy',
+    imports: [],
+    templateUrl: './button-buy.component.html',
+    styleUrl: './button-buy.component.scss'
 })
 export class ButtonBuyComponent {
 private router = inject(Router);

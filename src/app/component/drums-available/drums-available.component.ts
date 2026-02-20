@@ -7,9 +7,10 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {ToastrService} from 'ngx-toastr';
 
 @Component({
-  selector: 'app-drums-available',
-  templateUrl: './drums-available.component.html',
-  styleUrls: ['./drums-available.component.scss']
+    selector: 'app-drums-available',
+    templateUrl: './drums-available.component.html',
+    styleUrls: ['./drums-available.component.scss'],
+    standalone: false
 })
 export class DrumsAvailableComponent implements OnInit, OnChanges {
 

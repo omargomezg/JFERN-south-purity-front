@@ -6,9 +6,10 @@ import {ResetPwdModalComponent} from "../reset-pwd-modal/reset-pwd-modal.compone
 import {UserInterface} from "../../core/model/user.interface";
 
 @Component({
-  selector: 'app-my-profile',
-  templateUrl: './my-profile.component.html',
-  styleUrls: ['./my-profile.component.scss']
+    selector: 'app-my-profile',
+    templateUrl: './my-profile.component.html',
+    styleUrls: ['./my-profile.component.scss'],
+    standalone: false
 })
 export class MyProfileComponent implements OnInit {
   user: UserInterface = {} as UserInterface;

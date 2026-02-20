@@ -2,9 +2,10 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
-  selector: 'app-user-form',
-  templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.scss']
+    selector: 'app-user-form',
+    templateUrl: './user-form.component.html',
+    styleUrls: ['./user-form.component.scss'],
+    standalone: false
 })
 export class UserFormComponent {
   userForm: FormGroup;

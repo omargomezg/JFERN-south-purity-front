@@ -5,9 +5,10 @@ import {ToastrService} from "ngx-toastr";
 import {UserService} from "../../core/service";
 
 @Component({
-  selector: 'app-my-admin-profile',
-  templateUrl: './my-admin-profile.component.html',
-  styleUrls: ['./my-admin-profile.component.scss']
+    selector: 'app-my-admin-profile',
+    templateUrl: './my-admin-profile.component.html',
+    styleUrls: ['./my-admin-profile.component.scss'],
+    standalone: false
 })
 export class MyAdminProfileComponent implements OnChanges{
   @Input() user: UserInterface = {} as UserInterface;

@@ -5,9 +5,10 @@ import {CommonAdminService, EmailService} from "../../core/service";
 import {ToastrService} from "ngx-toastr";
 
 @Component({
-  selector: 'app-configuration',
-  templateUrl: './configuration.component.html',
-  styleUrls: ['./configuration.component.scss']
+    selector: 'app-configuration',
+    templateUrl: './configuration.component.html',
+    styleUrls: ['./configuration.component.scss'],
+    standalone: false
 })
 export class ConfigurationComponent implements OnInit {
   configuration = {} as ConfigurationInterface;

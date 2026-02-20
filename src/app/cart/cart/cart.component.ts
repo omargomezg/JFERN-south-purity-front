@@ -12,9 +12,10 @@ import {ModalAvailableBottlesComponent} from "../modal-available-bottles/modal-a
 import {ToastrService} from "ngx-toastr";
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+    selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    styleUrls: ['./cart.component.scss'],
+    standalone: false
 })
 export class CartComponent {
   config: DrumRequestModel[] = [];

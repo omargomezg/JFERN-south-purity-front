@@ -5,11 +5,10 @@ import { ContactComponent } from '../contact/contact.component';
 import { SectionAdvantagesComponent } from 'src/app/core/component/section-advantages/section-advantages.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, NgOptimizedImage, ContactComponent, SectionAdvantagesComponent],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    imports: [CommonModule, NgOptimizedImage, ContactComponent, SectionAdvantagesComponent],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
   products: any[] = [];

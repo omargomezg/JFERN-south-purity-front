@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { RutService } from '../service/rut.service';
 
 @Pipe({
-  name: 'rutFormat'
+    name: 'rutFormat',
+    standalone: false
 })
 export class RutFormatPipe implements PipeTransform {
 
