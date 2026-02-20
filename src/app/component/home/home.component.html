@@ -1,5 +1,19 @@
 <div class="container-fluid px-0">
-    <section class="parallax">
+    <section class="parallax-container" style="background-image: url('/assets/images/water-parallax.jpg');" appParallax>
+        <div class="parallax-content">
+            <h1>Agua Purificada Premium</h1>
+            <p class="fs-5 text-light py-3">
+                Agua purificada de la mejor calidad, con un proceso de purificación de 7 etapas, para que
+                disfrutes de un agua pura y cristalina.
+            </p>
+            <Button (click)="buy()" gtagEvent trackOn="click" action="make_order" class="btn btn-lg btn-secondary">
+                Solicita tu Recarga
+            </Button>
+            <p class="text-light pt-2">Tu comunidad aún no cuenta con nuestro servicio? <a
+                    href="https://wa.me/56984428760" class="text-light">Puedes empezar gratis.</a></p>
+        </div>
+    </section>
+    <section class="parallax" style="display: none;">
         <img ngSrc="assets/images/water-parallax.jpg" fill priority alt="Fondo agua purificada" class="hero-img">
         <div class="hero-overlay"></div>
         <div class="container py-14 py-md-23 py-lg-25">
@@ -96,6 +110,7 @@
             </div>
         </div>
     </section>
+    <app-section-advantages />
     <section class="section bg-light px-5" id="quienes-somos">
         <div class="section-content text-center container">
             <h1 class="mb-5">¿Quiénes somos?</h1>

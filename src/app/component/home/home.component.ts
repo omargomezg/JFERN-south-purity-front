@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { ContactComponent } from '../contact/contact.component';
-import { NgxGa4Module } from '@kattoshi/ngx-ga4';
+import { SectionAdvantagesComponent } from 'src/app/core/component/section-advantages/section-advantages.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, ContactComponent, RouterLink, NgxGa4Module],
+  imports: [CommonModule, NgOptimizedImage, ContactComponent, SectionAdvantagesComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

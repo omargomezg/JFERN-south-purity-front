@@ -36,3 +36,47 @@ code {
   display: block;
   white-space: pre-wrap
 }
+
+.parallax-container {
+  position: relative;
+  background-attachment: fixed; // clave para el efecto
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; // ocupa toda la pantalla
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.parallax-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); // oscurece la imagen para mejorar legibilidad
+  z-index: 1;
+}
+
+.parallax-content {
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 10px;
+
+  h1 {
+    font-family: Roboto, 'sans-serif' !important;
+    font-size: 4rem !important;
+    font-weight: 500 !important;
+  }
+
+  h2 {
+    font-family: Roboto, 'sans-serif' !important;
+    font-size: 3.5rem !important;
+    font-weight: 450 !important;
+  }
+
+}
