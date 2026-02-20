@@ -1,11 +1,12 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {ReactiveFormsModule} from '@angular/forms';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
 
 import {UserFormComponent} from './user-form.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('UserFormComponent', () => {
   let component: UserFormComponent;
@@ -13,17 +14,17 @@ describe('UserFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, RouterTestingModule.withRoutes([]), ReactiveFormsModule],
-      declarations: [UserFormComponent],
-      providers: [{
-        provide: ToastrService, useValue: {
-          success() {
-          }, error() {
-          }
-        }
-      }],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
+    declarations: [UserFormComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    imports: [RouterTestingModule.withRoutes([]), ReactiveFormsModule],
+    providers: [{
+            provide: ToastrService, useValue: {
+                success() {
+                }, error() {
+                }
+            }
+        }, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+})
       .compileComponents();
 
     fixture = TestBed.createComponent(UserFormComponent);

@@ -11,7 +11,7 @@ import { FooterComponent } from './core/component/footer/footer.component';
 import { MyProfileComponent } from './component/my-profile/my-profile.component';
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { TokenInterceptorService } from "./core/interceptor/token-interceptor.service";
 import { RegisterComponent } from './component/register/register.component';
 import { ToastrModule } from "ngx-toastr";
@@ -51,89 +51,83 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { RutValidatorDirective } from './core/directive/rut-validator.directive';
 import { RutFormatPipe } from './core/pipe/rut-format.pipe';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    FooterComponent,
-    MyProfileComponent,
-    BuildPaymentResultComponent,
-    RegisterComponent,
-    ResetPwdModalComponent,
-    MyOrdersComponent,
-    DrumsAvailableComponent,
-    DrumsComponent,
-    ClientsComponent,
-    ClientFormComponent,
-    UsersComponent,
-    HeaderComponent,
-    FormPlaceComponent,
-    PlaceComponent,
-    DashboardComponent,
-    RestorePasswordComponent,
-    ResetPwdWithCodeComponent,
-    UserFormComponent,
-    MyCustomerProfileComponent,
-    MyAdminProfileComponent,
-    ParagraphH1Component,
-    RutValidatorDirective,
-    RutFormatPipe
-  ],
-  imports: [
-    BrowserModule,
-    NgOptimizedImage,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    FormsModule,
-    MatDialogModule,
-    LoadingBarHttpClientModule,
-    ToastrModule.forRoot(),
-    MatPaginatorModule,
-    MatTableModule,
-    MatSelectModule,
-    MatIconModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    NgxGa4Module.forRoot({ measurementId: 'G-FVKGFK1ZQD' }),
-    MatRadioModule,
-    MatAutocompleteModule,
-    SocialLoginModule,
-    GoogleSigninButtonModule
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorService,
-      multi: true
-    },
-    {
-      provide: SOCIAL_AUTH_CONFIG,
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('862673757450-dq2ojmbu0v48mosunvo2cs0citcgir3f.apps.googleusercontent.com', {
-              oneTapEnabled: false
-            })
-          }
-        ],
-        onError: (err) => {
-          console.error(err);
-        }
-      } as SocialAuthServiceConfig
-    },
-    provideClientHydration()
-  ],
-  exports: [
-    ParagraphH1Component
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        LoginComponent,
+        FooterComponent,
+        MyProfileComponent,
+        BuildPaymentResultComponent,
+        RegisterComponent,
+        ResetPwdModalComponent,
+        MyOrdersComponent,
+        DrumsAvailableComponent,
+        DrumsComponent,
+        ClientsComponent,
+        ClientFormComponent,
+        UsersComponent,
+        HeaderComponent,
+        FormPlaceComponent,
+        PlaceComponent,
+        DashboardComponent,
+        RestorePasswordComponent,
+        ResetPwdWithCodeComponent,
+        UserFormComponent,
+        MyCustomerProfileComponent,
+        MyAdminProfileComponent,
+        ParagraphH1Component,
+        RutValidatorDirective,
+        RutFormatPipe
+    ],
+    exports: [
+        ParagraphH1Component
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        NgOptimizedImage,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        FormsModule,
+        MatDialogModule,
+        LoadingBarHttpClientModule,
+        ToastrModule.forRoot(),
+        MatPaginatorModule,
+        MatTableModule,
+        MatSelectModule,
+        MatIconModule,
+        MatSlideToggleModule,
+        MatMenuModule,
+        NgxGa4Module.forRoot({ measurementId: 'G-FVKGFK1ZQD' }),
+        MatRadioModule,
+        MatAutocompleteModule,
+        SocialLoginModule,
+        GoogleSigninButtonModule], providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptorService,
+            multi: true
+        },
+        {
+            provide: SOCIAL_AUTH_CONFIG,
+            useValue: {
+                autoLogin: false,
+                providers: [
+                    {
+                        id: GoogleLoginProvider.PROVIDER_ID,
+                        provider: new GoogleLoginProvider('862673757450-dq2ojmbu0v48mosunvo2cs0citcgir3f.apps.googleusercontent.com', {
+                            oneTapEnabled: false
+                        })
+                    }
+                ],
+                onError: (err) => {
+                    console.error(err);
+                }
+            } as SocialAuthServiceConfig
+        },
+        provideClientHydration(),
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule {
 }
