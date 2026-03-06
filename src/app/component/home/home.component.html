@@ -7,9 +7,7 @@
       </p>
       <p class="text-uppercase fs-5 text-light fw-bold pb-3">Instalación Gratis</p>
       <p class="pt-2 text-uppercase text-light">Contacto Whatsapp</p>
-      <a target="_blank"
-         href="https://wa.me/56984428760"
-         class="text-decoration-none text-light">+56 9 8442 8760</a>
+      <a target="_blank" href="https://wa.me/56984428760" class="text-decoration-none text-light">+56 9 8442 8760</a>
     </div>
   </section>
   <section class="parallax" style="display: none;">
@@ -30,9 +28,8 @@
         <div class="col">
           <div class="card border-0 bg-transparent mb-10 mb-md-0">
             <div class="card-body p-0 text-center">
-              <a href="https://wa.me/56984428760"
-                 class="link-offset-2 link-underline link-underline-opacity-0" target="_blank"
-                 rel="noopener noreferrer">
+              <a href="https://wa.me/56984428760" class="link-offset-2 link-underline link-underline-opacity-0"
+                target="_blank" rel="noopener noreferrer">
                 <div class="card-icon mb-6">
                   <i class="material-icons text-light">phone</i>
                 </div>
@@ -50,58 +47,47 @@
     </div>
   </section>
   <section class="section" id="como-comprar">
-    <div class="section-content container text-center">
-      <small
-        class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">Agua
-        Purificada Premium</small>
-      <h1 class="mb-0 display-1">¿Cómo comprar?</h1>
-      <div class="row mt-6 mt-md-10 mt-lg-17 vertical-divider-light">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card border-0">
-            <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-              <div class="card-icon mb-6">
-                <span class="step-number">1</span>
-              </div>
-              <div class="mb-5">
-                <p class="text-steps">Verifica que nuestros productos estén disponibles cerca de ti.</p>
-              </div>
+    <div class="section-content container text-center d-flex flex-column justify-content-center h-100">
+      <h1 class="fs-1 fw-bold mb-5">¿Cómo podemos ayudarte?</h1>
+      <div class="row mt-4 g-4">
+        <!-- Columna 1: Vivo en un edificio o condominio -->
+        <div class="col-12 col-md-4">
+          <div class="card border-0 h-100 como-comprar-card">
+            <div class="card-body d-flex flex-column align-items-center px-4 py-5">
+              <h2 class="fs-4 fw-bold text-uppercase mb-3">Vivo en un edificio o condominio</h2>
+              <p class="text-dark fs-6 mb-4">Quiero conseguir el servicio de agua</p>
+              <a [routerLink]="['/home']" fragment="como-comprar" class="btn btn-primary btn-como-comprar mt-auto">
+                Cómo pedir el servicio
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card border-0">
-            <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-              <div class="card-icon mb-6">
-                <span class="step-number">2</span>
-              </div>
-              <div class="mb-5">
-                <p class="text-steps">Regístrate en nuestra página y selecciona la dirección del rack
-                  más cercano.</p>
-              </div>
+        <!-- Columna 2: Soy administrador -->
+        <div class="col-12 col-md-4">
+          <div class="card border-0 h-100 como-comprar-card">
+            <div class="card-body d-flex flex-column align-items-center px-4 py-5">
+              <h2 class="fs-4 fw-bold text-uppercase mb-3">Soy administrador</h2>
+              <p class="text-dark fs-6 mb-4">Información para edificios, condominios y comités</p>
+              <a [routerLink]="['/home']" fragment="como-comprar" class="btn btn-primary btn-como-comprar mt-auto">
+                Ver información
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card border-0">
-            <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-              <div class="card-icon mb-6">
-                <span class="step-number">3</span>
-              </div>
-              <div class="mb-5">
-                <p class="text-steps">Llena tu carrito de compras y realiza el pago.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card border-0">
-            <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-              <div class="card-icon mb-6">
-                <span class="step-number font-weight-bold">4</span>
-              </div>
-              <div class="mb-5">
-                <p class="text-steps">Recibe tu clave, ve al rack, abre el candado, toma tu botellón y
-                  ¡listo!</p>
+        <!-- Columna 3: Ya soy cliente -->
+        <div class="col-12 col-md-4">
+          <div class="card border-0 h-100 como-comprar-card">
+            <div class="card-body d-flex flex-column align-items-center px-4 py-5">
+              <h2 class="fs-4 fw-bold text-uppercase mb-3">Ya soy cliente</h2>
+              <p class="text-dark fs-6 mb-4">Recarga y soporte</p>
+              <div class="d-flex flex-column gap-2 mt-auto">
+                <button (click)="buy()" class="btn btn-primary btn-como-comprar">
+                  Solicitar recarga
+                </button>
+                <a href="https://wa.me/56984428760" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary btn-como-comprar">
+                  Soporte / Whatsapp
+                </a>
               </div>
             </div>
           </div>
@@ -109,14 +95,14 @@
       </div>
     </div>
   </section>
-  <app-section-advantages id="ventajas"/>
+  <app-section-advantages id="ventajas" />
   <section class="section bg-light px-5" id="quienes-somos">
     <div class="section-content text-center container">
       <h1 class="mb-5">¿Quiénes somos?</h1>
     </div>
     <p class="text-center mb-5 fs-5">
       Somos una empresa valdiviana que comprende <strong>la importancia del agua en la salud y el bienestar de las
-      personas.</strong>
+        personas.</strong>
       Conscientes de las impurezas presentes en el agua de consumo habitacional y de las dificultades que muchas veces
       existen para acceder a agua limpia de forma continua, buscamos una manera de facilitar su acceso de forma segura y
       cómoda.
@@ -125,7 +111,7 @@
       A partir de nuestra experiencia en el abastecimiento de agua, identificamos que muchos servicios requieren
       coordinación previa y disponibilidad constante por parte de las personas, por lo que decidimos ir un paso más
       allá y proponer <strong>una alternativa que permite contar con agua completamente purificada las 24 horas del
-      día</strong>.
+        día</strong>.
     </p>
     <p class="text-center mb-5 fs-5">
       Toda el agua Pureza del Sur pasa por meticulosos procesos de filtrado y purificación, lo que garantiza un

@@ -1,4 +1,4 @@
-@import "../../../variables.scss";
+@use "../../../variables.scss" as *;
 
 .available-drums-container {
   display: flex;

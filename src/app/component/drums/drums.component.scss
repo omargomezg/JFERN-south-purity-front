@@ -1,4 +1,4 @@
-@import "../../../variables.scss";
+@use "../../../variables.scss" as *;
 
 .drums-page-container {
   padding: 2rem;

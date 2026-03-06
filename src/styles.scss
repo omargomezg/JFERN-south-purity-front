@@ -2,39 +2,22 @@
 /* principal palette => https://coolors.co/palette/2f6690-3a7ca5-d9dcd6-16425b-81c3d7 */
 // Google Fonts are moved to index.html for better performance (FCP)
 
-
-@use "variables";
-
-@use 'node_modules/bootstrap/scss/bootstrap.scss';
-@use "assets/vendor";
+// Define custom colors BEFORE importing Bootstrap
+@use "variables.scss" as vars;
+// Import Bootstrap - it will use the variables defined above
+@use '../node_modules/bootstrap/scss/bootstrap' with ($primary: vars.$primary,
+  $secondary: vars.$secondary,
+  $success: vars.$success,
+  $info: vars.$info,
+  $warning: vars.$warning,
+  $danger: vars.$danger,
+  $light: vars.$light,
+  $dark: vars.$dark);
+@use 'assets/vendor' as *;
 
 body {
   margin: 0;
-  font-family: Roboto, 'sans-serif' !important;
-}
-
-.base-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.base-full-width {
-  width: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section[id] {
-  scroll-margin-top: 100px;
-  /* Offset for fixed header */
-}
-
-code {
-  display: block;
-  white-space: pre-wrap
+  font-family: Roboto, 'sans-serif', serif !important;
 }
 
 .parallax-container {
@@ -68,27 +51,17 @@ code {
   padding: 0 8px;
 
   h1 {
-    font-family: Roboto, 'sans-serif' !important;
-    font-size: 4rem !important;
-    font-weight: 500 !important;
+    font-family: Roboto, 'sans-serif', serif !important;
+    font-size: 4.4rem !important;
+    font-weight: 800 !important;
+    line-height: 1.2;
+    text-align: center;
   }
 
   h2 {
-    font-family: Roboto, 'sans-serif' !important;
+    font-family: Roboto, 'sans-serif', serif !important;
     font-size: 3.5rem !important;
     font-weight: 450 !important;
   }
 
-}
-
-.text-primary {
-  color: variables.$primary !important;
-}
-
-.bg-primary {
-  background-color: variables.$primary !important;
-}
-
-.bg-secondary {
-  background-color: variables.$secondary !important;
 }
