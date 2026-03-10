@@ -1,0 +1,26 @@
+<div class="container py-5 text-center">
+    <h1 class="fs-1 fw-bold mb-5">¿Eres residente de un edificio o condominio y quieres tener agua purificada disponible 24/7?
+    </h1>
+    <p class="fs-4">Para acceder al servicio de Pureza del Sur, solo necesitas ponerte en contacto con la administración de tu
+        edificio o condominio y solicitar la implementación de nuestro sistema.</p>
+    <p class="fs-4">Una vez recibida la solicitud, nos coordinamos directamente con el administrador o el comité para resolver dudas,
+        explicar el funcionamiento del servicio y agendar una visita de evaluación e instalación, la cual es
+        completamente gratuita.</p>
+    <p class="fs-4">De esta forma, facilitamos el acceso a agua purificada para todas las personas del edificio, de manera simple y
+        sin gestiones complejas.</p>
+    <p class="fs-4">Te invitamos a compartir el siguiente enlace con tu administración o comité:</p>
+    <div class="fw-bold text-center">
+        Rápido y fácil
+    </div>
+    <div class="row">
+        <div class="col justify-content-center">
+            <button (click)="copyToClipboard()" class="btn btn-primary mx-auto mt-4 d-block">
+                Copiar y enviar
+            </button><br>
+            <div *ngIf="copiedMessage" class="mx-auto mt-2 d-block text-success">
+                {{ copiedMessage }}
+            </div>
+        </div>
+    </div>
+    
+</div>

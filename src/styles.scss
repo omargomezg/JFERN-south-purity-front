@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 /* principal palette => https://coolors.co/palette/2f6690-3a7ca5-d9dcd6-16425b-81c3d7 */
 // Google Fonts are moved to index.html for better performance (FCP)
-
-// Define custom colors BEFORE importing Bootstrap
+@use '@angular/material' as mat;// Define custom colors BEFORE importing Bootstrap
 @use "variables.scss" as vars;
-// Import Bootstrap - it will use the variables defined above
+@use 'assets/vendor' as *;
+
 @use '../node_modules/bootstrap/scss/bootstrap' with ($primary: vars.$primary,
   $secondary: vars.$secondary,
   $success: vars.$success,
@@ -12,8 +12,23 @@
   $warning: vars.$warning,
   $danger: vars.$danger,
   $light: vars.$light,
-  $dark: vars.$dark);
-@use 'assets/vendor' as *;
+  $dark: vars.$dark
+);
+
+@include mat.core();
+
+$my-theme: mat.define-theme((color: (primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: (brand-family: 'Roboto', // Aquí puedes poner la misma que use tu Bootstrap
+        plain-family: 'sans-serif',
+      ),
+    ));
+
+html {
+  @include mat.all-component-themes($my-theme);
+}
+
 
 body {
   margin: 0;

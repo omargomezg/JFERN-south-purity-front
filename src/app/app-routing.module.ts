@@ -14,6 +14,8 @@ import {BuildPaymentResultComponent} from './component/build-payment-result/buil
 import {ClientFormComponent} from './component/client-form/client-form.component';
 import {ResetPwdWithCodeComponent} from "./component/reset-pwd-with-code/reset-pwd-with-code.component";
 import {ContactComponent} from "./component/contact/contact.component";
+import { BuildingOrComplexComponent } from './component/building-or-complex/building-or-complex.component';
+import { BuildingAdministratorComponent } from './component/building-administrator/building-administrator.component';
 
 const routerOptions: ExtraOptions = {
   useHash: false,
@@ -27,6 +29,8 @@ const routes: Routes = [
   {path: 'contacto', component: ContactComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'home', loadComponent: () => import('./component/home/home.component').then(m => m.HomeComponent)},
+  {path: 'vivo-en-edificio-o-condominio', component: BuildingOrComplexComponent},
+  {path: 'soy-administrador-de-edificio-o-condominio', component: BuildingAdministratorComponent},
   {path: 'puntos-de-venta', component: PlaceComponent},
   {path: 'agregar-bidones/:placeId', component: DrumsComponent, canActivate: [AuthGuard]},
   {path: 'clientes', component: ClientsComponent, canActivate: [AuthGuard]},
