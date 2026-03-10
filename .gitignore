@@ -38,12 +38,13 @@ yarn-error.log
 testem.log
 /typings
 
+.nx/cache/
+.nx/cache/cloud/
+.nx/cache/d/
+.nx/cache/nx_files.nxt
+.nx/
+
 # System files
 .DS_Store
 Thumbs.db
-
-/.nx/cache
-
-# Temporary SSR test folder
 /tmp_test_ssr
-
