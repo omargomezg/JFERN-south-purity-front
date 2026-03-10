@@ -37,6 +37,16 @@ yarn-error.log
 testem.log
 /typings
 
+# Nx cache and logs
+.nx/cache/
+.nx/cache/cloud/
+.nx/cache/d/
+.nx/cache/nx_files.nxt
+.nx/
+# End Nx cache ignore
+
 # System files
 .DS_Store
 Thumbs.db
+
+.nx
