@@ -1,0 +1,14 @@
+{
+    "editor.parameterHints.enabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modifyConfig": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact",
+        "html": "html"
+    },
+    "html.suggest.html5": true
+}

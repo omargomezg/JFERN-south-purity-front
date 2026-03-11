@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* principal palette => https://coolors.co/palette/2f6690-3a7ca5-d9dcd6-16425b-81c3d7 */
 // Google Fonts are moved to index.html for better performance (FCP)
-@use '@angular/material' as mat;// Define custom colors BEFORE importing Bootstrap
+@use '@angular/material' as mat; // Define custom colors BEFORE importing Bootstrap
 @use "variables.scss" as vars;
 @use 'assets/vendor' as *;
 
@@ -12,8 +12,7 @@
   $warning: vars.$warning,
   $danger: vars.$danger,
   $light: vars.$light,
-  $dark: vars.$dark
-);
+  $dark: vars.$dark);
 
 @include mat.core();
 
@@ -67,8 +66,8 @@ body {
 
   h1 {
     font-family: Roboto, 'sans-serif', serif !important;
-    font-size: 4.4rem !important;
-    font-weight: 800 !important;
+    //font-size: 4.4rem !important;
+    //font-weight: 800 !important;
     line-height: 1.2;
     text-align: center;
   }

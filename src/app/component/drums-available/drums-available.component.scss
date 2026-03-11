@@ -1,4 +1,4 @@
-@use "../../../variables.scss" as *;
+@use "../../../variables.scss" as vars;
 
 .available-drums-container {
   display: flex;
@@ -22,11 +22,11 @@
     margin-right: 8px;
 
     &.available {
-      color: $success;
+      color: vars.$success;
     }
 
     &.taken {
-      color: $warning;
+      color: vars.$warning;
     }
   }
 }
@@ -43,7 +43,7 @@
   border-spacing: 0;
 
   th.mat-mdc-header-cell {
-    background: rgba($primary, 0.02);
+    background: rgba(vars.$primary, 0.02);
     color: #444;
     font-weight: 600;
     text-transform: uppercase;
@@ -62,7 +62,7 @@
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: rgba($primary, 0.02);
+      background-color: rgba(vars.$primary, 0.02);
     }
   }
 }
@@ -87,7 +87,7 @@
 
 .capacity-text {
   font-weight: 500;
-  color: $primary;
+  color: vars.$primary;
 }
 
 code {
@@ -107,13 +107,13 @@ code {
   text-transform: uppercase;
 
   &.status-available {
-    background: rgba($success, 0.1);
-    color: darken($success, 5%);
+    background: rgba(vars.$success, 0.1);
+    color: darken(vars.$success, 5%);
   }
 
   &.status-taken {
-    background: rgba($warning, 0.1);
-    color: darken($warning, 15%);
+    background: rgba(vars.$warning, 0.1);
+    color: darken(vars.$warning, 15%);
   }
 }
 
@@ -149,7 +149,7 @@ code {
   color: #999;
 
   &:hover {
-    color: $primary;
+    color: vars.$primary;
   }
 }
 
