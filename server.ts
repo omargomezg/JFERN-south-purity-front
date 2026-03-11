@@ -14,7 +14,9 @@ export function app(): express.Express {
   const distFolder = join(process.cwd(), 'dist/south-purity-front/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
     ? join(distFolder, 'index.original.html')
-    : join(distFolder, 'index.html');
+    : existsSync(join(distFolder, 'index.html'))
+    ? join(distFolder, 'index.html')
+    : join(distFolder, 'index.csr.html');
 
   const commonEngine = new CommonEngine();
 

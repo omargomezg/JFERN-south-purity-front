@@ -22,8 +22,14 @@ FROM node:20-alpine
 # Set the working directory for the serving stage
 WORKDIR /usr/src/app
 
+# Copy package.json and package-lock.json for production dependencies
+COPY --from=build /app/package.json /app/package-lock.json ./
+
+# Install production dependencies only
+RUN npm ci --only=production --legacy-peer-deps
+
 # Copy the built output (both browser and server folders)
-COPY --from=build /app/dist/south-purity-front ./dist/south-purity-front
+COPY --from=build /app/dist ./dist
 
 # The server expects the 'browser' folder to be at dist/south-purity-front/browser relative to process.cwd()
 # We set the environment variable for the port to match the user's previous preference
