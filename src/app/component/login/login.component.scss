@@ -1,17 +1,6 @@
 @use "sass:color";
 @use "../../../variables.scss" as variables;
 
-.container-fluid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    135deg,
-    variables.$secondary 0%,
-    variables.$light 100%
-  );
-}
-
 .form-parent {
   width: 100%;
   max-width: 400px;
@@ -27,7 +16,6 @@
   text-align: center;
 
   h1 {
-    font-family: 'Playfair Display', serif;
     color: variables.$primary;
     margin-bottom: 1.5rem;
     font-weight: bold;
@@ -53,27 +41,7 @@
   }
 }
 
-.btn-primary {
-  background-color: variables.$primary;
-  border-color: variables.$primary;
-  padding: 0.8rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-
-  &:hover {
-    background-color: color.adjust(variables.$primary, $lightness: -10%);
-    border-color: color.adjust(variables.$primary, $lightness: -10%);
-  }
-
-  &:disabled {
-    background-color: color.adjust(variables.$primary, $lightness: 20%);
-    border-color: color.adjust(variables.$primary, $lightness: 20%);
-  }
-}
-
-.links-container {
+/* .links-container {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -96,7 +64,7 @@
     color: #ccc;
     display: none;
   }
-}
+} */
 
 asl-google-signin-button {
   display: flex;
@@ -104,7 +72,7 @@ asl-google-signin-button {
   margin-top: 1.5rem;
   width: 100%;
 
-  > div {
+  >div {
     width: 100% !important;
 
     iframe {

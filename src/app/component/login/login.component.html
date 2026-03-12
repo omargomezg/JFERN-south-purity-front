@@ -1,9 +1,9 @@
-<div class="container-fluid">
+<div class="container-fluid bg-light">
     <div class="form-parent">
         <div class="form-signin">
             <form (ngSubmit)="onSubmit()" novalidate [formGroup]="loginForm">
-                <h1 class="h3 mb-4 fw-normal">Pureza del Sur</h1>
-
+                <h2 class="mb-4 fw-normal">Iniciar sesión</h2>
+                <p>Ingresa tu usuario y contraseña para iniciar sesión.</p>
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" formControlName="email" id="floatingInput"
                         placeholder="name@example.com">
@@ -24,17 +24,19 @@
 
                 <p class="text-danger" *ngIf="failedLogin">Correo o contraseña incorrecta</p>
 
-                <button class="w-100 btn btn-lg btn-primary mb-3" [disabled]="!loginForm.valid" gtagEvent
-                    trackOn="click" action="login" type="submit">Iniciar sesión
+                <button class="w-100 btn btn-primary" [disabled]="!loginForm.valid" gtagEvent trackOn="click"
+                    action="login" type="submit">Iniciar sesión
                 </button>
 
-                <asl-google-signin-button text="continue_with" type="standard" size="large"></asl-google-signin-button>
-
-                <div class="links-container">
-                    <a [routerLink]="['/registrate']" gtagEvent trackOn="click" action="register" mat-button>¿No tienes
-                        cuenta? <b>Regístrate</b></a>
-                    <button (click)="restorePassword()" gtagEvent trackOn="click" action="restore_password"
-                        type="button" mat-button>Olvidé mi contraseña
+                <asl-google-signin-button class="w-100" text="continue_with" type="standard"
+                    size="large"></asl-google-signin-button>
+                <div class="my-3">
+                    <a [routerLink]="['/registrate']" class="btn btn-link text-decoration-none" gtagEvent
+                        trackOn="click" action="register">
+                        ¿No tienes cuenta? <b>Regístrate</b>
+                    </a>
+                    <button class="btn btn-link text-decoration-none" (click)="restorePassword()" gtagEvent
+                        trackOn="click" action="restore_password" type="button">Olvidé mi contraseña
                     </button>
                 </div>
             </form>

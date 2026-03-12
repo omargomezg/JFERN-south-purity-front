@@ -19,9 +19,7 @@
 $my-theme: mat.define-theme((color: (primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
       ),
-      typography: (brand-family: 'Roboto', // Aquí puedes poner la misma que use tu Bootstrap
-        plain-family: 'sans-serif',
-      ),
+      typography: (brand-family: 'Roboto', plain-family: 'sans-serif'),
     ));
 
 html {
@@ -36,16 +34,21 @@ body {
 
 .parallax-container {
   position: relative;
-  background-attachment: fixed; // clave para el efecto
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; // ocupa toda la pantalla
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
+
+  /* Fallback para iOS: arregla el problema de la imagen agrandada */
+  @supports (-webkit-touch-callout: none) {
+    background-attachment: scroll;
+  }
 }
 
 .parallax-container::before {
@@ -55,7 +58,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); // oscurece la imagen para mejorar legibilidad
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -66,8 +69,6 @@ body {
 
   h1 {
     font-family: Roboto, 'sans-serif', serif !important;
-    //font-size: 4.4rem !important;
-    //font-weight: 800 !important;
     line-height: 1.2;
     text-align: center;
   }
