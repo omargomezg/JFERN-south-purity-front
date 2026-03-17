@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-building-or-complex',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './building-or-complex.component.html',
   styleUrl: './building-or-complex.component.scss'
 })

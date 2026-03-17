@@ -8,9 +8,11 @@
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Repetir contraseña</mat-label>
       <input matInput type="password" formControlName="confirmPassword">
-      <mat-error *ngIf="formPwd.hasError('matching')">
-      Password must match.
-    </mat-error>
+      @if (formPwd.hasError('matching')) {
+        <mat-error>
+          Password must match.
+        </mat-error>
+      }
     </mat-form-field>
   </div>
   <div mat-dialog-actions>

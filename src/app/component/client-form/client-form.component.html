@@ -13,15 +13,19 @@
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Rol</mat-label>
       <mat-select formControlName="role">
-        <mat-option *ngFor="let role of roles" [value]="role.value">{{role.label}}</mat-option>
+        @for (role of roles; track role) {
+          <mat-option [value]="role.value">{{role.label}}</mat-option>
+        }
       </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="fill" class="base-full-width" *ngIf="!user.id || profile?.role === 'ADMINISTRATOR'">
-      <mat-label>{{user.id ? 'Nueva Contraseña' : 'Contraseña'}}</mat-label>
-      <input type="password" matInput formControlName="password" autocomplete="new-password">
-      <button type="button" (click)="randomPassword()" mat-button matSuffix mat-stroked-button>Generar contraseña
-      </button>
-    </mat-form-field>
+    @if (!user.id || profile?.role === 'ADMINISTRATOR') {
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>{{user.id ? 'Nueva Contraseña' : 'Contraseña'}}</mat-label>
+        <input type="password" matInput formControlName="password" autocomplete="new-password">
+        <button type="button" (click)="randomPassword()" mat-button matSuffix mat-stroked-button>Generar contraseña
+        </button>
+      </mat-form-field>
+    }
     <h2>Información de contacto</h2>
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Correo electrónico</mat-label>
@@ -30,7 +34,9 @@
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Estado</mat-label>
       <mat-select formControlName="status">
-        <mat-option *ngFor="let status of userStatus" [value]="status.value">{{status.label}}</mat-option>
+        @for (status of userStatus; track status) {
+          <mat-option [value]="status.value">{{status.label}}</mat-option>
+        }
       </mat-select>
     </mat-form-field>
     <div class="text-end">

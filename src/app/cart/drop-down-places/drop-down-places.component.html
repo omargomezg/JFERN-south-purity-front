@@ -6,9 +6,11 @@
       </div>
       <div class="col-auto">
         <select id="selectPlaces" class="form-select" formControlName="place"
-                aria-label="select places">
+          aria-label="select places">
           <option value="">Seleccione una opción</option>
-          <option *ngFor="let item of places" [value]="item.id">{{item.address}}</option>
+          @for (item of places; track item) {
+            <option [value]="item.id">{{item.address}}</option>
+          }
         </select>
       </div>
     </div>

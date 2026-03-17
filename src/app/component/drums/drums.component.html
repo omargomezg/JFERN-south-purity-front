@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb custom-breadcrumb">
         <li class="breadcrumb-item"><a [routerLink]="['/puntos-de-venta']">
-            <mat-icon>location_on</mat-icon> Puntos de venta</a>
+          <mat-icon>location_on</mat-icon> Puntos de venta</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">Registro de Bidones</li>
       </ol>
@@ -30,9 +30,11 @@
               <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Punto de Venta / Dirección</mat-label>
                 <mat-select formControlName="place">
-                  <mat-option *ngFor="let place of places" [value]="place.id">
-                    {{place.address}}
-                  </mat-option>
+                  @for (place of places; track place) {
+                    <mat-option [value]="place.id">
+                      {{place.address}}
+                    </mat-option>
+                  }
                 </mat-select>
               </mat-form-field>
             </div>
@@ -106,7 +108,7 @@
         </mat-card-header>
         <mat-card-content>
           <app-drums-available [placeId]="formDrum.controls['place'].value"
-            [reload]="reloadListOfDrums.toString()"></app-drums-available>
+          [reload]="reloadListOfDrums.toString()"></app-drums-available>
         </mat-card-content>
       </mat-card>
     </div>
