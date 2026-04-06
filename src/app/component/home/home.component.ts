@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { MatTooltip } from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [NgOptimizedImage, RouterLink, MatTooltip],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
