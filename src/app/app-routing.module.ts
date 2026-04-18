@@ -23,38 +23,82 @@ const routerOptions: ExtraOptions = {
 }
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'login', component: LoginComponent},
-  {path: 'registrate', component: RegisterComponent},
-  {path: 'contacto', component: ContactComponent},
-  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-  {path: 'home', loadComponent: () => import('./component/home/home.component').then(m => m.HomeComponent)},
-  {path: 'vivo-en-edificio-o-condominio', component: BuildingOrComplexComponent},
-  {path: 'soy-administrador-de-edificio-o-condominio', component: BuildingAdministratorComponent},
-  {path: 'puntos-de-venta', component: PlaceComponent},
-  {path: 'agregar-bidones/:placeId', component: DrumsComponent, canActivate: [AuthGuard]},
-  {path: 'clientes', component: ClientsComponent, canActivate: [AuthGuard]},
-  {path: 'agregar-usuario', component: ClientFormComponent, canActivate: [AuthGuard]},
-  {path: 'usuarios', component: UsersComponent, canActivate: [AuthGuard]},
-  {path: 'usuario/:id', component: ClientFormComponent, canActivate: [AuthGuard]},
-  {path: 'reset-password/:email', component: ResetPwdWithCodeComponent},
-  {path: 'mis-datos', component: MyProfileComponent, canActivate: [AuthGuard]},
-  {path: 'mis-pedidos', component: MyOrdersComponent, canActivate: [AuthGuard]},
-  {path: 'payment-result/:reference', component: BuildPaymentResultComponent, canActivate: [AuthGuard]},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'registrate', component: RegisterComponent },
+  { path: 'contacto', component: ContactComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./component/home/home.component').then((m) => m.HomeComponent),
+  },
+  {
+    path: 'informacion-para-administracion',
+    component: BuildingOrComplexComponent,
+  },
+  {
+    path: 'soy-administrador-de-edificio-o-condominio',
+    component: BuildingAdministratorComponent,
+  },
+  { path: 'puntos-de-venta', component: PlaceComponent },
+  {
+    path: 'agregar-bidones/:placeId',
+    component: DrumsComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'clientes', component: ClientsComponent, canActivate: [AuthGuard] },
+  {
+    path: 'agregar-usuario',
+    component: ClientFormComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'usuarios', component: UsersComponent, canActivate: [AuthGuard] },
+  {
+    path: 'usuario/:id',
+    component: ClientFormComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'reset-password/:email', component: ResetPwdWithCodeComponent },
+  {
+    path: 'mis-datos',
+    component: MyProfileComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'mis-pedidos',
+    component: MyOrdersComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'payment-result/:reference',
+    component: BuildPaymentResultComponent,
+    canActivate: [AuthGuard],
+  },
   {
     path: 'hacer-pedido',
-    loadChildren: () => import('./cart/cart.module').then(m => m.CartModule)
+    loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
   },
   {
     path: 'cliente',
-    loadChildren: () => import('./client-module/client-module.module').then(m => m.ClientModuleModule),
-    canActivate: [AuthGuard]
+    loadChildren: () =>
+      import('./client-module/client-module.module').then(
+        (m) => m.ClientModuleModule,
+      ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'back-office',
-    loadChildren: () => import('./administrator/administrator.module').then(m => m.AdministratorModule),
-    canActivate: [AuthGuard]
-  }
+    loadChildren: () =>
+      import('./administrator/administrator.module').then(
+        (m) => m.AdministratorModule,
+      ),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

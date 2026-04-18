@@ -17,7 +17,7 @@ export class BuildingOrComplexComponent {
       setTimeout(() => {
         this.copiedMessage = '';
         // open new whatsapp window after message disappears
-        window.open(`https://wa.me/${link}`, '_blank');
+        window.open(`https://wa.me`, '_blank');
       }, 3000); // Hide message after 3 seconds
     }).catch(err => {
       console.error('Error al copiar: ', err);

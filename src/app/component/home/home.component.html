@@ -1,78 +1,51 @@
 <div class="container-fluid px-0">
-  <section class="parallax-container" style="background-image: url('/assets/images/water-parallax.png');" appParallax>
+  <section
+    class="parallax-container"
+    style="background-image: url(&quot;/assets/images/water-parallax.png&quot;)"
+    appParallax
+  >
     <div class="parallax-content">
       <div class="container">
-        <h1 class="display-2 fw-bolder">Agua purificada <br>con sistema de racks <br>en tu edificio o condominio</h1>
-        <p class="fs-4 text-light pt-3">
-          Disponible 24/7 en tu hogar.
+        <h1 class="display-2 fw-bolder">
+          Agua purificada <br />con sistema de racks <br />en tu edificio o
+          condominio
+        </h1>
+        <p class="fs-4 text-light pt-3">Disponible 24/7 en tu hogar.</p>
+        <p class="text-uppercase fs-5 text-light fw-bold pb-3">
+          Instalación Gratis
         </p>
-        <p class="text-uppercase fs-5 text-light fw-bold pb-3">Instalación Gratis</p>
         <p class="pt-2 text-uppercase text-light">Contacto Whatsapp</p>
-        <a target="_blank" matTooltip="Abrir Whatsapp"
-          href="https://wa.me/56984428760" class="text-decoration-none text-light">+56 9 8442 8760</a>
-      </div>
-    </div>
-  </section>
-  <section class="parallax" style="display: none;">
-    <img ngSrc="assets/images/water-parallax.jpg" fill priority alt="Fondo agua purificada" class="hero-img">
-    <div class="hero-overlay"></div>
-    <div class="container py-14 py-md-23 py-lg-25">
-      <div class="d-flex flex-column justify-content-center align-items-center text-center">
-        <h1 class="fs-10 fs-lg-11 mb-0 font-weight-bold text-light">Agua Purificada Premium</h1>
-        <p class="mt-7 mb-10 text-light fs-5 hero-text">
-          Agua purificada de la mejor calidad, con un proceso de purificación de 7 etapas, para que
-          disfrutes de un agua pura y cristalina.
-        </p>
-        <button (click)="buy()" gtagEvent trackOn="click" action="make_order" class="btn btn-lg btn-primary">
-          Solicita tu recarga
-        </button>
-      </div>
-      <div class="row align-items-center mt-4 mt-md-23 mt-lg-25">
-        <div class="col">
-          <div class="card border-0 bg-transparent mb-10 mb-md-0">
-            <div class="card-body p-0 text-center">
-              <a href="https://wa.me/56984428760" class="link-offset-2 link-underline link-underline-opacity-0"
-                target="_blank" rel="noopener noreferrer">
-                <div class="card-icon mb-6">
-                  <i class="material-icons text-light">phone</i>
-                </div>
-                <div class="fs-1 lh-1 my-3 text-uppercase fw-medium letter-spacing-caption text-light">
-                  Contacto Whatsapp
-                </div>
-                <p class="mb-0 fw-light text-light">
-                  +56 9 8442 8760
-                </p>
-              </a>
-            </div>
-          </div>
-        </div>
+        <a
+          target="_blank"
+          matTooltip="Abrir Whatsapp"
+          href="https://wa.me/56984428760"
+          class="text-decoration-none text-light"
+          >+56 9 8442 8760</a
+        >
       </div>
     </div>
   </section>
   <section class="" id="como-comprar">
-    <div class="container d-flex flex-column justify-content-center min-vh-100 py-5">
+    <div
+      class="container d-flex flex-column justify-content-center min-vh-100 py-5"
+    >
       <div class="text-center w-100">
         <h1 class="display-3 fw-bold mb-5">¿Cómo podemos ayudarte?</h1>
         <div class="row g-4 justify-content-center">
           <!-- Columna 1: Vivo en un edificio o condominio -->
           <div class="col-12 col-md-4">
             <div class="card border-0 h-100 como-comprar-card">
-              <div class="card-body d-flex flex-column align-items-center px-4 py-5">
-                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">Vivo en un edificio o condominio</h2>
-                <a [routerLink]="['/vivo-en-edificio-o-condominio']" class="btn btn-primary btn-como-comprar mt-auto">
-                  Quiero instalar el rack en mi comunidad
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-12 col-md-4">
-            <div class="card border-0 h-100 como-comprar-card">
-              <div class="card-body d-flex flex-column align-items-center px-4 py-5">
-                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">Soy administrador</h2>
-                <a [routerLink]="['/soy-administrador-de-edificio-o-condominio']"
-                  class="btn btn-primary btn-como-comprar mt-auto">
-                  Información para edificios, condominios y comités
+              <div
+                class="card-body d-flex flex-column align-items-center px-4 py-5"
+              >
+                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">
+                  Vivo en un edificio o condominio
+                </h2>
+                <a
+                  [routerLink]="['/informacion-para-administracion']"
+                  class="btn btn-primary btn-como-comprar mt-auto"
+                >
+                  Quiero instalar el rack<br />en mi comunidad
                 </a>
               </div>
             </div>
@@ -80,14 +53,44 @@
 
           <div class="col-12 col-md-4">
             <div class="card border-0 h-100 como-comprar-card">
-              <div class="card-body d-flex flex-column align-items-center px-4 py-5">
-                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">Ya soy cliente</h2>
+              <div
+                class="card-body d-flex flex-column align-items-center px-4 py-5"
+              >
+                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">
+                  Soy administrador
+                </h2>
+                <a
+                  [routerLink]="['/soy-administrador-de-edificio-o-condominio']"
+                  class="btn btn-primary btn-como-comprar mt-auto"
+                >
+                  Información para edificios,<br />condominios y comités
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card border-0 h-100 como-comprar-card">
+              <div
+                class="card-body d-flex flex-column align-items-center px-4 py-5"
+              >
+                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">
+                  Ya soy cliente
+                </h2>
                 <div class="d-flex flex-column gap-2 mt-auto">
-                  <button (click)="buy()" class="btn btn-primary btn-como-comprar">
+                  <button
+                    (click)="buy()"
+                    class="btn btn-primary btn-como-comprar"
+                  >
                     Solicitar recarga
                   </button>
-                  <a href="https://wa.me/56984428760" target="_blank" matTooltip="Abrir Whatsapp" rel="noopener noreferrer"
-                    class="btn btn-primary btn-como-comprar">
+                  <a
+                    href="https://wa.me/56984428760"
+                    target="_blank"
+                    matTooltip="Abrir Whatsapp"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary btn-como-comprar"
+                  >
                     Soporte / Whatsapp
                   </a>
                 </div>
@@ -99,30 +102,38 @@
     </div>
   </section>
   <section class="bg-light" id="quienes-somos">
-    <div class="container d-flex flex-column justify-content-center min-vh-100 py-5">
+    <div
+      class="container d-flex flex-column justify-content-center min-vh-100 py-5"
+    >
       <div class="text-center w-100">
         <h1 class="display-3 fw-bold mb-5">¿Quienes somos?</h1>
-        <p class="text-center mb-5 fs-5">
-          Somos una empresa valdiviana que comprende <strong>la importancia del agua en la salud y el bienestar de las
-            personas.</strong>
-          Conscientes de las impurezas presentes en el agua de consumo habitacional y de las dificultades que muchas
-          veces
-          existen para acceder a agua limpia de forma continua, buscamos una manera de facilitar su acceso de forma
-          segura
-          y
-          cómoda.
+        <p class="mb-5 fs-5">
+          Somos una empresa valdiviana que comprende
+          <strong
+            >la importancia del agua en la salud y el bienestar de las
+            personas.</strong
+          ><br />
+          Conscientes de las impurezas presentes en el agua de consumo
+          habitacional<br />y de las dificultades que muchas veces existen para
+          acceder a agua limpia de forma continua,<br />buscamos una manera de
+          facilitar su acceso de forma segura y cómoda.
         </p>
-        <p class="text-center mb-5 fs-5">
-          A partir de nuestra experiencia en el abastecimiento de agua, identificamos que muchos servicios requieren
-          coordinación previa y disponibilidad constante por parte de las personas, por lo que decidimos ir un paso más
-          allá y proponer <strong>una alternativa que permite contar con agua completamente purificada las 24 horas del
-            día</strong>.
+        <p class="mb-5 fs-5">
+          A partir de nuestra experiencia en el abastecimiento de agua,<br />
+          identificamos que muchos servicios requieren coordinación previa y
+          disponibilidad constante por parte de las personas,<br />por lo que
+          decidimos ir un paso más allá y proponer
+          <strong
+            >una alternativa<br />que permite contar con agua completamente
+            purificada las 24 horas del día</strong
+          >.
         </p>
-        <p class="text-center mb-5 fs-5">
-          Toda el agua Pureza del Sur pasa por meticulosos procesos de filtrado y purificación, lo que garantiza un
-          producto seguro, saludable y beneficioso para el consumo diario, especialmente en contextos urbanos donde
-          acceder
-          a este recurso vital se vuelve cada vez más necesario.
+        <p class="mb-5 fs-5">
+          Toda el agua <strong>Pureza del Sur</strong> pasa por meticulosos
+          procesos de filtrado y purificación,<br />lo que garantiza un producto
+          seguro, saludable y beneficioso para el consumo diario,<br />especialmente
+          en contextos urbanos donde acceder a este recurso vital se vuelve cada
+          vez más necesario.
         </p>
       </div>
     </div>
