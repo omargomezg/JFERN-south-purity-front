@@ -3,35 +3,68 @@
     ¿Eres residente de un edificio o condominio <br />y quieres tener agua
     purificada disponible 24/7?
   </h1>
-  <p class="fs-5">
-    Para acceder al servicio de Pureza del Sur,<br /><b>solo necesitas ponerte en
-    contacto con la administración de tu edificio o condominio</b><br />
-    y solicitar la implementación de nuestro sistema.
-  </p>
-  <p class="fs-5">
-    Una vez recibida la solicitud,<br />nos coordinamos directamente con el
-    administrador o el comité<br /> para resolver dudas, explicar el funcionamiento
-    del servicio<br /> y agendar una visita de evaluación e instalación, la cual es
-    <b>completamente gratuita</b>.
-  </p>
-  <p class="fs-5">
-    De esta forma, facilitamos el acceso a agua purificada para todas las
-    personas del edificio,<br /> de manera simple y sin gestiones complejas.
-  </p>
-  <p class="fs-5 mt-5 fw-bold">
-    Te invitamos a enviar a tu administración o comité esta información <br /> con la que podrá contactarno, copiandola con un sólo clic:
-  </p>
-  <div class="fw-bold text-center">Rápido y fácil</div>
+  @if (isMobile()) {
+    <p class="fs-5">
+      Para acceder al servicio de Pureza del Sur,<br />solo <strong>necesitas ponerte en contacto con la<br />administración de tu edificio
+        o condominio</strong
+      ><br />
+      y solicitar la implementación<br />de nuestro sistema.
+    </p>
+    <p class="fs-5">
+      Una vez recibida la solicitud,<br />nos coordinamos directamente<br />con el
+      administrador o el comité para<br />resolver dudas, explicar el funcionamiento<br />del servicio
+      y agendar una visita de<br />evaluación e instalación, la cual es<br />
+      <b>completamente gratuita</b>.
+    </p>
+    <p class="fs-5">
+      De esta forma, facilitamos el acceso a<br />agua purificada para todas las
+      personas<br />del edificio,
+      de manera simple<br />y sin gestiones complejas.
+    </p>
+    <p class="fs-5 mt-5 fw-bold">
+      Te invitamos a enviar esta información <br />
+      a tu administración o comité<br />con la que podrán contactarnos,<br />copiándola con un sólo clic:
+    </p>
+    <div class="fw-bold text-center">Rápido y fácil</div>
+  } @else {
+    <p class="fs-5">
+      Para acceder al servicio de Pureza del Sur,<br /><b
+        >solo necesitas ponerte en contacto con la administración de tu edificio
+        o condominio</b
+      ><br />
+      y solicitar la implementación de nuestro sistema.
+    </p>
+    <p class="fs-5">
+      Una vez recibida la solicitud,<br />nos coordinamos directamente con el
+      administrador o el comité<br />
+      para resolver dudas, explicar el funcionamiento del servicio<br />
+      y agendar una visita de evaluación e instalación, la cual es
+      <b>completamente gratuita</b>.
+    </p>
+    <p class="fs-5">
+      De esta forma, facilitamos el acceso a agua purificada para todas las
+      personas del edificio,<br />
+      de manera simple y sin gestiones complejas.
+    </p>
+    <p class="fs-5 mt-5 fw-bold">
+      Te invitamos a enviar a tu administración o comité esta información <br />
+      con la que podrá contactarno, copiandola con un sólo clic:
+    </p>
+    <div class="fw-bold text-center">Rápido y fácil</div>
+  }
+  <div class="d-flex justify-content-center align-items-center gap-2">
+    <button (click)="copyToClipboardAndSendToEmail()" class="btn btn-primary mt-4 d-block">
+      Copiar y enviar por Correo
+    </button>
+    <button (click)="copyToClipboardAndSendToWhatsApp()" class="btn btn-primary mt-4 d-block">
+      Copiar y enviar por Whatsapp
+    </button>
+  </div>
   <div class="row">
     <div class="col justify-content-center">
-      <button
-        (click)="copyToClipboard()"
-        class="btn btn-primary mx-auto mt-4 d-block"
-      >
-        Copiar y enviar</button
-      ><br />
+      <br />
       @if (copiedMessage) {
-        <div class="mx-auto mt-2 d-block text-success">
+        <div class="mx-auto mt-2 d-block text-success text-center">
           {{ copiedMessage }}
         </div>
       }
