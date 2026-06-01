@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-building-administrator',
-  imports: [],
+  imports: [MatButtonModule],
   templateUrl: './building-administrator.component.html',
-  styleUrl: './building-administrator.component.scss'
+  styleUrl: './building-administrator.component.scss',
 })
-export class BuildingAdministratorComponent {
-
-}
+export class BuildingAdministratorComponent {}

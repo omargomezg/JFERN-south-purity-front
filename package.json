@@ -31,7 +31,7 @@
     "jquery": "^3.7.0",
     "ng-recaptcha": "^13.2.1",
     "ngx-toastr": "^16.1.1",
-    "postcss": "^8.5.8",
+    "postcss": "8.5.10",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"
@@ -55,5 +55,9 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "nx": "17.2.8",
     "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "js-yaml": "^4.1.0",
+    "minimatch": "^9.0.5"
   }
 }

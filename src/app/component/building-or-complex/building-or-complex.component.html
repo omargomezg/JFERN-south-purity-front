@@ -1,68 +1,136 @@
-<div class="container py-5 text-center">
-  <h1 class="fs-1 fw-bold mb-5">
-    ¿Eres residente de un edificio o condominio <br />y quieres tener agua
+<div class="container-fluid py-5 text-center box-title">
+  <h1 class="fs-1 fw-bold">
+    ¿Eres residente de un edificio o condominio <br/>y quieres tener agua
     purificada disponible 24/7?
   </h1>
+</div>
+<div class="container py-5 text-center">
+
   @if (isMobile()) {
-    <p class="fs-5">
-      Para acceder al servicio de Pureza del Sur,<br />solo <strong>necesitas ponerte en contacto con la<br />administración de tu edificio
+    <p class="">
+      Para acceder al servicio de Pureza del Sur,<br/>solo
+      <strong
+      >necesitas ponerte en contacto con la<br/>administración de tu edificio
         o condominio</strong
-      ><br />
-      y solicitar la implementación<br />de nuestro sistema.
+      ><br/>
+      y solicitar la implementación<br/>de nuestro sistema.
     </p>
-    <p class="fs-5">
-      Una vez recibida la solicitud,<br />nos coordinamos directamente<br />con el
-      administrador o el comité para<br />resolver dudas, explicar el funcionamiento<br />del servicio
-      y agendar una visita de<br />evaluación e instalación, la cual es<br />
+    <p class="">
+      Una vez recibida la solicitud,<br/>nos coordinamos directamente<br/>con
+      el administrador o el comité para<br/>resolver dudas, explicar el
+      funcionamiento<br/>del servicio y agendar una visita de<br/>evaluación e
+      instalación, la cual es<br/>
       <b>completamente gratuita</b>.
     </p>
-    <p class="fs-5">
-      De esta forma, facilitamos el acceso a<br />agua purificada para todas las
-      personas<br />del edificio,
-      de manera simple<br />y sin gestiones complejas.
+    <p class="">
+      De esta forma, facilitamos el acceso a<br/>agua purificada para todas las
+      personas<br/>del edificio, de manera simple<br/>y sin gestiones
+      complejas.
     </p>
-    <p class="fs-5 mt-5 fw-bold">
-      Te invitamos a enviar esta información <br />
-      a tu administración o comité<br />con la que podrán contactarnos,<br />copiándola con un sólo clic:
+    <p class=" mt-5 fw-bold">
+      Te invitamos a enviar esta información <br/>
+      a tu administración o comité<br/>con la que podrán contactarnos,<br/>copiándola
+      con un sólo clic:
     </p>
-    <div class="fw-bold text-center">Rápido y fácil</div>
   } @else {
     <p class="fs-5">
-      Para acceder al servicio de Pureza del Sur,<br /><b
-        >solo necesitas ponerte en contacto con la administración de tu edificio
-        o condominio</b
-      ><br />
+      Para acceder al servicio de Pureza del Sur,<br/><b
+    >solo necesitas ponerte en contacto con la administración de tu edificio
+      o condominio</b
+    ><br/>
       y solicitar la implementación de nuestro sistema.
     </p>
     <p class="fs-5">
-      Una vez recibida la solicitud,<br />nos coordinamos directamente con el
-      administrador o el comité<br />
-      para resolver dudas, explicar el funcionamiento del servicio<br />
+      Una vez recibida la solicitud,<br/>nos coordinamos directamente con el
+      administrador o el comité<br/>
+      para resolver dudas, explicar el funcionamiento del servicio<br/>
       y agendar una visita de evaluación e instalación, la cual es
       <b>completamente gratuita</b>.
     </p>
     <p class="fs-5">
       De esta forma, facilitamos el acceso a agua purificada para todas las
-      personas del edificio,<br />
+      personas del edificio,<br/>
       de manera simple y sin gestiones complejas.
     </p>
     <p class="fs-5 mt-5 fw-bold">
-      Te invitamos a enviar a tu administración o comité esta información <br />
-      con la que podrá contactarno, copiandola con un sólo clic:
+      Te invitamos a enviar a tu administración o comité esta información <br/>
+      con la que podrá contactarnos, copiándola con un sólo clic:
     </p>
-    <div class="fw-bold text-center">Rápido y fácil</div>
   }
+  <br/>
+  <br/>
+  <div class="col-md-6 offset-md-3">
+    <mat-card>
+      <mat-card-content>
+        <div
+          style="
+            font-family: Consola, sans-serif !important;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #000000;
+          "
+        >
+          <p style="margin-bottom: 12px; text-align: left">
+            💧
+            <strong
+            >Abastecimiento de agua purificada para edificios y
+              condominios.</strong
+            >
+          </p>
+
+          <p style="margin-bottom: 20px; text-align: left">
+            💡 <strong>Instalación gratuita, rápida y no invasiva.</strong>
+          </p>
+
+          <p style="margin-bottom: 20px; text-align: left">
+            Implementación de racks a nivel comunitario, orientada a la
+            comodidad de los residentes.
+          </p>
+
+          <p style="margin-bottom: 5px; text-align: left">
+            Información y contacto directo con la empresa:<br/>
+            <a
+              href="https://purezadelsur.cl/informacion-para-administracion"
+              style="color: #0066cc; text-decoration: underline"
+            >
+              https://purezadelsur.cl/informacion-para-administracion
+            </a>
+          </p>
+
+          <p
+            style="
+              margin-top: 15px;
+              margin-bottom: 0;
+              line-height: 1.3;
+              text-align: left;
+            "
+          >
+            +56 9 8442 8760<br/>
+            <strong>Aguas Pureza del Sur</strong><br/>
+            Calidad Valdiviana
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
   <div class="d-flex justify-content-center align-items-center gap-2">
-    <button (click)="copyToClipboardAndSendToEmail()" class="btn btn-primary mt-4 d-block">
+    <button
+      (click)="copyToClipboardAndSendToEmail()"
+      class="btn btn-primary mt-4 d-block"
+    >
       Copiar y enviar por Correo
     </button>
-    <button (click)="copyToClipboardAndSendToWhatsApp()" class="btn btn-primary mt-4 d-block">
+    <button
+      (click)="copyToClipboardAndSendToWhatsApp()"
+      class="btn btn-primary mt-4 d-block"
+    >
       Copiar y enviar por Whatsapp
     </button>
   </div>
+
   <div class="row">
     <div class="col justify-content-center">
-      <br />
+      <br/>
       @if (copiedMessage) {
         <div class="mx-auto mt-2 d-block text-success text-center">
           {{ copiedMessage }}

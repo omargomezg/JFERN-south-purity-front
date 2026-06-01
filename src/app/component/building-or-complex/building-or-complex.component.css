@@ -1,0 +1,22 @@
+p {
+  font-family: Roboto, "sans-serif", serif !important;
+}
+
+.box-title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/img/resident.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  .box-title {
+    padding: 40px 15px;
+  }
+  .box-title h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/*# sourceMappingURL=building-or-complex.component.css.map */

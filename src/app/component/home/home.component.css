@@ -1,0 +1,69 @@
+@charset "UTF-8";
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.text-steps {
+  font-size: 1rem;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-icon > span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.list-unstyled > li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  list-style: none;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section {
+  min-height: 100vh;
+  padding: 5rem 0; /* Previene desbordamiento y solapamiento en móviles horizontales */
+}
+.section h2 {
+  min-height: 4.5rem;
+}
+
+/* Como comprar section */
+.como-comprar-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.como-comprar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.btn-como-comprar {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/*# sourceMappingURL=home.component.css.map */

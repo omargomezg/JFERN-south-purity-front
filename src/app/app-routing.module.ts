@@ -38,11 +38,11 @@ const routes: Routes = [
       import('./component/home/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: 'informacion-para-administracion',
+    path: 'residentes',
     component: BuildingOrComplexComponent,
   },
   {
-    path: 'soy-administrador-de-edificio-o-condominio',
+    path: 'informacion-para-administracion',
     component: BuildingAdministratorComponent,
   },
   { path: 'puntos-de-venta', component: PlaceComponent },
