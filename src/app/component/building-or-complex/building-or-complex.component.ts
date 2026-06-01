@@ -1,7 +1,7 @@
-import {BreakpointObserver} from '@angular/cdk/layout';
-import {Component, inject, OnInit, signal} from '@angular/core';
-import {MatCard, MatCardModule} from '@angular/material/card';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-building-or-complex',
@@ -16,10 +16,21 @@ export class BuildingOrComplexComponent implements OnInit {
   private emailSubject =
     'Hola, podemos contratar agua purificada en mi comunidad';
 
-  // Guarda el texto limpio directamente en la variable:
-  private emailBody = `💧 *Abastecimiento de agua purificada para edificios y condominios.*
+  private emailBody = `💧 Abastecimiento de agua purificada para edificios y condominios.
 
-💡 *Instalación gratuita, rápida y no invasiva.*
+💡 Instalación gratuita, rápida y no invasiva.
+
+Implementación de racks a nivel comunitario, orientada a la comodidad de los residentes.
+
+Información y contacto directo con la empresa:
+https://purezadelsur.cl/informacion-para-administracion
+
++56 9 8442 8760
+*Aguas Pureza del Sur*
+Calidad Valdiviana`;
+  private whatsAppBody = `*Abastecimiento de agua purificada para edificios y condominios.*
+
+*Instalación gratuita, rápida y no invasiva.*
 
 Implementación de racks a nivel comunitario, orientada a la comodidad de los residentes.
 
@@ -62,15 +73,19 @@ Calidad Valdiviana`;
 
   copyToClipboardAndSendToWhatsApp() {
     const phoneNumber = '56984428760'; // WhatsApp number without '+'
-    const whatsappMessage = encodeURIComponent(this.emailBody);
+    const whatsappMessage = encodeURIComponent(this.whatsAppBody);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
 
     navigator.clipboard
       .writeText(whatsappUrl) // Copy the full WhatsApp URL to clipboard
       .then(() => {
-        this.snackBar.open('Enlace de WhatsApp copiado al portapapeles!', 'Cerrar', {
-          duration: 3000,
-        });
+        this.snackBar.open(
+          'Enlace de WhatsApp copiado al portapapeles!',
+          'Cerrar',
+          {
+            duration: 3000,
+          },
+        );
         setTimeout(() => {
           window.open(whatsappUrl, '_blank');
         }, 3000);
