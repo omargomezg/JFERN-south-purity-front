@@ -1,0 +1,22 @@
+.cf-p {
+  font-size: 14px;
+}
+
+/* Para pantallas mayores a 768px (Tablets en horizontal, Laptops y Desktops) */
+@media (min-width: 425px) {
+  .cf-p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 425px) {
+  .cf-p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cf-p {
+    font-size: 24px;
+  }
+}
