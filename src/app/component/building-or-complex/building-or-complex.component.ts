@@ -26,8 +26,35 @@ Información y contacto directo con la empresa:
 https://purezadelsur.cl/informacion-para-administracion
 
 +56 9 8442 8760
-*Aguas Pureza del Sur*
+Aguas Pureza del Sur
 Calidad Valdiviana`;
+
+  private emailBodyHTML = `
+<div style="padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+  <p style="margin: 0 0 15px 0; font-size: 16px; font-weight: bold;">
+    <span style="font-size: 20px;">💧</span> Abastecimiento de agua purificada para edificios y condominios.
+  </p>
+  
+  <p style="margin: 0 0 15px 0; font-size: 16px; font-weight: bold;">
+    <span style="font-size: 20px;">💡</span> Instalación gratuita, rápida y no invasiva.
+  </p>
+  
+  <p style="margin: 0 0 15px 0; font-size: 14px; color: #555;">
+    Implementación de racks a nivel comunitario, orientada a la comodidad de los residentes.
+  </p>
+  
+  <p style="margin: 0 0 15px 0; font-size: 14px;">
+    Información y contacto directo con la empresa:<br>
+    <a href="https://purezadelsur.cl/informacion-para-administracion" style="color: #2196F3; text-decoration: none;">https://purezadelsur.cl/informacion-para-administracion</a>
+  </p>
+  
+  <p style="margin: 0; font-size: 14px;">
+    +56 9 8442 8760<br>
+    <strong>Aguas Pureza del Sur</strong><br>
+    <span style="color: #666;">Calidad Valdiviana</span>
+  </p>
+</div>
+`;
   private whatsAppBody = `*Abastecimiento de agua purificada para edificios y condominios.*
 
 *Instalación gratuita, rápida y no invasiva.*
@@ -51,16 +78,15 @@ Calidad Valdiviana`;
   }
 
   copyToClipboardAndSendToEmail() {
-    const emailAddress = 'purezadelsur@gmail.com';
     navigator.clipboard
-      .writeText(emailAddress)
+      .writeText(this.emailBodyHTML)
       .then(() => {
-        this.snackBar.open('¡Correo copiado al portapapeles!', 'Cerrar', {
-          duration: 3000,
+        this.snackBar.open('¡Correo formateado copiado al portapapeles!', 'Cerrar', {
+          duration: 2000,
         });
         setTimeout(() => {
           window.open(
-            `mailto:${emailAddress}?subject=${encodeURIComponent(this.emailSubject)}&body=${encodeURIComponent(this.emailBody)}`,
+            `mailto:?subject=${encodeURIComponent(this.emailSubject)}&body=${encodeURIComponent(this.emailBodyHTML)}`,
             '_blank',
           );
         }, 3000);
@@ -72,12 +98,11 @@ Calidad Valdiviana`;
   }
 
   copyToClipboardAndSendToWhatsApp() {
-    const phoneNumber = '56984428760'; // WhatsApp number without '+'
     const whatsappMessage = encodeURIComponent(this.whatsAppBody);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${whatsappMessage}`;
 
     navigator.clipboard
-      .writeText(whatsappUrl) // Copy the full WhatsApp URL to clipboard
+      .writeText(whatsappUrl)
       .then(() => {
         this.snackBar.open(
           'Enlace de WhatsApp copiado al portapapeles!',
