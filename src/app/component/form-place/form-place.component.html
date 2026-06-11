@@ -1,6 +1,6 @@
-<h1 mat-dialog-title>{{data ? 'Punto de venta: ' + data.address : 'Nuevo Punto de Venta'}}</h1>
 <form [formGroup]="placeForm" novalidate (ngSubmit)="save()" class="base-form">
-  <div mat-dialog-content>
+  <h1 mat-dialog-title>{{data ? 'Punto de venta: ' + data.address : 'Nuevo Punto de Venta'}}</h1>
+  <mat-dialog-content>
     <mat-form-field appearance="fill" class="base-full-width">
       <mat-label>Ciudad</mat-label>
       <input type="text"
@@ -29,11 +29,9 @@
     <mat-slide-toggle formControlName="status">
       {{ placeForm.controls['status'].value ? 'Deshabilitar punto de venta' : 'Activar punto de venta'}}
     </mat-slide-toggle>
-  </div>
-  <div mat-dialog-actions>
-    <div class="text-end">
+  </mat-dialog-content>
+  <mat-dialog-actions align="end" >
       <button mat-button [mat-dialog-close]="data">Cerrar</button>
       <button mat-raised-button [disabled]="!placeForm.valid" type="submit">Guardar</button>
-    </div>
-  </div>
+  </mat-dialog-actions>
 </form>

@@ -31,10 +31,10 @@ export class RestorePasswordComponent {
         });
     }
 
-    haveACode(): void {
+    /*haveACode(): void {
         if (this.formRestorePwd.valid) {
             let email = this.formRestorePwd.controls['email'].value as string;
             this.matDialogRef.close({status: true, email: email});
         }
-    }
+    }*/
 }
