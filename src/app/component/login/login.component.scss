@@ -1,48 +1,48 @@
 @import "../../../variables.scss";
 
+// 1. Contenedor principal: Elástico y abarca el alto completo de la ventana gráfica
 .container-fluid {
-  min-height: 100vh;
+  //min-height: 100vh; // Cambiado a min-height para evitar cortes en pantallas pequeñas/móviles
   display: flex;
+  flex-direction: column; // Soporta un flujo vertical limpio si añades un header/footer
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, $secondary 0%, $light 100%);
+  padding: 24px; // Espaciado seguro para dispositivos móviles
 }
 
 .form-parent {
   width: 100%;
-  max-width: 400px;
-  padding: 15px;
-  margin: auto;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
+// 3. Tarjeta blanca del inicio de sesión (Card)
 .form-signin {
   background-color: white;
   padding: 2.5rem;
-  border-radius: 10px;
+  border-radius: 12px; // Bordes un poco más suavizados (estilo moderno)
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  text-align: center;
 
   h1 {
     font-family: 'Playfair Display', serif;
     color: $primary;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-    display: block !important;
-    /* Overriding visually-hidden for better UX if desired, or keep hidden */
+    font-size: 1.75rem;
+    margin-bottom: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    display: block !important; // Muestra "Pureza del Sur" de forma clara arriba
   }
-
-  /* If we want to keep the h1 visually hidden as per original HTML but maybe show a Logo or Welcome text, 
-     I will respect the HTML's 'visually-hidden' class, but adding a visible header is often better. 
-     For now, I'll assume the user might want to see the title "Pureza del Sur". 
-     I will suggest removing 'visually-hidden' in the HTML step. */
 }
 
+// 4. Estilos para los Inputs flotantes de Bootstrap
 .form-floating {
   margin-bottom: 1rem;
 
   .form-control {
-    border-radius: 5px;
+    border-radius: 8px; // Consistencia visual con los bordes redondeados
     border: 1px solid fade-out($primary, 0.8);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {
       border-color: $primary;
@@ -51,68 +51,87 @@
   }
 
   label {
-    color: #999;
+    color: #64748b; // Un tono slate mucho más profesional que el gris genérico
   }
 }
 
+// 5. Botón principal de acción ("Iniciar sesión")
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
   padding: 0.8rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
   &:hover {
-    background-color: darken($primary, 10%);
-    border-color: darken($primary, 10%);
+    background-color: darken($primary, 8%);
+    border-color: darken($primary, 8%);
   }
 
   &:disabled {
     background-color: lighten($primary, 20%);
     border-color: lighten($primary, 20%);
+    color: fade-out(white, 0.3);
+    cursor: not-allowed;
   }
 }
 
+// 6. Botón e integración de Google Sign-In
+asl-google-signin-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  width: 100%;
+
+  // Forzamos el centrado simétrico del iframe interno de Google
+  ::v-deep > div {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+
+    iframe {
+      margin: 0 auto !important;
+      border-radius: 4px;
+    }
+  }
+}
+
+// 7. Enlaces inferiores distribuidos verticalmente en bloque
 .links-container {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+  align-items: center; // Centra los enlaces horizontalmente uno abajo del otro
+  gap: 0.75rem;       // Despega sutilmente un link del otro
+  font-size: 0.875rem;
 
   a,
   button.mat-mdc-button {
-    color: $muted;
+    color: #0284c7 !important; // Unifica los enlaces con tu paleta corporativa azul sky
     text-decoration: none;
-    transition: color 0.2s;
+    font-weight: 500;
+    transition: color 0.2s, text-decoration 0.2s;
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+    line-height: normal;
+
+    b {
+      color: #0284c7;
+      font-weight: 700;
+    }
 
     &:hover {
-      color: $primary;
+      color: darken(#0284c7, 15%) !important;
       text-decoration: underline;
     }
   }
 
   .divider {
-    color: #ccc;
-    display: none;
-    /* Hiding the pipe separator relying on flex gap */
-  }
-}
-
-asl-google-signin-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-  width: 100%;
-
-  /* The google button wrapper itself */
-  >div {
-    width: 100% !important;
-
-    iframe {
-      margin: 0 auto !important;
-    }
+    display: none; // Ocultado por completo, la separación se gestiona mediante el 'gap' del flex
   }
 }
