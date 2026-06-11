@@ -15,7 +15,7 @@ import {ModalTransactionComponent} from "../modal-transaction/modal-transaction.
 })
 export class SalesComponent {
   sales: SaleOrderInterface[] = [];
-  displayedColumns: string[] = ['createdDate', 'status', 'client', 'total', 'payment', 'options'];
+  displayedColumns: string[] = ['createdDate', 'status', 'client', 'total', 'options'];
     pagination: PaginationModel = new PaginationModel()
 
   constructor(private saleOrderService: SaleOrderService, public matDialog: MatDialog) {

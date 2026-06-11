@@ -4,6 +4,7 @@ import {PlaceInterface, ProductInterface} from "../../core/model";
 import {FormBuilder, Validators} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
 import {ActivatedRoute, Router} from "@angular/router";
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
     selector: 'app-drums',
@@ -11,10 +12,15 @@ import {ActivatedRoute, Router} from "@angular/router";
     styleUrls: ['./drums.component.scss']
 })
 export class DrumsComponent implements OnInit {
+  bottle20Lts = "Bidón de 20 Lts.";
+  bottle10Lts = "Bidón de 10 Lts.";
     formDrum = this.formBuilder.group({
         place: ['', Validators.required],
         lockNumber: [0, Validators.required],
         padlockKey: ['', Validators.required],
+      shortName: ['', Validators.required],
+      priceRefill: [0, Validators.required],
+      priceBottle: [0, Validators.required]
     });
     reloadListOfDrums: boolean = false;
     places: PlaceInterface[] = [];
@@ -33,7 +39,14 @@ export class DrumsComponent implements OnInit {
 
     loadPlaces(): void {
         this.commonAdminService.getPlaces().subscribe(places => this.places = places);
-    }
+  }
+
+  setDefaultPrice(event: MatRadioChange) {
+    const refill = event.value == this.bottle20Lts ? 2500 : 1800;
+    const bottle = event.value == this.bottle20Lts ? 4500 : 4200;
+      this.formDrum.controls['priceRefill'].setValue(refill);
+      this.formDrum.controls['priceBottle'].setValue(bottle);
+  }
 
     saveDrum(): void {
         let order = this.formDrum.value as ProductInterface;

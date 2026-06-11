@@ -1,13 +1,17 @@
 export class DrumRequestModel {
-  available: number;
-  price: number;
-  priceWithDrum: number;
+    available: number;
+    description: string;
+    refillPrice: number;
+    bottlePrice: number;
+    isRefill: boolean;
 
-  constructor() {
-    this.available = 0;
-    this.price = 0;
-    this.priceWithDrum = 0;
-  }
+    constructor() {
+        this.available = 0;
+        this.description = '';
+        this.refillPrice = 0;
+        this.bottlePrice = 0;
+        this.isRefill = false;
+    }
 
 
 }

@@ -1,1 +1,7 @@
-
+ .text-price {
+  text-align: right;
+ }
+input.text-price::-webkit-outer-spin-button,
+input.text-price::-webkit-inner-spin-button {
+  display: none;
+}

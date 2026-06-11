@@ -3,14 +3,6 @@
   <div class="row">
     <div class="col-sm-8">
       <form (ngSubmit)="submit()" [formGroup]="configurationForm" novalidate class="base-form">
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Valor de la recarga</mat-label>
-          <input type="number" matInput formControlName="price">
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="base-full-width">
-          <mat-label>Valor del bidón + recarga</mat-label>
-          <input type="number" matInput formControlName="priceWithDrum">
-        </mat-form-field>
         <h2>GetNet</h2>
         <p>Si existen operaciones pendientes, puedes hacer una actualización contra los servicios de getnet</p>
         <mat-form-field appearance="fill" class="base-full-width">

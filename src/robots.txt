@@ -1,0 +1,11 @@
+# Allow all access to the root directory
+User-agent: *
+Allow: /
+
+# Specific disallows (if any)
+# Disallow: /admin/ # Example: If you have an admin panel
+# Disallow: /tmp/   # Example: Temporary directories
+# Disallow: /private/ # Example: Private directories
+
+# Sitemap (if you have one)
+#Sitemap: https://yourdomain.com/sitemap.xml

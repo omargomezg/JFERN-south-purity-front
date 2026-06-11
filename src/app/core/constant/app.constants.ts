@@ -1,5 +1,6 @@
 export const PAYMENT_TYPE = {
   GETNET: 'GETNET',
+  TRANSBANK: 'TRANSBANK',
   CASH: 'CASH',
 }
 

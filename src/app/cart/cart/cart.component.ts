@@ -17,7 +17,7 @@ import {ToastrService} from "ngx-toastr";
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
-  config = new DrumRequestModel();
+  config: DrumRequestModel[] = [];
   places: PlaceInterface[];
   loading = {
     waterDrums: true
@@ -28,11 +28,11 @@ export class CartComponent {
   cart: CartModel = new CartModel();
   protected readonly PAYMENT_TYPE = PAYMENT_TYPE;
 
-  constructor(private commonService: CommonClientService,
+  constructor(private readonly commonService: CommonClientService,
               public authService: AuthService,
-              private router: Router,
-              private toastr: ToastrService,
-              private matDialog: MatDialog) {
+              private readonly router: Router,
+              private readonly toastr: ToastrService,
+              private readonly matDialog: MatDialog) {
     this.isLogged = this.authService.isLogged();
     this.places = []
   }
@@ -59,12 +59,18 @@ export class CartComponent {
   loadWaterDrumsAvailable(): void {
     if (this.cart.place !== undefined && this.cart.place.id) {
       this.loading.waterDrums = true;
-      this.commonService.getWaterDrumsAvailable(this.cart.place).subscribe((config: DrumRequestModel) => {
-        this.config = config;
+      this.commonService.getWaterDrumsAvailable(this.cart.place).subscribe((bottles: DrumRequestModel[]) => {
+        this.config = bottles.map(bottle => ({
+          available: bottle.available,
+          description: bottle.description,
+          refillPrice: bottle.refillPrice,
+          bottlePrice: bottle.bottlePrice,
+          isRefill: true
+        }));
         this.loading.waterDrums = false;
       });
     } else {
-      this.config = new DrumRequestModel();
+      this.config = [];
     }
   }
 
@@ -73,22 +79,34 @@ export class CartComponent {
     this.loadWaterDrumsAvailable();
   }
 
-  addToCart(product: TYPE_OF_BOTTLES, description: string, price: number): void {
+  addToCart(price: DrumRequestModel): void {
     if (!this.cart.place.id) {
       return;
     }
-    if (this.existsElement(description)) {
+    if (this.existsElement(price.description)) {
       this.cart.items.forEach(item => {
-        if (item.description === description) {
+        if (item.description === price.description) {
           item.quantity++;
-          item.subtotal = item.quantity * item.price;
+          item.subtotal += this.isTrue(price.isRefill) ? price.refillPrice : price.refillPrice + price.bottlePrice;
         }
       })
     } else {
-      let item = new CartDetailModel(1, price, description, price);
+      let item = new CartDetailModel(1, this.isTrue(price.isRefill) ? price.refillPrice : price.refillPrice + price.bottlePrice, price.description);
       this.cart.items.push(item);
       sessionStorage.setItem('cart', JSON.stringify(this.cart));
     }
+  }
+
+  hasAvailableBottles(description: string, available: number): boolean {
+    let bottle = this.config.find(bottle => bottle.description === description)?.available ?? 0;
+    let cart = this.cart.items.find(item => item.description === description)?.quantity ?? 0;
+    return bottle > cart;
+  }
+
+  isTrue(value: boolean): boolean {
+    if (value === undefined || value === null)
+      return true;
+    return value;
   }
 
   existsElement(description: string): boolean {
@@ -112,7 +130,7 @@ export class CartComponent {
   }
 
   pay(): void {
-    if (this.cart.paymentType === PAYMENT_TYPE.GETNET) {
+    if (this.cart.paymentType === PAYMENT_TYPE.GETNET || this.cart.paymentType === PAYMENT_TYPE.TRANSBANK) {
       const payDialog = this.matDialog.open(ModalTimeToPayComponent, {
         data: this.cart
       });

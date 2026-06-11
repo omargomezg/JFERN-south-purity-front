@@ -45,8 +45,8 @@ export class CommonClientService {
         return this.httpClient.get<MyOrderInterface[]>(`${environment.apiUrl}/payment/`);
     }
 
-    getWaterDrumsAvailable(place: PlaceInterface): Observable<DrumRequestModel> {
-        return this.httpClient.get<DrumRequestModel>(`${environment.apiUrl}/public/water-drums/${place.id}/available`)
+    getWaterDrumsAvailable(place: PlaceInterface): Observable<DrumRequestModel[]> {
+        return this.httpClient.get<DrumRequestModel[]>(`${environment.apiUrl}/public/water-drums/${place.id}/available`)
     }
 
     getPrice(): Observable<number> {

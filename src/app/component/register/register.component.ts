@@ -4,6 +4,7 @@ import {RegisterModel} from "../../core/model";
 import {AuthService} from "../../core/service";
 import {ToastrService} from "ngx-toastr";
 import {Router} from "@angular/router";
+import {RutService} from "../../core/service/rut.service";
 
 @Component({
     selector: 'app-register',
@@ -25,13 +26,15 @@ export class RegisterComponent {
             validators: this.password.bind(this)
         });
 
-    constructor(private formBuilder: FormBuilder, private authService: AuthService,
+    constructor(private formBuilder: FormBuilder,
+                private readonly rutService: RutService,
+                private authService: AuthService,
                 private toastr: ToastrService, private router: Router) {
     }
 
     password(formGroup: FormGroup) {
-        const {password} = formGroup.get('password')?.value;
-        const {confirmPassword} = formGroup.get('confirmPassword')?.value;
+        const password = formGroup.get('password')?.value;
+        const confirmPassword = formGroup.get('confirmPassword')?.value;
         return password === confirmPassword ? null : {passwordNotMatch: true};
     }
 
@@ -51,5 +54,17 @@ export class RegisterComponent {
             this.toastr.error('Ocurrió un error al registrarte, intenta nuevamente.', error);
         })
     }
+
+  onRutInput(event: any) {
+    const input = event.target;
+    const cursorPosition = input.selectionStart;
+    const rutValue = input.value;
+
+    const rutFormateado = this.rutService.formatearRut(rutValue);
+    input.value = rutFormateado;
+
+    const newCursorPosition = cursorPosition + (rutFormateado.length - rutValue.length);
+    input.setSelectionRange(newCursorPosition, newCursorPosition);
+  }
 
 }

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {config, Observable} from "rxjs";
+import {Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {PageInterface, PaginationModel, PlaceInterface, ProductInterface, UserFilterModel} from "../model";
 import {UserInterface} from "../model/user.interface";
@@ -70,6 +70,10 @@ export class CommonAdminService {
 
     getnetProcessPending(): Observable<void> {
         return this.httpClient.patch<void>(`${environment.apiUrl}/payment`, null);
-    }
+  }
+
+  untakenProduct(product: string, place: string): Observable<any> {
+    return this.httpClient.patch<void>(`${environment.apiUrl}/place/${place}/product/${product}`, null);
+  }
 
 }

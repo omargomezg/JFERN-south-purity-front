@@ -1,12 +1,22 @@
-<div class="container">
+<div class="container my-4">
   <div class="border mt-4 p-4">
     <app-paragraph-h1 text="Mis pedidos"></app-paragraph-h1>
-    <div class="text-center mt-4" *ngIf="dataSource.length === 0">
-      <p class="text-primary">No encontramos nada!</p>
+    <div class="row" *ngIf="dataSource.length === 0">
+      <div class="col-md-7 text-center">
+        <h3 class="display-3">¿Aún no has probado nuestro servicio? ¡Tu primer pedido de agua te espera!</h3>
+        <button (click)="buy()" gtagEvent trackOn="click" action="make_order"
+                class="btn btn-lg btn-primary mt-3">
+          ¡Pedir ahora!
+        </button>
+      </div>
+      <div class="col-md-5">
+        <img src="assets/img/5faa6d7533cae.jpeg"
+             class="img-fluid" alt="Agua purificada con limon">
+      </div>
     </div>
-    <p>Acá te presentamos el historia de tus compras.</p>
 
     <div class="mat-elevation-z8" *ngIf="dataSource.length > 0">
+      <p>Acá te presentamos el historia de tus compras.</p>
       <table class="table table-striped">
         <caption>Detalle de mis pedidos</caption>
         <thead>
@@ -21,20 +31,20 @@
         </thead>
         <tbody>
         <tr *ngFor="let order of dataSource">
-          <td>{{order.serial}}</td>
-          <td>{{order.createdDate | date:'short'}}</td>
+          <td>{{ order.serial }}</td>
+          <td>{{ order.createdDate | date:'short' }}</td>
           <td>
             <ng-container *ngFor="let item of order.items">
-              <div>{{item.quantity}} {{item.name}}</div>
+              <div>{{ item.quantity }} {{ item.name }}</div>
             </ng-container>
           </td>
           <td>
             <ng-container *ngFor="let key of order.keys">
-              <div>No. {{key.key}} - Clave: {{key.value}}</div>
+              <div>No. {{ key.key }} - Clave: {{ key.value }}</div>
             </ng-container>
           </td>
-          <td>{{order.status}}</td>
-          <td class="text-end">{{order.total | number}}</td>
+          <td>{{ order.status }}</td>
+          <td class="text-end">{{ order.total | number }}</td>
         </tr>
         </tbody>
       </table>

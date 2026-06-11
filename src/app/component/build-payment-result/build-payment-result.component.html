@@ -1,82 +1,103 @@
-<div class="container">
-    <div class="">
-        <ng-container *ngIf="gettingPaymentStatus">
-            <div class="row">
-                <div class="col h-75 rounded">
-                    <div class="d-flex justify-content-center mt-8">
-                        <div class="spinner-border" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                    <p>Un momento... estamos validando tu pago.</p>
-                </div>
-            </div>
-        </ng-container>
-        <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'REJECTED'">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display"
-                      fontIcon="error"></mat-icon>
-            <p>Tu pago online fue rechazado</p>
-            <a [routerLink]="['/home']" mat-stroked-button>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back"></mat-icon>
-                Home</a>
-        </ng-container>
-        <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'APPROVED'">
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="alert alert-success">
-                        <div class="position-relative d-flex justify-content-center align-items-center mb-3">
-
-                            <mat-icon aria-hidden="false" aria-label="Example home icon"
-                                      class="icon-display"
-                                      fontIcon="check_circle_outline"></mat-icon>
-                        </div>
-                        <h4 class="alert-heading display-3">Su compra ha sido exitosa!</h4>
-                        <p class="mb-1">
-                            Para retirar tu pedido, debes dirigirte al punto de retiro ubicado en tu ubicación. Recuerda
-                            que el bodón que debes retirar es el indicado mas abajo.
-                        </p>
-                        <hr>
-                        <p class="mb-0">El comprobante de tu compra será enviado a tu correo electrónico</p>
-                    </div>
-                    <div class="shadow-sm p-3 mb-5 bg-body rounded">
-                        <div class="d-flex justify-content-center">
-                            <div class="clearfix"></div>
-                        </div>
-                        <p>Tu pago online fue exitoso</p>
-                        <p>Ya puedes hacer el retiro de tus bidones:</p>
-                        <dl>
-                            <ng-container *ngFor="let product of paymentResponse.products">
-                                <dt>Bidón Nº {{product.key}}</dt>
-                                <dd>Clave: {{product.value}}</dd>
-                            </ng-container>
-                        </dl>
-                        <div>
-                            <h4>Recuerda</h4>
-                            <ul>
-                                <li>
-                                    La compra de estos productos no tiene derecho a retracto
-                                </li>
-                                <li>
-                                    No procederá la devolución de dinero por la compra de estos productos
-                                </li>
-                                <li>
-                                    El retiro de los productos se realizará en el punto de retiro seleccionado
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="mb-8"></div>
-                </div>
-            </div>
-        </ng-container>
-        <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'NOT_EXISTS'">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display"
-                      fontIcon="error"></mat-icon>
-            <p>No hemos encontrado información relacionada al pago.</p>
-            <a [routerLink]="['/home']" mat-stroked-button>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back"></mat-icon>
-                Home</a>
-        </ng-container>
+<div class="container my-4">
+  <ng-container *ngIf="gettingPaymentStatus">
+    <div class="row">
+      <div class="col h-75 rounded">
+        <div class="d-flex justify-content-center mt-8">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <p>Un momento... estamos validando tu pago.</p>
+      </div>
     </div>
+  </ng-container>
+  <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'REJECTED'">
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 col-md-8 col-lg-6">
+        <mat-card>
+          <mat-card-content class="text-center">
+            <mat-icon aria-hidden="false"
+                      aria-label="Example home icon"
+                      class="icon-display"
+                      fontIcon="error"></mat-icon>
+            <h1 class="display-1">Tu pago no pudo ser procesado!</h1>
+            <p class="hero-text mb-4" style="color: #1b1e21">
+              Lamentamos informarte, pero ha habido un problema al procesar el pago.
+              Esto podría deberse a un desistimiento, un error de tarjeta o un problema técnico.
+            </p>
+            <h4 class="text-start mt-4 mb-3 ms-4">Pasos a seguir:</h4>
+            <ul class="list-unstyled text-start error-steps mb-5  ms-4">
+              <li>1. Verifica los datos de tu tarjeta (número, fecha de vencimiento, CVV).</li>
+              <li>2. Asegúrate de tener saldo suficiente.</li>
+              <li>3. Intenta con otro método de pago.</li>
+            </ul>
+            <div class="mt-3">
+              <a [routerLink]="['/home']"
+                 class="btn btn-sm btn-primary mt-3 w-100 py-2 fs-5">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back"></mat-icon>
+                Volver</a>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'APPROVED'">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="alert alert-success">
+          <div class="position-relative d-flex justify-content-center align-items-center mb-3">
+
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+                      class="icon-display"
+                      fontIcon="check_circle_outline"></mat-icon>
+          </div>
+          <h4 class="alert-heading display-3">Su compra ha sido exitosa!</h4>
+          <p class="mb-1">
+            Para retirar tu pedido, debes dirigirte al punto de retiro ubicado en tu ubicación. Recuerda
+            que el bodón que debes retirar es el indicado mas abajo.
+          </p>
+          <hr>
+          <p class="mb-0">El comprobante de tu compra será enviado a tu correo electrónico</p>
+        </div>
+        <div class="shadow-sm p-3 mb-5 bg-body rounded">
+          <div class="d-flex justify-content-center">
+            <div class="clearfix"></div>
+          </div>
+          <p>Tu pago online fue exitoso</p>
+          <p>Ya puedes hacer el retiro de tus bidones:</p>
+          <dl>
+            <ng-container *ngFor="let product of paymentResponse.products">
+              <dt>Bidón Nº {{ product.key }}</dt>
+              <dd>Clave: {{ product.value }}</dd>
+            </ng-container>
+          </dl>
+          <div>
+            <h4>Recuerda</h4>
+            <ul>
+              <li>
+                La compra de estos productos no tiene derecho a retracto
+              </li>
+              <li>
+                No procederá la devolución de dinero por la compra de estos productos
+              </li>
+              <li>
+                El retiro de los productos se realizará en el punto de retiro seleccionado
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="mb-8"></div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!gettingPaymentStatus && paymentResponse.paymentStatus === 'NOT_EXISTS'">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-display"
+              fontIcon="error"></mat-icon>
+    <p>No hemos encontrado información relacionada al pago.</p>
+    <a [routerLink]="['/home']" mat-stroked-button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back"></mat-icon>
+      Home</a>
+  </ng-container>
 </div>

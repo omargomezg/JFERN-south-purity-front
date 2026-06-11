@@ -7,3 +7,4 @@ export * from './page.interface';
 export * from './place.interface';
 export * from './user-filter.model';
 export * from './product.interface';
+export * from './commune.interface';
