@@ -32,7 +32,7 @@ export class UsersComponent implements OnInit {
 
   loadUsers(): void {
     let filter = new UserFilterModel();
-    filter.role = 'ADMINISTRATOR,CUSTOMER';
+    filter.role = 'ADMINISTRATOR,STOCKER';
     this.commonAdminService.getUsers(filter, this.pagination).subscribe(customers => {
       this.totalElements = customers.totalElements;
       this.dataSource = customers.content;
