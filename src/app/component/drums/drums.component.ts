@@ -26,42 +26,52 @@ export class DrumsComponent implements OnInit {
     reloadListOfDrums: boolean = false;
     places: PlaceInterface[] = [];
 
-    constructor(private commonAdminService: CommonAdminService, private formBuilder: FormBuilder,
-                private toastr: ToastrService, private activatedRoute: ActivatedRoute, private router: Router) {
-        this.loadPlaces();
-    }
+  constructor(
+    private commonAdminService: CommonAdminService,
+    private formBuilder: FormBuilder,
+    private toastr: ToastrService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+  ) {
+    this.loadPlaces();
+  }
 
-    ngOnInit(): void {
-        this.activatedRoute.params.subscribe(params => {
-            if (params['placeId'])
-                this.formDrum.controls['place'].setValue(params['placeId'] as string);
-        });
-    }
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe((params) => {
+      if (params['placeId'])
+        this.formDrum.controls['place'].setValue(params['placeId'] as string);
+    });
+  }
 
-    loadPlaces(): void {
-        this.commonAdminService.getPlaces().subscribe(places => this.places = places);
+  loadPlaces(): void {
+    this.commonAdminService
+      .getPlaces()
+      .subscribe((places) => (this.places = places));
   }
 
   setDefaultPrice(event: MatRadioChange) {
     const refill = event.value == this.bottle20Lts ? 2500 : 1800;
     const bottle = event.value == this.bottle20Lts ? 4500 : 4200;
-      this.formDrum.controls['priceRefill'].setValue(refill);
-      this.formDrum.controls['priceBottle'].setValue(bottle);
+    this.formDrum.controls['priceRefill'].setValue(refill);
+    this.formDrum.controls['priceBottle'].setValue(bottle);
   }
 
-    saveDrum(): void {
-        let order = this.formDrum.value as ProductInterface;
-        this.commonAdminService.postProduct(order).subscribe(() => {
-            this.toastr.success('Bidón registrado :)');
-            this.formDrum.controls['lockNumber'].setValue(0);
-            this.formDrum.controls['padlockKey'].setValue('');
-            this.reloadListOfDrums = !this.reloadListOfDrums;
-        }, error => {
-            this.toastr.error(error);
-        })
-    }
+  saveDrum(): void {
+    let order = this.formDrum.value as ProductInterface;
+    this.commonAdminService.postProduct(order).subscribe(
+      () => {
+        this.toastr.success('Bidón registrado :)');
+        this.formDrum.controls['lockNumber'].setValue(0);
+        this.formDrum.controls['padlockKey'].setValue('');
+        this.reloadListOfDrums = !this.reloadListOfDrums;
+      },
+      (error) => {
+        this.toastr.error(error);
+      },
+    );
+  }
 
-    cancel() {
-        this.router.navigateByUrl('/puntos-de-venta');
-    }
+  cancel() {
+    this.router.navigateByUrl('/puntos-de-venta');
+  }
 }

@@ -52,6 +52,14 @@ export class CommonAdminService {
         return this.httpClient.get<UserInterface>(`${environment.apiUrl}/user/${id}`);
     }
 
+    updatePwd(id: string, pwd: string) {
+      return this.httpClient.put<void>(`${environment.apiUrl}/user/${id}/password`, {
+        id: id,
+        password: pwd,
+        sendEmail: true
+      });
+    }
+
     putUser(user: any): Observable<void> {
         return this.httpClient.put<void>(`${environment.apiUrl}/administrator/user/${user.id}`, user);
     }

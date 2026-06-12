@@ -1,4 +1,4 @@
-import {afterNextRender, Component, inject, PLATFORM_ID} from '@angular/core';
+import {afterNextRender, Component, OnInit, inject, PLATFORM_ID} from '@angular/core';
 import {AuthService} from "../../core/service";
 import {FormBuilder, Validators} from '@angular/forms';
 import {Router} from "@angular/router";
@@ -6,11 +6,15 @@ import {LoginModel} from "../../core/model";
 import {MatDialog} from '@angular/material/dialog';
 import {RestorePasswordComponent} from '../restore-password/restore-password.component';
 import {isPlatformBrowser} from "@angular/common";
+import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-login', templateUrl: './login.component.html', styleUrls: ['./login.component.scss'], standalone: false
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+  standalone: false
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   private authService = inject(AuthService);
   private router = inject(Router);
@@ -24,12 +28,23 @@ export class LoginComponent {
     rememberMe: false
   });
   failedLogin = false;
+    urlApi = environment.apiUrl
 
-  constructor() {
-    afterNextRender(() => {
-      this.loadRememberedUser();
-    });
-  }
+    constructor(private formBuilder: FormBuilder) {
+      afterNextRender(() => {
+        this.loadRememberedUser();
+      });
+    }
+
+    ngOnInit(): void {
+        let remember = localStorage.getItem('remember');
+        if (remember) {
+            let loginModel = JSON.parse(atob(remember));
+            this.loginForm.controls['email'].setValue(loginModel.email);
+            this.loginForm.controls['password'].setValue(loginModel.password);
+            this.loginForm.controls['rememberMe'].setValue(loginModel.rememberMe);
+        }
+    }
 
   private loadRememberedUser(): void {
     const remember = localStorage.getItem('remember');

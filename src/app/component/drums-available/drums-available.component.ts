@@ -1,36 +1,38 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, inject, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {CommonAdminService, ProductService} from "../../core/service";
 import {PaginationModel, ProductInterface} from "../../core/model";
 import {PageEvent} from "@angular/material/paginator";
 import {STATUS_BOTTLES} from "../../core/constant/app.constants";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {ToastrService} from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
+import { ResponsiveService } from 'src/app/core/service/responsive.service';
 
 @Component({
-    selector: 'app-drums-available',
-    templateUrl: './drums-available.component.html',
-    styleUrls: ['./drums-available.component.scss'],
-    standalone: false
+  selector: 'app-drums-available',
+  templateUrl: './drums-available.component.html',
+  styleUrls: ['./drums-available.component.scss'],
+  standalone: false
 })
 export class DrumsAvailableComponent implements OnInit, OnChanges {
 
   @Input() placeId: string | undefined | null;
   @Input() reload: string = '';
+  private responsiveService = inject(ResponsiveService);
   displayedColumns: string[] = ['number', 'description', 'key', 'createdDate', 'status', 'options'];
   selectedPlaceId: string | undefined | null;
   dataSource: ProductInterface[];
-  totalElements: number = 0
+  totalElements: number = 0;
   pagination: PaginationModel = new PaginationModel();
   statuses = STATUS_BOTTLES;
   selectedStatus: string = STATUS_BOTTLES[0].code;
   public filterForm: FormGroup;
+  isMobile = this.responsiveService.isMobile;
 
   constructor(private commonAdminService: CommonAdminService,
               private productService: ProductService,
-              private formBuilder: FormBuilder,
-              private toast: ToastrService) {
+    private formBuilder: FormBuilder,
+    private toast: ToastrService) {
     this.dataSource = [];
-    // Set default selected status to the first entry of STATUS_BOTTLES (code: '') => "Todos"
     this.filterForm = this.formBuilder.group({status: [STATUS_BOTTLES[0].code]});
   }
 
@@ -47,7 +49,7 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
 
   buildForm(): FormGroup {
     return this.formBuilder.group({
-      status: ['']
+      status: [''],
     });
   }
 
@@ -77,14 +79,16 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
   }
 
   unTake(product: ProductInterface) {
-    this.commonAdminService.untakenProduct(product.id, this.placeId as string).subscribe((result) => {
-      if (result === true) {
-        this.toast.success('Product liberado');
-        this.getOrders()
-      } else {
-        this.toast.error('No es posible liberar el producto');
-      }
-    })
+    this.commonAdminService
+      .untakenProduct(product.id, this.placeId as string)
+      .subscribe((result) => {
+        if (result === true) {
+          this.toast.success('Product liberado');
+          this.getOrders();
+        } else {
+          this.toast.error('No es posible liberar el producto');
+        }
+      });
   }
 
   delete(product: ProductInterface) {

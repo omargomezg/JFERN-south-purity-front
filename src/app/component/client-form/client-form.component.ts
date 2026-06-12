@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import { AuthService, CommonAdminService } from "../../core/service";
-import { FormBuilder, Validators } from "@angular/forms";
-import { UserInterface } from "../../core/model/user.interface";
-import { ToastrService } from "ngx-toastr";
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
+import {AuthService, CommonAdminService} from "../../core/service";
+import {FormBuilder, Validators} from "@angular/forms";
+import {UserInterface} from "../../core/model/user.interface";
+import {ToastrService} from "ngx-toastr";
+import {MatDialog} from "@angular/material/dialog";
+import {DialogPasswordResetComponent} from "../dialog-password-reset/dialog-password-reset.component";
 
 interface UserStatus {
   label: string;
@@ -16,10 +18,10 @@ interface Role {
 }
 
 @Component({
-    selector: 'app-client-form',
-    templateUrl: './client-form.component.html',
-    styleUrls: ['./client-form.component.scss'],
-    standalone: false
+  selector: 'app-client-form',
+  templateUrl: './client-form.component.html',
+  styleUrls: ['./client-form.component.scss'],
+  standalone: false
 })
 export class ClientFormComponent implements OnInit {
 
@@ -43,7 +45,8 @@ export class ClientFormComponent implements OnInit {
     private authService: AuthService,
     private commonAdminService: CommonAdminService,
     private formBuilder: FormBuilder,
-    private router: Router) {
+    private router: Router,
+              public dialog: MatDialog) {
     this.userStatus.push({ value: 'ACTIVE', label: 'Activo' });
     this.userStatus.push({ value: 'DISABLED', label: 'Desactivado' });
     this.roles.push({ value: 'ADMINISTRATOR', label: 'Administrador' });
@@ -88,5 +91,14 @@ export class ClientFormComponent implements OnInit {
   randomPassword(): void {
     let pwd = Math.random().toString(36).slice(2, 12);
     this.formUser.controls['password'].setValue(pwd);
+  }
+
+  openDialogPasswordReset(): void {
+    const dialogRef = this.dialog.open(DialogPasswordResetComponent, {
+      data: { id: this.user.id, email: this.user.email, password: "" }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    })
   }
 }

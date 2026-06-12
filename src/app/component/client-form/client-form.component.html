@@ -1,49 +1,59 @@
 <div class="container">
-  <h1>Creación de usuario</h1>
+  @if (!user.id) {
+    <h1>Creación de usuario</h1>
+  }
   <form novalidate [formGroup]="formUser" (ngSubmit)="submit()" class="base-form">
-    <h2>Opciones personales</h2>
-    <mat-form-field appearance="fill" class="base-full-width">
-      <mat-label>Rut</mat-label>
-      <input type="text" matInput formControlName="rut">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="base-full-width">
-      <mat-label>Nombre</mat-label>
-      <input type="text" matInput formControlName="fullName">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="base-full-width">
-      <mat-label>Rol</mat-label>
-      <mat-select formControlName="role">
-        @for (role of roles; track role) {
-          <mat-option [value]="role.value">{{role.label}}</mat-option>
-        }
-      </mat-select>
-    </mat-form-field>
-    @if (!user.id || profile?.role === 'ADMINISTRATOR') {
+    <mat-card style="padding: 24px;">
+      <h2>Opciones personales</h2>
       <mat-form-field appearance="fill" class="base-full-width">
-        <mat-label>{{user.id ? 'Nueva Contraseña' : 'Contraseña'}}</mat-label>
-        <input type="password" matInput formControlName="password" autocomplete="new-password">
-        <button type="button" (click)="randomPassword()" mat-button matSuffix mat-stroked-button>Generar contraseña
-        </button>
+        <mat-label>Rut</mat-label>
+        <input type="text" matInput formControlName="rut">
       </mat-form-field>
-    }
-    <h2>Información de contacto</h2>
-    <mat-form-field appearance="fill" class="base-full-width">
-      <mat-label>Correo electrónico</mat-label>
-      <input type="email" matInput formControlName="email" [readonly]="">
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="base-full-width">
-      <mat-label>Estado</mat-label>
-      <mat-select formControlName="status">
-        @for (status of userStatus; track status) {
-          <mat-option [value]="status.value">{{status.label}}</mat-option>
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>Nombre</mat-label>
+        <input type="text" matInput formControlName="fullName">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>Rol</mat-label>
+        <mat-select formControlName="role">
+          @for (role of roles; track role) {
+            <mat-option [value]="role.value">{{ role.label }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      @if (!user.id || profile?.role === 'ADMINISTRATOR') {
+        <mat-form-field appearance="fill" class="base-full-width">
+          <mat-label>{{ user.id ? 'Nueva Contraseña' : 'Contraseña' }}</mat-label>
+          <input type="password" matInput formControlName="password" autocomplete="new-password">
+          <button type="button" (click)="randomPassword()" mat-button matSuffix mat-stroked-button>Generar contraseña
+          </button>
+        </mat-form-field>
+      }
+    </mat-card>
+    <mat-card style="padding: 24px; margin-top: 30px">
+      <h2>Información de contacto</h2>
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>Correo electrónico</mat-label>
+        <input type="email" matInput formControlName="email" [readonly]="">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="base-full-width">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="status">
+          @for (status of userStatus; track status) {
+            <mat-option [value]="status.value">{{ status.label }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <div class="text-end form-actions">
+        <a [routerLink]="['/usuarios']" mat-stroked-button class="action-btn">Cancelar</a>
+        @if (user.id) {
+          <button type="button" mat-stroked-button (click)="openDialogPasswordReset()" class="action-btn">Contraseña
+          </button>
         }
-      </mat-select>
-    </mat-form-field>
-    <div class="text-end">
-      <a [routerLink]="['/usuarios']" mat-button>Cancelar</a>
-      <button type="submit" mat-raised-button class="m-1" [disabled]="!formUser.valid" color="primary">
-        {{user.id ? 'Actualizar' : 'Guardar'}}
-      </button>
-    </div>
+        <button type="submit" mat-raised-button class="action-button" [disabled]="!formUser.valid" color="primary">
+          {{ user.id ? 'Actualizar' : 'Guardar' }}
+        </button>
+      </div>
+    </mat-card>
   </form>
 </div>

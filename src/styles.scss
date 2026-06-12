@@ -30,6 +30,7 @@ html {
 body {
   margin: 0;
   font-family: Roboto, 'sans-serif', serif !important;
+  background-color: #f4f6f8;
 }
 
 .parallax-container {
@@ -80,4 +81,23 @@ body {
     font-weight: 450 !important;
   }
 
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite linear;
+  border-radius: 4px;
+  color: transparent !important;
+  pointer-events: none; /* Desactiva clicks mientras carga */
+  user-select: none;
+
+  * {
+    opacity: 0 !important; /* Oculta texto hijo si existiera */
+  }
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }

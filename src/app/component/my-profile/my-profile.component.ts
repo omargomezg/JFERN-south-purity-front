@@ -15,6 +15,7 @@ export class MyProfileComponent implements OnInit {
   user: UserInterface = {} as UserInterface;
   address: string = '';
   loading: boolean = true;
+  rolName: string = '';
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
@@ -26,6 +27,7 @@ export class MyProfileComponent implements OnInit {
     const id = this.authService.getProfile()?.id as string;
     this.userService.getById(id).subscribe(user => {
       this.user = user;
+      this.setRolName();
       this.loading = false;
     });
   }
@@ -36,4 +38,19 @@ export class MyProfileComponent implements OnInit {
     dialogRef.afterClosed().subscribe(() => {
     });
   }
+
+  private setRolName(): void {
+    switch (this.user.role) {
+      case 'ADMINISTRATOR':
+        this.rolName = 'Administrador';
+        break;
+      case 'STOCKER':
+        this.rolName = 'Reponedor';
+        break;
+      default:
+        this.rolName = '';
+        break;
+    }
+  }
+
 }
