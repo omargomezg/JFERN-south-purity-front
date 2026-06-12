@@ -9,7 +9,8 @@ import {RutService} from "../../core/service/rut.service";
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
-    styleUrls: ['./register.component.scss']
+    styleUrls: ['./register.component.scss'],
+    standalone: false
 })
 export class RegisterComponent {
     registerForm = this.formBuilder.group({

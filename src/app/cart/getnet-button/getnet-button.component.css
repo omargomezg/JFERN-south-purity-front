@@ -1,0 +1,61 @@
+.payment-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.payment-item {
+  margin: 0;
+}
+.payment-item .form-check {
+  padding: 0.55rem 1rem 0.55rem 2rem;
+  border: 1px solid rgba(129, 195, 215, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+.payment-item .form-check:hover {
+  border-color: rgba(58, 124, 165, 0.4);
+  background: #f3f7fa;
+}
+.payment-item .form-check-input {
+  cursor: pointer;
+}
+.payment-item .form-check-input:checked {
+  background-color: #3a7ca5;
+  border-color: #3a7ca5;
+}
+.payment-item .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(58, 124, 165, 0.15);
+  border-color: #3a7ca5;
+}
+.payment-item .form-check-label {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+:host > div:not(.payment-content) {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: #f3f7fa;
+  border-radius: 8px;
+  border-left: 3px solid #3a7ca5;
+}
+:host > div:not(.payment-content) img {
+  max-height: 28px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+:host > div:not(.payment-content) p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/*# sourceMappingURL=getnet-button.component.css.map */

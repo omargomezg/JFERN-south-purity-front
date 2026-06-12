@@ -1,16 +1,17 @@
 <form [formGroup]="filterForm">
   <mat-form-field class="base-full-width">
     <mat-label>Estado</mat-label>
-    <mat-select formControlName="status">
-      <mat-option
-        *ngFor="let status of statuses; trackBy: trackByStatusCode"
-        [value]="status.code"
-      >
-        {{ status.value }}
-      </mat-option>
-    </mat-select>
+    <mat-radio-group formControlName="status" class="status-filter">
+      @for (status of statuses; track trackByStatusCode($index, status)) {
+        <mat-radio-button
+          [value]="status.code">
+          {{ status.value }}
+        </mat-radio-button>
+      }
+    </mat-radio-group>
   </mat-form-field>
 </form>
+
 @if (isMobile()) {
   <div class="mobile-cards-container">
     @for (element of dataSource; track element.lockNumber) {
@@ -141,11 +142,17 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 }
-<mat-paginator
-  [length]="totalElements"
-  (page)="handlePageEvent($event)"
-  [pageSize]="pagination.pageSize"
-  [pageSizeOptions]="[5, 10, 25, 100]"
-  aria-label="Select page"
->
+
+@if (dataSource.length === 0) {
+  <div class="empty-state">
+    <mat-icon>inventory_2</mat-icon>
+    <p>No se encontraron bidones en esta ubicación</p>
+  </div>
+}
+
+<mat-paginator [length]="totalElements"
+               (page)="handlePageEvent($event)"
+               [pageSize]="pagination.pageSize"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page">
 </mat-paginator>

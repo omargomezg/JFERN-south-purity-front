@@ -1,36 +1,24 @@
-import {
-  Component,
-  inject,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { PageEvent } from '@angular/material/paginator';
+import {Component, Input, inject, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {CommonAdminService, ProductService} from "../../core/service";
+import {PaginationModel, ProductInterface} from "../../core/model";
+import {PageEvent} from "@angular/material/paginator";
+import {STATUS_BOTTLES} from "../../core/constant/app.constants";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
-import { STATUS_BOTTLES } from '../../core/constant/app.constants';
-import { PaginationModel, ProductInterface } from '../../core/model';
-import { CommonAdminService, ProductService } from '../../core/service';
 import { ResponsiveService } from 'src/app/core/service/responsive.service';
 
 @Component({
   selector: 'app-drums-available',
   templateUrl: './drums-available.component.html',
   styleUrls: ['./drums-available.component.scss'],
+  standalone: false
 })
 export class DrumsAvailableComponent implements OnInit, OnChanges {
+
   @Input() placeId: string | undefined | null;
   @Input() reload: string = '';
   private responsiveService = inject(ResponsiveService);
-  displayedColumns: string[] = [
-    'number',
-    'description',
-    'key',
-    'createdDate',
-    'status',
-    'options',
-  ];
+  displayedColumns: string[] = ['number', 'description', 'key', 'createdDate', 'status', 'options'];
   selectedPlaceId: string | undefined | null;
   dataSource: ProductInterface[];
   totalElements: number = 0;
@@ -40,14 +28,12 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
   public filterForm: FormGroup;
   isMobile = this.responsiveService.isMobile;
 
-  constructor(
-    private commonAdminService: CommonAdminService,
-    private productService: ProductService,
+  constructor(private commonAdminService: CommonAdminService,
+              private productService: ProductService,
     private formBuilder: FormBuilder,
-    private toast: ToastrService,
-  ) {
+    private toast: ToastrService) {
     this.dataSource = [];
-    this.filterForm = this.buildForm();
+    this.filterForm = this.formBuilder.group({status: [STATUS_BOTTLES[0].code]});
   }
 
   ngOnInit(): void {
@@ -55,16 +41,10 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
   }
 
   getOrders(): void {
-    this.commonAdminService
-      .getOrders(
-        this.selectedPlaceId as string,
-        this.selectedStatus,
-        this.pagination,
-      )
-      .subscribe((orders) => {
-        this.totalElements = orders.totalElements;
-        this.dataSource = orders.content;
-      });
+    this.commonAdminService.getOrders(this.selectedPlaceId as string, this.selectedStatus, this.pagination).subscribe(orders => {
+      this.totalElements = orders.totalElements;
+      this.dataSource = orders.content;
+    })
   }
 
   buildForm(): FormGroup {

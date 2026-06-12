@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2f6690;
+  white-space: nowrap;
+}
+
+.form-select {
+  border: 1px solid rgba(129, 195, 215, 0.4);
+  border-radius: 8px;
+  padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-width: 260px;
+}
+.form-select:focus {
+  border-color: #3a7ca5;
+  box-shadow: 0 0 0 3px rgba(58, 124, 165, 0.15);
+  outline: none;
+}
+.form-select:hover:not(:focus) {
+  border-color: rgba(129, 195, 215, 0.7);
+}
+
+/*# sourceMappingURL=list-of-clients.component.css.map */

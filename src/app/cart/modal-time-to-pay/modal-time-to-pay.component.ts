@@ -6,7 +6,8 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 @Component({
     selector: 'app-modal-time-to-pay',
     templateUrl: './modal-time-to-pay.component.html',
-    styleUrls: ['./modal-time-to-pay.component.scss']
+    styleUrls: ['./modal-time-to-pay.component.scss'],
+    standalone: false
 })
 export class ModalTimeToPayComponent implements OnInit {
     timeToPay: number = 0;

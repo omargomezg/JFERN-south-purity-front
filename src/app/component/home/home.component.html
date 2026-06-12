@@ -1,164 +1,142 @@
-<div class="container-fluid">
-    <section class="parallax">
-        <div class="py-14 py-md-23 py-lg-25">
-            <div class="d-flex flex-column justify-content-center align-items-center text-center">
-                <h1 class="fs-10 fs-lg-11 mb-0 font-weight-bold text-white">Agua Purificada Premium</h1>
-                <p class="mt-7 mb-10 text-white fs-5 hero-text">
-                    Agua purificada de la mejor calidad, con un proceso de purificación de 7 etapas, para que
-                    disfrutes de un agua pura y cristalina.
-                </p>
-                <button (click)="buy()" gtagEvent trackOn="click" action="make_order" class="btn btn-lg btn-primary">
-                    Solicita tu recarga
-                </button>
+<div class="container-fluid px-0">
+  <section
+    class="parallax-container"
+    style="background-image: url(&quot;/assets/images/water-parallax.png&quot;)"
+    appParallax
+  >
+    <div class="parallax-content">
+      <div class="container">
+        <h1 class="fw-bolder">Agua purificada <br />con sistema de racks <br />en tu edificio o
+            condominio</h1>        
+        <p class="text-light pt-3">Disponible 24/7 en tu hogar.</p>
+        <p class="text-uppercase text-light fw-bold pb-3">
+          Instalación Gratis
+        </p>
+        <p class="pt-2 text-uppercase text-light">Contacto Whatsapp</p>
+        <a
+          target="_blank"
+          matTooltip="Abrir Whatsapp"
+          href="https://wa.me/56984428760"
+          class="text-decoration-none text-light"
+          >+56 9 8442 8760</a
+        >
+      </div>
+    </div>
+  </section>
+  <section class="" id="como-comprar">
+    <div
+      class="container d-flex flex-column justify-content-center min-vh-100 py-5"
+    >
+      <div class="text-center w-100">
+        <h1 class="display-3 fw-bold mb-5">¿Cómo podemos ayudarte?</h1>
+        <div class="row g-4 justify-content-center">
+          <!-- Columna 1: Vivo en un edificio o condominio -->
+          <div class="col-12 col-md-4">
+            <div class="card border-0 h-100 como-comprar-card">
+              <div
+                class="card-body d-flex flex-column align-items-center px-4 py-5"
+              >
+                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">
+                  Vivo en un edificio o condominio
+                </h2>
+                <a
+                  [routerLink]="['/residentes']"
+                  class="btn btn-primary btn-como-comprar mt-auto"
+                >
+                  Quiero instalar el rack<br />en mi comunidad
+                </a>
+              </div>
             </div>
-            <div class="row align-items-center mt-4 mt-md-23 mt-lg-25">
-                <div class="col">
-                    <div class="card border-0 bg-transparent mb-10 mb-md-0">
-                        <div class="card-body p-0 text-center">
-                            <a href="https://wa.me/56984428760"
-                                class="link-offset-2 link-underline link-underline-opacity-0" target="_blank"
-                                rel="noopener noreferrer">
-                                <div class="card-icon mb-6">
-                                    <i class="material-icons text-white">phone</i>
-                                </div>
-                                <div class="fs-1 lh-1 my-3 text-uppercase fw-medium letter-spacing-caption text-white">
-                                    Contacto Whatsapp
-                                </div>
-                                <p class="mb-0 fw-light text-white">
-                                    +56 9 8442 8760
-                                </p>
-                            </a>
-                        </div>
-                    </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card border-0 h-100 como-comprar-card">
+              <div
+                class="card-body d-flex flex-column align-items-center px-4 py-5"
+              >
+                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">
+                  Soy administrador
+                </h2>
+                <a
+                  [routerLink]="['/informacion-para-administracion']"
+                  class="btn btn-primary btn-como-comprar mt-auto"
+                >
+                  Información para edificios,<br />condominios y comités
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card border-0 h-100 como-comprar-card">
+              <div
+                class="card-body d-flex flex-column align-items-center px-4 py-5"
+              >
+                <h2 class="fs-4 fw-bold text-primary text-uppercase mb-4">
+                  Ya soy cliente
+                </h2>
+                <div class="d-flex flex-column gap-2 mt-auto">
+                  <button
+                    (click)="buy()"
+                    class="btn btn-primary btn-como-comprar"
+                  >
+                    Solicitar recarga
+                  </button>
+                  <a
+                    href="https://wa.me/56984428760"
+                    target="_blank"
+                    matTooltip="Abrir Whatsapp"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary btn-como-comprar"
+                  >
+                    Soporte / Whatsapp
+                  </a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <section class="section" id="como-comprar">
-        <div class="section-content container text-center">
-            <small
-                class="fs-1 font-family-secondary text-uppercase font-weight-bold letter-spacing-caption text-muted">Agua
-                Purificada Premium</small>
-            <h1 class="mb-0 display-1">¿Como comprar?</h1>
-            <div class="row mt-6 mt-md-10 mt-lg-17 vertical-divider-light">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card border-0">
-                        <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-                            <div class="card-icon mb-6">
-                                <span class="step-number">1</span>
-                            </div>
-                            <div class="mb-5">
-                                <p class="text-steps">
-                                    Debes asegurarte de que nuestros productos están cerca de donde vives.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card border-0">
-                        <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-                            <div class="card-icon mb-6">
-                                <span class="step-number">2</span>
-                            </div>
-                            <div class="mb-5">
-                                <p class="text-steps">Luego, debes inscribirte en nuestra página, y elegir la dirección
-                                    que
-                                    aparece en el
-                                    rack
-                                    mas cercano a tu dirección</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card border-0">
-                        <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-                            <div class="card-icon mb-6">
-                                <span class="step-number">3</span>
-                            </div>
-                            <div class="mb-5">
-                                <p class="text-steps">Ya registrado todo es mas fácil, llenas el carrito de compras, y
-                                    pagas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card border-0">
-                        <div class="card-body py-17 px-10 d-flex flex-column align-items-center">
-                            <div class="card-icon mb-6">
-                                <span class="step-number font-weight-bold">4</span>
-                            </div>
-                            <div class="mb-5">
-                                <p class="text-steps">Te entregaremos una clave, con la cual vas hacia el rack, abres el
-                                    candado, sacas el
-                                    botellón, dejas el botellón vacío,
-                                    ¡cierras el candado y listo!, ya tienes tu agua purificada premium</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section bg-secondary px-5" id="quienes-somos">
-        <div class="section-content text-center container">
-            <h1>Quienes somos</h1>
-        </div>
-        <div class="row justify-content-lg-center my-5">
-            <div class="col col-lg-6 text-center">
-                <p>Hola, somos pureza del sur, un nuevo concepto en la venta de agua purificada para tu hogar, nuestro
-                    revolucionario método, te permitirá tener agua purificada en botellones de 20 litros las 24 horas
-                    del
-                    día y los
-                    365 días del año, y a solo un paso de tu departamento, o de tu casa.</p>
-                <p>Es importante que sepas que nuestro método de venta está pensado para edificios y condominios.</p>
-                <p class="text-info">Si vives en uno de ellos y no tienen nuestros productos no dudes en
-                    contactarnos.</p>
-            </div>
-        </div>
-    </section>
-    <section class="section" id="ventajas">
-        <div class="section-content text-center container">
-            <h1>Ventajas</h1>
-        </div>
-        <div class="sds-block mt-14 mt-xl-20">
-            <div class="sds-block-background sds-block-background-right"
-                style="background-image: url('assets/images/home-ventajas.jpeg')">
-            </div>
-            <div class="sds-block-foreground sds-block-foreground-left text-center text-xl-left">
-                <ul class="list-unstyled mb-12">
-                    <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start">
-                        <i class="material-icons text-primary mr-1">check_circle</i> Compras
-                        agua purificada premium
-                    </li>
-                    <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start">
-                        <i class="material-icons text-primary mr-1 align-top">check_circle</i> Tienes
-                        agua disponible todos los días a la hora que quieras, y no debes esperar a que lleguen con tu
-                        pedido, perdiendo tiempo valioso que a veces no tienes.
-                    </li>
-                    <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start"><i
-                            class="material-icons text-primary mr-1">check_circle</i> Evitas
-                        tener una gran cantidad de bidones, pues tienes a disposición cada vez que lo necesitas, y de
-                        este modo, ocupas menos espacio.
-                    </li>
-                    <li class="mb-6 d-flex align-items-center justify-content-center justify-content-xl-start"><i
-                            class="material-icons text-primary mr-1">check_circle</i> El
-                        valor de la recarga es la misma que la compra en local, ósea no se cobra despacho
-                    </li>
-                    <li class="d-flex align-items-center justify-content-center justify-content-xl-start"><i
-                            class="material-icons text-primary mr-1">check_circle</i> Contribuyes
-                        al cuidado del medio ambiente, por medio de la reutilización de bidones. Además, se disminuyen
-                        la cantidad de traslados de bidones, bajando las emisiones de CO2.
-                    </li>
-                </ul>
-                <button (click)="buy()" class="btn btn-lg btn-primary">Haz tu
-                    pedido online
-                </button>
-            </div>
-        </div>
-    </section>
-    <section id="contacto">
-        <app-contact></app-contact>
-    </section>
+      </div>
+    </div>
+  </section>
+  <section class="bg-light" id="quienes-somos">
+    <div
+      class="container d-flex flex-column justify-content-center min-vh-100 py-5"
+    >
+      <div class="text-center w-100 section-who">
+        <h1 class="display-3 fw-bold mb-5">¿Quienes somos?</h1>
+          <p class="mb-5">
+            Somos una empresa valdiviana <br />que comprende
+            <strong
+              >la importancia del agua<br />
+              en la salud y el bienestar de las personas.</strong
+            ><br />Conscientes de las impurezas presentes <br />en el agua de
+            consumo habitacional<br />y de las dificultades que muchas veces
+            existen<br />para acceder a agua limpia de forma continua,<br />buscamos
+            una manera de facilitar su acceso<br />de forma segura y cómoda.
+          </p>
+          <p class="mb-5">
+            A partir de nuestra experiencia<br />
+            el abastecimiento de agua,<br />
+            identificamos que muchos servicios requieren<br />
+            coordinación previa y disponibilidad constante<br />por parte de las
+            personas,<br />
+            por lo que decidimos ir un paso más allá y<br />
+            proponer
+            <strong
+              >una alternativa que permite<br />
+              contar con agua completamente purificada<br />
+              24 horas del día.</strong
+            >
+          </p>
+          <p class="mb-5">
+            Toda el agua <strong>Pureza del Sur</strong><br />
+            pasa por meticulosos procesos de filtrado<br />y purificación, lo
+            que garantiza<br />un producto seguro, saludable<br />y beneficioso
+            para el consumo diario,<br />especialmente en contextos urbanos<br />donde
+            acceder a este recurso vital<br />se vuelve cada vez más necesario.
+          </p>
+      </div>
+    </div>
+  </section>
 </div>

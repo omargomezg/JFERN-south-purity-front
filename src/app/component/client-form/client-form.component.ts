@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {CommonAdminService} from "../../core/service";
+import {AuthService, CommonAdminService} from "../../core/service";
 import {FormBuilder, Validators} from "@angular/forms";
 import {UserInterface} from "../../core/model/user.interface";
 import {ToastrService} from "ngx-toastr";
@@ -21,6 +21,7 @@ interface Role {
   selector: 'app-client-form',
   templateUrl: './client-form.component.html',
   styleUrls: ['./client-form.component.scss'],
+  standalone: false
 })
 export class ClientFormComponent implements OnInit {
 
@@ -37,12 +38,14 @@ export class ClientFormComponent implements OnInit {
 
   userStatus: UserStatus[] = [];
   roles: Role[] = [];
+  profile = this.authService.getProfile();
 
   constructor(private activatedRoute: ActivatedRoute,
-              private toastr: ToastrService,
-              private commonAdminService: CommonAdminService,
-              private formBuilder: FormBuilder,
-              private router: Router,
+    private toastr: ToastrService,
+    private authService: AuthService,
+    private commonAdminService: CommonAdminService,
+    private formBuilder: FormBuilder,
+    private router: Router,
               public dialog: MatDialog) {
     this.userStatus.push({ value: 'ACTIVE', label: 'Activo' });
     this.userStatus.push({ value: 'DISABLED', label: 'Desactivado' });

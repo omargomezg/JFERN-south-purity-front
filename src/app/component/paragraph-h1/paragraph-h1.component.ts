@@ -1,9 +1,10 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-paragraph-h1',
-  templateUrl: './paragraph-h1.component.html',
-  styleUrls: ['./paragraph-h1.component.scss']
+    selector: 'app-paragraph-h1',
+    templateUrl: './paragraph-h1.component.html',
+    styleUrls: ['./paragraph-h1.component.scss'],
+    standalone: false
 })
 export class ParagraphH1Component {
 

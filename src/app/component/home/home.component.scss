@@ -1,14 +1,14 @@
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   clear: both;
   font-weight: 400;
   color: #212529;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
-  border: 0
+  border: 0;
 }
 
 .text-steps {
@@ -18,29 +18,103 @@
   margin-top: 20px;
 }
 
-.card-icon>span {
+.card-icon > span {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.list-unstyled>li {
+.list-unstyled > li {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  list-style: none
+  list-style: none;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  min-height: 100vh;
+  padding: 5rem 0; /* Previene desbordamiento y solapamiento en móviles horizontales */
+
+  h2 {
+    min-height: 4.5rem;
+  }
+}
+
+/* Como comprar section */
+.como-comprar-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.btn-como-comprar {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.cf-p {
+  font-size: 14px;
 }
 
 h1 {
-  font-size: 3.125rem;
-  font-weight: 500;
-  line-height: 1.2;
-  text-align: center;
+  font-size: 22px;
 }
 
-.parallax {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/images/water-parallax.jpg");
-  height: 83vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.section-who > p {
+  font-size: 14px;
+}
+
+@media (min-width: 375px) {
+  .cf-p {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .section-who > p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 425px) {
+  .cf-p {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .section-who > p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cf-p {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .section-who > p {
+    font-size: 18px;
+  }
 }

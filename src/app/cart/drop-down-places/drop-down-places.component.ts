@@ -4,9 +4,10 @@ import {AuthService, PublicService, UserService} from '../../core/service';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-drop-down-places',
-  templateUrl: './drop-down-places.component.html',
-  styleUrls: ['./drop-down-places.component.scss']
+    selector: 'app-drop-down-places',
+    templateUrl: './drop-down-places.component.html',
+    styleUrls: ['./drop-down-places.component.scss'],
+    standalone: false
 })
 export class DropDownPlacesComponent implements OnInit {
   @Output()

@@ -5,9 +5,10 @@ import {ToastrService} from "ngx-toastr";
 import {UserService} from "../../core/service";
 
 @Component({
-  selector: 'app-my-customer-profile',
-  templateUrl: './my-customer-profile.component.html',
-  styleUrls: ['./my-customer-profile.component.scss']
+    selector: 'app-my-customer-profile',
+    templateUrl: './my-customer-profile.component.html',
+    styleUrls: ['./my-customer-profile.component.scss'],
+    standalone: false
 })
 export class MyCustomerProfileComponent implements OnChanges {
   @Input() user: UserInterface = {} as UserInterface;

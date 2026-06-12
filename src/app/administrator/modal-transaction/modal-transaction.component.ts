@@ -3,9 +3,10 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {PaymentDetailInterface} from "../../core/model/sale-order/payment-detail.interface";
 
 @Component({
-  selector: 'app-modal-transaction',
-  templateUrl: './modal-transaction.component.html',
-  styleUrls: ['./modal-transaction.component.scss']
+    selector: 'app-modal-transaction',
+    templateUrl: './modal-transaction.component.html',
+    styleUrls: ['./modal-transaction.component.scss'],
+    standalone: false
 })
 export class ModalTransactionComponent {
 

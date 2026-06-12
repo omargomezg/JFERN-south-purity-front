@@ -8,9 +8,10 @@ import {Observable} from "rxjs";
 import {map, startWith} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-form-place',
-  templateUrl: './form-place.component.html',
-  styleUrls: ['./form-place.component.scss']
+    selector: 'app-form-place',
+    templateUrl: './form-place.component.html',
+    styleUrls: ['./form-place.component.scss'],
+    standalone: false
 })
 export class FormPlaceComponent implements OnInit {
   communes: CommuneInterface[] = [];

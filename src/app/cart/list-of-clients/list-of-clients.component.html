@@ -4,9 +4,11 @@
   </div>
   <div class="col-auto">
     <select id="clientList" [(ngModel)]="selectedClient" class="form-select" (change)="onClientChange()"
-            aria-label="select places">
+      aria-label="select places">
       <option [value]="">Seleccione un cliente</option>
-      <option *ngFor="let client of clients" [value]="client.id">{{client.fullName}}</option>
+      @for (client of clients; track client) {
+        <option [value]="client.id">{{client.fullName}}</option>
+      }
     </select>
   </div>
 </div>

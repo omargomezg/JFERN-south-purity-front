@@ -1,3 +1,184 @@
+// Brand palette
+$primary: #3a7ca5;
+$primary-dark: #2f6690;
+$muted: #81c3d7;
+$light-bg: #f3f7fa;
+
+:host {
+  display: block;
+  padding-bottom: 3rem;
+}
+
+// Main container
+.container>.border {
+  border: none !important;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+
+// Page title
+h1.fw-bold {
+  font-size: 1.75rem;
+  color: $primary-dark;
+  position: relative;
+  padding-left: 1.5rem !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background: $primary;
+    border-radius: 2px;
+  }
+}
+
+// Product cards
+mat-card,
+.mat-mdc-card {
+  border-radius: 10px !important;
+  border: 1px solid rgba($muted, 0.25);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba($primary, 0.12) !important;
+  }
+
+  img[mat-card-image] {
+    cursor: pointer;
+    border-bottom: 1px solid rgba($muted, 0.15);
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.88;
+    }
+  }
+
+  mat-card-title,
+  .mat-mdc-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $primary-dark;
+  }
+
+  .text-end.fs-6 {
+    font-size: 1.15rem !important;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  .bg-warning-subtle {
+    font-size: 0.85rem;
+    border-radius: 6px !important;
+    text-align: center;
+  }
+}
+
+// Cart summary table
+table.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba($muted, 0.2);
+
+  caption {
+    caption-side: top;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $primary-dark;
+    padding: 0 0 0.75rem;
+  }
+
+  thead {
+    background: $primary;
+
+    th {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.75rem 1rem;
+      border: none;
+    }
+  }
+
+  tbody tr {
+    transition: background-color 0.15s;
+
+    &:nth-child(even) {
+      background-color: $light-bg;
+    }
+
+    &:hover {
+      background-color: rgba($muted, 0.12);
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-color: rgba($muted, 0.15);
+      vertical-align: middle;
+
+      button {
+        color: #c0392b;
+        font-size: 0.8rem;
+        min-width: unset;
+
+        &:hover {
+          background-color: rgba(#c0392b, 0.08);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  tfoot .subtotal-footer th {
+    padding: 0.85rem 1rem;
+    font-weight: 700;
+    color: $primary-dark;
+    background: $light-bg;
+    border-top: 2px solid rgba($primary, 0.2);
+  }
+}
+
+// CTA buttons
+button[mat-raised-button] {
+  border-radius: 8px !important;
+  padding: 0.6rem 1.75rem !important;
+  font-weight: 600;
+  transition: all 0.25s;
+  box-shadow: 0 3px 10px rgba($primary, 0.2) !important;
+
+  &:hover {
+    box-shadow: 0 5px 18px rgba($primary, 0.3) !important;
+    transform: translateY(-1px);
+  }
+}
+
+// Login helper text
+.text-reset.fst-italic {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.75rem;
+}
+
+// Disabled state
+.opacity-50 {
+  pointer-events: none;
+  filter: grayscale(0.4);
+}
+
+// Dialog
 .mat-mdc-dialog-content {
   max-height: unset;
 }

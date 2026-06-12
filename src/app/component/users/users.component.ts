@@ -5,13 +5,14 @@ import {PageEvent} from "@angular/material/paginator";
 import {PaginationModel, UserFilterModel} from "../../core/model";
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+    selector: 'app-users',
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss'],
+    standalone: false
 })
 export class UsersComponent implements OnInit {
 
-  displayedColumns: string[] = ['identification', 'name', 'role', 'status', 'options'];
+  displayedColumns: string[] = ['identification', 'email', 'name', 'role', 'status', 'options'];
   dataSource: UserInterface[];
   pagination: PaginationModel = new PaginationModel();
   totalElements: number = 0

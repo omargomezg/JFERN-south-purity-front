@@ -3,12 +3,13 @@ import {AbstractControl, NG_VALIDATORS, ValidationErrors, Validator} from "@angu
 import {RutService} from "../service/rut.service";
 
 @Directive({
-  selector: '[appRutValidator]',
-  providers: [{
-    provide: NG_VALIDATORS,
-    useExisting: RutValidatorDirective,
-    multi: true
-  }]
+    selector: '[appRutValidator]',
+    providers: [{
+            provide: NG_VALIDATORS,
+            useExisting: RutValidatorDirective,
+            multi: true
+        }],
+    standalone: false
 })
 export class RutValidatorDirective implements Validator {
 

@@ -1,0 +1,37 @@
+p {
+  font-family: Roboto, 'sans-serif', serif !important;
+}
+
+.fira-code-text {
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #3a7ca5;
+  border-radius: 4px;
+  padding: 16px;
+  overflow-x: auto;
+
+  p {
+    font-family: 'Fira Code', monospace !important;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.box-title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/img/resident.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+}

@@ -3,9 +3,10 @@ import {HistoryInterface} from "../../core/model/sale-order/history.interface";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
-  selector: 'app-modal-history',
-  templateUrl: './modal-history.component.html',
-  styleUrls: ['./modal-history.component.scss']
+    selector: 'app-modal-history',
+    templateUrl: './modal-history.component.html',
+    styleUrls: ['./modal-history.component.scss'],
+    standalone: false
 })
 export class ModalHistoryComponent {
 

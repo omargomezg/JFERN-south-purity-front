@@ -4,8 +4,10 @@
   <div class="mb-3">
     <select class="form-select" [(ngModel)]="selectBottle">
       <option selected value="">Selecciona un bidón</option>
-      <option *ngFor="let bottle of bottles" [value]="bottle.id">Nº {{bottle.lockNumber}} | Key {{bottle.padlockKey}}
-      </option>
+      @for (bottle of bottles; track bottle) {
+        <option [value]="bottle.id">Nº {{bottle.lockNumber}} | Key {{bottle.padlockKey}}
+        </option>
+      }
     </select>
   </div>
   <div class="mb-3">
@@ -15,12 +17,14 @@
   </div>
 
   <mat-list>
-    <ng-container *ngFor="let bottle of selectedBottles; let i = index ">
+    @for (bottle of selectedBottles; track bottle; let i = $index) {
       <mat-list-item>
         {{bottle.lockNumber}} | {{bottle.padlockKey}}
       </mat-list-item>
-      <mat-divider *ngIf="i + 1 != bottles?.length"></mat-divider>
-    </ng-container>
+      @if (i + 1 != bottles?.length) {
+        <mat-divider></mat-divider>
+      }
+    }
   </mat-list>
 </div>
 <div mat-dialog-actions>

@@ -5,9 +5,10 @@ import {PaginationModel, UserFilterModel} from "../../core/model";
 import {PageEvent} from "@angular/material/paginator";
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.scss']
+    selector: 'app-clients',
+    templateUrl: './clients.component.html',
+    styleUrls: ['./clients.component.scss'],
+    standalone: false
 })
 export class ClientsComponent implements OnInit {
   displayedColumns: string[] = ['identification', 'name', 'email', 'place', 'options'];

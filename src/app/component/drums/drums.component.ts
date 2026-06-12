@@ -1,29 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {CommonAdminService} from "../../core/service";
+import {PlaceInterface, ProductInterface} from "../../core/model";
+import {FormBuilder, Validators} from "@angular/forms";
+import {ToastrService} from "ngx-toastr";
+import {ActivatedRoute, Router} from "@angular/router";
 import { MatRadioChange } from '@angular/material/radio';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { PlaceInterface, ProductInterface } from '../../core/model';
-import { CommonAdminService } from '../../core/service';
 
 @Component({
-  selector: 'app-drums',
-  templateUrl: './drums.component.html',
-  styleUrls: ['./drums.component.scss'],
+    selector: 'app-drums',
+    templateUrl: './drums.component.html',
+    styleUrls: ['./drums.component.scss'],
+    standalone: false
 })
 export class DrumsComponent implements OnInit {
-  bottle20Lts = 'Bidón de 20 Lts.';
-  bottle10Lts = 'Bidón de 10 Lts.';
-  formDrum = this.formBuilder.group({
-    place: ['', Validators.required],
-    lockNumber: [0, Validators.required],
-    padlockKey: ['', Validators.required],
-    shortName: ['', Validators.required],
-    priceRefill: [0, Validators.required],
-    priceBottle: [0, Validators.required],
-  });
-  reloadListOfDrums: boolean = false;
-  places: PlaceInterface[] = [];
+  bottle20Lts = "Bidón de 20 Lts.";
+  bottle10Lts = "Bidón de 10 Lts.";
+    formDrum = this.formBuilder.group({
+        place: ['', Validators.required],
+        lockNumber: [0, Validators.required],
+        padlockKey: ['', Validators.required],
+      shortName: ['', Validators.required],
+      priceRefill: [0, Validators.required],
+      priceBottle: [0, Validators.required]
+    });
+    reloadListOfDrums: boolean = false;
+    places: PlaceInterface[] = [];
 
   constructor(
     private commonAdminService: CommonAdminService,

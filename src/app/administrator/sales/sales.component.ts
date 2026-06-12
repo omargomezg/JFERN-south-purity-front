@@ -9,9 +9,10 @@ import {PaymentDetailInterface} from "../../core/model/sale-order/payment-detail
 import {ModalTransactionComponent} from "../modal-transaction/modal-transaction.component";
 
 @Component({
-  selector: 'app-sales',
-  templateUrl: './sales.component.html',
-  styleUrls: ['./sales.component.scss']
+    selector: 'app-sales',
+    templateUrl: './sales.component.html',
+    styleUrls: ['./sales.component.scss'],
+    standalone: false
 })
 export class SalesComponent {
   sales: SaleOrderInterface[] = [];

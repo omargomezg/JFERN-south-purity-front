@@ -4,9 +4,10 @@ import {CommonClientService} from "../../client-module/service/common-client.ser
 import {PaymentResponseModel} from "../../client-module/service/model";
 
 @Component({
-  selector: 'app-build-payment-result',
-  templateUrl: './build-payment-result.component.html',
-  styleUrls: ['./build-payment-result.component.scss']
+    selector: 'app-build-payment-result',
+    templateUrl: './build-payment-result.component.html',
+    styleUrls: ['./build-payment-result.component.scss'],
+    standalone: false
 })
 export class BuildPaymentResultComponent implements OnInit {
 

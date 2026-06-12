@@ -1,9 +1,73 @@
+$primary: #3a7ca5;
+$primary-dark: #2f6690;
+$muted: #81c3d7;
+$light-bg: #f3f7fa;
+
 .payment-content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
 }
 
 .payment-item {
-  margin: 0 10px;
+  margin: 0;
+
+  .form-check {
+    padding: 0.55rem 1rem 0.55rem 2rem;
+    border: 1px solid rgba($muted, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #fff;
+
+    &:hover {
+      border-color: rgba($primary, 0.4);
+      background: $light-bg;
+    }
+  }
+
+  .form-check-input {
+    cursor: pointer;
+
+    &:checked {
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($primary, 0.15);
+      border-color: $primary;
+    }
+  }
+
+  .form-check-label {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #333;
+  }
+}
+
+// Payment description blocks
+:host>div:not(.payment-content) {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: $light-bg;
+  border-radius: 8px;
+  border-left: 3px solid $primary;
+
+  img {
+    max-height: 28px;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.55;
+    margin: 0;
+  }
 }

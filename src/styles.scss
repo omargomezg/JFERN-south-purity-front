@@ -1,32 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
 /* principal palette => https://coolors.co/palette/2f6690-3a7ca5-d9dcd6-16425b-81c3d7 */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@100&display=swap');
+// Google Fonts are moved to index.html for better performance (FCP)
+@use '@angular/material' as mat; // Define custom colors BEFORE importing Bootstrap
+@use "variables.scss" as vars;
+@use 'assets/vendor' as *;
 
-@import "variables";
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@use '../node_modules/bootstrap/scss/bootstrap' with ($primary: vars.$primary,
+  $secondary: vars.$secondary,
+  $success: vars.$success,
+  $info: vars.$info,
+  $warning: vars.$warning,
+  $danger: vars.$danger,
+  $light: vars.$light,
+  $dark: vars.$dark);
 
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
-@import "assets/vendor";
+@include mat.core();
+
+$my-theme: mat.define-theme((color: (primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: (brand-family: 'Roboto', plain-family: 'sans-serif'),
+    ));
+
+html {
+  @include mat.all-component-themes($my-theme);
+}
+
 
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: Roboto, 'sans-serif', serif !important;
   background-color: #f4f6f8;
 }
 
-.base-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+.parallax-container {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 5rem 0; /* Previene superposiciones cuando la pantalla es muy baja en formato horizontal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+
+  /* Fallback para iOS: arregla el problema de la imagen agrandada */
+  @supports (-webkit-touch-callout: none) {
+    background-attachment: scroll;
+  }
 }
 
-.base-full-width {
+.parallax-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
-code {
-  display: block;
-  white-space: pre-wrap
+.parallax-content {
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 8px;
+
+  h1 {
+    font-family: Roboto, 'sans-serif', serif !important;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: Roboto, 'sans-serif', serif !important;
+    font-size: 3.5rem !important;
+    font-weight: 450 !important;
+  }
+
 }
 
 .skeleton-shimmer {
