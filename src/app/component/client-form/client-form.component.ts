@@ -4,6 +4,8 @@ import {CommonAdminService} from "../../core/service";
 import {FormBuilder, Validators} from "@angular/forms";
 import {UserInterface} from "../../core/model/user.interface";
 import {ToastrService} from "ngx-toastr";
+import {MatDialog} from "@angular/material/dialog";
+import {DialogPasswordResetComponent} from "../dialog-password-reset/dialog-password-reset.component";
 
 interface UserStatus {
   label: string;
@@ -18,7 +20,7 @@ interface Role {
 @Component({
   selector: 'app-client-form',
   templateUrl: './client-form.component.html',
-  styleUrls: ['./client-form.component.scss']
+  styleUrls: ['./client-form.component.scss'],
 })
 export class ClientFormComponent implements OnInit {
 
@@ -40,18 +42,19 @@ export class ClientFormComponent implements OnInit {
               private toastr: ToastrService,
               private commonAdminService: CommonAdminService,
               private formBuilder: FormBuilder,
-              private router: Router) {
-    this.userStatus.push({value: 'ACTIVE', label: 'Activo'});
-    this.userStatus.push({value: 'DISABLED', label: 'Desactivado'});
-    this.roles.push({value: 'ADMINISTRATOR', label: 'Administrador'});
-    this.roles.push({value: 'CUSTOMER', label: 'Cliente'});
-    this.roles.push({value: 'STOCKER', label: 'Reponedor'});
+              private router: Router,
+              public dialog: MatDialog) {
+    this.userStatus.push({ value: 'ACTIVE', label: 'Activo' });
+    this.userStatus.push({ value: 'DISABLED', label: 'Desactivado' });
+    this.roles.push({ value: 'ADMINISTRATOR', label: 'Administrador' });
+    this.roles.push({ value: 'CUSTOMER', label: 'Cliente' });
+    this.roles.push({ value: 'STOCKER', label: 'Reponedor' });
 
   }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(param => {
-      let {id} = param;
+      let { id } = param;
       if (id) {
         this.commonAdminService.getUserById(id).subscribe(user => {
           this.user = user;
@@ -79,11 +82,20 @@ export class ClientFormComponent implements OnInit {
 
   showMessageAndRedirect(message: string): void {
     this.toastr.success(message);
-    this.router.navigate(['/usuarios'], {relativeTo: this.activatedRoute})
+    this.router.navigate(['/usuarios'], { relativeTo: this.activatedRoute })
   }
 
   randomPassword(): void {
     let pwd = Math.random().toString(36).slice(2, 12);
     this.formUser.controls['password'].setValue(pwd);
+  }
+
+  openDialogPasswordReset(): void {
+    const dialogRef = this.dialog.open(DialogPasswordResetComponent, {
+      data: { id: this.user.id, email: this.user.email, password: "" }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    })
   }
 }

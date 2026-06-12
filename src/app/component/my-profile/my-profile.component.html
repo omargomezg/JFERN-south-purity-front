@@ -1,9 +1,13 @@
 <div class="container">
-  <div class="border mt-4 p-4">
-    <app-paragraph-h1 text="Mis datos"></app-paragraph-h1>
+  <mat-card style="padding: 24px;" class="my-2 py-5">
+    <app-paragraph-h1 text="Mis datos"/>
     <div class="row">
       <div class="col-sm-8" *ngIf="!loading">
-        {{user.role}}
+        @if(rolName) {
+          <div class="py-2">
+            Tu rol es {{ rolName }}
+          </div>
+        }
         <ng-template [ngIf]="user.role === 'ADMINISTRATOR'" [ngIfElse]="customerContainer">
           <app-my-admin-profile [user]="user"></app-my-admin-profile>
         </ng-template>
@@ -15,5 +19,5 @@
         <button type="button" mat-raised-button (click)="showModalPwd()">Cambia tu contraseña</button>
       </div>
     </div>
-  </div>
+  </mat-card>
 </div>

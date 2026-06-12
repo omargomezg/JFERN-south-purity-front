@@ -1,0 +1,25 @@
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.action-btn {
+  width: 100% !important;
+  padding: 22px 0 !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 576px) {
+  .form-actions {
+    flex-direction: row;
+  }
+
+  .action-btn {
+    flex: 1;
+  }
+}
