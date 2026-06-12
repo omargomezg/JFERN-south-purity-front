@@ -2,59 +2,150 @@
   <mat-form-field class="base-full-width">
     <mat-label>Estado</mat-label>
     <mat-select formControlName="status">
-      <mat-option *ngFor="let status of statuses; trackBy:trackByStatusCode" [value]="status.code">
-        {{status.value}}
+      <mat-option
+        *ngFor="let status of statuses; trackBy: trackByStatusCode"
+        [value]="status.code"
+      >
+        {{ status.value }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 </form>
+@if (isMobile()) {
+  <div class="mobile-cards-container">
+    @for (element of dataSource; track element.lockNumber) {
+      <mat-card class="mb-3 custom-card mat-elevation-z2">
+        <mat-card-header
+          class="d-flex justify-content-between align-items-start"
+        >
+          <mat-card-title>
+            Nº {{ element.lockNumber }} —
+            {{ element.shortName.replace("Bidón de ", "") }}
+          </mat-card-title>
+          <mat-card-subtitle class="mt-1">
+            Registrado el: {{ element.createdDate | date: "EEE d 'de' MMMM y" }}
+          </mat-card-subtitle>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <caption></caption>
+          <div class="card-options-menu">
+            <button mat-icon-button [matMenuTriggerFor]="menucard">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menucard="matMenu">
+              <button
+                mat-menu-item
+                (click)="unTake(element)"
+                *ngIf="element.status === 'TAKEN'"
+              >
+                Liberar
+              </button>
+              <button
+                mat-menu-item
+                (click)="delete(element)"
+                *ngIf="element.status === 'AVAILABLE'"
+              >
+                Eliminar
+              </button>
+            </mat-menu>
+          </div>
+        </mat-card-header>
+
+        <mat-card-content class="pt-2">
+          <div class="row gy-2">
+            <div class="col-6">
+              <small class="text-muted d-block">Clave Candado</small>
+              <strong>{{ element.padlockKey }}</strong>
+            </div>
+            <div class="col-6">
+              <small class="text-muted d-block">Estado</small>
+              <span
+                class="badge"
+                [ngClass]="
+                  element.status === 'TAKEN'
+                    ? 'bg-warning text-dark'
+                    : 'bg-success text-white'
+                "
+              >
+                {{
+                  element.status === "TAKEN"
+                    ? "En proceso de pago"
+                    : "Disponible"
+                }}
+              </span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    } @empty {
+      <div class="text-center my-4 py-4 text-muted">
+        <mat-icon style="transform: scale(1.5)">inventory_2</mat-icon>
+        <p class="mt-2">No se encontraron bidones registrados.</p>
+      </div>
+    }
+  </div>
+} @else {
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <caption></caption>
     <ng-container matColumnDef="number">
-        <th mat-header-cell *matHeaderCellDef>Número</th>
-        <td mat-cell *matCellDef="let element"> {{element.lockNumber}} </td>
+      <th mat-header-cell *matHeaderCellDef>Número</th>
+      <td mat-cell *matCellDef="let element">{{ element.lockNumber }}</td>
     </ng-container>
-  <ng-container matColumnDef="description">
-    <th mat-header-cell *matHeaderCellDef>Bidón</th>
-    <td mat-cell *matCellDef="let element"> {{element.shortName.replace('Bidón de ', '')}}</td>
-  </ng-container>
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef>Bidón</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.shortName.replace("Bidón de ", "") }}
+      </td>
+    </ng-container>
 
-  <ng-container matColumnDef="key">
-    <th mat-header-cell *matHeaderCellDef>Clave</th>
-    <td mat-cell *matCellDef="let element"> {{element.padlockKey}} </td>
-  </ng-container>
-  <ng-container matColumnDef="createdDate">
-    <th mat-header-cell *matHeaderCellDef>Fecha</th>
-    <td mat-cell *matCellDef="let element"> {{element.createdDate | date}} </td>
-  </ng-container>
-  <ng-container matColumnDef="status">
-    <th mat-header-cell *matHeaderCellDef>Estado</th>
-    <td mat-cell *matCellDef="let element">
-      {{element.status === 'TAKEN' ? 'En proceso de pago' : 'Disponible'}}
+    <ng-container matColumnDef="key">
+      <th mat-header-cell *matHeaderCellDef>Clave</th>
+      <td mat-cell *matCellDef="let element">{{ element.padlockKey }}</td>
+    </ng-container>
+    <ng-container matColumnDef="createdDate">
+      <th mat-header-cell *matHeaderCellDef>Fecha</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.createdDate | date }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Estado</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.status === "TAKEN" ? "En proceso de pago" : "Disponible" }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="options">
+      <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button [matMenuTriggerFor]="menutb">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menutb="matMenu">
+          <button
+            mat-menu-item
+            (click)="unTake(element)"
+            *ngIf="element.status === 'TAKEN'"
+          >
+            Liberar
+          </button>
+          <button
+            mat-menu-item
+            (click)="delete(element)"
+            *ngIf="element.status === 'AVAILABLE'"
+          >
+            Eliminar
+          </button>
+        </mat-menu>
+      </td>
+    </ng-container>
 
-    </td>
-  </ng-container>
-  <ng-container matColumnDef="options">
-    <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
-    <td mat-cell *matCellDef="let element">
-      <button mat-button [matMenuTriggerFor]="menutb">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menutb="matMenu">
-        <button mat-menu-item (click)="unTake(element)" *ngIf="element.status === 'TAKEN'">Liberar</button>
-        <button mat-menu-item (click)="delete(element)" *ngIf="element.status === 'AVAILABLE'">Eliminar</button>
-      </mat-menu>
-    </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
-
-<mat-paginator [length]="totalElements"
-               (page)="handlePageEvent($event)"
-               [pageSize]="pagination.pageSize"
-               [pageSizeOptions]="[5, 10, 25, 100]"
-               aria-label="Select page">
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+}
+<mat-paginator
+  [length]="totalElements"
+  (page)="handlePageEvent($event)"
+  [pageSize]="pagination.pageSize"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  aria-label="Select page"
+>
 </mat-paginator>

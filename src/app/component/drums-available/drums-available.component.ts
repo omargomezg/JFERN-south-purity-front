@@ -1,33 +1,51 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {CommonAdminService, ProductService} from "../../core/service";
-import {PaginationModel, ProductInterface} from "../../core/model";
-import {PageEvent} from "@angular/material/paginator";
-import {STATUS_BOTTLES} from "../../core/constant/app.constants";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {
+  Component,
+  inject,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { PageEvent } from '@angular/material/paginator';
 import { ToastrService } from 'ngx-toastr';
+import { STATUS_BOTTLES } from '../../core/constant/app.constants';
+import { PaginationModel, ProductInterface } from '../../core/model';
+import { CommonAdminService, ProductService } from '../../core/service';
+import { ResponsiveService } from 'src/app/core/service/responsive.service';
 
 @Component({
   selector: 'app-drums-available',
   templateUrl: './drums-available.component.html',
-  styleUrls: ['./drums-available.component.scss']
+  styleUrls: ['./drums-available.component.scss'],
 })
 export class DrumsAvailableComponent implements OnInit, OnChanges {
-
   @Input() placeId: string | undefined | null;
   @Input() reload: string = '';
-  displayedColumns: string[] = ['number', 'description', 'key', 'createdDate', 'status', 'options'];
+  private responsiveService = inject(ResponsiveService);
+  displayedColumns: string[] = [
+    'number',
+    'description',
+    'key',
+    'createdDate',
+    'status',
+    'options',
+  ];
   selectedPlaceId: string | undefined | null;
   dataSource: ProductInterface[];
-  totalElements: number = 0
+  totalElements: number = 0;
   pagination: PaginationModel = new PaginationModel();
   statuses = STATUS_BOTTLES;
   selectedStatus: string = STATUS_BOTTLES[0].code;
   public filterForm: FormGroup;
+  isMobile = this.responsiveService.isMobile;
 
-  constructor(private commonAdminService: CommonAdminService,
-              private productService: ProductService,
+  constructor(
+    private commonAdminService: CommonAdminService,
+    private productService: ProductService,
     private formBuilder: FormBuilder,
-    private toast: ToastrService) {
+    private toast: ToastrService,
+  ) {
     this.dataSource = [];
     this.filterForm = this.buildForm();
   }
@@ -37,15 +55,21 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
   }
 
   getOrders(): void {
-    this.commonAdminService.getOrders(this.selectedPlaceId as string, this.selectedStatus, this.pagination).subscribe(orders => {
-      this.totalElements = orders.totalElements;
-      this.dataSource = orders.content;
-    })
+    this.commonAdminService
+      .getOrders(
+        this.selectedPlaceId as string,
+        this.selectedStatus,
+        this.pagination,
+      )
+      .subscribe((orders) => {
+        this.totalElements = orders.totalElements;
+        this.dataSource = orders.content;
+      });
   }
 
   buildForm(): FormGroup {
     return this.formBuilder.group({
-      status: ['']
+      status: [''],
     });
   }
 
@@ -75,14 +99,16 @@ export class DrumsAvailableComponent implements OnInit, OnChanges {
   }
 
   unTake(product: ProductInterface) {
-    this.commonAdminService.untakenProduct(product.id, this.placeId as string).subscribe((result) => {
-      if (result === true) {
-        this.toast.success('Product liberado');
-        this.getOrders()
-      } else {
-        this.toast.error('No es posible liberar el producto');
-      }
-    })
+    this.commonAdminService
+      .untakenProduct(product.id, this.placeId as string)
+      .subscribe((result) => {
+        if (result === true) {
+          this.toast.success('Product liberado');
+          this.getOrders();
+        } else {
+          this.toast.error('No es posible liberar el producto');
+        }
+      });
   }
 
   delete(product: ProductInterface) {

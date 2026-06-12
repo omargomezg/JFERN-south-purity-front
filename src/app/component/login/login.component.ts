@@ -5,6 +5,7 @@ import {Router} from "@angular/router";
 import {LoginModel} from "../../core/model";
 import {MatDialog} from '@angular/material/dialog';
 import {RestorePasswordComponent} from '../restore-password/restore-password.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-login',
@@ -12,7 +13,7 @@ import {RestorePasswordComponent} from '../restore-password/restore-password.com
     styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
+    urlApi = environment.apiUrl
     loginForm = this.formBuilder.group({
         email: ['', [Validators.email, Validators.required]],
         password: ['', Validators.required],

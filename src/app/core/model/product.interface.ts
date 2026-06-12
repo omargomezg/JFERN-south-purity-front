@@ -5,5 +5,6 @@ export interface ProductInterface {
   lockNumber: number;
   shortName: string;
   padlockKey: string;
-
+  createdDate: Date;
+  status: string;
 }
