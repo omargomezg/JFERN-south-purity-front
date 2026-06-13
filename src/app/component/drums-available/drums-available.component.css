@@ -142,4 +142,9 @@ code {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
+.mat-mdc-card {
+  --mdc-elevated-card-container-color: #ffffff !important;
+  background-color: #ffffff !important; /* Respaldo para navegadores antiguos */
+}
+
 /*# sourceMappingURL=drums-available.component.css.map */

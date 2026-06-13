@@ -1,24 +1,24 @@
-<div class="container">
-  <mat-card style="padding: 24px;" class="my-2 py-5">
-    <app-paragraph-h1 text="Mis datos"/>
-    <div class="row">
-      @if (!loading) {
-        <div class="col-sm-8">
-          @if (rolName) {
-            <div class="py-2">
-              Tu rol es {{ rolName }}
-            </div>
-          }
-          @if (user.role === 'ADMINISTRATOR') {
-            <app-my-admin-profile [user]="user"></app-my-admin-profile>
-          } @else {
-            <app-my-customer-profile [user]="user"></app-my-customer-profile>
-          }
-        </div>
-      }
-      <div class="col-sm-4">
-        <button type="button" mat-raised-button (click)="showModalPwd()">Cambia tu contraseña</button>
+<div class="container bg-white p-4 border-start border-end border-secondary-subtle">
+  
+  <app-paragraph-h1 text="Mis datos"/>
+  <div class="row">
+    @if (!loading) {
+      <div class="col-sm-8">
+        @if (rolName) {
+          <div class="py-2">
+            Tu rol es {{ rolName }}
+          </div>
+        }
+        @if (user.role === 'ADMINISTRATOR') {
+          <app-my-admin-profile [user]="user"></app-my-admin-profile>
+        } @else {
+          <app-my-customer-profile [user]="user"></app-my-customer-profile>
+        }
       </div>
+    }
+    <div class="col-sm-4">
+      <button type="button" mat-raised-button (click)="showModalPwd()">Cambia tu contraseña</button>
     </div>
-  </mat-card>
+  </div>
+
 </div>

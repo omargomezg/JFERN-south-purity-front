@@ -1,8 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-/* principal palette => https://coolors.co/palette/2f6690-3a7ca5-d9dcd6-16425b-81c3d7 */
-// Google Fonts are moved to index.html for better performance (FCP)
 @use '@angular/material' as mat;
-// Define custom colors BEFORE importing Bootstrap
 @use "variables.scss" as vars;
 @use 'assets/vendor' as *;
 
@@ -27,8 +23,9 @@ $my-theme: mat.define-theme((
   typography: (brand-family: 'Roboto', plain-family: 'sans-serif'),
 ));
 
+@include mat.all-component-themes($my-theme);
+
 html {
-  @include mat.all-component-themes($my-theme);
   $mi-azul-claro: #3A7CA5;
 
   --mdc-filled-button-container-color: #{$mi-azul-claro};
@@ -58,13 +55,11 @@ html {
   background-color: #{$mi-azul-claro} !important;
   color: #ffffff !important;
 
-  // Efecto hover controlado para que no se pierda la interacción
   &:hover {
     background-color: #{darken($mi-azul-claro, 7%)} !important;
   }
 }
 
-// Hacemos lo mismo para el icono interno si la plantilla le cambió el color
 .mat-mdc-unelevated-button,
 .mat-mdc-filled-button {
   .mat-icon {
@@ -74,7 +69,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Roboto, 'sans-serif', serif !important;
+  font-family: Roboto, 'sans-serif', serif;
   background-color: #f4f6f8;
 }
 

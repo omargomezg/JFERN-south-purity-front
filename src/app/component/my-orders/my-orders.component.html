@@ -1,63 +1,60 @@
-<div class="container my-4">
-  <div class="border mt-4 p-4">
-    <app-paragraph-h1 text="Mis pedidos"></app-paragraph-h1>
-    @if (dataSource.length === 0) {
-      <div class="row">
-        <div class="col-md-7 text-center">
-          <h3 class="display-5">¿Aún no has probado nuestro servicio? ¡Tu primer pedido de agua te espera!</h3>
-          <button (click)="buy()" gtagEvent trackOn="click" action="make_order"
-            class="btn btn-lg btn-primary mt-3">
-            ¡Pedir ahora!
-          </button>
-        </div>
-        <div class="col-md-5">
-          <img src="assets/img/5faa6d7533cae.jpeg"
-            class="img-fluid" alt="Agua purificada con limon">
-        </div>
+<div class="container bg-white p-4 border-start border-end border-secondary-subtle">
+  <app-paragraph-h1 text="Mis pedidos"></app-paragraph-h1>
+  @if (dataSource.length === 0) {
+    <div class="row">
+      <div class="col-md-7 text-center">
+        <h3 class="display-5">¿Aún no has probado nuestro servicio? ¡Tu primer pedido de agua te espera!</h3>
+        <button (click)="buy()" gtagEvent trackOn="click" action="make_order"
+                class="btn btn-lg btn-primary mt-3">
+          ¡Pedir ahora!
+        </button>
       </div>
-    }
+      <div class="col-md-5">
+        <img src="assets/img/5faa6d7533cae.jpeg"
+             class="img-fluid" alt="Agua purificada con limon">
+      </div>
+    </div>
+  }
 
-    @if (dataSource.length > 0) {
-      <div class="mat-elevation-z8">
-        <p>Acá te presentamos el historia de tus compras.</p>
-        <table class="table table-striped">
-          <caption>Detalle de mis pedidos</caption>
-          <thead>
+  @if (dataSource.length > 0) {
+    <p>Acá te presentamos el historia de tus compras.</p>
+    <div class="mat-elevation-z8">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>No.</th>
+          <th>Fecha</th>
+          <th>Detalle</th>
+          <th>Códigos</th>
+          <th>Estado</th>
+          <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+          @for (order of dataSource; track order) {
             <tr>
-              <th>No.</th>
-              <th>Fecha</th>
-              <th>Detalle</th>
-              <th>Códigos</th>
-              <th>Estado</th>
-              <th>Total</th>
+              <td>{{ order.serial }}</td>
+              <td>{{ order.createdDate | date:'short' }}</td>
+              <td>
+                @for (item of order.items; track item) {
+                  <div>{{ item.quantity }} {{ item.name }}</div>
+                }
+              </td>
+              <td>
+                @for (key of order.keys; track key) {
+                  <div>No. {{ key.key }} - Clave: {{ key.value }}</div>
+                }
+              </td>
+              <td>{{ order.status }}</td>
+              <td class="text-end">{{ order.total | number }}</td>
             </tr>
-          </thead>
-          <tbody>
-            @for (order of dataSource; track order) {
-              <tr>
-                <td>{{ order.serial }}</td>
-                <td>{{ order.createdDate | date:'short' }}</td>
-                <td>
-                  @for (item of order.items; track item) {
-                    <div>{{ item.quantity }} {{ item.name }}</div>
-                  }
-                </td>
-                <td>
-                  @for (key of order.keys; track key) {
-                    <div>No. {{ key.key }} - Clave: {{ key.value }}</div>
-                  }
-                </td>
-                <td>{{ order.status }}</td>
-                <td class="text-end">{{ order.total | number }}</td>
-              </tr>
-            }
-          </tbody>
-        </table>
-        <mat-paginator #paginator (page)="handlePageEvent($event)"
-          [length]="pagination.length"
-          [pageSize]="pagination.pageSize" [pageSizeOptions]="pagination.pageSizeOptions">
-        </mat-paginator>
-      </div>
-    }
-  </div>
+          }
+        </tbody>
+      </table>
+      <mat-paginator #paginator (page)="handlePageEvent($event)"
+                     [length]="pagination.length"
+                     [pageSize]="pagination.pageSize" [pageSizeOptions]="pagination.pageSizeOptions">
+      </mat-paginator>
+    </div>
+  }
 </div>
