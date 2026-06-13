@@ -1,4 +1,4 @@
-@use "sass:color";
+// Quitado @use "sass:color" ya que usamos la función rgba nativa más segura
 @use "../../../variables.scss" as variables;
 
 .form-parent {
@@ -28,11 +28,13 @@
 
   .form-control {
     border-radius: 5px;
-    border: 1px solid color.change(variables.$primary, $alpha: 0.8);
+    // Usamos rgba nativo de CSS pasándole la variable, es más rápido y compatible
+    border: 1px solid rgba(variables.$primary, 0.4);
 
     &:focus {
       border-color: variables.$primary;
-      box-shadow: 0 0 0 0.25rem color.change(variables.$primary, $alpha: 0.25);
+      // Reemplazado por un rgba tradicional para el focus ring de Bootstrap
+      box-shadow: 0 0 0 0.25rem rgba(variables.$primary, 0.25);
     }
   }
 
@@ -41,42 +43,20 @@
   }
 }
 
-/* .links-container {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+// Mantenemos limpio el archivo eliminando el bloque de links comentado si ya no se usa
 
-  a,
-  button.mat-mdc-button {
-    color: variables.$muted;
-    text-decoration: none;
-    transition: color 0.2s;
-
-    &:hover {
-      color: variables.$primary;
-      text-decoration: underline;
-    }
-  }
-
-  .divider {
-    color: #ccc;
-    display: none;
-  }
-} */
-
+// Estilos específicos para el botón de Google (Angular Social Auth)
 asl-google-signin-button {
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
   width: 100%;
 
-  >div {
+  > div {
     width: 100% !important;
 
     iframe {
-      margin: 0 auto !important;
+      margin: 0 auto !important; // Centra perfectamente el botón oficial de Google
     }
   }
 }

@@ -5,20 +5,19 @@ import {PageEvent} from "@angular/material/paginator";
 import {PaginationModel, UserFilterModel} from "../../core/model";
 
 @Component({
-    selector: 'app-users',
-    templateUrl: './users.component.html',
-    styleUrls: ['./users.component.scss'],
-    standalone: false
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss'],
+  standalone: false
 })
 export class UsersComponent implements OnInit {
 
   displayedColumns: string[] = ['identification', 'email', 'name', 'role', 'status', 'options'];
-  dataSource: UserInterface[];
+  dataSource: UserInterface[] = [];
   pagination: PaginationModel = new PaginationModel();
   totalElements: number = 0
 
   constructor(private commonAdminService: CommonAdminService,) {
-    this.dataSource = [];
   }
 
   ngOnInit(): void {
@@ -35,6 +34,7 @@ export class UsersComponent implements OnInit {
     let filter = new UserFilterModel();
     filter.role = 'ADMINISTRATOR,STOCKER';
     this.commonAdminService.getUsers(filter, this.pagination).subscribe(customers => {
+      console.log(customers.content);
       this.totalElements = customers.totalElements;
       this.dataSource = customers.content;
     });

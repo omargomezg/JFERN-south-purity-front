@@ -29,7 +29,6 @@ import {ClientsComponent} from './component/clients/clients.component';
 import {ClientFormComponent} from './component/client-form/client-form.component';
 import {MatSelectModule} from '@angular/material/select';
 import {UsersComponent} from './component/users/users.component';
-import {FormPlaceComponent} from './component/form-place/form-place.component';
 import {DrumsAvailableComponent} from './component/drums-available/drums-available.component';
 import {DrumsComponent} from './component/drums/drums.component';
 import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
@@ -73,7 +72,6 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
     ClientFormComponent,
     UsersComponent,
     HeaderComponent,
-    FormPlaceComponent,
     PlaceComponent,
     DashboardComponent,
     RestorePasswordComponent,
@@ -108,7 +106,7 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
     MatIconModule,
     MatSlideToggleModule,
     MatMenuModule,
-    NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'}),
+    NgxGa4Module.forRoot({ measurementId: 'G-FVKGFK1ZQD' }),
     MatRadioModule,
     MatAutocompleteModule,
     SocialLoginModule,
@@ -116,7 +114,7 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
     RecaptchaV3Module
   ],
   providers: [
-    {provide: RECAPTCHA_V3_SITE_KEY, useValue: '6Ld-oHIsAAAAALNcT903ynFTU7DWVVbchWQwQZI5'},
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6Ld-oHIsAAAAALNcT903ynFTU7DWVVbchWQwQZI5' },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

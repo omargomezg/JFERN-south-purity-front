@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 /* principal palette => https://coolors.co/palette/2f6690-3a7ca5-d9dcd6-16425b-81c3d7 */
 // Google Fonts are moved to index.html for better performance (FCP)
-@use '@angular/material' as mat; // Define custom colors BEFORE importing Bootstrap
+@use '@angular/material' as mat;
+// Define custom colors BEFORE importing Bootstrap
 @use "variables.scss" as vars;
 @use 'assets/vendor' as *;
 
-@use '../node_modules/bootstrap/scss/bootstrap' with ($primary: vars.$primary,
+@use '../node_modules/bootstrap/scss/bootstrap' with (
+  $primary: vars.$primary,
   $secondary: vars.$secondary,
   $success: vars.$success,
   $info: vars.$info,
@@ -16,16 +18,59 @@
 
 @include mat.core();
 
-$my-theme: mat.define-theme((color: (primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
-      ),
-      typography: (brand-family: 'Roboto', plain-family: 'sans-serif'),
-    ));
+$my-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  typography: (brand-family: 'Roboto', plain-family: 'sans-serif'),
+));
 
 html {
   @include mat.all-component-themes($my-theme);
+  $mi-azul-claro: #3A7CA5;
+
+  --mdc-filled-button-container-color: #{$mi-azul-claro};
+  --mdc-filled-button-container-color-hover: #{darken($mi-azul-claro, 7%)};
+  --mdc-filled-button-label-text-color: #ffffff;
+  --mdc-filled-button-icon-color: #ffffff;
+
+  --mdc-protected-button-container-color: #{$mi-azul-claro};
+  --mdc-protected-button-label-text-color: #ffffff;
+
+  --mdc-outlined-button-label-text-color: #{$mi-azul-claro};
+  --mdc-outlined-button-icon-color: #{$mi-azul-claro};
+  --mat-outlined-button-state-layer-color: #{$mi-azul-claro};
+  --mdc-outlined-button-outline-color: #{rgba($mi-azul-claro, 0.4)};
+
+  --mat-form-field-focus-label-indicator-color: #{$mi-azul-claro};
+  --mat-form-field-focus-input-line-color: #{$mi-azul-claro};
+
 }
 
+.mat-mdc-unelevated-button:not(:disabled),
+.mat-mdc-raised-button:not(:disabled),
+.mat-mdc-filled-button:not(:disabled) {
+
+  $mi-azul-claro: #3A7CA5;
+
+  background-color: #{$mi-azul-claro} !important;
+  color: #ffffff !important;
+
+  // Efecto hover controlado para que no se pierda la interacción
+  &:hover {
+    background-color: #{darken($mi-azul-claro, 7%)} !important;
+  }
+}
+
+// Hacemos lo mismo para el icono interno si la plantilla le cambió el color
+.mat-mdc-unelevated-button,
+.mat-mdc-filled-button {
+  .mat-icon {
+    color: #ffffff !important;
+  }
+}
 
 body {
   margin: 0;
@@ -98,6 +143,21 @@ body {
 }
 
 @keyframes loading-shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.form-fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 4px;
+}
+
+.base-full-width {
+  width: 100%;
 }

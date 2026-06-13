@@ -10,7 +10,7 @@
           <label for="floatingInput">Correo electrónico</label>
         </div>
 
-        
+
 
         <div class="form-floating mb-3">
           <input type="password" class="form-control" id="floatingPassword" formControlName="password"
@@ -28,18 +28,18 @@
           <p class="text-danger">Correo o contraseña incorrecta</p>
         }
 
-        <button class="w-100 btn btn-primary" [disabled]="!loginForm.valid" gtagEvent trackOn="click"
+        <button matButton="filled" class="w-100" [disabled]="!loginForm.valid" gtagEvent trackOn="click"
           action="login" type="submit">Iniciar sesión
         </button>
 
         <asl-google-signin-button class="w-100" text="continue_with" type="standard"
         size="large"></asl-google-signin-button>
         <div class="my-3">
-          <a [routerLink]="['/registrate']" class="btn btn-link text-decoration-none" gtagEvent
+          <a [routerLink]="['/registrate']" matButton gtagEvent
             trackOn="click" action="register">
             ¿No tienes cuenta? <b>Regístrate</b>
           </a>
-          <button class="btn btn-link text-decoration-none" (click)="restorePassword()" gtagEvent
+          <button matButton (click)="restorePassword()" gtagEvent
             trackOn="click" action="restore_password" type="button">Olvidé mi contraseña
           </button>
         </div>

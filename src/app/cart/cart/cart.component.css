@@ -30,50 +30,6 @@ h1.fw-bold::before {
   border-radius: 2px;
 }
 
-mat-card,
-.mat-mdc-card {
-  border-radius: 10px !important;
-  border: 1px solid rgba(129, 195, 215, 0.25);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05) !important;
-  transition: transform 0.25s, box-shadow 0.25s;
-  overflow: hidden;
-}
-mat-card:hover,
-.mat-mdc-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(58, 124, 165, 0.12) !important;
-}
-mat-card img[mat-card-image],
-.mat-mdc-card img[mat-card-image] {
-  cursor: pointer;
-  border-bottom: 1px solid rgba(129, 195, 215, 0.15);
-  transition: opacity 0.2s;
-}
-mat-card img[mat-card-image]:hover,
-.mat-mdc-card img[mat-card-image]:hover {
-  opacity: 0.88;
-}
-mat-card mat-card-title,
-mat-card .mat-mdc-card-title,
-.mat-mdc-card mat-card-title,
-.mat-mdc-card .mat-mdc-card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #2f6690;
-}
-mat-card .text-end.fs-6,
-.mat-mdc-card .text-end.fs-6 {
-  font-size: 1.15rem !important;
-  font-weight: 700;
-  color: #3a7ca5;
-}
-mat-card .bg-warning-subtle,
-.mat-mdc-card .bg-warning-subtle {
-  font-size: 0.85rem;
-  border-radius: 6px !important;
-  text-align: center;
-}
-
 table.table {
   border-collapse: separate;
   border-spacing: 0;
