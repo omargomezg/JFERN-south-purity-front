@@ -24,7 +24,7 @@
 }
 .form-floating .form-control {
   border-radius: 5px;
-  border: 1px solid rgba(58, 124, 165, 0.8);
+  border: 1px solid rgba(58, 124, 165, 0.4);
 }
 .form-floating .form-control:focus {
   border-color: #3a7ca5;
@@ -34,30 +34,6 @@
   color: #999;
 }
 
-/* .links-container {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-
-  a,
-  button.mat-mdc-button {
-    color: variables.$muted;
-    text-decoration: none;
-    transition: color 0.2s;
-
-    &:hover {
-      color: variables.$primary;
-      text-decoration: underline;
-    }
-  }
-
-  .divider {
-    color: #ccc;
-    display: none;
-  }
-} */
 asl-google-signin-button {
   display: flex;
   justify-content: center;

@@ -1,17 +1,32 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
 import {CommuneInterface, PlaceInterface} from "../../core/model";
 import {CommonAdminService} from "../../core/service";
 import {LocationService} from "../../core/service/location.service";
 import {Observable} from "rxjs";
 import {map, startWith} from 'rxjs/operators';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatInputModule} from "@angular/material/input";
+import {AsyncPipe} from "@angular/common";
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @Component({
-    selector: 'app-form-place',
-    templateUrl: './form-place.component.html',
-    styleUrls: ['./form-place.component.scss'],
-    standalone: false
+  selector: 'app-form-place',
+  templateUrl: './form-place.component.html',
+  styleUrls: ['./form-place.component.scss'],
+  imports: [
+    MatSlideToggleModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatDialogModule,
+    AsyncPipe,
+    MatFormFieldModule
+  ]
 })
 export class FormPlaceComponent implements OnInit {
   communes: CommuneInterface[] = [];

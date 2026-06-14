@@ -1,16 +1,16 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { AuthService } from "./core/service";
-import { MENU } from "./core/constant/MENU";
-import { NgxGa4Service } from "@kattoshi/ngx-ga4";
-import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
-import { Router } from '@angular/router';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
+import {AuthService} from "./core/service";
+import {MENU} from "./core/constant/MENU";
+import {NgxGa4Service} from "@kattoshi/ngx-ga4";
+import {SocialAuthService, SocialUser} from '@abacritt/angularx-social-login';
+import {Router} from '@angular/router';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  standalone: false
 })
 export class AppComponent implements OnInit {
   title = 'south-purity-front';
@@ -20,9 +20,9 @@ export class AppComponent implements OnInit {
   }
 
   constructor(public authService: AuthService, private socialAuthService: SocialAuthService,
-    private router: Router,
-    private ngxGa4Service: NgxGa4Service,
-    @Inject(PLATFORM_ID) private platformId: Object) {
+              private router: Router,
+              private ngxGa4Service: NgxGa4Service,
+              @Inject(PLATFORM_ID) private platformId: Object) {
   }
 
   logout(): void {

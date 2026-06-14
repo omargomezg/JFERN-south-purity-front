@@ -1,15 +1,15 @@
-<form [formGroup]="filterForm">
-  <mat-form-field class="base-full-width">
-    <mat-label>Estado</mat-label>
-    <mat-radio-group formControlName="status" class="status-filter">
+<form [formGroup]="filterForm" class="mb-4">
+  <div class="form-group">
+    <label class="text-muted small d-block mb-2 font-weight-bold">Estado del Filtro</label>
+
+    <mat-radio-group formControlName="status" class="status-filter d-flex gap-3">
       @for (status of statuses; track trackByStatusCode($index, status)) {
-        <mat-radio-button
-          [value]="status.code">
+        <mat-radio-button [value]="status.code">
           {{ status.value }}
         </mat-radio-button>
       }
     </mat-radio-group>
-  </mat-form-field>
+  </div>
 </form>
 
 @if (isMobile()) {
@@ -104,7 +104,7 @@
     <ng-container matColumnDef="createdDate">
       <th mat-header-cell *matHeaderCellDef>Fecha</th>
       <td mat-cell *matCellDef="let element">
-        {{ element.createdDate | date }}
+        {{ element.createdDate | date: "EEE d 'de' MMMM y" }}
       </td>
     </ng-container>
     <ng-container matColumnDef="status">
@@ -143,10 +143,10 @@
   </table>
 }
 
-@if (dataSource.length === 0) {
-  <div class="empty-state">
-    <mat-icon>inventory_2</mat-icon>
-    <p>No se encontraron bidones en esta ubicación</p>
+@if (dataSource && dataSource.length === 0) {
+  <div class="empty-state text-center my-4 py-4 text-muted">
+    <mat-icon style="transform: scale(1.5)">inventory_2</mat-icon>
+    <p class="mt-2">No se encontraron bidones en esta ubicación</p>
   </div>
 }
 

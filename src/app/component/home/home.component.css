@@ -66,4 +66,50 @@
   letter-spacing: 0.02em;
 }
 
+.cf-p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.section-who > p {
+  font-size: 14px;
+}
+
+@media (min-width: 375px) {
+  .cf-p {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .section-who > p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 425px) {
+  .cf-p {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .section-who > p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .cf-p {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .section-who > p {
+    font-size: 18px;
+  }
+}
+
 /*# sourceMappingURL=home.component.css.map */
