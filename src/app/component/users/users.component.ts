@@ -1,14 +1,27 @@
 import {Component, OnInit} from '@angular/core';
 import {UserInterface} from "../../core/model/user.interface";
 import {CommonAdminService} from "../../core/service";
-import {PageEvent} from "@angular/material/paginator";
+import {MatPaginatorModule, PageEvent} from "@angular/material/paginator";
 import {PaginationModel, UserFilterModel} from "../../core/model";
+import {RouterModule} from "@angular/router";
+import {MatIconModule} from "@angular/material/icon";
+import {MatTableModule} from "@angular/material/table";
+import {CommonModule} from "@angular/common";
+import {ParagraphH1Component} from "../paragraph-h1/paragraph-h1.component";
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
-  standalone: false
+  imports: [
+    CommonModule,
+    MatPaginatorModule,
+    RouterModule,
+    MatTableModule,
+    MatIconModule,
+    ParagraphH1Component
+  ],
+  standalone: true
 })
 export class UsersComponent implements OnInit {
 

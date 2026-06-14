@@ -24,7 +24,6 @@
             </mat-form-field>
           </div>
           <div class="col">
-            R
             <mat-form-field appearance="fill" class="base-full-width">
               <mat-label>$ Recarga + Envase</mat-label>
               <input type="number" matInput formControlName="priceWithDrum">
@@ -34,26 +33,40 @@
         <div formGroupName="smtp">
           <h2>Configurar SMPT</h2>
           <p>Permite el envío de correos electrónicos</p>
-          <mat-form-field appearance="fill" class="base-full-width">
-            <mat-label>Host</mat-label>
-            <input type="text" matInput formControlName="host">
-          </mat-form-field>
-          <mat-form-field appearance="fill" class="base-full-width">
-            <mat-label>Puerto</mat-label>
-            <input type="number" matInput formControlName="port">
-          </mat-form-field>
-          <mat-form-field appearance="fill" class="base-full-width">
-            <mat-label>Usuario</mat-label>
-            <input type="text" matInput formControlName="username">
-          </mat-form-field>
-          <mat-form-field appearance="fill" class="base-full-width">
-            <mat-label>Contraseña</mat-label>
-            <input type="password" matInput formControlName="password">
-          </mat-form-field>
-          <mat-form-field appearance="fill" class="base-full-width">
-            <mat-label>Protocolo</mat-label>
-            <input type="text" matInput formControlName="protocol">
-          </mat-form-field>
+          <div class="row">
+            <div class="col">
+              <mat-form-field appearance="fill" class="base-full-width">
+                <mat-label>Host</mat-label>
+                <input type="text" matInput formControlName="host">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="fill" class="base-full-width">
+                <mat-label>Puerto</mat-label>
+                <input type="number" matInput formControlName="port">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="fill" class="base-full-width">
+                <mat-label>Protocolo</mat-label>
+                <input type="text" matInput formControlName="protocol">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field appearance="fill" class="base-full-width">
+                <mat-label>Usuario</mat-label>
+                <input type="text" matInput formControlName="username">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field appearance="fill" class="base-full-width">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput formControlName="password">
+              </mat-form-field>
+            </div>
+          </div>
           <mat-checkbox formControlName="auth">Auth</mat-checkbox>
           <mat-checkbox formControlName="starttlsEnable">Enable</mat-checkbox>
           <mat-checkbox formControlName="starttlsRequired">Required</mat-checkbox>
@@ -79,7 +92,7 @@
         <div class="col">
           <mat-form-field appearance="fill" class="base-full-width">
             <mat-label class="form-label">Correo para prueba</mat-label>
-            <input type="email" matInput [(ngModel)]="emailAddress" placeholder="Enviar correo de prueba">
+            <input type="email" matInput [(ngModel)]="emailAddress" placeholder="Ej: micorreo@emp.cl">
           </mat-form-field>
           <button type="button" mat-flat-button color="primary" (click)="sendEmail()">Enviar correo de prueba
           </button>

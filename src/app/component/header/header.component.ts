@@ -26,10 +26,9 @@ export class HeaderComponent implements OnInit {
   menus: IMenu[] = [];
   loading: boolean = true;
 
-  constructor(private router: Router,
+  constructor(private readonly router: Router,
               public authService: AuthService,
-              private location: Location) {
-    this.loading = true;
+              private readonly location: Location) {
   }
 
   ngOnInit() {

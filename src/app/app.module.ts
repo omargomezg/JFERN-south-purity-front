@@ -7,7 +7,6 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './component/login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
-import {FooterComponent} from './core/component/footer/footer.component';
 import {MyProfileComponent} from './component/my-profile/my-profile.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -28,7 +27,6 @@ import {PlaceComponent} from './component/place/place.component';
 import {ClientsComponent} from './component/clients/clients.component';
 import {ClientFormComponent} from './component/client-form/client-form.component';
 import {MatSelectModule} from '@angular/material/select';
-import {UsersComponent} from './component/users/users.component';
 import {DrumsAvailableComponent} from './component/drums-available/drums-available.component';
 import {DrumsComponent} from './component/drums/drums.component';
 import {BuildPaymentResultComponent} from './component/build-payment-result/build-payment-result.component';
@@ -49,18 +47,19 @@ import {
 } from '@abacritt/angularx-social-login';
 
 import {NgxGa4Module} from '@kattoshi/ngx-ga4';
-import {ParagraphH1Component} from './component/paragraph-h1/paragraph-h1.component';
 import {MatRadioModule} from "@angular/material/radio";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {RutValidatorDirective} from './core/directive/rut-validator.directive';
 import {RutFormatPipe} from './core/pipe/rut-format.pipe';
 import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {ParagraphH1Component} from "./component/paragraph-h1/paragraph-h1.component";
+import {FooterComponent} from "./core/component/footer/footer.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    FooterComponent,
     MyProfileComponent,
     BuildPaymentResultComponent,
     RegisterComponent,
@@ -70,7 +69,6 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
     DrumsComponent,
     ClientsComponent,
     ClientFormComponent,
-    UsersComponent,
     HeaderComponent,
     PlaceComponent,
     DashboardComponent,
@@ -79,13 +77,10 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
     UserFormComponent,
     MyCustomerProfileComponent,
     MyAdminProfileComponent,
-    ParagraphH1Component,
     RutValidatorDirective,
     RutFormatPipe
   ],
-  exports: [
-    ParagraphH1Component
-  ],
+  exports: [],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -105,16 +100,20 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
     MatSelectModule,
     MatIconModule,
     MatSlideToggleModule,
+    ParagraphH1Component,
     MatMenuModule,
-    NgxGa4Module.forRoot({ measurementId: 'G-FVKGFK1ZQD' }),
+    NgxGa4Module.forRoot({measurementId: 'G-FVKGFK1ZQD'}),
     MatRadioModule,
     MatAutocompleteModule,
     SocialLoginModule,
     GoogleSigninButtonModule,
-    RecaptchaV3Module
+    RecaptchaV3Module,
+    MatProgressSpinnerModule,
+    ParagraphH1Component,
+    FooterComponent
   ],
   providers: [
-    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6Ld-oHIsAAAAALNcT903ynFTU7DWVVbchWQwQZI5' },
+    {provide: RECAPTCHA_V3_SITE_KEY, useValue: '6Ld-oHIsAAAAALNcT903ynFTU7DWVVbchWQwQZI5'},
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
