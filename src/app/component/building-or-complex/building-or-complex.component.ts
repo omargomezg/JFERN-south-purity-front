@@ -16,10 +16,12 @@ export class BuildingOrComplexComponent implements OnInit {
   private emailSubject =
     'Hola, podemos contratar agua purificada en mi comunidad';
 
-  private emailBody = `💧 Abastecimiento de agua purificada para edificios y condominios.
+  private emailBody = `Estimado Sr. Administrador,
+Pertenezco a una de sus comunidades y quisiera solicitar la implementación de este servicio:
 
-💡 Instalación gratuita, rápida y no invasiva.
+Abastecimiento de agua purificada para edificios y condominios.
 
+Instalación gratuita, rápida y no invasiva.
 Implementación de racks a nivel comunitario, orientada a la comodidad de los residentes.
 
 Información y contacto directo con la empresa:
@@ -27,12 +29,17 @@ https://purezadelsur.cl/informacion-para-administracion
 
 +56 9 8442 8760
 Aguas Pureza del Sur
-Calidad Valdiviana`;
+Calidad Valdiviana,
+disponible en Santiago.
 
-  private whatsAppBody = `*Abastecimiento de agua purificada para edificios y condominios.*
+Muchas gracias desde ya por su gestión.`;
 
-*Instalación gratuita, rápida y no invasiva.*
+  private whatsAppBody = `*Estimado Sr. Administrador,*
+*Pertenezco a una de sus comunidades y quisiera solicitar la implementación de este servicio:*
 
+Abastecimiento de agua purificada para edificios y condominios.
+
+Instalación gratuita, rápida y no invasiva.
 Implementación de racks a nivel comunitario, orientada a la comodidad de los residentes.
 
 Información y contacto directo con la empresa:
@@ -40,7 +47,10 @@ https://purezadelsur.cl/informacion-para-administracion
 
 +56 9 8442 8760
 *Aguas Pureza del Sur*
-Calidad Valdiviana`;
+Calidad Valdiviana,
+disponible en Santiago.
+
+*Muchas gracias desde ya por su gestión.*`;
 
   private snackBar = inject(MatSnackBar);
 

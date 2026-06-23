@@ -92,3 +92,14 @@ p {
   .box-title .br-mobile { display: none !important; }
   .box-title .br-desktop { display: block !important; }
 }
+
+.highlight-yellow {
+  background-color: rgba(255, 230, 0, 0.25);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+.afiche-img {
+  width: 90%;
+  max-width: 500px;
+}
