@@ -18,19 +18,22 @@ export function app(): express.Express {
     ? join(distFolder, 'index.html')
     : join(distFolder, 'index.csr.html');
 
-  const commonEngine = new CommonEngine();
+  const allowedHostsEnv = process.env['ALLOWED_HOSTS'];
+  const allowedHosts = allowedHostsEnv
+    ? allowedHostsEnv.split(',').map((host) => host.trim())
+    : ['purezadelsur.cl', 'www.purezadelsur.cl', 'localhost'];
+
+  const commonEngine = new CommonEngine({
+    allowedHosts: allowedHosts,
+  });
 
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
 
-  // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
@@ -52,7 +55,6 @@ export function app(): express.Express {
 function run(): void {
   const port = process.env['PORT'] || 4000;
 
-  // Start up the Node server
   const server = app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
