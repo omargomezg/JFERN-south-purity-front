@@ -1,11 +1,12 @@
-# Allow all access to the root directory
 User-agent: *
 Allow: /
 
-# Specific disallows (if any)
-# Disallow: /admin/ # Example: If you have an admin panel
-# Disallow: /tmp/   # Example: Temporary directories
-# Disallow: /private/ # Example: Private directories
+# Bloquear rutas de autenticación y flujos internos
+Disallow: /login
+Disallow: /registrate
+Disallow: /payment-result/
+Disallow: /cliente/
+Disallow: /back-office/
 
-# Sitemap (if you have one)
-#Sitemap: https://yourdomain.com/sitemap.xml
+# Ubicación del sitemap
+Sitemap: https://www.purezadelsur.cl/sitemap.xml
